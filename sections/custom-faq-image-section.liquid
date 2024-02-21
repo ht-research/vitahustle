@@ -1,0 +1,88 @@
+<div class="column">
+  <h2>{{ section.settings.title }}</h2>
+  {% for block in section.blocks %}
+    {% if block.type == 'faq' %}
+      <button class="accordion">{{ block.settings.question }}</button>
+      <div class="panel">
+        <p>{{ block.settings.answer }}</p>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+<div class="column">
+  {% if section.settings.column_image != blank %}
+    <img src="{{ section.settings.column_image | img_url: 'master' }}" alt="">
+  {% endif %}
+</div>
+
+{% stylesheet %}
+  <style>
+  .column {
+    width: 50%;
+    float: left;
+  }
+  .accordion {
+    cursor: pointer;
+  }
+  .panel {
+    display: none;
+  }
+  </style>
+{% endstylesheet %}
+
+{% javascript %}
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  });
+  </script>
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Custom FAQ Image Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Your Title Here"
+    },
+    {
+      "type": "image_picker",
+      "id": "column_image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ Accordion",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

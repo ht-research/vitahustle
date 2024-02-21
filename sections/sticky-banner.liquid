@@ -1,0 +1,62 @@
+<div class="sticky-banner-custom">
+  <span onclick="hideBanner()" class="close-custom">&times;</span>
+  <p>
+    <button class="btn btn--solid" onclick="location.href='{{ section.settings.button_link }}';">
+      {{ section.settings.button_text }}
+    </button>
+  </p>
+</div>
+
+{% schema %}
+ {
+  "name": "Sticky Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Get Started"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .sticky-banner-custom {
+    display:block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    color: #212121;
+    text-align: center;
+    padding: 10px;
+    z-index: 4;
+  }
+
+  .sticky-banner-custom .close-custom {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity:0;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  function hideBanner() {
+    document.getElementById('sticky-banner-custom').style.display = 'none';
+  }
+{% endjavascript %}

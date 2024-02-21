@@ -1,0 +1,155 @@
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_1": {
+          "type": "announcement",
+          "settings": {
+            "text": "<h3><a href=\"https:\/\/bit.ly\/meetkevinhart\" target=\"_blank\" title=\"https:\/\/bit.ly\/meetkevinhart\"><strong>MEET KEVIN HART GIVEAWAY<\/strong><\/a><\/h3>",
+            "link": "https:\/\/bit.ly\/meetkevinhart",
+            "icon": "star-solid"
+          }
+        },
+        "7e142f36-d3ea-40be-a6ff-d7819a415cb9": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>FREE SHAKER <\/strong>WITH STARTER KIT<\/p>",
+            "link": "shopify:\/\/products\/starter-kit-1",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_1",
+        "7e142f36-d3ea-40be-a6ff-d7819a415cb9"
+      ],
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "show_only_on_homepage": false,
+        "color_scheme": "custom-2",
+        "container_size": "full-screen",
+        "enable_autoplay": true,
+        "autoplay_interval": 5,
+        "show_navigation_arrows": false,
+        "show_language_selector": false,
+        "show_currency_selector": false,
+        "show_social_list": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "7ca1f1c5-b6ac-4202-b351-41dcf32a36c2": {
+          "type": "menu-1",
+          "disabled": true,
+          "settings": {
+            "mega_nav_item_name": "Shop",
+            "color_scheme": "white",
+            "add_spacing": true,
+            "desktop_img_ratio": 1.1,
+            "mobile_img_ratio": 0.5,
+            "columns": 5,
+            "desktop_space_between_cards": 15,
+            "mobile_space_between_cards": 12,
+            "heading_size": "h3",
+            "body_size": "body3",
+            "content_position": "bottom-left",
+            "enable_vertical_text": false,
+            "overlay_opacity": 5,
+            "show_item_1": true,
+            "item_1_img": "shopify:\/\/shop_images\/Vh3_07f29d90-7e0b-4706-9c43-6d49d95378a0.png",
+            "item_1_title": "One Superfood",
+            "item_1_text": "<p>Special Offer<\/p>",
+            "item_1_btn_text": "",
+            "item_1_link": "\/products\/vitahustle-one-superfood",
+            "show_item_2": false,
+            "item_2_img": "shopify:\/\/shop_images\/Electrolyte_Hydration.png",
+            "item_2_title": "ELECTROLYTE HYDRATION",
+            "item_2_text": "",
+            "item_2_btn_text": "",
+            "item_2_link": "shopify:\/\/collections\/electrolyte-hydration",
+            "show_item_3": false,
+            "item_3_img": "shopify:\/\/shop_images\/Gummy_Vitamins_Megamenu.png",
+            "item_3_title": "GUMMY VITAMINS",
+            "item_3_text": "",
+            "item_3_btn_text": "",
+            "item_3_link": "shopify:\/\/collections\/gummy-vitamins",
+            "show_item_4": true,
+            "item_4_img": "shopify:\/\/shop_images\/reviews_2.png",
+            "item_4_title": "Shop All",
+            "item_4_text": "",
+            "item_4_btn_text": "",
+            "item_4_link": "shopify:\/\/collections\/all",
+            "show_item_5": false,
+            "item_5_img": "shopify:\/\/shop_images\/Untitled-5_d328791f-cf77-40d6-b783-61380baccf38.jpg",
+            "item_5_title": "SPECIAL OFFER",
+            "item_5_text": "",
+            "item_5_btn_text": "",
+            "item_5_link": "shopify:\/\/products\/starter-kit-1",
+            "show_item_6": false,
+            "item_6_title": "Image with text",
+            "item_6_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_6_btn_text": "Link label",
+            "item_6_link": "",
+            "show_item_7": false,
+            "item_7_title": "Image with text",
+            "item_7_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_7_btn_text": "Link label",
+            "item_7_link": "",
+            "show_item_8": false,
+            "item_8_title": "Image with text",
+            "item_8_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_8_btn_text": "Link label",
+            "item_8_link": "",
+            "show_item_9": false,
+            "item_9_title": "Image with text",
+            "item_9_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_9_btn_text": "Link label",
+            "item_9_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "7ca1f1c5-b6ac-4202-b351-41dcf32a36c2"
+      ],
+      "custom_css": [
+        ".image-block {border-radius: 15px; border: solid 1px white;}",
+        ".image-block__content {background-color: #212121; padding: 25px; width: 100%;}",
+        ".image-block__content-wrap {padding: 0px;}",
+        ".image-block__title {color: #cee64d; width: 100%;}",
+        ".mega-menu__inner-container {background-color: white;}",
+        ".drawer-menu__settings {display: none;}",
+        ".header__icon--people {display: block;}",
+        ".body3 {font-family: \"FK Grotesk Neue Regular\"; font-size: 1.4rem;}",
+        ".image-block__content > * + * {margin: 0;}"
+      ],
+      "settings": {
+        "color_scheme": "custom-1",
+        "container_size": "full-screen",
+        "grid": "3",
+        "enable_border": true,
+        "enable_sticky": false,
+        "enable_upcart": false,
+        "menu_trigger": "hover",
+        "menu": "header-new-website",
+        "desktop_logo_img": "shopify:\/\/shop_images\/Vita_Hustle_Desktop_Logo.svg",
+        "desktop_logo_width": 280,
+        "mobile_logo_img": "shopify:\/\/shop_images\/Vita_Hustle_Desktop_Logo.svg",
+        "mobile_logo_width": 180,
+        "icon_style": "outline",
+        "cart_icon": "bag"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

@@ -1,0 +1,76 @@
+<div class="banner_strip">
+  <h3>
+    {{ section.settings.title | default: 'Title' }}
+  </h3>
+</div>
+
+{% style %}
+
+  .banner_strip {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: {{ section.settings.bg_color }}
+    ;
+    padding-bottom: 0.2vw;
+  }
+  .banner_strip h3 {
+    font-size: 3.132vw;
+    line-height: 120%;
+    color: {{ section.settings.primary_color }}
+    ;
+    font-weight: 700;
+    letter-spacing: calc(0.45*0.0694vw);
+  }
+  .banner_strip h3 span {
+    color: {{ section.settings.secondary_color }}
+    ;
+  }
+  @media screen and (max-width: 768px) {
+    .banner_strip h3 {
+      font-size: 30px;
+      line-height: 120%;
+      padding: 6px 0 8px;
+      color: #ffffff;
+    }
+    .banner_strip h3 span {
+      color: #c9e14b;
+    }
+
+  }
+{% endstyle %}
+
+{% schema %}
+
+  {
+    "name": "Banner Strip",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Backgound color",
+        "default": "#000"
+      }, {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary title color",
+        "default": "#fff"
+      }, {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "Secondary title color",
+        "default": "#C8E812"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner Strip"
+      }
+    ]
+  }
+{% endschema %}

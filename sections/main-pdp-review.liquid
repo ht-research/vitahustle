@@ -1,0 +1,351 @@
+<div class="main_review_wrapper">
+  <div class="main_review_inner_box">
+    <div class="review_switch">
+      <div class="written_review switch-item active" data-tab="reviews">
+        Written Reviews
+      </div>
+      <div class="testimonial switch-item" data-tab="testimonial">
+        Testimonials
+      </div>
+    </div>
+
+    <div class="main_container">
+      <div class="all_reviews active" data-container="reviews">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when '@app' %}
+            {% render block %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+
+      <div class="testimonials" data-container="testimonial">
+        <div class="testimonial_wrapper">
+          {% for block in section.blocks %}
+            {% if block.type == "testimonial_box" %}
+              <div class="testimonial_box">
+                <img
+                  loading="lazy"
+                  src="{{ block.settings.thumbnail_image | img_url: '150x' }}"
+                  srcset="{{ block.settings.thumbnail_image | img_url: '200x' }}" />
+                <button data-video-url="{{ block.settings.video_url }}">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none">
+                    <g opacity="0.8">
+                      <path
+                        d="M30 55C43.8071 55 55 43.8071 55 30C55 16.1929 43.8071 5 30 5C16.1929 5 5 16.1929 5 30C5 43.8071 16.1929 55 30 55Z"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M25 20L40 30L25 40V20Z"
+                        fill="white"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="video_modal_pop">
+    <div class="video_wrapper">
+      <video
+        id="videoId"
+        controls
+        playsinline="true"
+        style="max-height: 444px;"></video>
+      <div class="close_button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="27.816"
+          height="27.816"
+          viewBox="0 0 27.816 27.816">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #fff
+              }
+            </style>
+          </defs>
+          <path
+            id="ic_highlight_off_24px"
+            d="M19.51 10.345l-3.6 3.6-3.6-3.6-1.961 1.961 3.6 3.6-3.6 3.6 1.961 1.961 3.6-3.6 3.6 3.6 1.961-1.961-3.6-3.6 3.6-3.6zM15.908 2a13.908 13.908 0 1 0 13.908 13.908A13.9 13.9 0 0 0 15.908 2zm0 25.034a11.126 11.126 0 1 1 11.126-11.126 11.141 11.141 0 0 1-11.126 11.126z"
+            class="cls-1"
+            transform="translate(-2 -2)" />
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</div>
+<style>
+  .testimonial_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .main_review_inner_box {
+    padding-bottom: 52px;
+  }
+  .testimonial_wrapper .testimonial_box {
+    width: calc((100% - 60px) / 6);
+    margin-right: 12px;
+    margin-bottom: 12px;
+    position: relative;
+    height: 245px;
+  }
+  .testimonial_wrapper .testimonial_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+  }
+  .testimonial_wrapper .testimonial_box button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent !important;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .testimonial_wrapper .testimonial_box:nth-child(6n) {
+    margin-right: 0;
+  }
+  .video_modal_pop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .video_modal_pop.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .video_modal_pop .video_wrapper {
+    max-width: 750px;
+    margin: auto;
+    padding: 30px 40px;
+    position: relative;
+    /* display: flex; */
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: center;
+    align-items: flex-start;
+    display: none;
+  }
+  
+  .video_modal_pop .video_wrapper .close_button {
+    position: relative;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    z-index: 6;
+
+  }
+  .main_container {
+    width: 100%;
+  }
+  .main_review_wrapper {
+    padding-top: 33px;
+  }
+  .review_switch {
+    display: flex;
+    width: 100%;
+    max-width: 352px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin: 0 auto 20px;
+    background: #ECECEC;
+
+  }
+  .review_switch .switch-item {
+    padding: 16px 30px;
+    position: relative;
+    border-radius: 40px;
+    cursor: pointer;
+    color: #212121;
+    font-family: "Lato Regular", sans-serif;
+    font-size: 16px;
+    width: 50%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .review_switch .switch-item.active {
+    background-color: #C9E14B;
+  }
+  .testimonials,
+  .all_reviews {
+    display: none;
+  }
+  .all_reviews.active,
+  .testimonials.active {
+    display: block;
+  }
+  .testimonials {
+    margin-top: 52px;
+  }
+  .main_container .jdgm-widget:not(.jdgm-review-widget--small, .jdgm-review-widget--medium) .jdgm-rev-widg__title,
+  .main_container .jdgm-widget:not(.jdgm-review-widget--small,.jdgm-review-widget--medium) .jdgm-row-stars {
+    display: none !important;
+  }
+  .main_container .jdgm-widget:not(.jdgm-review-widget--small,.jdgm-review-widget--medium) .jdgm-row-media {
+    border-top: none;
+  }
+  .main_container .jdgm-rev__buyer-badge {
+    padding: 5px 10px 4px;
+    border-radius: 14px;
+  }
+  .main_container .all_reviews {
+    width: calc(100% - 40px);
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 1024px) and(min-width: 769px) {
+    .testimonial_wrapper .testimonial_box {
+      width: calc((100% - 60px) / 4);
+    }
+    .testimonial_wrapper .testimonial_box:nth-child(6n) {
+      margin-right: 12px;
+    }
+    .testimonial_wrapper .testimonial_box:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .testimonial_wrapper .testimonial_box {
+      width: calc((100% - 24px) / 3);
+      height: 165px;
+
+    }
+    .main_container .all_reviews .jdgm-rev-widg__title,
+    .main_container .all_reviews .jdgm-row-stars {
+      display: none !important;
+    }
+    .testimonial_wrapper {
+      width: calc(100% - 40px);
+    }
+    .testimonial_wrapper .testimonial_box:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  .jdgm-paginate__load-more,.jdgm-rev__buyer-badge:before,
+.jdgm-rev__body p, .jdgm-rev__title{
+    font-family: 'Lato Regular', sans-serif!important;
+  }
+.jdgm-rev__author{
+  font-family: 'Lato Bold', sans-serif!important;
+}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    $(document).on('click', '.video_modal_pop .video_wrapper .close_button', function() {
+      var videoElement = document.getElementById('videoId');
+      var sourceElement = videoElement.querySelector('source');
+      $('.video_modal_pop').removeClass('active');
+      if (sourceElement) {
+        videoElement.pause(); // Optionally, pause the video if it's playing
+        videoElement.removeAttribute('src');
+
+// Remove the src attribute from the video tag
+// Refresh the video element to reflect changes
+        sourceElement.remove();
+        videoElement.load(); // Remove the source element
+      }
+      $('.video_modal_pop .video_wrapper').css('display', 'none');
+    });
+
+    $('.switch-item').on('click', function() {
+      let dataId = $(this).attr('data-tab');
+      $('.main_container').children('div[data-container]').removeClass('active');
+      $('.main_container').children('[data-container=' + dataId + ']').addClass('active');
+      $('.switch-item').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $('.testimonial_box button').on('click', function() {
+      $('.video_modal_pop .video_wrapper').css('display', 'flex');
+      let vide_url = $(this).attr('data-video-url');
+      $('.video_modal_pop').addClass('active');
+      var videoElement = document.getElementById('videoId');
+      var sourceElement = document.createElement('source');
+      sourceElement.setAttribute('src', vide_url);
+      sourceElement.setAttribute('type', 'video/mp4');
+
+      videoElement.appendChild(sourceElement);
+      videoElement.load();
+      videoElement.play();
+    })
+
+  })
+</script>
+{% schema %}
+  {
+    "name": "PDP Reviews",
+    "class": "pdp-review-section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "@app"
+      }, {
+        "name": "Testimonial",
+        "type": "testimonial_box",
+        "limit": 20,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "thumbnail_image",
+            "label": "Testimonial thumbnail Image"
+          }, {
+            "type": "text",
+            "id": "video_url",
+            "label": "Video Url"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "PDP Reviews"
+      }
+    ]
+  }
+{% endschema %}

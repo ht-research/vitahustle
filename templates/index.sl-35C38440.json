@@ -1,0 +1,541 @@
+{
+  "sections": {
+    "9fd9498c-6efb-476e-8d6a-a7a853124857": {
+      "type": "banner-new",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "display_rating": false,
+        "number_of_reviews": 426,
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 960,
+        "mobile_height": 600,
+        "desktop_img": "shopify:\/\/shop_images\/vitahustle-hp-banner2.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/VH-Mobile-Banner-1920x1080-11_13-NoText-2_3.png",
+        "desktop_overlay_opacity": 50,
+        "mobile_overlay_opacity": 39,
+        "caption": "",
+        "title": "YOUR DAILY SUPERFOODS",
+        "text": "<p>Clean and green ingredients support gut health, immunity, muscle recovery & overall wellness<\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 528,
+        "content_spacing": 116,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "solid",
+        "mobile_content_background": "solid",
+        "btn_text": "Shop Now",
+        "btn_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "outline"
+      }
+    },
+    "8c9108e5-5763-41a5-8164-5e91fb2a073e": {
+      "type": "banner-strip",
+      "settings": {
+        "title": "Founded &amp; Created by <span>Kevin Hart<\/span>",
+        "bg_color": "#121212",
+        "primary_color": "#ffffff",
+        "secondary_color": "#c8e812"
+      }
+    },
+    "0d20106d-cf81-4575-89b1-4dfd2ec13c66": {
+      "type": "all-in-one",
+      "blocks": {
+        "6deffc6e-c58a-44d1-9974-1d7c38f8b5c8": {
+          "type": "key_highlight",
+          "settings": {
+            "key_point": "20G of Protein"
+          }
+        },
+        "b04e2174-170d-4962-aeb0-d7907bae3ca1": {
+          "type": "key_highlight",
+          "settings": {
+            "key_point": "Super Greens"
+          }
+        },
+        "665737e7-a1cb-49d4-8070-0aacf6703f9b": {
+          "type": "key_highlight",
+          "settings": {
+            "key_point": "Pre + Probiotics"
+          }
+        },
+        "0fae6d93-9ac1-451a-80b2-88eed4c36762": {
+          "type": "key_highlight",
+          "settings": {
+            "key_point": "86 Superfoods +"
+          }
+        },
+        "2ce911d3-cfc0-45b2-bd6d-e6109eb30ea1": {
+          "type": "key_highlight",
+          "settings": {
+            "key_point": "Vitamins & Minerals"
+          }
+        },
+        "dbb71234-896a-45d7-aed7-2e44d3e9370c": {
+          "type": "key_highlight",
+          "settings": {
+            "key_point": "Adaptogens"
+          }
+        },
+        "6465c620-8715-47a4-8b05-296444932668": {
+          "type": "key_highlight",
+          "settings": {
+            "key_point": "Digestive Enzymes"
+          }
+        },
+        "cfcfed6d-af62-4892-af7f-f60dca1ecb9a": {
+          "type": "key_highlight",
+          "settings": {
+            "key_point": "Super Mushrooms"
+          }
+        },
+        "ac6c04e0-e288-44c8-895d-8ed228d0661f": {
+          "type": "key_highlight",
+          "settings": {
+            "key_point": "+ WAY MORE"
+          }
+        }
+      },
+      "block_order": [
+        "6deffc6e-c58a-44d1-9974-1d7c38f8b5c8",
+        "b04e2174-170d-4962-aeb0-d7907bae3ca1",
+        "665737e7-a1cb-49d4-8070-0aacf6703f9b",
+        "0fae6d93-9ac1-451a-80b2-88eed4c36762",
+        "2ce911d3-cfc0-45b2-bd6d-e6109eb30ea1",
+        "dbb71234-896a-45d7-aed7-2e44d3e9370c",
+        "6465c620-8715-47a4-8b05-296444932668",
+        "cfcfed6d-af62-4892-af7f-f60dca1ecb9a",
+        "ac6c04e0-e288-44c8-895d-8ed228d0661f"
+      ],
+      "settings": {
+        "title": "ALL IN <span>ONE<\/span>",
+        "primary_color": "#ffffff",
+        "secondary_color": "#afc42f",
+        "subtext": "Everything you need for mind and body<br>",
+        "text_color": "#4d201a",
+        "cta_text": "Shop Now",
+        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "list_color": "#797a74"
+      }
+    },
+    "7104b9b8-98c9-4888-9248-7874a9f6472f": {
+      "type": "all-ingredients",
+      "blocks": {
+        "5fb1b568-75de-4cb7-82b5-ea4204b1e306": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHE1C7_1.png",
+            "name1": "ORGANIC KALE"
+          }
+        },
+        "32752f03-a544-4878-a8ab-c468ed452b64": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHST_L_1_3.png",
+            "name1": "ORGANIC SPINACH"
+          }
+        },
+        "c19bd822-c9fc-45e3-b531-c99f453ebe49": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VH6529_1.png",
+            "name1": "ORGANIC BROCCOLI"
+          }
+        },
+        "02198a55-fd10-44ad-a2d0-79e3d73b837b": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHD2BE_1.png",
+            "name1": "ORGANIC BEET ROOT"
+          }
+        },
+        "e7ce461e-e564-47e8-be19-7435d47e1ca9": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHST_L_2_3.png",
+            "name1": "ORGANIC CAULIFLOWER"
+          }
+        },
+        "d2eb0d2b-0e22-4403-b5f8-03ac9ed44aff": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHCF75_1.png",
+            "name1": "ORGANIC BARLEY GRASS"
+          }
+        },
+        "87983cd7-00dd-42de-add0-2212c0e0b254": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHE2DB_1.png",
+            "name1": "ORGANIC TURMERIC ROOT"
+          }
+        },
+        "6282d446-68b4-4d27-ae07-93c300844392": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHA788_1.png",
+            "name2": "ORGANIC POMEGRANATE"
+          }
+        },
+        "5bba7bf6-95dd-4c13-a7ab-bf55832b55d8": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VH8837_1.png",
+            "name2": "ORGANIC ACAI"
+          }
+        },
+        "154002a2-01f9-4712-81f4-1a879516b8f1": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VH4679_1.png",
+            "name2": "TART CHERRY"
+          }
+        },
+        "57c62444-1816-49a6-9023-fdc226a3ffeb": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VH3075_1.png",
+            "name2": "ORGANIC STRAWBERRY"
+          }
+        },
+        "119e801c-5a69-4c91-afaa-53243537fa07": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHST_L_2_4.png",
+            "name2": "ORGANIC BLACKBERRY"
+          }
+        },
+        "a2672959-bfd4-4327-9d34-a2548eab15a1": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHST_L_4_4.png",
+            "name2": "ORGANIC CRANBERRY"
+          }
+        },
+        "b557220a-e297-4c66-a9e9-2630b6f78936": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VH6EB9_1.png",
+            "name2": "ORGANIC BANANA"
+          }
+        },
+        "8e8dee6b-2f7f-4bb6-a1a5-0a7d4b103648": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHC3F5_1.png",
+            "name2": "ORGANIC APPLE"
+          }
+        },
+        "a3b4d46c-0a9f-4661-8da9-7ec78c009325": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHST_L_3.png",
+            "name2": "ASHWAGANDHA"
+          }
+        },
+        "34d24afd-ed00-4a40-a9a0-501bc3da61c3": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_3_2.png",
+            "name3": "DIGESTIVE ENZYMES"
+          }
+        },
+        "36ec19d9-e41b-4000-95f4-1c97c0157726": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_2.png",
+            "name3": "ORGANIC CORDYCEPS"
+          }
+        },
+        "cf27b2a2-203f-4ff5-85a4-1fc90e7f3172": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_1_1.png",
+            "name3": "ORGANIC GINGER ROOT"
+          }
+        },
+        "d0004bd0-15e3-4bf3-87f3-429a9852084e": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_1_2.png",
+            "name3": "PREBIOTIC FIBER"
+          }
+        },
+        "d9f243ec-a246-452a-bdab-a4f683ba3184": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_4_2.png",
+            "name3": "PROBIOTIC BLEND"
+          }
+        },
+        "798cc835-20f3-4ca4-8de2-862e3a98f4c9": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VH2920_1.png",
+            "name3": "ORGANIC MACA ROOT"
+          }
+        }
+      },
+      "block_order": [
+        "5fb1b568-75de-4cb7-82b5-ea4204b1e306",
+        "32752f03-a544-4878-a8ab-c468ed452b64",
+        "c19bd822-c9fc-45e3-b531-c99f453ebe49",
+        "02198a55-fd10-44ad-a2d0-79e3d73b837b",
+        "e7ce461e-e564-47e8-be19-7435d47e1ca9",
+        "d2eb0d2b-0e22-4403-b5f8-03ac9ed44aff",
+        "87983cd7-00dd-42de-add0-2212c0e0b254",
+        "6282d446-68b4-4d27-ae07-93c300844392",
+        "5bba7bf6-95dd-4c13-a7ab-bf55832b55d8",
+        "154002a2-01f9-4712-81f4-1a879516b8f1",
+        "57c62444-1816-49a6-9023-fdc226a3ffeb",
+        "119e801c-5a69-4c91-afaa-53243537fa07",
+        "a2672959-bfd4-4327-9d34-a2548eab15a1",
+        "b557220a-e297-4c66-a9e9-2630b6f78936",
+        "8e8dee6b-2f7f-4bb6-a1a5-0a7d4b103648",
+        "a3b4d46c-0a9f-4661-8da9-7ec78c009325",
+        "34d24afd-ed00-4a40-a9a0-501bc3da61c3",
+        "36ec19d9-e41b-4000-95f4-1c97c0157726",
+        "cf27b2a2-203f-4ff5-85a4-1fc90e7f3172",
+        "d0004bd0-15e3-4bf3-87f3-429a9852084e",
+        "d9f243ec-a246-452a-bdab-a4f683ba3184",
+        "798cc835-20f3-4ca4-8de2-862e3a98f4c9"
+      ],
+      "settings": {
+        "title": "Powered by Nature’s <span>Healthiest Superfoods<\/span>",
+        "subtext": "Unlock Your Potential with <span>86 Superfoods<\/span>, Nutrients &amp; Plant-Based Goodness.",
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_navigation_on_hover": true,
+        "enable_carousel_on_mobile": false,
+        "img_ratio": "default",
+        "section_layout": "carousel",
+        "cards_to_show": 20,
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 18,
+        "mobile_space_between_cards": 18,
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48
+      }
+    },
+    "cab30cee-3dd0-4da8-9392-756aff6c1cee": {
+      "type": "image-with-text-new",
+      "settings": {
+        "title": "And, it tastes <span>damn delicious!<\/span>",
+        "subtext": "VitaHustle ONE is the real deal, no chalkiness, just lip-smacking, soul-satisfying taste!",
+        "title_font_size": 65,
+        "title_box_width": 350,
+        "cta_text": "SEE REVIEWS",
+        "cta_url": "shopify:\/\/pages\/vitahustle-reviews",
+        "top_spacing": 245,
+        "bottom_spacing": 275,
+        "background_image": "shopify:\/\/shop_images\/Image2_1_1.png",
+        "background_image_mobile": "shopify:\/\/shop_images\/Kevin_1_1.png",
+        "alignment": "left",
+        "mobile_height": 548
+      }
+    },
+    "1fa8ddd8-c62b-4a4b-81e1-e1e801d2dff3": {
+      "type": "flavors",
+      "blocks": {
+        "5a757184-498a-49bd-aae7-534b3a151bab": {
+          "type": "flavor_box",
+          "settings": {
+            "thumbnail": "shopify:\/\/shop_images\/Image3.png",
+            "main_image": "shopify:\/\/shop_images\/image5-min.jpg",
+            "flavor_name": "Dark Cacao",
+            "main_banner_title": "Dark Cacao",
+            "main_banner_subtext": "\"The healthy chocolate shake is the real deal\""
+          }
+        },
+        "36d001dd-c9d0-43f3-a29f-62ba993250a6": {
+          "type": "flavor_box",
+          "settings": {
+            "thumbnail": "shopify:\/\/shop_images\/Image4.png",
+            "main_image": "shopify:\/\/shop_images\/image6_1_1_1.png",
+            "flavor_name": "Vanilla Bean",
+            "main_banner_title": "Vanilla Bean",
+            "main_banner_subtext": "\"Tastes like a creamy and delicious vanilla shake.”"
+          }
+        }
+      },
+      "block_order": [
+        "5a757184-498a-49bd-aae7-534b3a151bab",
+        "36d001dd-c9d0-43f3-a29f-62ba993250a6"
+      ],
+      "settings": {
+        "title": "TREAT YOURSELF TO <br><span>2 DELICIOUS FLAVORS<\/span>",
+        "subtext": "A Bag Full of Nutrition - simply add Water!",
+        "cta_text": "Shop",
+        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood"
+      }
+    },
+    "48b62c86-ee21-4dd4-982a-3b2d19f4db86": {
+      "type": "vitahustle-one",
+      "settings": {
+        "title": "VitaHustle One. <span>Achieve Your Maximum Potential<\/span>",
+        "subtext": "Leave all the others behind. <br>\nExperience what no other nutrition shake can offer.",
+        "cta_text": "GET STARTED",
+        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "bg_color": "#ffffff"
+      }
+    },
+    "a58bbcfa-ff9e-493b-9b88-4f16d0c602d6": {
+      "type": "product-usb",
+      "blocks": {
+        "cbbdd019-f764-4eba-acf0-fb10d7867593": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_21_1ae1548a-e15b-40c1-bb3c-8635757577ed.png",
+            "icon_title": "SOY FREE"
+          }
+        },
+        "f23dead0-d3ca-49b5-999c-f1db4b25d4ea": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_22.png",
+            "icon_title": "Dairy Free"
+          }
+        },
+        "97c8b875-997c-4c3c-94cc-9a47d1cf6507": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_23.png",
+            "icon_title": "Gluten Free"
+          }
+        },
+        "d0f1dd9e-572e-43d8-97ba-1f10d26e7683": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_24.png",
+            "icon_title": "Non GMO"
+          }
+        },
+        "eccf0670-979e-459c-8122-b12e117f5cdb": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_25.png",
+            "icon_title": "No Artificial Ingredients"
+          }
+        },
+        "0cb0647e-99a8-4aab-8849-dd3f901bc1e4": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_26.png",
+            "icon_title": "No Fillers"
+          }
+        }
+      },
+      "block_order": [
+        "cbbdd019-f764-4eba-acf0-fb10d7867593",
+        "f23dead0-d3ca-49b5-999c-f1db4b25d4ea",
+        "97c8b875-997c-4c3c-94cc-9a47d1cf6507",
+        "d0f1dd9e-572e-43d8-97ba-1f10d26e7683",
+        "eccf0670-979e-459c-8122-b12e117f5cdb",
+        "0cb0647e-99a8-4aab-8849-dd3f901bc1e4"
+      ],
+      "settings": {
+        "title": "<span>All Good<\/span> No B.S.(Bad Stuff)",
+        "subtext": "Clean & Green: No Artificial Ingredients, No Added Sugar & No Junky Fillers"
+      }
+    },
+    "9db44892-cf73-44af-adaa-4185d0a6bf2b": {
+      "type": "image-with-text-new",
+      "settings": {
+        "title": "<span>FUEL<\/span> YOUR HUSTLE",
+        "subtext": "",
+        "title_font_size": 110,
+        "title_box_width": 600,
+        "cta_text": "Get Started",
+        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "top_spacing": 460,
+        "bottom_spacing": 260,
+        "background_image": "shopify:\/\/shop_images\/image7_1_1.jpg",
+        "background_image_mobile": "shopify:\/\/shop_images\/image7_1_1.jpg",
+        "alignment": "center",
+        "mobile_height": 450
+      }
+    },
+    "d80b875a-9a8a-4e72-a0cf-8e6bb77e7726": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-1": {
+          "type": "title",
+          "settings": {
+            "title": "STAY IN TOUCH",
+            "heading_size": "h1"
+          }
+        },
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-2": {
+          "type": "text",
+          "settings": {
+            "text": "Get Kev's healthy hacks, product drops and exclusive discounts.",
+            "body_size": "body3"
+          }
+        },
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-3": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-1",
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-2",
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-3"
+      ],
+      "custom_css": [
+        ".newsletter__input {border-radius: 100px;}",
+        ".newsletter__input-btn:hover {background: #212121;}",
+        ".h1 {white-space: nowrap;}",
+        ".newsletter__input-btn {flex: 0; margin-left: -25%;}",
+        ".newsletter__content--desktop {display: flex; align-items: center; gap: 40px; padding: 3rem;}",
+        ".field {width: 100%;}",
+        ".newsletter__content > * + .newsletter__text {width: 70%;}",
+        ".newsletter__field {flex-wrap: nowrap;}"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 280,
+        "mobile_height": 420,
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "left",
+        "content_max_width": 1324,
+        "content_spacing": 16,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
+    }
+  },
+  "order": [
+    "9fd9498c-6efb-476e-8d6a-a7a853124857",
+    "8c9108e5-5763-41a5-8164-5e91fb2a073e",
+    "0d20106d-cf81-4575-89b1-4dfd2ec13c66",
+    "7104b9b8-98c9-4888-9248-7874a9f6472f",
+    "cab30cee-3dd0-4da8-9392-756aff6c1cee",
+    "1fa8ddd8-c62b-4a4b-81e1-e1e801d2dff3",
+    "48b62c86-ee21-4dd4-982a-3b2d19f4db86",
+    "a58bbcfa-ff9e-493b-9b88-4f16d0c602d6",
+    "9db44892-cf73-44af-adaa-4185d0a6bf2b",
+    "d80b875a-9a8a-4e72-a0cf-8e6bb77e7726"
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "sections": {
+    "main": {
+      "type": "blog-post",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "img_ratio": 0.5
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_author": true,
+            "show_date": true,
+            "show_comment_count": true,
+            "show_share_link": true
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content"
+      ],
+      "custom_css": [
+        ".article__title {font-size: 6rem; line-height: 1;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "section_spacing_top": 20,
+        "section_spacing_bottom": 0,
+        "show_breadcrumbs": false,
+        "show_background": false
+      }
+    },
+    "1689350549cb44ddf6": {
+      "type": "apps",
+      "blocks": {
+        "5c6e5220-71d6-4586-a1b2-1f2b84f515a1": {
+          "type": "shopify:\/\/apps\/recipe-kit\/blocks\/app-block\/0afa374e-81c7-4989-96de-e1ac84640954",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "5c6e5220-71d6-4586-a1b2-1f2b84f515a1"
+      ],
+      "custom_css": [
+        ".rk_heading {font-family: \"Druk Web\"; font-size: 4.5rem !important;}",
+        ".rk_meta {font-family: \"Sohene\" !important; font-size: 1.4rem !important;}",
+        ".rk_column_heading {font-family: \"Sohene\" !important; font-size: 1.4rem !important;}",
+        ".rk_social svg {fill: #afc42e !important;}",
+        ".star svg {fill: #afc42e !important;}",
+        "svg * {vector-effect: none;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 48,
+        "custom_liquid": ""
+      }
+    },
+    "d3cf93d4-83fa-4d30-8bb6-5271c779262f": {
+      "type": "collage",
+      "blocks": {
+        "template--16944483336441__d3cf93d4-83fa-4d30-8bb6-5271c779262f-168960665239d508b3-1": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/DSCF1772.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Shop All",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/collections\/all",
+            "content_position": "bottom-left"
+          }
+        },
+        "template--16944483336441__d3cf93d4-83fa-4d30-8bb6-5271c779262f-168960665239d508b3-3": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/recipes_2.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Recipes",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/blogs\/the-hustle",
+            "content_position": "bottom-left"
+          }
+        },
+        "5f9248b9-8129-434d-850a-99aba2ea3e7b": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/clean_ingredients.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Clean Ingredients",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/pages\/superfood-ingredients",
+            "content_position": "bottom-left"
+          }
+        },
+        "2f08eef4-f0ae-4f48-91aa-df5aca3e63c1": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/reviews_2.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Reviews",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/pages\/vitahustle-reviews",
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483336441__d3cf93d4-83fa-4d30-8bb6-5271c779262f-168960665239d508b3-1",
+        "template--16944483336441__d3cf93d4-83fa-4d30-8bb6-5271c779262f-168960665239d508b3-3",
+        "5f9248b9-8129-434d-850a-99aba2ea3e7b",
+        "2f08eef4-f0ae-4f48-91aa-df5aca3e63c1"
+      ],
+      "custom_css": [
+        ".collage__image-block {border-radius: 15px;}",
+        ".h2 {font-size: 6rem;}",
+        "@media (max-width: 768px) {.h2 {font-size: 5.5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "",
+        "heading_size": "h5",
+        "alignment": "left",
+        "columns": 4,
+        "desktop_row_height": 240,
+        "mobile_row_height": 240,
+        "desktop_space_between_cards": 16,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1689350549cb44ddf6",
+    "d3cf93d4-83fa-4d30-8bb6-5271c779262f"
+  ]
+}

@@ -1,0 +1,86 @@
+<div class="footer" style="background-color:#212121">
+  <div class="footer__container container section footer-custom-section">
+    <div class="footer-custom__column footer-custom__column1">
+      <a href="{{ section.settings.footer_link_url }}">{{ section.settings.footer_link_text }}</a>
+    </div>
+    <div class="footer-custom__column footer-custom__column2">
+      <h2 class="h1" style="color: {{ section.settings.footer_heading_color }}">
+        {{ section.settings.footer_heading }}
+      </h2>
+    </div>
+  </div>
+  <div class="footer__container container footer-custom__column3">
+    <p>{{ section.settings.footer_text }}</p>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Custom Footer",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.general_section_settings.color_scheme_option_default_label"
+        },
+        {
+          "value": "primary",
+          "label": "t:sections.general_section_settings.color_scheme_option_primary_label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.general_section_settings.color_scheme_option_secondary_label"
+        },
+        {
+          "value": "custom-1",
+          "label": "t:sections.general_section_settings.color_scheme_option_custom_1_label"
+        },
+        {
+          "value": "custom-2",
+          "label": "t:sections.general_section_settings.color_scheme_option_custom_2_label"
+        },
+        {
+          "value": "custom-3",
+          "label": "t:sections.general_section_settings.color_scheme_option_custom_3_label"
+        }
+      ],
+      "default": "default",
+      "label": "t:sections.general_section_settings.color_scheme_label",
+      "info": "t:sections.general_section_settings.color_scheme_tip"
+    },
+    {
+      "id": "footer_link_url",
+      "type": "url",
+      "label": "Footer Link URL"
+    },
+    {
+      "id": "footer_link_text",
+      "type": "text",
+      "label": "Footer Link Text"
+    },
+    {
+      "id": "footer_heading",
+      "type": "text",
+      "label": "Footer Heading"
+    },
+    {
+      "id": "footer_heading_color",
+      "type": "color",
+      "label": "Footer Heading Color",
+      "default": "#000000"
+    },
+    {
+      "id": "footer_text",
+      "type": "text",
+      "label": "Footer Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default"
+    }
+  ]
+}
+{% endschema %}

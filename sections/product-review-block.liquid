@@ -1,0 +1,146 @@
+<div class="review_wrapper">
+  <div class="inner_review_wrap">
+    <h3>{{ section.settings.title }}</h3>
+    <div class="overall_reviews">
+      <div class="net_rating">
+        <h4>{{ product.metafields.reviews.rating.value }}</h4>
+      </div>
+      <div class="rating_star_block">
+        <div class="star_rated">
+          {% for i in (1..5) %}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="23"
+              viewBox="0 0 24 23"
+              fill="none">
+              <path d="M23.9691 8.67251C23.8866 8.41714 23.6506 8.24187 23.382 8.23632L15.2621 8.07121L12.5957 0.423244C12.5076 0.169729 12.2686 0 12 0C11.7314 0 11.4924 0.169729 11.4043 0.423244L8.73788 8.07121L0.617992 8.23632C0.349383 8.24187 0.113425 8.41714 0.0308713 8.67251C-0.052299 8.92818 0.0364159 9.20849 0.25081 9.37052L6.72146 14.2615L4.3699 22.0102C4.29227 22.2672 4.3853 22.5453 4.60216 22.7036C4.82025 22.8617 5.11288 22.8651 5.33344 22.712L12 18.0861L18.6666 22.712C18.775 22.7868 18.9007 22.8244 19.0264 22.8244C19.157 22.8244 19.2869 22.784 19.3978 22.7036C19.6147 22.5453 19.7077 22.2672 19.6301 22.0102L17.2785 14.2615L23.7492 9.37052C23.9636 9.20849 24.0523 8.92818 23.9691 8.67251Z" fill="#AFC42F" />
+            </svg>
+          {% endfor %}
+        </div>
+        <p>
+          {{ section.settings.rating_text }}
+        </p>
+      </div>
+
+    </div>
+    <p class="rating_info">
+      {{ section.settings.review_text_tagline }}
+    </p>
+  </div>
+</div>
+<style>
+  .review_wrapper {
+    width: 100%;
+    background-color: #F8FAEF;
+  }
+  .inner_review_wrap {
+    padding: 44px 0 36px;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    margin: 0 auto;
+
+  }
+  p.rating_info {
+    color: #4D201A;
+    text-align: center;
+    font-family: "Lato Regular", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    text-transform: capitalize;
+    margin-top: 16px;
+  }
+  .inner_review_wrap h3 {
+    color: #212121;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 60.775px */
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  .inner_review_wrap .overall_reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inner_review_wrap .overall_reviews .net_rating h4 {
+    color: #252421;
+    font-size: 88px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .inner_review_wrap .overall_reviews .rating_star_block {
+    margin-left: 20px;
+  }
+  .inner_review_wrap .overall_reviews .rating_star_block .star_rated {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .inner_review_wrap .overall_reviews .rating_star_block .star_rated svg {
+    margin-right: 10px
+  }
+  .inner_review_wrap .overall_reviews .rating_star_block p {
+    margin-top: 19px;
+    color: #4D201A;
+    text-align: center;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  @media screen and (max-width: 768px) {
+    .inner_review_wrap h3 {
+      font-size: 56px;
+    }
+    .inner_review_wrap .overall_reviews .net_rating h4 {
+      font-size: 72px;
+    }
+    p.rating_info {
+      margin-top: 22px;
+    }
+  }
+</style>
+{% schema %}
+  {
+    "name": "Product Overall review",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "VITAHUSTLE REVIEWS"
+      }, {
+        "type": "text",
+        "id": "rating_text",
+        "label": "5 star rating text",
+        "default": "200+ 5 STAR REVIEWS"
+      }, {
+        "type": "text",
+        "id": "review_text_tagline",
+        "label": "Review Text Tagline",
+        "default": "We're Constantly Inspired By VitaHustle Users Sharing Their Success Stories, Embracing Healthier, More Energized Lives Every Single Day!"
+      }, {
+        "type": "range",
+        "id": "rating",
+        "label": "Overall rating",
+        "max": 5,
+        "min": 1,
+        "step": 0.1,
+        "default": 4.5
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Overall review"
+      }
+    ]
+  }
+{% endschema %}

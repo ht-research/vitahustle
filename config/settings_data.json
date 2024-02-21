@@ -1,0 +1,539 @@
+{
+  "current": {
+    "page_width": 2560,
+    "edge_rounding_degree": "none",
+    "heading_font_family": "helvetica_n4",
+    "heading_font_uppercase": true,
+    "heading_font_letter_spacing": 0,
+    "body_font_family": "helvetica_n4",
+    "menu_font_family": "helvetica_n4",
+    "menu_font_uppercase": false,
+    "menu_font_scale": 100,
+    "menu_font_letter_spacing": 0,
+    "product_card_font_family": "helvetica_n4",
+    "product_card_font_scale": 110,
+    "button_font_family": "helvetica_n7",
+    "button_font_uppercase": true,
+    "button_font_scale": 115,
+    "button_font_letter_spacing": 1,
+    "default_color_scheme": "primary",
+    "primary_text_color": "#212121",
+    "primary_background_color": "#FFFFFF",
+    "primary_foreground_color": "#f5f5f5",
+    "primary_border_color": "#e7e7e7",
+    "primary_button_background_color": "#c8e812",
+    "primary_button_text_color": "#212121",
+    "secondary_text_color": "#212121",
+    "secondary_background_color": "#f0f2f2",
+    "secondary_foreground_color": "#FFFFFF",
+    "secondary_border_color": "#d9d9d9",
+    "secondary_button_background_color": "#c8e812",
+    "secondary_button_text_color": "#212121",
+    "custom_1_text_color": "#FFFFFF",
+    "custom_1_background_color": "#212121",
+    "custom_1_foreground_color": "#212121",
+    "custom_1_border_color": "#494949",
+    "custom_1_button_background_color": "#c8e812",
+    "custom_1_button_text_color": "#222222",
+    "custom_2_text_color": "#212121",
+    "custom_2_background_color": "#c8e812",
+    "custom_2_foreground_color": "#ffffff",
+    "custom_2_border_color": "#afc42f",
+    "custom_2_button_background_color": "#2d2d2d",
+    "custom_2_button_text_color": "#ffffff",
+    "custom_3_text_color": "#212121",
+    "custom_3_background_color": "#edece7",
+    "custom_3_foreground_color": "#e0dcd1",
+    "custom_3_border_color": "#cbc8bd",
+    "custom_3_button_background_color": "#746b5d",
+    "custom_3_button_text_color": "#edece7",
+    "default_img_ratio": "portrait",
+    "show_vendor": false,
+    "show_currency_code": false,
+    "show_color_count": false,
+    "show_background": false,
+    "enable_product_darken_background": false,
+    "enable_product_review": true,
+    "product_card_price_size": "xs",
+    "img_hover": "none",
+    "color_swatches_when_to_show": "on_hover",
+    "show_quick_view": false,
+    "show_add_to_cart": true,
+    "desktop_button_style": "with_labels",
+    "show_button_on_hover": true,
+    "product_card_show_sale_badge": false,
+    "product_sale_badge_variant": "variant_1",
+    "product_sale_badge_bg": "#dbff00",
+    "product_sale_badge_color": "#2d2d2d",
+    "product_card_show_sale_amount_badge": false,
+    "product_sale_amount_badge_variant": "variant_2",
+    "product_sale_amount_badge_bg": "#dbff00",
+    "product_sale_badge_amount_color": "#2d2d2d",
+    "product_card_highlight_sale_price": true,
+    "product_highlight_sale_price_color": "#2d2d2d",
+    "product_card_custom_badge_1_text": "Best seller",
+    "product_card_custom_badge_1_tag": "Best Sellers",
+    "product_card_custom_badge_1_bg": "#ffffff",
+    "product_card_custom_badge_1_color": "#000000",
+    "product_card_custom_badge_2_bg": "#5d54a3",
+    "cart_type": "drawer_only",
+    "show_sticky_cart": false,
+    "show_cart_order_note": false,
+    "show_taxes_and_shipping_costs_label": true,
+    "cart_status_background_color": "#ffffff",
+    "cart_status_text_color": "#000000",
+    "cart_free_shipping_bar_visible": false,
+    "cart_free_shipping_bar_threshold": 39,
+    "cart_free_shipping_bar_color": "#000000",
+    "cart_free_shipping_bar_bg": "#c8e812",
+    "favicon": "shopify:\/\/shop_images\/vita_favicon.svg",
+    "search_type": "hide",
+    "show_back_to_top_button": false,
+    "back_to_top_button_position": "bottom-left",
+    "social_icon_style": "solid",
+    "social_instagram_link": "https:\/\/www.instagram.com\/getvitahustle\/",
+    "social_facebook_link": "",
+    "social_twitter_link": "",
+    "social_youtube_link": "",
+    "social_pinterest_link": "",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@vitahustle",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_linkedin_link": "",
+    "social_vimeo_link": "",
+    "social_flickr_link": "",
+    "social_reddit_link": "",
+    "social_email_link": "",
+    "primary_option_name": "Flavor",
+    "primary_shape_for_product_cards": "square",
+    "primary_size_for_product_cards": 6,
+    "primary_shape_for_product_pages": "square",
+    "primary_size_for_product_pages": 5,
+    "primary_size_for_filters": 2,
+    "secondary_option_names": "Size",
+    "secondary_shape_for_product_pages": "square",
+    "secondary_size_for_product_pages": 4,
+    "secondary_size_for_filters": 2,
+    "checkout_logo_image": "shopify:\/\/shop_images\/Vita-Hustle-logo.svg",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#212121",
+    "checkout_button_color": "#212121",
+    "product_color_swatches_style": "images",
+    "color_swatch_option_name_variants": "Color",
+    "color_swatch_variables": "Ultramarine::#0437F2\nCherry blossom::#FFB7C5\nSunny day::yellow\/green\/blue\/\nSummertime::#F9FAFB\/#0F9D58\/#4285F4",
+    "header_icon_style": "outline",
+    "header_cart_icon_background_color": "#00c853",
+    "header_cart_icon_text_color": "#ffffff",
+    "show_old_price": true,
+    "enable_product_card_multiply": true,
+    "sections": {
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+          "color_scheme": "custom-1",
+          "img_ratio": "square"
+        }
+      },
+      "search-sidebar": {
+        "type": "search-sidebar",
+        "settings": {
+          "color_scheme": "custom-1",
+          "img_ratio": "portrait-xl",
+          "results_per_category": 4
+        }
+      },
+      "gift-card-page": {
+        "type": "gift-card-page",
+        "settings": {
+          "color_scheme": "custom-3",
+          "logo_img": "shopify:\/\/shop_images\/PURE.png",
+          "desktop_logo_width": 100,
+          "mobile_logo_width": 100
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "4705145147225299685": {
+        "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/widget-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "12120936241911852800": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/reviews_tab\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "position": "right"
+        }
+      },
+      "1027443428159536739": {
+        "type": "shopify:\/\/apps\/hextom-quick-announcement-bar\/blocks\/qab-embeded-block\/9ac2a261-3b8b-42c8-9613-d34eb2e079d3",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14230651041339252739": {
+        "type": "shopify:\/\/apps\/easy-redirects\/blocks\/app_404\/be3f8dbd-5d43-46b4-ba43-2d65046054c2",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "5017882195547572635": {
+        "type": "shopify:\/\/apps\/easy-redirects\/blocks\/app\/be3f8dbd-5d43-46b4-ba43-2d65046054c2",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "17143716568830177004": {
+        "type": "shopify:\/\/apps\/shop-protector\/blocks\/shop-protector\/c35d1411-093f-400e-8977-af1ac4720d6d",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "6610233760104865948": {
+        "type": "shopify:\/\/apps\/pushowl-web-push-notifications\/blocks\/pushowl-app-embed-3d2ff2b5\/fa20c3ba-38bf-43e0-ba5c-431f6ae07d95",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "17151115064775110295": {
+        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": false,
+        "settings": {
+          "color_brand": "#000000",
+          "contrast_color": "#ffffff",
+          "color_brand_secondary": "#afc42f",
+          "corners": "8px",
+          "app_background": "#f0f2f2",
+          "app_container": 1200,
+          "app_vertical_padding": 32,
+          "images_aspect_ratio": "1",
+          "cards_background": "#ffffff",
+          "cards_border_color": "rgba(0,0,0,0)"
+        }
+      },
+      "1877152918344802950": {
+        "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "15683396631634586217": {
+        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "button_color": "#212121",
+          "secondary_color": "#ffffff",
+          "button_icon": "chat_bubble",
+          "button_text": "live_chat",
+          "button_horizontal_position": "bottom_left",
+          "button_vertical_position": "lowest",
+          "greeting_message": "👋 Hello! Please message us if you have questions, or need help. You can also email us at help@vitahustle.com"
+        }
+      },
+      "17676059084223943535": {
+        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "18228966181090706294": {
+        "type": "shopify:\/\/apps\/selleasy\/blocks\/app-embed\/790c1a03-a71f-4bc1-9869-00dad526d3c2",
+        "disabled": false,
+        "settings": {
+          "storefrontAccessToken": "9cc49211d0583bc27a541080e515618c"
+        }
+      },
+      "14952540001915115444": {
+        "type": "shopify:\/\/apps\/upcart-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "disabled": true,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Pure": {
+      "page_width": 2560,
+      "edge_rounding_degree": "high",
+      "heading_font_family": "harmonia_sans_n7",
+      "heading_font_uppercase": false,
+      "heading_font_letter_spacing": 0,
+      "body_font_family": "muli_n4",
+      "menu_font_family": "harmonia_sans_n6",
+      "menu_font_uppercase": false,
+      "menu_font_scale": 100,
+      "menu_font_letter_spacing": 0,
+      "product_card_font_family": "harmonia_sans_n6",
+      "product_card_font_scale": 110,
+      "button_font_family": "muli_n7",
+      "button_font_uppercase": false,
+      "button_font_scale": 110,
+      "button_font_letter_spacing": 0,
+      "default_img_ratio": "portrait-xl",
+      "show_vendor": true,
+      "show_currency_code": false,
+      "show_color_count": false,
+      "show_background": false,
+      "enable_product_darken_background": true,
+      "enable_product_review": true,
+      "product_card_price_size": "xs",
+      "img_hover": "zoom",
+      "product_color_swatches_style": "images",
+      "desktop_button_style": "with_labels",
+      "show_button_on_hover": true,
+      "product_sale_badge_variant": "variant_1",
+      "product_sale_badge_bg": "#dbff00",
+      "product_sale_badge_color": "#2d2d2d",
+      "product_card_show_sale_amount_badge": true,
+      "product_sale_amount_badge_variant": "variant_2",
+      "product_sale_amount_badge_bg": "#dbff00",
+      "product_sale_badge_amount_color": "#2d2d2d",
+      "product_card_highlight_sale_price": true,
+      "product_highlight_sale_price_color": "#e63217",
+      "product_card_custom_badge_1_text": "Best seller",
+      "product_card_custom_badge_1_tag": "Best Sellers",
+      "product_card_custom_badge_1_bg": "#ffffff",
+      "product_card_custom_badge_1_color": "#000000",
+      "product_card_custom_badge_2_bg": "#5d54a3",
+      "cart_type": "drawer_and_page",
+      "show_sticky_cart": true,
+      "cart_status_background_color": "#dbff00",
+      "cart_status_text_color": "#383930",
+      "cart_free_shipping_bar_visible": true,
+      "cart_free_shipping_bar_threshold": 300,
+      "back_to_top_button_position": "bottom-left",
+      "social_icon_style": "solid",
+      "social_instagram_link": "https:\/\/www.instagram.com\/revellathelabel\/",
+      "social_facebook_link": "https:\/\/www.facebook.com\/profile.php?id=100081796403208",
+      "social_twitter_link": "",
+      "social_youtube_link": "",
+      "social_pinterest_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_linkedin_link": "",
+      "social_vimeo_link": "",
+      "social_flickr_link": "",
+      "social_reddit_link": "",
+      "social_email_link": "",
+      "color_swatch_option_name_variants": "Color",
+      "color_swatch_variables": "Ultramarine::#0437F2\nCherry blossom::#FFB7C5\nSunny day::yellow\/green\/blue\/\nSummertime::#F9FAFB\/#0F9D58\/#4285F4",
+      "show_old_price": true,
+      "enable_product_card_multiply": true,
+      "sections": {
+        "cart-drawer": {
+          "type": "cart-drawer",
+          "settings": {
+            "color_scheme": "custom-1",
+            "img_ratio": "square"
+          }
+        },
+        "search-sidebar": {
+          "type": "search-sidebar",
+          "settings": {
+            "color_scheme": "custom-1",
+            "img_ratio": "portrait-xl",
+            "results_per_category": 4
+          }
+        },
+        "gift-card-page": {
+          "type": "gift-card-page",
+          "settings": {
+            "color_scheme": "custom-3",
+            "logo_img": "shopify:\/\/shop_images\/PURE.png",
+            "desktop_logo_width": 100,
+            "mobile_logo_width": 100
+          }
+        }
+      },
+      "content_for_index": [
+
+      ],
+      "primary_text_color": "#141416",
+      "primary_background_color": "#FFFFFF",
+      "primary_foreground_color": "#f5f5f5",
+      "primary_border_color": "#e7e7e7",
+      "primary_button_background_color": "#141416",
+      "primary_button_text_color": "#FFFFFF",
+      "secondary_text_color": "#141416",
+      "secondary_background_color": "#f5f5f5",
+      "secondary_foreground_color": "#FFFFFF",
+      "secondary_border_color": "#d9d9d9",
+      "secondary_button_background_color": "#141416",
+      "secondary_button_text_color": "#FFFFFF",
+      "custom_1_text_color": "#FFFFFF",
+      "custom_1_background_color": "#222222",
+      "custom_1_foreground_color": "#2D2D2D",
+      "custom_1_border_color": "#494949",
+      "custom_1_button_background_color": "#dbff00",
+      "custom_1_button_text_color": "#222222",
+      "custom_2_background_color": "#dbff00",
+      "custom_2_foreground_color": "#c9ea00",
+      "custom_2_border_color": "#b5d200",
+      "custom_2_button_background_color": "#2d2d2d",
+      "custom_2_button_text_color": "#dbff00",
+      "custom_3_text_color": "#383930",
+      "custom_3_background_color": "#edece7",
+      "custom_3_foreground_color": "#e0dcd1",
+      "custom_3_border_color": "#cbc8bd",
+      "custom_3_button_background_color": "#746b5d",
+      "custom_3_button_text_color": "#edece7"
+    },
+    "Sheer": {
+      "page_width": 2800,
+      "edge_rounding_degree": "none",
+      "heading_font_family": "itc_new_baskerville_n6",
+      "heading_font_uppercase": false,
+      "heading_font_letter_spacing": 0,
+      "body_font_family": "optima_nova_n4",
+      "menu_font_family": "optima_nova_n5",
+      "menu_font_uppercase": false,
+      "menu_font_scale": 103,
+      "menu_font_letter_spacing": 0,
+      "product_card_font_family": "itc_new_baskerville_n4",
+      "product_card_font_scale": 105,
+      "button_font_family": "itc_new_baskerville_n4",
+      "button_font_uppercase": true,
+      "button_font_scale": 100,
+      "button_font_letter_spacing": 1,
+      "default_img_ratio": "portrait",
+      "show_vendor": true,
+      "show_currency_code": false,
+      "show_color_count": false,
+      "show_background": false,
+      "enable_product_darken_background": false,
+      "enable_product_review": false,
+      "product_card_price_size": "xs",
+      "img_hover": "show-secondary-media",
+      "product_color_swatches_style": "none",
+      "show_add_to_cart": false,
+      "desktop_button_style": "with_labels",
+      "show_button_on_hover": true,
+      "product_sale_badge_variant": "variant_1",
+      "product_sale_badge_bg": "#ffffff",
+      "product_sale_badge_color": "#c69229",
+      "product_card_show_sale_amount_badge": false,
+      "product_sale_amount_badge_variant": "variant_2",
+      "product_sale_amount_badge_bg": "#c69229",
+      "product_sale_badge_amount_color": "#ffffff",
+      "product_card_highlight_sale_price": true,
+      "product_highlight_sale_price_color": "#c69229",
+      "product_card_custom_badge_1_text": "Best seller",
+      "product_card_custom_badge_1_tag": "Best Sellers",
+      "product_card_custom_badge_1_bg": "#ffffff",
+      "product_card_custom_badge_1_color": "#000000",
+      "product_card_custom_badge_2_bg": "#5d54a3",
+      "cart_type": "drawer_and_page",
+      "show_sticky_cart": true,
+      "cart_status_background_color": "#6c745d",
+      "cart_status_text_color": "#f7f5f1",
+      "cart_free_shipping_bar_visible": true,
+      "cart_free_shipping_bar_threshold": 500,
+      "back_to_top_button_position": "bottom-left",
+      "social_instagram_link": "https:\/\/www.instagram.com\/revellathelabel\/",
+      "social_facebook_link": "https:\/\/www.facebook.com\/profile.php?id=100081796403208",
+      "social_twitter_link": "",
+      "social_youtube_link": "",
+      "social_pinterest_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_linkedin_link": "",
+      "social_vimeo_link": "",
+      "social_flickr_link": "",
+      "social_reddit_link": "",
+      "social_email_link": "",
+      "color_swatch_option_name_variants": "Color",
+      "color_swatch_variables": "Ultramarine::#0437F2\nCherry blossom::#FFB7C5\nSunny day::yellow\/green\/blue\/\nSummertime::#F9FAFB\/#0F9D58\/#4285F4",
+      "show_old_price": true,
+      "enable_product_card_multiply": true,
+      "sections": {
+        "cart-drawer": {
+          "type": "cart-drawer",
+          "settings": {
+            "color_scheme": "custom-3",
+            "img_ratio": "portrait-xl"
+          }
+        },
+        "search-sidebar": {
+          "type": "search-sidebar",
+          "settings": {
+            "color_scheme": "custom-1",
+            "img_ratio": "portrait-xl",
+            "results_per_category": 4
+          }
+        },
+        "gift-card-page": {
+          "type": "gift-card-page",
+          "settings": {
+            "color_scheme": "default",
+            "desktop_logo_width": 140,
+            "mobile_logo_width": 140
+          }
+        }
+      },
+      "content_for_index": [
+
+      ],
+      "primary_text_color": "#34342f",
+      "primary_background_color": "#FFFFFF",
+      "primary_foreground_color": "#f5f5f5",
+      "primary_border_color": "#e7e7e7",
+      "primary_button_background_color": "#6c745d",
+      "primary_button_text_color": "#FFFFFF",
+      "secondary_text_color": "#34342f",
+      "secondary_background_color": "#f5f5f5",
+      "secondary_foreground_color": "#FFFFFF",
+      "secondary_border_color": "#d9d9d9",
+      "secondary_button_background_color": "#6c745d",
+      "secondary_button_text_color": "#FFFFFF",
+      "custom_1_text_color": "#d9ded1",
+      "custom_1_background_color": "#222222",
+      "custom_1_foreground_color": "#2D2D2D",
+      "custom_1_border_color": "#494949",
+      "custom_1_button_background_color": "#6c745d",
+      "custom_1_button_text_color": "#d9ded1",
+      "custom_2_text_color": "#433C31",
+      "custom_2_background_color": "#f7f5f1",
+      "custom_2_foreground_color": "#f1ede8",
+      "custom_2_border_color": "#e9e3d9",
+      "custom_2_button_background_color": "#746b5d",
+      "custom_2_button_text_color": "#edece7",
+      "custom_3_text_color": "#e0dcd1",
+      "custom_3_background_color": "#383930",
+      "custom_3_foreground_color": "#45463b",
+      "custom_3_border_color": "#616255",
+      "custom_3_button_background_color": "#e0dcd1",
+      "custom_3_button_text_color": "#383930"
+    }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "@media (min-width: 2000px) {.image-banner__container {min-height: 850px; } .btn {font-size: 2rem; }}",
+      ".variant-picker-dropdown__toggle--solid {background-color: white;}",
+      ".variant-picker-dropdown__color-swatch {display: none;}"
+    ]
+  }
+}

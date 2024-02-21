@@ -1,0 +1,855 @@
+{
+  "sections": {
+    "742f54e3-44ed-4808-978b-f83400b0d688": {
+      "type": "image-banner",
+      "custom_css": [
+        ".image-banner__btn {background: #c8e812;}",
+        "@media (max-width: 768px) {.image-banner__content > * + .image-banner__btns {margin: 25rem 0 0; }}",
+        ".image-banner__caption {color: #c8e812;}",
+        ".image-banner__text {color: #212121;}",
+        "@media (min-width: 1780px) {.image-banner__content--desktop {margin-left: 15rem; }}",
+        "@media (min-width: 2000px) {.image-banner {height: 850px; }}"
+      ],
+      "settings": {
+        "display_rating": false,
+        "number_of_reviews": 451,
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 640,
+        "mobile_height": 600,
+        "desktop_img": "shopify:\/\/shop_images\/Kevin_Hart_Fuel_Your_Hustle.png",
+        "mobile_img": "shopify:\/\/shop_images\/3108f005dcc9722b80a2245e851e9c1e.png",
+        "desktop_overlay_opacity": 3,
+        "mobile_overlay_opacity": 3,
+        "caption": "",
+        "title": "Fuel Your Hustle",
+        "text": "",
+        "heading_size": "h0",
+        "body_size": "body0",
+        "desktop_content_position": "align-items:center;justify-content:flex-start;",
+        "desktop_content_align": "left",
+        "content_max_width": 664,
+        "content_spacing": 24,
+        "mobile_content_position": "align-items:flex-end;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "SHOP NOW",
+        "btn_url": "shopify:\/\/products\/starter-kit-1",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
+      }
+    },
+    "1995127b-832a-4f8a-93c0-19f2657a09f8": {
+      "type": "images-with-text",
+      "blocks": {
+        "template--16944483729657__1995127b-832a-4f8a-93c0-19f2657a09f8-16872064934d55a627-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TDAVIS_Vitahustle_135_1_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483729657__1995127b-832a-4f8a-93c0-19f2657a09f8-16872064934d55a627-0"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.container {padding-left: 0px; padding-right: 0px; }}",
+        "@media (max-width: 768px) {.container {padding-left: 0px; padding-right: 0px; } .images-with-text__content-wrapper {padding-left: 20px; padding-right: 20px; } .custom-text-item span {white-space: nowrap; } .images-with-text__content > * + * {margin: 0; } p {margin-top: 12px; margin-bottom: 12px; }}",
+        ".images-with-text__content-wrapper .h1 {color: #afc42f;}",
+        ".h1 {font-size: 8rem;}",
+        "@media (min-width: 1780px) {.images-with-text__content {margin: 0px 40px !important; }}"
+      ],
+      "settings": {
+        "display_custom_text_items": true,
+        "custom_text_1": "Fuel everyday energy",
+        "custom_icon_1": "shopify:\/\/shop_images\/fuel_icon_f959af02-d045-4be0-b9d5-d32ec1780b65.svg",
+        "custom_text_2": "Unleash mental performance",
+        "custom_icon_2": "shopify:\/\/shop_images\/mental_focus.svg",
+        "custom_text_3": "Balance gut health",
+        "custom_icon_3": "shopify:\/\/shop_images\/belly_bloat.svg",
+        "custom_text_4": "Boost overall wellness",
+        "custom_icon_4": "shopify:\/\/shop_images\/immune_system.svg",
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "content_layout": "right",
+        "image_layout": "grid",
+        "img_ratio": 0.9,
+        "rotate_images": false,
+        "icon": "none",
+        "subheading": "",
+        "heading": "Simple. Nutritious. Damn Delicious.",
+        "body": "<p>VitaHustle makes getting healthy easy with superfoods, greens & vitamins that taste great.<\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "left",
+        "desktop_content_width": 560,
+        "first_button_text": "",
+        "first_button_link": "shopify:\/\/products\/starter-kit-1",
+        "first_button_style": "link",
+        "second_button_text": "shop the one superfood",
+        "second_button_link": "shopify:\/\/products\/starter-kit-1",
+        "second_button_style": "link"
+      }
+    },
+    "9daf2c8c-caa7-483c-a188-518a029e2731": {
+      "type": "spacer",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "desktop_height": 2,
+        "mobile_height": 2,
+        "show_separator": false
+      }
+    },
+    "22e85bc4-0d24-4d7a-ab6c-33e6134cf032": {
+      "type": "text-marquee",
+      "blocks": {
+        "74a45b70-a296-494d-b792-5e813ff23fc0": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "All good. No b.s. (bad stuff)"
+          }
+        },
+        "9c03d397-e014-420a-af38-a1ef24fc2e13": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "•"
+          }
+        }
+      },
+      "block_order": [
+        "74a45b70-a296-494d-b792-5e813ff23fc0",
+        "9c03d397-e014-420a-af38-a1ef24fc2e13"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#212121",
+        "text_color": "#c8e812"
+      }
+    },
+    "532c4d4b-ef25-45de-b87b-fa703ddb3274": {
+      "type": "image-banner",
+      "custom_css": [
+        ".link {color: #212121;}",
+        ".link__text:before {background-color: #212121;}",
+        ".rating__star path {fill: white;}",
+        "@media (max-width: 768px) {.image-banner__btns {justify-content: center; } .h1 {font-size: 6.6rem; }}",
+        "@media (min-width: 1780px) {.image-banner__content--desktop {margin-left: 15rem; }}",
+        "@media (min-width: 2000px) {.image-banner {height: 950px; }}",
+        ".btn--solid {background: white;}"
+      ],
+      "settings": {
+        "display_rating": true,
+        "number_of_reviews": 415,
+        "color_scheme": "secondary",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 660,
+        "mobile_height": 940,
+        "desktop_img": "shopify:\/\/shop_images\/one_starter_kit_b7da8b6b-be4e-48f0-92f7-8135a5de5f35.png",
+        "mobile_img": "shopify:\/\/shop_images\/one_starter_kit_mobile.png",
+        "desktop_overlay_opacity": 0,
+        "mobile_overlay_opacity": 0,
+        "caption": "",
+        "title": "86 superfoods<br>& greens",
+        "text": "<p>The ultimate all-in-one shake with 86 superfoods & nutrients, probiotics, protein and adaptogens.  <strong>Free shaker bottle & recipe book <\/strong>when you subscribe.<br\/><\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:center;justify-content:flex-start;",
+        "desktop_content_align": "left",
+        "content_max_width": 568,
+        "content_spacing": 40,
+        "mobile_content_position": "align-items:flex-end;justify-content:center;",
+        "mobile_content_align": "left",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "shop the kit",
+        "btn_url": "shopify:\/\/products\/starter-kit-1",
+        "btn_style": "solid",
+        "extra_btn_text": "SHOP ALL",
+        "extra_btn_url": "shopify:\/\/collections\/all",
+        "extra_btn_style": "link"
+      }
+    },
+    "e8c227da-f68b-49ef-b52f-4943a6979d80": {
+      "type": "text-marquee",
+      "blocks": {
+        "bc229b10-068c-4113-9a5b-c8c8260d1556": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Gluten Free"
+          }
+        },
+        "a7a14bad-915e-4746-b5e6-14677aebd413": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "•"
+          }
+        },
+        "32d4188b-006c-4a0d-aec1-344c9f0a41f4": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Dairy Free"
+          }
+        },
+        "626a9cd1-b742-487e-8b09-01b118b8b550": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "•"
+          }
+        },
+        "14095882-cc6b-4ad7-abb1-2c358f103894": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Soy Free"
+          }
+        },
+        "b2b5681c-d808-41e4-8f63-8e276944662a": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "•"
+          }
+        },
+        "e6c72c64-5cc6-47ee-906a-57b55b3c94ff": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Low Sugar"
+          }
+        },
+        "357b6283-52f5-4aa7-98ba-4835bac10323": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "•"
+          }
+        },
+        "b84fdc9b-9533-4f58-bfd0-d5b161f3ac79": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "No artificial flavors"
+          }
+        },
+        "d8eeca8b-6292-479c-bf7b-1742d5c237cd": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "•"
+          }
+        }
+      },
+      "block_order": [
+        "bc229b10-068c-4113-9a5b-c8c8260d1556",
+        "a7a14bad-915e-4746-b5e6-14677aebd413",
+        "32d4188b-006c-4a0d-aec1-344c9f0a41f4",
+        "626a9cd1-b742-487e-8b09-01b118b8b550",
+        "14095882-cc6b-4ad7-abb1-2c358f103894",
+        "b2b5681c-d808-41e4-8f63-8e276944662a",
+        "e6c72c64-5cc6-47ee-906a-57b55b3c94ff",
+        "357b6283-52f5-4aa7-98ba-4835bac10323",
+        "b84fdc9b-9533-4f58-bfd0-d5b161f3ac79",
+        "d8eeca8b-6292-479c-bf7b-1742d5c237cd"
+      ],
+      "settings": {
+        "bg_color": "#212121",
+        "text_color": "#c8e812"
+      }
+    },
+    "bf9cb432-647e-4d8a-95e9-e0e83242d93a": {
+      "type": "collage",
+      "blocks": {
+        "template--16729789989105__bf9cb432-647e-4d8a-95e9-e0e83242d93a-1681819567e3686a56-2": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "custom-1",
+            "desktop_columns": 2,
+            "desktop_rows": 2,
+            "collection": "vitahustle-one-superfoods",
+            "heading_size": "h1",
+            "show_product_count": false,
+            "image": "shopify:\/\/shop_images\/hi_res-36-Inov8_Brands_r1_9946.png",
+            "overlay_opacity": 5,
+            "link_text": "Shop Now",
+            "content_position": "bottom-left"
+          }
+        },
+        "1c99eb1a-7f85-4334-94e3-de1571931acd": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "custom-1",
+            "desktop_columns": 2,
+            "desktop_rows": 2,
+            "collection": "electrolyte-hydration",
+            "heading_size": "h1",
+            "show_product_count": false,
+            "image": "shopify:\/\/shop_images\/hi_res-fc-Inov8_Brands_r1_095A0003.png",
+            "overlay_opacity": 0,
+            "link_text": "Shop Now",
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16729789989105__bf9cb432-647e-4d8a-95e9-e0e83242d93a-1681819567e3686a56-2",
+        "1c99eb1a-7f85-4334-94e3-de1571931acd"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".container {padding-right: 0px; padding-left: 0px;}",
+        ".collection-card__count {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 50,
+        "section_spacing_bottom": 0,
+        "title": "SHOp by category",
+        "heading_size": "h6",
+        "alignment": "center",
+        "columns": 4,
+        "desktop_row_height": 400,
+        "mobile_row_height": 500,
+        "desktop_space_between_cards": 0,
+        "mobile_space_between_cards": 0,
+        "enable_carousel_on_mobile": false
+      }
+    },
+    "3cb032ab-e34c-41d9-8f9e-7d0ca704bd9c": {
+      "type": "collage",
+      "disabled": true,
+      "custom_css": [
+        ".container {padding-right: 0px; padding-left: 0px;}",
+        ".collection-card__count {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "title": "",
+        "heading_size": "h5",
+        "alignment": "left",
+        "columns": 3,
+        "desktop_row_height": 340,
+        "mobile_row_height": 500,
+        "desktop_space_between_cards": 16,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false
+      }
+    },
+    "c942b19e-18b9-4b1c-b771-c503083b7cd6": {
+      "type": "image-banner",
+      "disabled": true,
+      "custom_css": [
+        ".image-banner__btn {background: #c8e812;}",
+        ".image-banner__btns {width: 73%;}",
+        ".image-banner__media {transform: scale(1); transition: -webkit-transform 0.8s cubic-bezier(0, 0.6, 1, 1), -webkit-transform 0.8s cubic-bezier(0, 0.6, 1, 1), transform 0.8s cubic-bezier(0, 0.6, 1, 1);}",
+        ".image-banner__container:hover .image-banner__media {transition: -webkit-transform 0.8s cubic-bezier(0, 0.6, 1, 1), -webkit-transform 0.8s cubic-bezier(0, 0.6, 1, 1), transform 0.8s cubic-bezier(0, 0.6, 1, 1); -webkit-transform: scale(1.05); transform: scale(1.05);}"
+      ],
+      "settings": {
+        "display_rating": false,
+        "number_of_reviews": 0,
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 560,
+        "mobile_height": 480,
+        "desktop_img": "shopify:\/\/shop_images\/2_New-_hi_res-3b-Inov8_Brands_r1_9966_copy.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/Monile_New-_hi_res-3b-Inov8_Brands_r1_9966_copy.png",
+        "desktop_overlay_opacity": 10,
+        "mobile_overlay_opacity": 10,
+        "caption": "",
+        "title": "GUMMY VITAMINS",
+        "text": "",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:flex-end;justify-content:flex-start;",
+        "desktop_content_align": "left",
+        "content_max_width": 568,
+        "content_spacing": 0,
+        "mobile_content_position": "align-items:flex-end;justify-content:center;",
+        "mobile_content_align": "left",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "Shop Now",
+        "btn_url": "shopify:\/\/collections\/gummy-vitamins",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
+      }
+    },
+    "bb712ca8-4582-42a1-8174-864f36d2fbc6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16944483729657__bb712ca8-4582-42a1-8174-864f36d2fbc6-1687540143e183581f-2": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Healthy Meets Gummylicious",
+            "heading_size": "h1"
+          }
+        },
+        "template--16944483729657__bb712ca8-4582-42a1-8174-864f36d2fbc6-1687540143e183581f-3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Low sugar vitamin gummies pack a punch with multiple benefits <br\/><\/p>",
+            "text_2": "",
+            "text_3": "",
+            "body_size": "body3"
+          }
+        },
+        "template--16944483729657__bb712ca8-4582-42a1-8174-864f36d2fbc6-1687540143e183581f-4": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "btn_text": "SHOP  now",
+            "btn_url": "shopify:\/\/collections\/gummy-vitamins",
+            "btn_style": "solid",
+            "extra_btn_text": "",
+            "extra_btn_url": "shopify:\/\/collections\/gummy-vitamins",
+            "extra_btn_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483729657__bb712ca8-4582-42a1-8174-864f36d2fbc6-1687540143e183581f-2",
+        "template--16944483729657__bb712ca8-4582-42a1-8174-864f36d2fbc6-1687540143e183581f-3",
+        "template--16944483729657__bb712ca8-4582-42a1-8174-864f36d2fbc6-1687540143e183581f-4"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "span {color: #afc42f;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "enable_background_around_container": false,
+        "container_size": "page-width",
+        "section_spacing_top": 40,
+        "section_spacing_bottom": 0,
+        "content_align": "center"
+      }
+    },
+    "d7721d58-d672-4dcd-86f7-d5f284dafc83": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [
+        ".product-card__info {display: none;}",
+        ".collection-card {display: none;}",
+        ".product-card__btns {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "section_layout": "carousel-overflow",
+        "title": "",
+        "heading_size": "h5",
+        "alignment": "center",
+        "collection": "gummy-vitamins",
+        "featured_products": [
+
+        ],
+        "img_ratio": "default",
+        "product_card_align": "left",
+        "cards_to_show": 16,
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 12,
+        "mobile_space_between_cards": 12,
+        "enable_carousel_on_mobile": true,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_navigation_on_hover": true
+      }
+    },
+    "c13864c3-3f91-44d0-964b-892da9cf2acb": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".collection-card {display: none;}",
+        ".product-card-sale-amount-badge {display: none;}",
+        "@media (max-width: 768px) {.btn--solid {padding: 1rem 2rem !important; } .product-card__btn-label-text {display: block; } .product-card__actions {justify-content: center; }}",
+        ".product-card__btn-icon {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 60,
+        "section_spacing_bottom": 60,
+        "section_layout": "carousel",
+        "title": "Kevin's Favorites",
+        "heading_size": "h5",
+        "alignment": "center",
+        "collection": "kevs-faves",
+        "featured_products": [
+
+        ],
+        "img_ratio": "square",
+        "product_card_align": "center",
+        "cards_to_show": 16,
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 32,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": true,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_navigation_on_hover": true
+      }
+    },
+    "1dcae0b1-c889-4b51-8c51-9d068ebbc24a": {
+      "type": "testimonials",
+      "blocks": {
+        "template--16944483729657__1dcae0b1-c889-4b51-8c51-9d068ebbc24a-16878848492a523ce7-0": {
+          "type": "quote",
+          "settings": {
+            "text": "Both flavors are delicious and have helped greatly with my gut health. I only need this as a supplement now versus multiple powders and pills. The price is good and my husband is even on board!",
+            "author_name": "Danielle",
+            "author_image": "shopify:\/\/shop_images\/Screen_Shot_2023-05-02_at_11.27.53_AM.png",
+            "rating": 5,
+            "link": ""
+          }
+        },
+        "template--16944483729657__1dcae0b1-c889-4b51-8c51-9d068ebbc24a-16878848492a523ce7-1": {
+          "type": "quote",
+          "settings": {
+            "text": "Awesome stuff! Definitely can feel a difference after just a couple days.   Thanks for putting in the work to get this out there.",
+            "author_name": "Justin",
+            "author_image": "shopify:\/\/shop_images\/Group_628.png",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16944483729657__1dcae0b1-c889-4b51-8c51-9d068ebbc24a-16878848492a523ce7-2": {
+          "type": "quote",
+          "settings": {
+            "text": "This is the “One” for me. 😃 The chocolate & vanilla taste really good . I take 2 as a meal replacement. I feel full. I’m energetic. My focus is so much better. I overall just feel great all day.",
+            "author_name": "Cindy",
+            "author_image": "shopify:\/\/shop_images\/download_5_-min.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "82bf245f-1311-4714-a225-e07672268ba2": {
+          "type": "quote",
+          "settings": {
+            "text": "This is the best tasting and textured protein powder out of all I've ever tried! I love that it's not JUST protein powder, it has lots of other health benefits too! You can cut out a few other of your supplements when using this, which saves you money!",
+            "author_name": "Jennifer",
+            "author_image": "shopify:\/\/shop_images\/ATX_2902-min.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "a82193f2-e2b8-488d-93b9-e7af28759056": {
+          "type": "quote",
+          "settings": {
+            "text": "I'm impressed! VitaHustle ONE tastes decent with just water, but I prefer to make a meal replacement out of it and smoothiefy it. My hunger is satiated for hours afterward, and my energy levels stay constant.",
+            "author_name": "Kort",
+            "author_image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-08-07_at_1.43.27_PM.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "4ae01d4b-42c5-4fc8-946c-81df1737e19b": {
+          "type": "quote",
+          "settings": {
+            "text": "Really can't beat this...I've tried several and this is the best on the market. It tastes great, has solid ingredients, and the price for 30 day supply to me, is on Point!!",
+            "author_name": "David",
+            "author_image": "shopify:\/\/shop_images\/download.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "2c4e24b3-db20-4ec1-a29e-0fdec7e4009e": {
+          "type": "quote",
+          "settings": {
+            "text": "I have just recently started counting macros and the vita hustle one super food drink fits into my plan very nice. It gives me a good amount of protein without a lot of the chemical junk but I don’t want or need.",
+            "author_name": "Lee",
+            "author_image": "shopify:\/\/shop_images\/Lee-min.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "8a9c2342-7041-4f52-bfe4-9a75aa68d5c1": {
+          "type": "quote",
+          "settings": {
+            "text": "I’ve been drinking Vita-Hustle for almost 2 months & it’s the best decision I’ve made when it comes to health! It tastes delicious & i feel so energized & have even noticed a difference in my overall health.10\/10 🤟🏼",
+            "author_name": "Eli",
+            "author_image": "shopify:\/\/shop_images\/download_7_-min.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "86a931f4-bb23-4031-889e-37a669ed9063": {
+          "type": "quote",
+          "settings": {
+            "text": "This plant-based protein shake is a delicious! It helps digestion, while delivering a boost of energy when I’m active. It’s not only great as a meal replacement, but an awesome addition to my immunity!",
+            "author_name": "M.",
+            "author_image": "shopify:\/\/shop_images\/download_a5447f69-c661-4a42-926e-f7cb9d6ad26c.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483729657__1dcae0b1-c889-4b51-8c51-9d068ebbc24a-16878848492a523ce7-0",
+        "template--16944483729657__1dcae0b1-c889-4b51-8c51-9d068ebbc24a-16878848492a523ce7-1",
+        "template--16944483729657__1dcae0b1-c889-4b51-8c51-9d068ebbc24a-16878848492a523ce7-2",
+        "82bf245f-1311-4714-a225-e07672268ba2",
+        "a82193f2-e2b8-488d-93b9-e7af28759056",
+        "4ae01d4b-42c5-4fc8-946c-81df1737e19b",
+        "2c4e24b3-db20-4ec1-a29e-0fdec7e4009e",
+        "8a9c2342-7041-4f52-bfe4-9a75aa68d5c1",
+        "86a931f4-bb23-4031-889e-37a669ed9063"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "section_layout": "bottom-quotes",
+        "cards_per_slide": 3,
+        "quote_alignment": "left",
+        "caption": "Don't Take It From Us",
+        "title": "VitaHustle Reviews",
+        "text": "",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "btn_text": "Read More Reviews",
+        "btn_url": "shopify:\/\/pages\/vitahustle-reviews",
+        "enable_autoplay": false,
+        "autoplay_interval": 3
+      }
+    },
+    "938f4472-bac4-4959-bcff-bb172425d6f4": {
+      "type": "images-with-text",
+      "blocks": {
+        "template--16944483729657__938f4472-bac4-4959-bcff-bb172425d6f4-1687535103d8a007bf-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2d562d0665298e309a6ce133c5d3dd9d.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483729657__938f4472-bac4-4959-bcff-bb172425d6f4-1687535103d8a007bf-0"
+      ],
+      "custom_css": [
+        ".images-with-text__text {color: white;}",
+        ".images-with-text__image-list-item-media {border-radius: 20px;}",
+        ".images-with-text__text h6 {font-family: \"Sohene\"; color: #afc42f;}"
+      ],
+      "settings": {
+        "display_custom_text_items": false,
+        "custom_text_1": "",
+        "custom_text_2": "",
+        "custom_text_3": "",
+        "custom_text_4": "",
+        "color_scheme": "custom-1",
+        "container_size": "large",
+        "section_spacing_top": 70,
+        "section_spacing_bottom": 70,
+        "content_layout": "left",
+        "image_layout": "grid",
+        "img_ratio": 1,
+        "rotate_images": false,
+        "icon": "none",
+        "subheading": "",
+        "heading": "powerhouse founders",
+        "body": "<h6>Kevin HART & RON EVERLINE<\/h6><p>Meet the powerhouse team behind it all: Kevin Hart and celebrity trainer & business partner Ron Everline (\"Boss\"). As founders and visionaries, they've harnessed their passion for greatness to create VitaHustle.<\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "desktop_content_width": 500,
+        "first_button_text": "Learn More",
+        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_style": "outline",
+        "second_button_text": "",
+        "second_button_link": "",
+        "second_button_style": "outline"
+      }
+    },
+    "7feb0a9d-bd49-46bd-b85b-d02e2880b0c5": {
+      "type": "instagram",
+      "blocks": {
+        "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-0": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vitahustle_instagram_1.png",
+            "link": "https:\/\/instagram.com\/getvitahustle",
+            "icon": "instagram"
+          }
+        },
+        "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-1": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vitahustle_instagram_2.png",
+            "link": "https:\/\/instagram.com\/getvitahustle",
+            "icon": "instagram"
+          }
+        },
+        "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-2": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vitahustle_instagram_4.png",
+            "link": "https:\/\/instagram.com\/getvitahustle",
+            "icon": "instagram"
+          }
+        },
+        "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-3": {
+          "type": "post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vitahustle_instagram_3.png",
+            "link": "https:\/\/instagram.com\/getvitahustle",
+            "icon": "instagram"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-0",
+        "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-1",
+        "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-2",
+        "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-3"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".instagram__image-wrapper {border-radius: 15px;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "FOLLOW US @getvitahustle",
+        "text": "",
+        "heading_size": "h7",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "img_ratio": 1,
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 16,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "d80b875a-9a8a-4e72-a0cf-8e6bb77e7726": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-1": {
+          "type": "title",
+          "settings": {
+            "title": "STAY IN TOUCH",
+            "heading_size": "h1"
+          }
+        },
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-2": {
+          "type": "text",
+          "settings": {
+            "text": "Get Kev's healthy hacks, product drops and exclusive discounts.",
+            "body_size": "body3"
+          }
+        },
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-3": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-1",
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-2",
+        "template--16944483729657__d80b875a-9a8a-4e72-a0cf-8e6bb77e7726-1687206011b7a088cb-3"
+      ],
+      "custom_css": [
+        ".newsletter__input {border-radius: 100px;}",
+        ".newsletter__input-btn:hover {background: #212121;}",
+        ".h1 {white-space: nowrap;}",
+        ".newsletter__input-btn {flex: 0; margin-left: -25%;}",
+        ".newsletter__content--desktop {display: flex; align-items: center; gap: 40px; padding: 3rem;}",
+        ".field {width: 100%;}",
+        ".newsletter__content > * + .newsletter__text {width: 70%;}",
+        ".newsletter__field {flex-wrap: nowrap;}"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 280,
+        "mobile_height": 420,
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "left",
+        "content_max_width": 1324,
+        "content_spacing": 16,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
+    },
+    "16912964631826ebf9": {
+      "type": "apps",
+      "blocks": {
+        "c22171f7-451b-49d6-8f2f-9a35a49e0eb7": {
+          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "9s4l44zl6d0z9"
+          }
+        }
+      },
+      "block_order": [
+        "c22171f7-451b-49d6-8f2f-9a35a49e0eb7"
+      ],
+      "custom_css": [
+        ".tolstoy-carousel-title {text-transform: uppercase; font-family: \"Sohene\" !important; font-size: 2rem !important;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 20,
+        "section_spacing_bottom": 48,
+        "custom_liquid": ""
+      }
+    }
+  },
+  "order": [
+    "742f54e3-44ed-4808-978b-f83400b0d688",
+    "1995127b-832a-4f8a-93c0-19f2657a09f8",
+    "9daf2c8c-caa7-483c-a188-518a029e2731",
+    "22e85bc4-0d24-4d7a-ab6c-33e6134cf032",
+    "532c4d4b-ef25-45de-b87b-fa703ddb3274",
+    "e8c227da-f68b-49ef-b52f-4943a6979d80",
+    "bf9cb432-647e-4d8a-95e9-e0e83242d93a",
+    "3cb032ab-e34c-41d9-8f9e-7d0ca704bd9c",
+    "c942b19e-18b9-4b1c-b771-c503083b7cd6",
+    "bb712ca8-4582-42a1-8174-864f36d2fbc6",
+    "d7721d58-d672-4dcd-86f7-d5f284dafc83",
+    "c13864c3-3f91-44d0-964b-892da9cf2acb",
+    "1dcae0b1-c889-4b51-8c51-9d068ebbc24a",
+    "938f4472-bac4-4959-bcff-bb172425d6f4",
+    "7feb0a9d-bd49-46bd-b85b-d02e2880b0c5",
+    "d80b875a-9a8a-4e72-a0cf-8e6bb77e7726",
+    "16912964631826ebf9"
+  ]
+}

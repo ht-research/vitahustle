@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "custom_css": [
+        "h5 {font-family: \"Druk Web\"; font-size: 6rem; line-height: 1;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "medium",
+        "section_spacing_top": 50,
+        "section_spacing_bottom": 50,
+        "show_heading": true
+      }
+    }
+  },
+  "order": [
+    "page"
+  ]
+}

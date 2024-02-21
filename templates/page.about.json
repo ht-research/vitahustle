@@ -1,0 +1,735 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "show_heading": false
+      }
+    },
+    "b67336fe-a4be-4970-98a1-ee09b95bde87": {
+      "type": "image-banner",
+      "custom_css": [
+        ".image-banner__caption {color: #c8e812;}",
+        ".image-banner__btn {background: #c8e812;}",
+        "@media (min-width: 1780px) {.image-banner__content--desktop {margin-right: 15rem; }}"
+      ],
+      "settings": {
+        "display_rating": false,
+        "number_of_reviews": 0,
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 640,
+        "mobile_height": 660,
+        "desktop_img": "shopify:\/\/shop_images\/733bc0244280d4caa043cbd7e984ee0a.png",
+        "mobile_img": "shopify:\/\/shop_images\/9413956213b179f5e210e6c5bf416482.png",
+        "desktop_overlay_opacity": 0,
+        "mobile_overlay_opacity": 0,
+        "caption": "",
+        "title": "DISRUPTING THE GAME",
+        "text": "",
+        "heading_size": "h0",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:center;justify-content:flex-end;",
+        "desktop_content_align": "left",
+        "content_max_width": 528,
+        "content_spacing": 24,
+        "mobile_content_position": "align-items:flex-end;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "Shop Now",
+        "btn_url": "shopify:\/\/collections\/all",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
+      }
+    },
+    "a4a1fdc6-03c6-4075-84cf-9f9dc163d005": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16952733040889__a4a1fdc6-03c6-4075-84cf-9f9dc163d005-1688578536465a82d7-3": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>SHORT Placeholder <br\/>Headline Goes Here<\/h1>",
+            "text_2": "<p>Welcome to Vitahustle where we’re taking superfood wellness to the next level. Get ready to meet the powerhouse team behind it all: Kevin Hart and trainer Ron “Boss” Everline. As founders and visionaries, they’ve harnessed their passion for greatness to create VitaHustle. These guys know what it takes to hustle hard and live life to the fullest.<br\/><\/p>",
+            "text_3": "",
+            "body_size": "body3"
+          }
+        }
+      },
+      "block_order": [
+        "template--16952733040889__a4a1fdc6-03c6-4075-84cf-9f9dc163d005-1688578536465a82d7-3"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h1 {font-family: \"Druk Web\"; line-height: 1em;}"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": true,
+        "container_size": "medium",
+        "section_spacing_top": 20,
+        "section_spacing_bottom": 20,
+        "content_align": "left"
+      }
+    },
+    "875c08a6-f445-4b16-b6eb-f47a7d1d1bc3": {
+      "type": "images-with-text",
+      "blocks": {
+        "template--16952733040889__875c08a6-f445-4b16-b6eb-f47a7d1d1bc3-168857859007781a58-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled-2_98037c53-7251-4035-bff0-f0723a2103a6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--16952733040889__875c08a6-f445-4b16-b6eb-f47a7d1d1bc3-168857859007781a58-0"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".images-with-text__image-list-item-media {border-radius: 20px;}"
+      ],
+      "settings": {
+        "display_custom_text_items": true,
+        "custom_text_1": "KEVIN HART",
+        "custom_icon_1": "shopify:\/\/shop_images\/kevin_hart_sign.svg",
+        "custom_text_2": "",
+        "custom_text_3": "",
+        "custom_text_4": "",
+        "color_scheme": "secondary",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 0,
+        "content_layout": "left",
+        "image_layout": "collage",
+        "img_ratio": 0.7,
+        "rotate_images": false,
+        "icon": "none",
+        "custom_icon_image": "shopify:\/\/shop_images\/vita_quote_icon_c0351634-d394-4a5d-848f-260e3a5907fa.svg",
+        "subheading": "",
+        "heading": "Making a Difference",
+        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "left",
+        "desktop_content_width": 480,
+        "first_button_text": "",
+        "first_button_link": "",
+        "first_button_style": "solid",
+        "second_button_text": "",
+        "second_button_link": "",
+        "second_button_style": "solid"
+      }
+    },
+    "2e5e245d-964e-4843-92ef-ac5aeb0b1f47": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16961303019769__2e5e245d-964e-4843-92ef-ac5aeb0b1f47-icon-1": {
+          "type": "icon",
+          "settings": {
+            "icon": "none",
+            "custom_icon_image": "shopify:\/\/shop_images\/vita_quote_icon_c0351634-d394-4a5d-848f-260e3a5907fa.svg"
+          }
+        },
+        "template--16961303019769__2e5e245d-964e-4843-92ef-ac5aeb0b1f47-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "MAKING A DIFFERENCE",
+            "heading_size": "h1"
+          }
+        },
+        "template--16961303019769__2e5e245d-964e-4843-92ef-ac5aeb0b1f47-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products.<\/p>",
+            "text_2": "",
+            "text_3": "",
+            "body_size": "body3"
+          }
+        }
+      },
+      "block_order": [
+        "template--16961303019769__2e5e245d-964e-4843-92ef-ac5aeb0b1f47-icon-1",
+        "template--16961303019769__2e5e245d-964e-4843-92ef-ac5aeb0b1f47-heading-1",
+        "template--16961303019769__2e5e245d-964e-4843-92ef-ac5aeb0b1f47-text-1"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "enable_background_around_container": true,
+        "container_size": "xsmall",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "content_align": "center"
+      }
+    },
+    "b802e723-4747-4426-98ac-8ff5ca2ef4d1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16961303019769__b802e723-4747-4426-98ac-8ff5ca2ef4d1-icon-1": {
+          "type": "icon",
+          "settings": {
+            "icon": "none",
+            "custom_icon_image": "shopify:\/\/shop_images\/kevin_hart_sign.svg"
+          }
+        },
+        "171a36d6-2f2f-41af-83a2-0c1735f69418": {
+          "type": "heading",
+          "settings": {
+            "title": "Kevin Hart",
+            "heading_size": "h7"
+          }
+        }
+      },
+      "block_order": [
+        "template--16961303019769__b802e723-4747-4426-98ac-8ff5ca2ef4d1-icon-1",
+        "171a36d6-2f2f-41af-83a2-0c1735f69418"
+      ],
+      "custom_css": [
+        ".rich-text__icon {width: 10rem; height: 10rem;}",
+        ".rich-text__container {padding-top: 0rem;}"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "enable_background_around_container": true,
+        "container_size": "page-width",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "content_align": "center"
+      }
+    },
+    "a1e4a258-4b20-4180-8d70-419f0662b9ce": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16952733040889__a1e4a258-4b20-4180-8d70-419f0662b9ce-1688578536465a82d7-2": {
+          "type": "heading",
+          "settings": {
+            "title": "Are you ready?",
+            "heading_size": "h1"
+          }
+        },
+        "template--16952733040889__a1e4a258-4b20-4180-8d70-419f0662b9ce-1688578536465a82d7-3": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_2": "",
+            "text_3": "",
+            "body_size": "body3"
+          }
+        },
+        "template--16952733040889__a1e4a258-4b20-4180-8d70-419f0662b9ce-1688578536465a82d7-4": {
+          "type": "buttons",
+          "settings": {
+            "btn_text": "let's do this",
+            "btn_url": "shopify:\/\/collections\/all",
+            "btn_style": "solid",
+            "extra_btn_text": "",
+            "extra_btn_url": "",
+            "extra_btn_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16952733040889__a1e4a258-4b20-4180-8d70-419f0662b9ce-1688578536465a82d7-2",
+        "template--16952733040889__a1e4a258-4b20-4180-8d70-419f0662b9ce-1688578536465a82d7-3",
+        "template--16952733040889__a1e4a258-4b20-4180-8d70-419f0662b9ce-1688578536465a82d7-4"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": true,
+        "container_size": "page-width",
+        "section_spacing_top": 20,
+        "section_spacing_bottom": 20,
+        "content_align": "center"
+      }
+    },
+    "d1a83756-ec98-462f-9c24-c2ecd16e4803": {
+      "type": "text-marquee",
+      "blocks": {
+        "a7cc7c5c-e46a-4c8a-a162-59396d7456ed": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "ALL GOOD, NO B.S"
+          }
+        },
+        "8a9b65ed-d64a-4ea6-997d-3ac55e95a57d": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "•"
+          }
+        }
+      },
+      "block_order": [
+        "a7cc7c5c-e46a-4c8a-a162-59396d7456ed",
+        "8a9b65ed-d64a-4ea6-997d-3ac55e95a57d"
+      ],
+      "settings": {
+        "bg_color": "#212121",
+        "text_color": "#c8e812"
+      }
+    },
+    "5b634834-c164-4703-8cb4-671f1d743258": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16952733040889__5b634834-c164-4703-8cb4-671f1d743258-168858364004baaf01-2": {
+          "type": "heading",
+          "settings": {
+            "title": "we don't mess around when crafting the best",
+            "heading_size": "h1"
+          }
+        },
+        "template--16952733040889__5b634834-c164-4703-8cb4-671f1d743258-168858364004baaf01-3": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_2": "",
+            "text_3": "",
+            "body_size": "body3"
+          }
+        }
+      },
+      "block_order": [
+        "template--16952733040889__5b634834-c164-4703-8cb4-671f1d743258-168858364004baaf01-2",
+        "template--16952733040889__5b634834-c164-4703-8cb4-671f1d743258-168858364004baaf01-3"
+      ],
+      "custom_css": [
+        ".h1 {color: #afc42f;}",
+        "@media (max-width: 768px) {.h1 {text-align: left; font-size: 5.5rem; } .rich-text__text {text-align: left; }}"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "enable_background_around_container": true,
+        "container_size": "xsmall",
+        "section_spacing_top": 20,
+        "section_spacing_bottom": 0,
+        "content_align": "center"
+      }
+    },
+    "098c60b0-ebf6-49d6-bb05-34f68df8f323": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16952733040889__098c60b0-ebf6-49d6-bb05-34f68df8f323-16885784903c034ad8-0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/soy_free.svg",
+            "icon_size": 64,
+            "title": "Soy Free",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16952733040889__098c60b0-ebf6-49d6-bb05-34f68df8f323-16885784903c034ad8-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/dairy_free.svg",
+            "icon_size": 64,
+            "title": "Dairy Free",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16952733040889__098c60b0-ebf6-49d6-bb05-34f68df8f323-16885784903c034ad8-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/gluten_free.svg",
+            "icon_size": 64,
+            "title": "Gluten Free",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "212c9eac-c45b-49a7-a08e-ca0b16183b57": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/non_gmo.svg",
+            "icon_size": 64,
+            "title": "NON GMO",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "1f7ef067-e25a-4c20-b7fb-205aed840034": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/no_artificial_ingredients.svg",
+            "icon_size": 64,
+            "title": "No Artificial Ingredients",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "a124f0f4-6f05-435a-9ede-d00895918e42": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/no_fillers.svg",
+            "icon_size": 64,
+            "title": "No Fillers",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16952733040889__098c60b0-ebf6-49d6-bb05-34f68df8f323-16885784903c034ad8-0",
+        "template--16952733040889__098c60b0-ebf6-49d6-bb05-34f68df8f323-16885784903c034ad8-1",
+        "template--16952733040889__098c60b0-ebf6-49d6-bb05-34f68df8f323-16885784903c034ad8-2",
+        "212c9eac-c45b-49a7-a08e-ca0b16183b57",
+        "1f7ef067-e25a-4c20-b7fb-205aed840034",
+        "a124f0f4-6f05-435a-9ede-d00895918e42"
+      ],
+      "custom_css": [
+        ".h7 {font-family: \"FK Grotesk Bold\"; text-transform: capitalize;}",
+        "@media (max-width: 768px) {.multicolumn__column {padding: 0; }}",
+        "@media (max-width: 768px) {.multicolumn__column {padding: 0; }}",
+        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 3 !important; }"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "container_size": "medium",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 48,
+        "title": "",
+        "text": "",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 6,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 10,
+        "content_spacing": 10,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "4db38f2b-96f4-41fd-9f37-6d623e647621": {
+      "type": "testimonials",
+      "blocks": {
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-0": {
+          "type": "quote",
+          "settings": {
+            "text": "I'm definitely reordering! This blend is a perfect replacement for the shake I have in place. It additionally saves me getting separate pre & probiotic supplements: game changer!",
+            "author_name": "Mercedes",
+            "author_image": "shopify:\/\/shop_images\/download_1.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-1": {
+          "type": "quote",
+          "settings": {
+            "text": "I was not sure what to expect with this, but it has become a part of my daily wellness routine and it’s soooo worth the money! It actually tastes good just by itself with oatmilk, not like chalk like other protein powders. GO GET IT!",
+            "author_name": "Jessica",
+            "author_image": "shopify:\/\/shop_images\/download_9.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-2": {
+          "type": "quote",
+          "settings": {
+            "text": "I am THE worst at getting breakfast in my belly. This shake is packed with plant based protein, fiber, pre and probiotics and vitamins and minerals. It's not chalky and I don't get that icky bloat.\n\nBest of all, it's available at walmart!",
+            "author_name": "@themermaidyogi",
+            "author_image": "shopify:\/\/shop_images\/themermaidyogi.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-3": {
+          "type": "quote",
+          "settings": {
+            "text": "Man I'm a big fan of Kevin Hart, so I gave vitahustle a shot, and man I'm loving it like the McDonald's commercial! Trying to get my friends to try! I'll just let them see my results!",
+            "author_name": "Shelton",
+            "author_image": "shopify:\/\/shop_images\/Shelton.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-4": {
+          "type": "quote",
+          "settings": {
+            "text": "I drink the chocolate with almond milk. It’s delicious and I look forward to it every day as part of my morning routine! After 2 months, I feel great, much better than I did before starting.",
+            "author_name": "Angelica",
+            "author_image": "shopify:\/\/shop_images\/Angelika.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-5": {
+          "type": "quote",
+          "settings": {
+            "text": "Definitely can feel a difference after just a couple days. Awesome stuff!  Thanks for putting in the work to get this out there.",
+            "author_name": "Justin",
+            "author_image": "shopify:\/\/shop_images\/Justin.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "45c4c886-3768-4763-81d0-fadad1731dc0": {
+          "type": "quote",
+          "settings": {
+            "text": "Both flavors of the superfood powder are delicious and have helped greatly with my gastrointestinal health. I only need this as a supplement now versus multiple powders and pills. The price is good and my husband is even on board.",
+            "author_name": "Daniella",
+            "author_image": "shopify:\/\/shop_images\/download_3.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "4223e38d-7209-49c9-aa3a-e0d71b0d095c": {
+          "type": "quote",
+          "settings": {
+            "text": "I have tried about 10 different superfood protein shakes and finally found the One for me! It tastes great, isn't gritty, has the perfect mix of all the things that I need.",
+            "author_name": "Misty",
+            "author_image": "shopify:\/\/shop_images\/download_66c54556-053e-4274-8a6e-55b689f38d76.jpg",
+            "rating": 4.5,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-0",
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-1",
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-2",
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-3",
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-4",
+        "template--16952733040889__4db38f2b-96f4-41fd-9f37-6d623e647621-168857878921f2f14a-5",
+        "45c4c886-3768-4763-81d0-fadad1731dc0",
+        "4223e38d-7209-49c9-aa3a-e0d71b0d095c"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.testimonials__content {text-align: left; }}"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": true,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "section_layout": "left-quotes",
+        "cards_per_slide": 2,
+        "quote_alignment": "left",
+        "image": "shopify:\/\/shop_images\/ATX_2719_1.png",
+        "caption": "",
+        "title": "See what they're saying!",
+        "text": "<p>Our customers have leveled up their game, crushed their goals, and unlocked their full potential.<br\/><\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "btn_text": "see more reviews",
+        "btn_url": "shopify:\/\/pages\/vitahustle-reviews",
+        "enable_autoplay": false,
+        "autoplay_interval": 3
+      }
+    },
+    "84066e67-828a-4e23-a2f8-d5c24a7c639c": {
+      "type": "collage",
+      "blocks": {
+        "template--16952733040889__84066e67-828a-4e23-a2f8-d5c24a7c639c-168858517005bf7887-1": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/DSCF1772.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Shop All",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/collections\/all",
+            "content_position": "bottom-left"
+          }
+        },
+        "template--16952733040889__84066e67-828a-4e23-a2f8-d5c24a7c639c-168858517005bf7887-3": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/recipes_2.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Recipes",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/blogs\/the-hustle",
+            "content_position": "bottom-left"
+          }
+        },
+        "84b614fe-f1ab-4442-9392-8927162f6a8a": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/clean_ingredients.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Clean Ingredients",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/pages\/superfood-ingredients",
+            "content_position": "bottom-left"
+          }
+        },
+        "974cd1f9-aa86-4bae-863e-1de4e1664ea4": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/reviews_2.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Reviews",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/pages\/vitahustle-reviews",
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16952733040889__84066e67-828a-4e23-a2f8-d5c24a7c639c-168858517005bf7887-1",
+        "template--16952733040889__84066e67-828a-4e23-a2f8-d5c24a7c639c-168858517005bf7887-3",
+        "84b614fe-f1ab-4442-9392-8927162f6a8a",
+        "974cd1f9-aa86-4bae-863e-1de4e1664ea4"
+      ],
+      "custom_css": [
+        ".collage__image-block {border-radius: 15px;}",
+        ".h2 {font-size: 6rem;}",
+        "@media (max-width: 768px) {.h2 {font-size: 5.5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "",
+        "heading_size": "h5",
+        "alignment": "left",
+        "columns": 4,
+        "desktop_row_height": 240,
+        "mobile_row_height": 240,
+        "desktop_space_between_cards": 16,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false
+      }
+    },
+    "5a4f9dc8-2fcc-459e-942a-a93567a661f8": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16952733040889__5a4f9dc8-2fcc-459e-942a-a93567a661f8-1688584919a5e8a44d-1": {
+          "type": "title",
+          "settings": {
+            "title": "GET ON THE LIST",
+            "heading_size": "h1"
+          }
+        },
+        "template--16952733040889__5a4f9dc8-2fcc-459e-942a-a93567a661f8-1688584919a5e8a44d-2": {
+          "type": "text",
+          "settings": {
+            "text": "Get Kev's healthy hacks, product drops and exclusive discounts.",
+            "body_size": "body3"
+          }
+        },
+        "template--16952733040889__5a4f9dc8-2fcc-459e-942a-a93567a661f8-1688584919a5e8a44d-3": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16952733040889__5a4f9dc8-2fcc-459e-942a-a93567a661f8-1688584919a5e8a44d-1",
+        "template--16952733040889__5a4f9dc8-2fcc-459e-942a-a93567a661f8-1688584919a5e8a44d-2",
+        "template--16952733040889__5a4f9dc8-2fcc-459e-942a-a93567a661f8-1688584919a5e8a44d-3"
+      ],
+      "custom_css": [
+        ".newsletter__input {border-radius: 100px;}",
+        ".newsletter__input-btn:hover {background: #212121;}",
+        ".h1 {white-space: nowrap;}",
+        ".newsletter__input-btn {margin-left: -15%;}",
+        "@media (max-width: 768px) {.newsletter__input-btn {margin-left: 0px; }}"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 280,
+        "mobile_height": 340,
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 624,
+        "content_spacing": 16,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
+    },
+    "e5c3e018-5266-4699-83f6-dca6ffe8a0c2": {
+      "type": "sticky-banner",
+      "disabled": true,
+      "custom_css": [
+        ".sticky-banner-custom {display: block; position: fixed; bottom: 0; left: 0; width: 100%; background-color: #fff; color: #212121; text-align: center; padding: 10px; z-index: 1000;}"
+      ],
+      "settings": {
+        "button_text": "Get Started",
+        "button_link": "shopify:\/\/products\/starter-kit-1"
+      }
+    }
+  },
+  "order": [
+    "page",
+    "b67336fe-a4be-4970-98a1-ee09b95bde87",
+    "a4a1fdc6-03c6-4075-84cf-9f9dc163d005",
+    "875c08a6-f445-4b16-b6eb-f47a7d1d1bc3",
+    "2e5e245d-964e-4843-92ef-ac5aeb0b1f47",
+    "b802e723-4747-4426-98ac-8ff5ca2ef4d1",
+    "a1e4a258-4b20-4180-8d70-419f0662b9ce",
+    "d1a83756-ec98-462f-9c24-c2ecd16e4803",
+    "5b634834-c164-4703-8cb4-671f1d743258",
+    "098c60b0-ebf6-49d6-bb05-34f68df8f323",
+    "4db38f2b-96f4-41fd-9f37-6d623e647621",
+    "84066e67-828a-4e23-a2f8-d5c24a7c639c",
+    "5a4f9dc8-2fcc-459e-942a-a93567a661f8",
+    "e5c3e018-5266-4699-83f6-dca6ffe8a0c2"
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "show_heading": false
+      }
+    },
+    "b7b1ae27-a565-435a-ae51-a66a535352f2": {
+      "type": "image-banner",
+      "custom_css": [
+        ".image-banner__btn {background: #c8e812;}"
+      ],
+      "settings": {
+        "display_rating": false,
+        "number_of_reviews": 0,
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 640,
+        "mobile_height": 440,
+        "desktop_img": "shopify:\/\/shop_images\/733bc0244280d4caa043cbd7e984ee0a_95a101ac-1cbf-479b-8094-99a5ac3fde18.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/2.jpg",
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 7,
+        "caption": "",
+        "title": "VITAHUSTLE REVIEWS",
+        "text": "",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 632,
+        "content_spacing": 116,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "Shop Now",
+        "btn_url": "shopify:\/\/collections\/all",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
+      }
+    },
+    "1689258509bb7e4801": {
+      "type": "apps",
+      "blocks": {
+        "63048845-c96c-4cef-a0bd-d0bc15354f28": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/all_reviews_page\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "extra_wrapper_classes": "page-width page-width--narrow"
+          }
+        }
+      },
+      "block_order": [
+        "63048845-c96c-4cef-a0bd-d0bc15354f28"
+      ],
+      "custom_css": [
+        ".jdgm-row-actions {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": ""
+      }
+    },
+    "779e25c9-eda2-48ba-8e65-9fab0e151297": {
+      "type": "tolstoy-stories",
+      "disabled": true,
+      "settings": {
+        "publishId": "9s4l44zl6d0z9"
+      }
+    },
+    "ee8d4d6d-d102-46ee-8773-af04a54fb295": {
+      "type": "tolstoy-carousel",
+      "settings": {
+        "publishId": "9s4l44zl6d0z9"
+      }
+    },
+    "3a79a5a4-ec9c-423a-aa07-b6b88fb502fc": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16961303183609__3a79a5a4-ec9c-423a-aa07-b6b88fb502fc-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "GET ON THE LIST",
+            "heading_size": "h1"
+          }
+        },
+        "template--16961303183609__3a79a5a4-ec9c-423a-aa07-b6b88fb502fc-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Join our list for exclusive access to discounts, product launches and simple health hacks.",
+            "body_size": "body3"
+          }
+        },
+        "template--16961303183609__3a79a5a4-ec9c-423a-aa07-b6b88fb502fc-subscribe-1": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16961303183609__3a79a5a4-ec9c-423a-aa07-b6b88fb502fc-title-1",
+        "template--16961303183609__3a79a5a4-ec9c-423a-aa07-b6b88fb502fc-text-1",
+        "template--16961303183609__3a79a5a4-ec9c-423a-aa07-b6b88fb502fc-subscribe-1"
+      ],
+      "custom_css": [
+        ".newsletter__input {border-radius: 100px;}",
+        ".newsletter__input-btn:hover {background: #212121;}",
+        ".h1 {white-space: nowrap;}",
+        ".newsletter__input-btn {margin-left: -15%;}",
+        "@media (max-width: 768px) {.newsletter__input-btn {margin-left: 0px; }}"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 280,
+        "mobile_height": 380,
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 624,
+        "content_spacing": 16,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
+    },
+    "63043e26-e4da-4405-abbe-8ade8bebc883": {
+      "type": "collection-text",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "content_position": "left",
+        "collection": "",
+        "icon": "none",
+        "caption": "COLLECTION WITH TEXT",
+        "title": "Carousel of products",
+        "text": "<p>Tell customers by what your latest collection was inspired.<\/p>",
+        "heading_size": "h5",
+        "body_size": "body3",
+        "link_text": "Link label",
+        "link_url": "",
+        "img_ratio": "default",
+        "product_card_align": "left",
+        "cards_to_show": 6,
+        "desktop_columns": 3,
+        "desktop_space_between_cards": 16,
+        "mobile_space_between_cards": 16,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_navigation_on_hover": true
+      }
+    },
+    "8ce40c8d-aa3d-40ee-a87e-7daaca93eb9a": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_layout": "carousel",
+        "title": "Recently viewed",
+        "heading_size": "h5",
+        "alignment": "center",
+        "img_ratio": "portrait",
+        "product_card_align": "left",
+        "cards_to_show": 18,
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 12,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_navigation_on_hover": true
+      }
+    }
+  },
+  "order": [
+    "page",
+    "b7b1ae27-a565-435a-ae51-a66a535352f2",
+    "1689258509bb7e4801",
+    "779e25c9-eda2-48ba-8e65-9fab0e151297",
+    "ee8d4d6d-d102-46ee-8773-af04a54fb295",
+    "3a79a5a4-ec9c-423a-aa07-b6b88fb502fc",
+    "63043e26-e4da-4405-abbe-8ade8bebc883",
+    "8ce40c8d-aa3d-40ee-a87e-7daaca93eb9a"
+  ]
+}

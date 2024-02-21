@@ -1,0 +1,255 @@
+<div class="customReview-section">
+    <ul class="customReview-tabs">
+        <li class="customReview-tab-link customReview-current" data-tab="customReview-tab-video">Video Reviews</li>
+        <li class="customReview-tab-link" data-tab="customReview-tab-written">Written Reviews</li>
+    </ul>
+
+  <div id="customReview-tab-video" class="customReview-tab-content customReview-current"">
+<div class="customReview-video-grid">
+    {% for block in section.blocks %}
+        {% if block.type == 'video_block' %}
+            <div class="customReview-video-item">
+                <a href="#" class="video-thumbnail-link" data-video-url="{{ block.settings.video_url }}">
+                    <div class="video-thumbnail-wrapper">
+                        <img src="{{ block.settings.video_thumbnail | img_url: '300x' }}" alt="Video Thumbnail">
+                        <button class="video-play-button"></button>
+                    </div>
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+</div>
+<!-- Lightbox Structure -->
+<div class="video-lightbox" id="videoLightbox">
+    <span class="video-lightbox-close">&times;</span>
+    <iframe src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+    <div id="customReview-tab-written" class="customReview-tab-content">
+       <!-- Start of Judge.me code --> 
+    <div style='clear:both'></div>
+    <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-id='{{ product.id }}'>
+        {{ product.metafields.judgeme.widget }}
+    </div>
+<!-- End of Judge.me code -->
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const tabs = document.querySelectorAll('.customReview-tab-link');
+
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            const target = this.getAttribute('data-tab');
+
+            // Remove current class from tabs and contents
+            document.querySelector('.customReview-tab-link.customReview-current').classList.remove('customReview-current');
+            document.querySelector('.customReview-tab-content.customReview-current').classList.remove('customReview-current');
+
+            // Add current class to clicked tab and its content
+            this.classList.add('customReview-current');
+            document.getElementById(target).classList.add('customReview-current');
+        });
+    });
+});
+  
+document.addEventListener("DOMContentLoaded", function() {
+    const videoLinks = document.querySelectorAll('.video-thumbnail-link');
+    const lightbox = document.getElementById('videoLightbox');
+    const lightboxClose = lightbox.querySelector('.video-lightbox-close');
+    const lightboxIframe = lightbox.querySelector('iframe');
+
+    videoLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const videoUrl = this.getAttribute('data-video-url');
+            lightboxIframe.src = videoUrl;
+            lightbox.style.display = 'block';
+        });
+    });
+
+    lightboxClose.addEventListener('click', function() {
+        lightboxIframe.src = ''; // Stop the video
+        lightbox.style.display = 'none';
+    });
+});
+
+</script>
+
+
+{% schema %}
+{
+    "name": "Custom Reviews Section",
+  "blocks": [
+    {
+        "type": "video_block",
+        "name": "Add Video",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "video_thumbnail",
+                "label": "Video Thumbnail"
+            },
+            {
+                "type": "url",
+                "id": "video_url",
+                "label": "Video Embed URL"
+            }
+        ]
+    }
+],
+    "presets": [
+        {
+            "name": "Custom Reviews",
+            "category": "Custom"
+        }
+    ]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+
+.customReview-section {
+    width: 100%;
+}
+
+.customReview-tabs {
+    display: flex;
+  justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.customReview-tab-link {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: white;
+    margin-right: 5px;
+  font-family:"FK Grotesk Bold";
+  text-transform:uppercase;
+  font-size:1.6rem;
+}
+
+.customReview-tab-link.customReview-current {
+    background-color: #F5F5F5;
+}
+
+.customReview-tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.customReview-tab-content.customReview-current {
+    display: block;
+    background-color: #F5F5F5;
+}
+
+.customReview-video-grid {
+    display: grid;
+   justify-content: center;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; /* Adjust this value if you want more or less spacing between videos */
+}
+
+.customReview-video-item {
+    width: 100%;
+    height: 100%;
+}
+
+.video-thumbnail-wrapper {
+    position: relative;
+    width: 100%; /* Make the wrapper take the full width of the grid cell */
+    padding-bottom: 150%; /* This ensures a 16:9 aspect ratio. Adjust if your videos have a different aspect ratio. */
+    overflow: hidden;
+}
+
+.video-thumbnail-wrapper img {
+   display: block;
+    max-width: 100%; /* Ensure the image doesn't exceed the wrapper's width */
+    max-height: 100%; /* Ensure the image doesn't exceed the wrapper's height */
+    width: auto; /* Allow the image to adjust its width */
+    height: auto; /* Allow the image to adjust its height */
+    position: absolute; /* Position the image within the wrapper */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image within the wrapper */
+  border-radius:8px;
+}
+
+  @media (max-width: 768px) {
+  .customReview-video-grid {
+    grid-template-columns: repeat(3, 1fr)!important;
+    gap: 10px;
+}
+}
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    background-color: transparent!important;
+    border: solid 2px white!important;
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0;
+    line-height: 0;
+}
+
+/* Play icon using pseudo-element */
+.video-play-button:before {
+    content: '';
+    position: absolute;
+    top: 24%;
+    left: 36%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid white; /* Play arrow */
+}
+
+/* Hover effect for play button */
+
+
+
+.video-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.video-lightbox iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+}
+
+.video-lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+  
+{% endstylesheet %}
+

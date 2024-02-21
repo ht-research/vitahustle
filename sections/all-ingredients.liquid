@@ -1,0 +1,602 @@
+<div class="all_ingredient">
+  <div class="upper_content_row">
+    <div class="head_block">
+      <h3>{{ section.settings.title | default: 'Title' }}
+      </h3>
+      <p>
+        {{ section.settings.subtext | default: 'Subtext' }}
+      </p>
+    </div>
+
+    <div class="upper_ingredient_row" dir="rtl">
+
+      {% for block in section.blocks %}
+        {% if block.type == 'superfood_greens' %}
+          <div class="ingredient_box">
+            <div class="inner_block">
+              <img
+                loading="lazy"
+                alt="{{ block.settings.name1 }}"
+                src="{{ block.settings.ingredient_image1 | img_url: '250x' }}"
+                srcset="{{ block.settings.ingredient_image1 | img_url: 'medium' }} 600w, {{ block.settings.ingredient_image1 | img_url: 'master' }} 1400w" />
+              <span>{{ block.settings.name1 }}</span>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+
+
+  </div>
+
+  <div class="lower_ingredient_row" dir="ltr">
+
+    {% for block in section.blocks %}
+      {% if block.type == 'Superfood_fruits' %}
+        <div class="ingredient_box">
+          <div class="inner_block">
+            <img
+              loading="lazy"
+              alt="{{ block.settings.name2 }}"
+              src="{{ block.settings.ingredient_image2 | img_url: '250x' }}"
+              srcset="{{ block.settings.ingredient_image2 | img_url: 'medium' }} 600w, {{ block.settings.ingredient_image2 | img_url: 'master' }} 1400w" />
+            <span>{{ block.settings.name2 }}</span>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+  </div>
+
+
+  <div class="upper_ingredient_row mobile_only" dir="rtl">
+
+    {% for block in section.blocks %}
+      {% if block.type == 'Superfood_energy' %}
+        <div class="ingredient_box">
+          <div class="inner_block">
+            <img
+              loading="lazy"
+              alt="{{ block.settings.name3 }}"
+              src="{{ block.settings.ingredient_image3 | img_url: '250x' }}"
+              data-srcset="{{ block.settings.ingredient_image3 | img_url: 'medium' }} 600w, {{ block.settings.ingredient_image3 | img_url: 'master' }} 1400w"
+              alt="{{ block.settings.name1 }}" />
+            <span>{{ block.settings.name3 }}</span>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+  </div>
+
+
+</div>
+
+{% capture css %}
+  {% style %}
+    .section-{{ section.id}}{
+      --gsc-space-between-cards: {{ mobile_space_between_cards }}
+      rem;
+      --gsc-slide-width: {{ desktop_carousel_percent_width | times: 1.00 | divided_by: desktop_columns }}
+      %;
+      --gsc-columns: 2;
+      --gsc-section-spacing-top: {{ section_spacing_top }}
+      px;
+      --gsc-section-spacing-bottom: {{ section_spacing_bottom }}
+      px;
+    }
+
+    @media{% render 'media-queries', screen: 'md' %}{
+      .section-{{ section.id}}{
+        --gsc-space-between-cards: {{ desktop_space_between_cards}}
+        rem;
+        --gsc-columns: {{ desktop_columns}}
+        ;
+      }
+    }
+
+
+    {% if desktop_columns == 3 %}
+      @media screen and (min-width: 768px) and (max-width: 1016px) {
+        .section-{{ section.id }}{
+          --gsc-slide-width: {{ laptop_carousel_percent_width | times: 1.00 | divided_by: laptop_columns }}
+          %;
+        }
+      }
+    {% endif %}
+
+    {% if desktop_columns > 3 %}
+      @media screen and (min-width: 880px) and (max-width: 1016px) {
+        .section-{{ section.id }}{
+          --gsc-slide-width: {{ laptop_carousel_percent_width | times: 1.00 | divided_by: laptop_columns }}
+          %;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 880px) {
+        .section-{{ section.id }}{
+          --gsc-slide-width: {{ tablet_carousel_percent_width | times: 1.00 | divided_by: tablet_columns }}
+          %;
+        }
+      }
+    {% endif %}
+  {% endstyle %}
+{% endcapture %}
+
+{% render 'inline-css-minifier', css: css %}
+
+<style>
+  section.ingredient_section {
+    background-color: #F8FAEF;
+  }
+  section.ingredient_section .card-carousel__container {
+    align-items: flex-start;
+  }
+  section.ingredient_section .card-carousel__position-btn-wrap {
+    min-width: 4.246vw;
+    width: 4.246vw;
+  }
+  section.ingredient_section .card-carousel__carousel-btn--prev {
+    left: 0;
+  }
+  section.ingredient_section .card-carousel__carousel-btn--next {
+    right: 0;
+  }
+  section.ingredient_section .carousel-btn {
+    width: 2.498vw;
+    height: 2.498vw;
+  }
+  .all_ingredient {
+    width: 100%;
+    max-width: 67.8732vw;
+    margin: 0 auto;
+    padding: 3.2vw 0;
+  }
+  .upper_content_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .upper_content_row .head_block {
+    width: 33.4098vw;
+  }
+  .upper_content_row .head_block h3 {
+    color: #212121;
+    font-size: 4.511vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 0px */
+    text-transform: uppercase;
+    letter-spacing: calc(0.65*0.0694vw);
+  }
+  .upper_content_row .head_block h3 span {
+    color: #AEC22F;
+  }
+  .upper_content_row .head_block p {
+    color: #4D201A;
+    font-family: 'Lato Bold', sans-serif;
+    font-size: 1.388vw;
+    font-style: normal;
+    line-height: normal;
+    margin-top: 0.56vw;
+    font-weight: 700;
+  }
+  .upper_ingredient_row {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 31.3688vw;
+    overflow: hidden;
+  }
+  .upper_ingredient_row .ingredient_box .inner_block,
+  .lower_ingredient_row .ingredient_box .inner_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .upper_ingredient_row .ingredient_box img,
+  .lower_ingredient_row .ingredient_box img {
+    width: 7.4952vw;
+    aspect-ratio: 1 / 1;
+  }
+  .upper_ingredient_row .ingredient_box.slick-slide,
+  .lower_ingredient_row .ingredient_box.slick-slide {
+    display: inline-block;
+    text-align: center;
+  }
+  .lower_ingredient_row {
+    margin-top: 0.9vw;
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+  .upper_ingredient_row .ingredient_box span,
+  .lower_ingredient_row .ingredient_box span {
+    color: #4D201A;
+    text-align: center;
+    font-family: 'Lato Heavy', sans-serif;
+    font-size: 0.9716vw;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 700;
+    margin-top: 0.7634vw;
+    text-transform: uppercase;
+    display: block;
+    width: 90%;
+  }
+  .lower_ingredient_row .ingredient_box {
+    /* min-width: calc(100% / 6); */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .upper_ingredient_row .slick-arrow {
+    display: none !important;
+  }
+  .lower_ingredient_row .slick_prev ,
+  .lower_ingredient_row .slick_next{
+    border: none;
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .lower_ingredient_row .slick_next{
+    left: unset;
+    right:0;
+  }
+  .lower_ingredient_row .ingredient_box.mobile_only {
+    display: none;
+  }
+  .upper_ingredient_row.mobile_only {
+    display: none !important;
+  }
+  @media screen and (max-width: 768px) {
+
+    .all_ingredient {
+      width: 100%;
+      max-width: 100%;
+    }
+    .upper_content_row {
+      flex-direction: column;
+    }
+    .lower_ingredient_row .ingredient_box.mobile_only {
+      display: flex;
+    }
+    .upper_ingredient_row,
+    .upper_ingredient_row.mobile_only {
+      display: block !important;
+      width: 100%;
+    }
+    .upper_ingredient_row .ingredient_box img,
+    .lower_ingredient_row .ingredient_box img {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+    section.ingredient_section .card-carousel__container {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .lower_ingredient_row .ingredient_box,
+    .upper_ingredient_row .ingredient_box {
+      width: calc((100% - 18px) / 3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .upper_content_row .head_block {
+      width: calc(100% - 40px);
+      padding: 36px 0 32px;
+    }
+    .upper_content_row .head_block h3 {
+      font-size: 45px;
+      letter-spacing: 0.5px;
+    }
+    .upper_content_row .head_block p {
+      font-size: 16px;
+      margin-top: 12px;
+    }
+    .upper_content_row .head_block p span {
+      font-family: 'Lato Bold', sans-serif;
+    }
+    .lower_ingredient_row .ingredient_box span,
+    .upper_ingredient_row .ingredient_box span {
+      font-size: 13px;
+      margin-top: 15px;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    .lower_ingredient_row {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .lower_ingredient_row .slick-list {
+      overflow: hidden;
+    }
+  }
+</style>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        $('.upper_ingredient_row').slick({
+          dots: false,
+          infinite: true,
+          speed: 400,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          draggable: false,
+          swipe: false,
+          touchMove: false,
+          rtl: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                autoplay: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplaySpeed: 2000,
+                centerMode: true,
+                centerPadding: '25%',
+                rtl: true
+              }
+            }
+
+          ]
+        });
+
+
+        $('.lower_ingredient_row').slick({
+          dots: false,
+          infinite: true,
+          speed: 400,
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          rtl: false,
+          draggable: false,
+          swipe: false,
+          touchMove: false,
+          prevArrow: '<button class="slick_prev"><svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Nextarrow"><rect id="Rectangle 5" x="0.5" width="29" height="29" rx="14.5" fill="#F2EBE8"/><path id="Vector 2" d="M18 22L10.5 14.5L18 7" stroke="#4D201A" stroke-width="3" stroke-linecap="round"/</g></svg></button>',
+          nextArrow: '<button class="slick_next"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none"><rect width="29" height="29" rx="14.5" transform="matrix(-1 0 0 1 29 0)" fill="#F2EBE8"/><path d="M11.5 22L19 14.5L11.5 7" stroke="#4D201A" stroke-width="3" stroke-linecap="round"/></svg></button>',
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                autoplay: true,
+                slidesToShow: 1,
+                arrows: false,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: '25%',
+                autoplaySpeed: 2000
+              }
+            }
+
+          ]
+        });
+
+        $(document).on('click', '.lower_ingredient_row .slick_prev', function() {
+          $('.upper_ingredient_row .slick-prev').click();
+        });
+
+        $(document).on('click', '.lower_ingredient_row .slick_next', function() {
+          $('.upper_ingredient_row .slick-next').click();
+        })
+
+
+      });
+
+</script>
+
+
+
+{% schema %}
+  {
+    "name": "Ingredient Section",
+    "class": "ingredient_section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "html",
+        "id": "subtext",
+        "label": "Subtext"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_autoplay",
+        "default": false,
+        "label": "t:sections.featured_collection.enable_autoplay_label"
+      },
+      {
+        "type": "range",
+        "id": "autoplay_interval",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "default": 3,
+        "unit": "t:sections.featured_collection.autoplay_interval_unit",
+        "label": "t:sections.featured_collection.autoplay_interval_label"
+      }, {
+        "type": "checkbox",
+        "id": "show_navigation_on_hover",
+        "default": true,
+        "label": "t:sections.featured_collection.show_navigation_on_hover_label"
+      }, {
+        "type": "checkbox",
+        "id": "enable_carousel_on_mobile",
+        "default": false,
+        "label": "t:sections.featured_collection.enable_carousel_on_mobile.label",
+        "info": "t:sections.featured_collection.enable_carousel_on_mobile.info"
+      }, {
+        "type": "select",
+        "id": "img_ratio",
+        "options": [
+          {
+            "value": "default",
+            "label": "t:sections.general_section_settings.img_ratio_option_default_label"
+          },
+          {
+            "value": "nature",
+            "label": "t:sections.general_section_settings.img_ratio_option_nature_label"
+          },
+          {
+            "value": "square",
+            "label": "t:sections.general_section_settings.img_ratio_option_square_label"
+          },
+          {
+            "value": "portrait",
+            "label": "t:sections.general_section_settings.img_ratio_option_portrait_label"
+          }, {
+            "value": "portrait-xl",
+            "label": "t:sections.general_section_settings.img_ratio_option_portrait_xl_label"
+          }, {
+            "value": "landscape",
+            "label": "t:sections.general_section_settings.img_ratio_option_landscape_label"
+          }
+        ],
+        "default": "default",
+        "label": "t:sections.general_section_settings.img_ratio_label"
+      }, {
+        "type": "select",
+        "id": "section_layout",
+        "options": [
+          {
+            "value": "grid",
+            "label": "t:sections.featured_collection.section_layout.grid_label"
+          }, {
+            "value": "carousel",
+            "label": "t:sections.featured_collection.section_layout.carousel_label"
+          }, {
+            "value": "carousel-overflow",
+            "label": "t:sections.featured_collection.section_layout.carousel_overflow_label"
+          }
+        ],
+        "default": "carousel",
+        "label": "t:sections.featured_collection.section_layout.label"
+      }, {
+        "type": "range",
+        "id": "cards_to_show",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "default": 16,
+        "label": "t:sections.featured_collection.cards_to_show.label"
+      }, {
+        "type": "range",
+        "id": "desktop_columns",
+        "min": 2,
+        "max": 5,
+        "step": 1,
+        "default": 4,
+        "label": "t:sections.featured_collection.desktop_columns_label"
+      }, {
+        "type": "range",
+        "id": "desktop_space_between_cards",
+        "min": 0,
+        "max": 32,
+        "step": 1,
+        "default": 16,
+        "unit": "t:sections.featured_collection.desktop_space_between_cards_unit",
+        "label": "t:sections.featured_collection.desktop_space_between_cards_label"
+      }, {
+        "type": "range",
+        "id": "mobile_space_between_cards",
+        "min": 0,
+        "max": 32,
+        "step": 1,
+        "default": 16,
+        "unit": "t:sections.featured_collection.mobile_space_between_cards_unit",
+        "label": "t:sections.featured_collection.mobile_space_between_cards_label"
+      }, {
+        "type": "range",
+        "id": "section_spacing_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 48,
+        "unit": "t:sections.general_section_settings.section_spacing_top.unit",
+        "label": "t:sections.general_section_settings.section_spacing_top.label"
+      }, {
+        "type": "range",
+        "id": "section_spacing_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 48,
+        "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
+        "label": "t:sections.general_section_settings.section_spacing_bottom.label"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Superfood greens",
+        "type": "superfood_greens",
+        "limit": 20,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "ingredient_image1",
+            "label": "Ingredient Image"
+          }, {
+            "type": "text",
+            "id": "name1",
+            "label": "Ingredient Title"
+          }
+        ]
+      }, {
+        "name": "Superfood fruits",
+        "type": "Superfood_fruits",
+        "limit": 20,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "ingredient_image2",
+            "label": "Ingredient Image"
+          }, {
+            "type": "text",
+            "id": "name2",
+            "label": "Ingredient Title"
+          }
+        ]
+      }, {
+        "name": "Superfood energy",
+        "type": "Superfood_energy",
+        "limit": 20,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "ingredient_image3",
+            "label": "Ingredient Image"
+          }, {
+            "type": "text",
+            "id": "name3",
+            "label": "Ingredient Title"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Ingredient Box"
+      }
+    ]
+  }
+{% endschema %}

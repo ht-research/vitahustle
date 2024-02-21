@@ -1,0 +1,307 @@
+<div class="all-in-one-block">
+  <div class="title_block">
+    <h3>{{ section.settings.title | default: 'Title' }}</h3>
+    <p>{{ section.settings.subtext | default: 'Subtitle' }}</p>
+    <a href="{{ section.settings.cta_url | default: '#' }}" class="btn btn--solid desktop_only">{{ section.settings.cta_text | default: 'CTA' }}</a>
+  </div>
+
+  {% comment %} <div class="center_image_block">
+  <img
+  loading="lazy"
+  class="desktop_only"
+  src="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/TDAVIS_Vitahustle_135_1_1_bb2b0d03-b73b-4e56-8a53-dc2f120b5d4d-removebg-preview.png?v=1693061957" />
+  </div> {% endcomment %}<div class="feature_block">
+    <ul>
+      {% for block in section.blocks %}
+        {% if block.type == 'key_highlight' %}
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="10"
+              viewBox="0 0 13 10"
+              fill="none">
+              <path d="M10.2987 0L9.24395 1.10064L4.99427 5.35032L3.75605 4.15796L2.65541 3.05732L0.5 5.21274L1.60064 6.31338L3.89363 8.60637L4.94841 9.70701L6.04904 8.60637L11.3994 3.25605L12.5 2.15541L10.2987 0Z" fill="#7A7B75" />
+            </svg>
+            <span>{{ block.settings.key_point }}</span>
+          </li>
+        {% endif %}
+      {% endfor %}
+
+    </ul>
+
+    <a href="{{ section.settings.cta_url | default: '#' }}" class="btn btn--solid mobile_only">{{ section.settings.cta_text | default: 'CTA' }}</a>
+
+  </div>
+
+</div>
+{% style %}
+
+  section.all_in_one_section {
+    background-color: #efefef;
+    width: 100%;
+    aspect-ratio: 2.542;
+
+
+    background-image: url('https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Shakefruits_1_1.png?v=1693144015');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .all-in-one-block {
+    width: 100%;
+    max-width: 92.99vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 2.22vw 0;
+  }
+  a.mobile_only {
+    display: none;
+  }
+
+  .all-in-one-block .title_block a {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Lato Heavy', sans-serif;
+    font-size: 1.386vw;
+    color: #121212;
+    padding: 0.8328vw 4.164vw 1.014vw;
+
+    border-radius: 5.13vw;
+    margin-top: 1.3186vw;
+    min-height: unset;
+
+  }
+
+  .all-in-one-block .title_block h3 {
+    font-weight: 700;
+    font-size: 7.634vw;
+    line-height: 120%;
+    color: #212121;
+    letter-spacing: calc(1.1*0.0694vw);
+  }
+  .all-in-one-block .title_block h3 span {
+    color: {{ section.settings.secondary_color }}
+    ;
+  }
+  .all-in-one-block .title_block p {
+    color: {{ section.settings.text_color }}
+    ;
+    text-align: center;
+    font-size: 1.3186vw;
+    font-style: normal;
+    font-weight: 700;
+    font-family: 'Lato Bold', sans-serif;
+  }
+
+  .all-in-one-block .feature_block ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+
+  }
+  .all-in-one-block .feature_block ul li {
+    font-family: 'Lato Heavy', sans-serif;
+    font-size: 1.5615vw;
+    font-style: normal;
+    line-height: normal;
+    color: {{ section.settings.list_color }}
+    ;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .all-in-one-block .feature_block ul li span {
+    padding-left: 1.11vw;
+  }
+  .all-in-one-block .feature_block ul li:last-child {
+    color: #AEC22F;
+  }
+
+
+  @media screen and (min-width: 769px) {
+    .all-in-one-block .title_block {
+      position: absolute;
+      left: 10vw;
+      top: 4vw;
+      text-align: center;
+    }
+    .all-in-one-block {
+      height: 39.339vw;
+    }
+    .all-in-one-block .feature_block {
+      position: absolute;
+      right: 4vw;
+      top: 5.5vw;
+    }
+
+
+    .all-in-one-block .center_image_block {
+      width: 100%;
+      max-width: 53.438vw;
+    }
+    .all-in-one-block .center_image_block img {
+      width: 100%;
+      max-width: 53.438vw;
+
+    }
+
+    @media not all and (min-resolution: 0.001dpcm) {
+      /* CSS specific to iOS devices */
+      .all-in-one-block .title_block {
+        left: 10vw;
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .all-in-one-block {
+      max-width: 100%;
+      flex-direction: column;
+      height: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .all-in-one-block .title_block h3 {
+      font-size: 80px;
+      letter-spacing: 0.8px;
+    }
+    .all-in-one-block .title_block p {
+      font-size: 19px;
+    }
+    .all-in-one-block .feature_block ul li,
+    .all-in-one-block .feature_block ul li:last-child {
+      font-size: 26px;
+      color: #FFF;
+    }
+    .all-in-one-block .feature_block ul li svg path {
+      fill: #fff;
+    }
+    .all-in-one-block .title_block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .all-in-one-block .feature_block {
+      padding: 0 0 51px;
+      max-width: 287px;
+    }
+    .all-in-one-block .title_block a {
+      font-size: 19px;
+      padding: 12px 60px;
+      border-radius: 74px;
+    }
+    .all-in-one-block .title_block a.desktop_only {
+      display: none !important;
+    }
+    a.mobile_only {
+      display: block;
+      font-size: 19px;
+      padding: 12px 60px;
+    }
+    section.all_in_one_section {
+      width: 100%;
+      aspect-ratio: 0.605;
+      background-size: 100%;
+      background-position: top;
+      background-image: url("https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Shakefruits_1_2.png?v=1693159241");
+    }
+  }
+  @media screen and (max-width: 768px) and(min-width: 581px) {
+    .all-in-one-block {
+      justify-content: flex-start;
+      padding-top: 100px;
+    }
+    section.all_in_one_section {
+      aspect-ratio: 0.805;
+      height: auto;
+    }
+    .all-in-one-block .feature_block {
+      padding: 140px 0 51px;
+
+    }
+  }
+  @media screen and (max-width: 580px) {
+    section.all_in_one_section {
+      height: auto;
+    }
+    .all-in-one-block .feature_block {
+      padding: 50px 0;
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "All in one",
+    "tag": "section",
+    "class": "all_in_one_section",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary title color",
+        "default": "#000000"
+
+      },
+      {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "Secondary title color",
+        "default": "#AEC22F"
+      },
+      {
+        "type": "text",
+        "id": "subtext",
+        "label": "Subtitle"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#4D201A"
+      }, {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+      }, {
+        "type": "url",
+        "id": "cta_url",
+        "label": "CTA Url"
+      }, {
+        "type": "color",
+        "id": "list_color",
+        "label": "List text color",
+        "default": "#797A74"
+      }
+    ],
+    "blocks": [
+
+      {
+        "name": "key highlight",
+        "type": "key_highlight",
+        "limit": 10,
+        "settings": [
+          {
+            "type": "text",
+            "id": "key_point",
+            "label": "Title"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "All In One"
+      }
+    ]
+  }
+{% endschema %}

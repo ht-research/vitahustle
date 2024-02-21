@@ -1,0 +1,608 @@
+{% liquid  
+    assign blocks = section.blocks
+%}
+<div class="flavor_wrapper">
+  <div class="upper_delicious_wrapper">
+    <div class="text_block">
+      <h3>{{ section.settings.title | default: 'Title' }}
+      </h3>
+      <p>
+        {{ section.settings.subtext | default: 'Subtitle' }}
+      </p>
+      <a href="{{ section.settings.cta_url | default: '#' }}" class="btn btn--solid">{{ section.settings.cta_text }}</a>
+    </div>
+    <div class="pouch_wrapper">
+      {% for block in blocks %}
+        {% if block.type == 'flavor_box' %}
+          <div class="flavor_item {% if forloop.index == 1 %} active{% endif %}">
+            <img
+              alt="{{ block.settings.flavor_name }}"
+              src="{{ block.settings.thumbnail | img_url: '300x' }}"
+              loading="lazy"
+              srcset="{{ block.settings.thumbnail | img_url: '400x' }} 600w, {{ block.settings.thumbnail| img_url: 'master' }} 1400w" />
+            <div class="mobile_only triangle"></div>
+            <span>{{ block.settings.flavor_name }}</span>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <a href="{{ section.settings.cta_url | default: '#' }}" class="mobile_only btn btn--solid">{{ section.settings.cta_text }}</a>
+
+  </div>
+  <div class="lower_image_block">
+    <div class="controller">
+      <div class="prev controller_item left_controller">
+        <img src="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Prev_arrow.png?v=1693130926" />
+      </div>
+      <div class="next controller_item right_controller">
+        <img src="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Next_arrow.png?v=1693130927" />
+      </div>
+    </div>
+    <div class="pointer_slider">
+      <div class="pointer"></div>
+    </div>
+    <div class="image_slider_wrap">
+      {% for block in blocks %}
+        {% if block.type == 'flavor_box' %}
+
+          <div class="image_box {% if forloop.index == 1 %}active{% endif %}">
+          {% if forloop.index == 2 %}
+            <div class="blur_layer"></div>
+          {% endif %}
+            <div class="text_box">
+              <h3>{{ block.settings.main_banner_title }}</h3>
+              <p>{{ block.settings.main_banner_subtext }}</p>
+            </div>
+            <img
+              loading="lazy"
+              src="{{ block.settings.main_image }}"
+              srcset="{{ block.settings.main_image | img_url: '650x' }} 600w, {{ block.settings.main_image| img_url: '1600x' }} 1400w" />
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+
+<style>
+  section.flavor_section {
+    background-color: #F8FAEF;
+  }
+  .blur_layer{
+    position: absolute;
+    bottom: 8vw;
+    left: 16.5vw;
+    width: 100%;
+    height: 12vw;
+    max-width: 16.3784vw;
+    background-color: #e7e7e7;
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
+    -moz-filter: blur(40px);
+  }
+  .lower_image_block {
+    width: 100%;
+    position: relative;
+
+  }
+  .lower_image_block .image_slider_wrap .image_box:nth-child(2) img{
+    object-position: 0 calc(-1 * 15vw);
+  }
+  a.mobile_only {
+    display: none;
+  }
+  .lower_image_block .pointer_slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+  }
+  .lower_image_block .controller {
+    position: absolute;
+    bottom: 5.5vw;
+    left: 17.5vw;
+    width: 7.425vw;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile_only.triangle {
+    display: none;
+  }
+  .lower_image_block .controller div {
+    width: 2.012vw;
+    height: 2.012vw;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+  }
+  .lower_image_block .controller img {
+    width: 2.012vw;
+    aspect-ratio: 1 / 1;
+  }
+  .lower_image_block .pointer_slider::after {
+    content: "";
+    position: absolute;
+    right: calc(-1 * 1.8vw);
+    width: 43%;
+    height: 2.4vw;
+    top: 0;
+    background-color: #F8FAEF;
+    -webkit-transform: skew(42deg);
+    -moz-transform: skew(42deg);
+    -o-transform: skew(42deg);
+    -ms-transform: skew(42deg);
+    transform: skew(42deg);
+    transition: all 0.4s;
+  }
+  .lower_image_block .pointer_slider::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * 2.082vw);
+    width: 59%;
+    height: 2.4vw;
+    top: 0;
+    background-color: #F8FAEF;
+    -webkit-transform: skew(-42deg);
+    -moz-transform: skew(-42deg);
+    -o-transform: skew(-42deg);
+    -ms-transform: skew(-42deg);
+    transform: skew(-42deg);
+    transition: all 0.4s;
+  }
+  .lower_image_block .pointer_slider.active_next::before {
+    width: 76%;
+  }
+  .lower_image_block .pointer_slider.active_next::after {
+    width: 26%;
+  }
+
+  .lower_image_block .image_slider_wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 45.59vw;
+    position: relative;
+  }
+  .lower_image_block .image_slider_wrap .image_box {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s;
+  }
+  .lower_image_block .image_slider_wrap .image_box .text_box {
+    position: absolute;
+    bottom: 10vw;
+    left: 17.5vw;
+    width: 100%;
+    max-width: 16.3784vw;
+  }
+  .lower_image_block .image_slider_wrap .image_box .text_box h3 {
+    color: #926454;
+    font-size: 4.511vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 0px */
+    text-transform: capitalize;
+  }
+  .lower_image_block .image_slider_wrap .image_box:nth-child(2) .text_box h3{
+    color: #A2B643;
+  }
+  .lower_image_block .image_slider_wrap .image_box .text_box p {
+    color: #3F3D3F;
+    font-family: 'Lato Bold', sans-serif;
+    font-size: 1.388vw;
+    font-style: italic;
+    line-height: normal;
+    font-weight: 700;
+    margin-top: 0.65vw;
+  }
+   .lower_image_block .image_slider_wrap .image_box:nth-child(2) {
+     transform: translate(100%, 0);
+ 
+  }
+  .lower_image_block .image_slider_wrap .image_box:first-child {
+     transform: translate(-100%, 0);
+   
+  }
+  .lower_image_block .image_slider_wrap .image_box.active {
+     transform: translate(0%, 0);
+ 
+  }
+  .lower_image_block .image_slider_wrap .image_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 calc(-1 * 16.7vw);
+  }
+  .upper_delicious_wrapper .text_block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 27.5vw;
+  }
+  .flavor_wrapper {
+    width: 100%;
+
+  }
+  .upper_delicious_wrapper {
+    padding-bottom: 1.3vw;
+  }
+  .upper_delicious_wrapper .pouch_wrapper {
+    width: 32.271vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .upper_delicious_wrapper .pouch_wrapper .flavor_item {
+    width: calc((100% - 17px) / 2);
+    text-align: center;
+    cursor: pointer;
+  }
+  .upper_delicious_wrapper .pouch_wrapper .flavor_item img {
+    width: 100%;
+    aspect-ratio: 0.6656;
+  }
+  .upper_delicious_wrapper .pouch_wrapper .flavor_item span {
+    color: #5F4641;
+    text-align: center;
+    font-family: 'Lato Bold', sans-serif;
+    font-size: 1.388vw;
+    font-style: normal;
+    margin-top: calc(-1 * 1vw);
+    font-weight: 700;
+  }
+  .flavor_wrapper .upper_delicious_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 65.3758vw;
+  }
+  .upper_delicious_wrapper .text_block h3 {
+    color: #212121;
+    font-size: 4.511vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 0px */
+    text-transform: uppercase;
+    letter-spacing: calc(0.65*0.0694vw);
+  }
+  .upper_delicious_wrapper .text_block h3 span {
+    color: #AEC22F;
+  }
+  .upper_delicious_wrapper .text_block p {
+    color: #4D201A;
+    font-family: 'Lato Bold', sans-serif;
+    font-size: 1.388vw;
+    font-weight: 700;
+    line-height: normal;
+    margin: 1.368vw 0 0;
+    text-align: left;
+  }
+  .upper_delicious_wrapper .text_block a {
+    color: #121212;
+    text-align: center;
+    font-family: 'Lato Heavy', sans-serif;
+    font-size: 1.3186vw;
+    font-style: normal;
+    padding: 0.8328vw 4.164vw 1.014vw;
+    /* background-color: #C9E14B; */
+    border-radius: 5.13vw;
+    margin-top: 1.668vw;
+    display: inline-block;
+    width: 100%;
+    max-width: 18.1134vw;
+    min-height: unset;
+
+  }
+
+  @media screen and (min-width: 769px) {
+    .upper_delicious_wrapper .pouch_wrapper .flavor_item span {
+      display: block;
+      margin-top: calc(-1 * 1.5vw);
+      padding-bottom: 1vw;
+    }
+    .flavor_wrapper .upper_delicious_wrapper {
+      padding-bottom: 0;
+    }
+    .lower_image_block .image_slider_wrap .image_box:nth-child(2) img{
+      width: 108%;
+      object-position: 0 calc(-1 * 18vw);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .flavor_wrapper .upper_delicious_wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      max-width: 100%;
+    }
+    .lower_image_block .image_slider_wrap .image_box:nth-child(2) img{
+      object-position: center;
+    }
+    .blur_layer{
+      bottom: unset!important;
+      top: 75px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      max-width: 100%;
+      filter: blur(40px);
+    -webkit-filter: blur(48px);
+    -moz-filter: blur(40px);
+    }
+    a.mobile_only {
+      color: #121212;
+      text-align: center;
+      font-family: 'Lato Heavy', sans-serif;
+      font-size: 19px;
+      font-style: normal;
+      padding: 12px 60px;
+      background-color: #C9E14B;
+      border-radius: 74px;
+      margin-top: 1px;
+      display: inline-block;
+      min-width: 261px;
+    }
+    .mobile_only.triangle {
+      display: none;
+      width: 0;
+      height: 0;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      border-bottom: 11px solid #CAE14B;
+      position: absolute;
+      left: calc((50% - 17px) / 2);
+      bottom: 92px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      transform: translate(-50%, -100%);
+
+    }
+    .pouch_wrapper .flavor_item.active .mobile_only.triangle {
+      display: block;
+    }
+    .pouch_wrapper .flavor_item:nth-child(2) .mobile_only.triangle {
+      left: unset;
+      right: calc((50% - 17px) / 2);
+      transform: translate(50%, -100%);
+    }
+    .lower_image_block .pointer_slider::before {
+      height: 25px;
+      width: 55%;
+      left: -30px;
+      -webkit-transform: skew(-42deg);
+      -moz-transform: skew(-42deg);
+      -o-transform: skew(-42deg);
+      -ms-transform: skew(-42deg);
+      transform: skew(-42deg);
+    }
+    .lower_image_block .pointer_slider::after {
+      height: 25px;
+      width: 55%;
+      right: -30px;
+      -webkit-transform: skew(42deg);
+      -moz-transform: skew(42deg);
+      -o-transform: skew(42deg);
+      -ms-transform: skew(42deg);
+      transform: skew(42deg);
+    }
+    .lower_image_block .pointer_slider.active_next::before {
+      width: 55%;
+    }
+    .lower_image_block .pointer_slider.active_next::after {
+      width: 55%;
+    }
+    .lower_image_block .image_slider_wrap {
+      height: 549px;
+    }
+    .lower_image_block .image_slider_wrap .image_box .text_box {
+      top: 83px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 375px;
+      width: calc(100% - 20px);
+    }
+    .lower_image_block .image_slider_wrap .image_box .text_box h3 {
+      display: none;
+    }
+    .lower_image_block .image_slider_wrap .image_box .text_box p {
+      font-size: 30px;
+      text-align: center;
+      color: #6A4F42;
+      font-weight: 700;
+    }
+    .lower_image_block .image_slider_wrap .image_box img {
+      object-position: center;
+    }
+    .upper_delicious_wrapper .text_block {
+      width: 100%;
+      max-width: 300px;
+    }
+    .upper_delicious_wrapper .pouch_wrapper {
+      width: 100%;
+
+    }
+    .upper_delicious_wrapper .text_block h3 {
+      font-size: 50px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .upper_delicious_wrapper .text_block p {
+      font-size: 20px;
+      text-align: center;
+    }
+    .upper_delicious_wrapper .pouch_wrapper {
+      position: relative;
+      padding-bottom: 80px
+    }
+    .upper_delicious_wrapper .pouch_wrapper .flavor_item span {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 65px;
+      font-family: "Druk Web", sans-serif;
+      text-transform: uppercase;
+      display: none;
+      width: 100%;
+    }
+    .upper_delicious_wrapper .pouch_wrapper .flavor_item.active span {
+      display: block;
+    }
+    .flavor_wrapper {
+      padding: 28px 0 0px 0 ;
+      .upper_delicious_wrapper .text_block a {
+        display: none;
+      }
+      .lower_image_block .controller {
+        bottom: 55.5vw;
+        left: 20px;
+        width: calc(100% - 40px);
+      }
+      .lower_image_block .controller div {
+        width: 30px;
+        height: 30px;
+      }
+      .lower_image_block .controller img {
+        width: 30px;
+      }
+    }
+  </style>
+
+  <script>
+
+  // homepage flavors
+  let checkJQueryInterval = setInterval(function() {
+    if (typeof $ !== 'undefined' && $.fn && $.fn.jquery) { // jQuery is loaded and functional. Write your code here.
+      $(document).ready(function() {
+
+        $(document).on('click', '.controller_item img', function() {
+
+          let index = $('.lower_image_block .image_slider_wrap .image_box.active').index();
+          let controller_index = $(this).parent('.controller_item').index();
+
+          if (index !== controller_index) {
+            $('.lower_image_block .image_slider_wrap .image_box.active').removeClass('active');
+            $('.lower_image_block .image_slider_wrap .image_box:nth-child(' + (
+              controller_index + 1
+            ) + ')').addClass('active');
+
+            $('.pouch_wrapper .flavor_item.active').removeClass('active');
+            $('.pouch_wrapper .flavor_item:nth-child(' + (
+              controller_index + 1
+            ) + ')').addClass('active');
+
+          }
+          if (controller_index == 1) {
+            $('.pointer_slider').addClass('active_next');
+          } else {
+            $('.pointer_slider').removeClass('active_next');
+          }
+        });
+
+
+        $(document).on('click', '.pouch_wrapper .flavor_item img', function() {
+
+          let index = $('.lower_image_block .image_slider_wrap .image_box.active').index();
+          let controller_index = $(this).parent('.flavor_item').index();
+
+          if (index !== controller_index) {
+            $('.lower_image_block .image_slider_wrap .image_box.active').removeClass('active');
+            $('.lower_image_block .image_slider_wrap .image_box:nth-child(' + (
+              controller_index + 1
+            ) + ')').addClass('active');
+            $('.pouch_wrapper .flavor_item.active').removeClass('active');
+            $('.pouch_wrapper .flavor_item:nth-child(' + (
+              controller_index + 1
+            ) + ')').addClass('active');
+
+          }
+          if (controller_index == 1) {
+            $('.pointer_slider').addClass('active_next');
+          } else {
+            $('.pointer_slider').removeClass('active_next');
+          }
+        });
+
+
+      });
+      clearInterval(checkJQueryInterval);
+    } else {
+      console.error("jQuery is not loaded or not functional");
+    }
+  }, 500);
+</script>
+{% schema %}
+    {
+      "name": "Flavor Section",
+      "tag": "section",
+      "class": "flavor_section",
+      "settings": [
+        {
+          "type": "html",
+          "id": "title",
+          "label": "Title"
+        }, {
+          "type": "text",
+          "id": "subtext",
+          "label": "Subtext"
+        }, {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA Text"
+        }, {
+          "type": "url",
+          "id": "cta_url",
+          "label": "CTA Url"
+        }
+      ],
+      "blocks": [
+        {
+          "name": "Flavor",
+          "type": "flavor_box",
+          "limit": 2,
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "thumbnail",
+              "label": "Thumbnail Image"
+            },
+            {
+              "type": "image_picker",
+              "id": "main_image",
+              "label": "Main Banner Image"
+            },
+            {
+              "type": "text",
+              "id": "flavor_name",
+              "label": "Flavor Name"
+            },
+            {
+              "type": "text",
+              "id": "main_banner_title",
+              "label": "Main Banner Title"
+            }, {
+              "type": "text",
+              "id": "main_banner_subtext",
+              "label": "Main Banner Subtitle"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Flavor Section"
+        }
+      ]
+    }
+  {% endschema %}

@@ -1,0 +1,33 @@
+{
+  "type": "aside",
+  "name": "Aside Group",
+  "sections": {
+    "cart-drawer": {
+      "type": "cart-drawer",
+      "custom_css": [
+        ".sidebar-cart__header-product-count {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "img_ratio": "default"
+      }
+    },
+    "search-sidebar": {
+      "type": "search-sidebar",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "img_ratio": "default",
+        "results_per_category": 10,
+        "recommendations_title": "Most searched",
+        "recommendations_queries": "party dress\nblue denim\nhandbag\nshirt"
+      }
+    }
+  },
+  "order": [
+    "cart-drawer",
+    "search-sidebar"
+  ]
+}

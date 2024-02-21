@@ -1,0 +1,151 @@
+<div class="supplement_wrapper">
+    <div class="inner_supplement_wrap">
+        <div class="supplement_switch">
+            <div class="switch_box">
+                <div class="cacao switch_item active" data-tab="cacao">
+                    Dark Cacao
+                </div>
+                <div class="vanilla switch_item" data-tab="vanilla">
+                    Vanilla Bean
+                </div>
+            </div>
+        </div>
+
+        <div class="supplement_facts_main">
+            <div class="cacao_main active supplement_box" data-container="cacao">
+                <img class="desktop_only" src="{{ section.settings.d_c_suplement | img_url: '1440x' }}" loading="lazy" />
+                <img class="mobile_only" src="{{ section.settings.m_c_suplement | img_url: '800x' }}" loading="lazy" />
+            </div>
+
+            <div class="vanilla_main supplement_box" data-container="vanilla">
+            <img class="desktop_only" src="{{ section.settings.d_v_suplement | img_url: '1440x' }}" loading="lazy" />
+            <img class="mobile_only" src="{{ section.settings.m_v_suplement | img_url: '800x' }}" loading="lazy" />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .supplement_wrapper{
+        width: 100%;
+    }
+    .supplement_wrapper .inner_supplement_wrap{
+        width: calc(100% - 40px);
+        max-width: 960px;
+        margin:0 auto;
+        padding: 56px 0;
+    }
+    .supplement_box{
+        display: none;
+    }
+    .supplement_box.active{
+        display: block;
+    }
+
+    .supplement_facts_main img.desktop_only,
+    .supplement_facts_main img.mobile_only{
+        width: 100%
+    }
+    .supplement_facts_main img.desktop_only{
+        display: block;
+    }
+    .supplement_facts_main img.mobile_only{
+        display: none;
+    } 
+    @media screen and (max-width: 768px){
+        .supplement_facts_main img.desktop_only{
+            display: none;
+        } 
+        .supplement_facts_main img.mobile_only{
+            display: block;
+        } 
+    }
+    .inner_supplement_wrap .supplement_switch{
+        margin-bottom: 46px;
+    }
+    .inner_supplement_wrap .supplement_switch .switch_box{
+        display: flex;
+        width: max-content;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin: 0 auto 20px;
+        background: #ECECEC;
+    }
+    .inner_supplement_wrap .supplement_switch .switch_item {
+        padding: 16px 30px;
+        position: relative;
+        border-radius: 40px;
+        cursor: pointer;
+        color: #212121;
+        font-family: "Lato Regular", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+      }
+      .inner_supplement_wrap .supplement_switch .switch_item.active{
+        background-color: #50392B;
+        color: #FFF;
+      }
+      .inner_supplement_wrap .supplement_switch .switch_item.active.vanilla{
+        background-color: #DFD0A5;
+        color: #212121;
+      }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        $('.switch_item').on('click', function() {
+          let dataId = $(this).attr('data-tab');
+          $('.supplement_facts_main').children('div[data-container]').removeClass('active');
+          $('.supplement_facts_main').children('[data-container=' + dataId + ']').addClass('active');
+          $('.switch_item').removeClass('active');
+          $(this).addClass('active');
+        });
+    });
+</script>
+
+{% schema %}
+    {
+        "name": "Supplement Facts",
+        "class": "supplements_box",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Dark Cacao"
+            },
+            {
+                "type": "image_picker",
+                "id": "d_c_suplement",
+                "label": "Dark Cacao Supplement Desktop"
+            },
+            {
+                "type": "image_picker",
+                "id": "m_c_suplement",
+                "label": "Dark Cacao Supplement Mobile"
+            }
+            , {
+                "type": "header",
+                "content": "Vanilla Bean"
+            },
+            {
+                "type": "image_picker",
+                "id": "d_v_suplement",
+                "label": "Vanilla Bean Supplement Desktop"
+            },
+            {
+                "type": "image_picker",
+                "id": "m_v_suplement",
+                "label": "Vanilla Bean Supplement Mobile"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Supplement Facts"
+            }
+        ]
+    }
+{% endschema %}

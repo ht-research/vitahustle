@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 96,
+        "show_heading": true
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 96,
+        "title": "Contact us",
+        "text": "You can email: <a href=\"mailto:Help@vitahustle.com\"><strong>hello@vitahustle.com <\/strong><\/a>or Fill out the form, and we'll get back to your shortly.",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "text_align": "center",
+        "input_style": "solid",
+        "show_phone": true,
+        "show_captcha": true
+      }
+    }
+  },
+  "order": [
+    "page",
+    "contact-form"
+  ]
+}

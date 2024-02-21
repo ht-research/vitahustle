@@ -1,0 +1,90 @@
+<div class='product__info-wrapper' id='ProductInfoWrapper-{{ product.id }}-{{ sectionId }}'>
+  <div class='product__info'>
+    {%- liquid
+      for block in section.blocks
+        case block.type
+          when '@app'
+            render 'product-app-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'vendor'
+            render 'product-vendor-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'title'
+            render 'product-title-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'sku'
+            render 'product-sku-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'divider'
+            render 'product-divider-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'inventory_status'
+            render 'product-stock-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'price'
+            render 'product-price-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'description'
+            render 'product-description-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'custom_liquid'
+            render 'product-liquid-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'collapsible_row'
+            render 'product-content-tab-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'quantity_selector'
+            render 'product-quantity-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'information_tag'
+            render 'product-information-tag-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'product_drawer_with_tabs'
+            render 'product-drawer-with-tabs', product: product, section: section, block: block, sectionId: sectionId
+          when 'share'
+            render 'product-share-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'variant_picker'
+            render 'product-variant-picker-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'buy_buttons'
+            render 'product-form-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'button'
+            render 'product-button-block', product: product, section: section, block: block, sectionId: sectionId
+          when 'complementary_products'
+            render 'product-related-products-block', product: product, section: section, block: block, sectionId: sectionId, is_complementary: true
+          when 'related_products'
+            render 'product-related-products-block', product: product, section: section, block: block, sectionId: sectionId
+        endcase
+      endfor
+    -%}
+  </div>
+  
+ 
+<style>
+.hiddenprop65 {
+display : none;
+}
+.prop65-warning-text{
+font-size: 1.2rem;
+}
+.prop65-warning:hover{
+cursor: pointer;
+}
+.webpanda-warning-container.label-warning-container {
+padding:0;
+margin-bottom:0;
+margin-top: 20px;
+}
+.webpanda-warning-container .col {
+padding: 0;
+}
+.webpanda-warning-container.label-warning-container .col {
+padding: 0;
+}
+</style>
+  
+<script>
+function showhide() {
+  var div = document.getElementById("prop65text");
+  div.classList.toggle('hiddenprop65'); 
+}
+</script>
+
+  <div class="prop65-warning" id="button" onclick="showhide()">
+    
+    <div class='prop65'> </div>
+    <div id="prop65text" class="hiddenprop65">
+        <span class="prop65-warning-text">WARNING: This product can expose you to chemicals which are known to the State of California to cause cancer, birth defects or other reproductive harm. For more information, go to: www.P65Warnings.ca.gov</span>
+    </div>
+  </div>
+  
+  <div id="prop65-new" class="prop65-new"> </div>
+  
+</div>

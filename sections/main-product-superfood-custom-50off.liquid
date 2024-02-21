@@ -1,0 +1,2260 @@
+<style>
+
+.fifty-off-banner {
+    background-color: #C8E812;
+    padding: 29px 25px 23px;
+    margin-top: -8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-content: center;
+    align-items: center;
+}
+
+  
+
+.fifty-off-banner span {
+    font-size: 15px;
+    line-height:17px;
+    font-weight: 700;
+    background-color: #212121;
+    color: #bad80f;
+    font-family: 'FK Grotesk Bold';
+    padding: 7px 20px;
+}
+.fifty-off-banner h2 {
+    font-size: 60px;
+    line-height: 64px;
+    margin-bottom: 6px;
+    display: block;
+    margin-bottom: 0px;
+}
+
+  .subs_benefit_box ul li:first-child span {
+    background-color: #c8e810;
+    padding: 3px 8px;
+    text-transform: uppercase;
+}
+
+  </style>
+
+
+{% liquid
+    assign sectionId = section.id | append: '---MainSection'
+    assign totalServes = section.settings.total_serves
+    assign blocks = section.blocks
+    assign bundleProducts = product.metafields.custom.product_bundles.value
+    assign productOne = bundleProducts | first
+    assign price = productOne.price
+    assign productPrice = price | money
+    assign subPrice = price | divided_by: 2 | money
+    assign selling_plans = productOne.selling_plan_groups[0].selling_plans
+    assign pricePerBag = price | divided_by: 2 | divided_by: totalServes | money
+    assign subcribeText = section.settings.subscribe_cta_text
+    
+    assign onetimeText = section.settings.onetime_cta_text
+    assign disabledText = section.settings.disabled_cta_text
+    assign step1Title = section.settings.step1_title
+    assign step2Title = section.settings.step2_title
+    assign freeshippingText = section.settings.free_shipping_text
+    assign addMorebagsText = section.settings.offer_free_shipping_text
+    assign choosebagFirst = section.settings.bags_to_choose_text
+    assign customProductImages = product.metafields.custom.custom_product_images.value
+%}
+
+
+<script>
+  window.bundleProducts = {};
+  window.basePrice = {{ price }}
+  {% for item in bundleProducts %}
+    window.bundleProducts = {
+      ...window.bundleProducts,
+      ['{{ item.id }}']: {{ item | json }}
+    }
+  {% endfor %}
+</script>
+
+<div class="product_information_block">
+  <div class="product__container container container--page-width">
+    <div class="product_wrapper_block">
+      <div class="product__media_block">
+                <div class="fifty-off-banner desktop">
+            <span>LIMITED TIME OFFER</span>
+          <h2>Get 50% OFF Your 1st Order</h2>
+          <p>When you subscribe & save.</p>
+          {% comment %}
+          <img class="double-arrow-offer" src="{{ 'double-arrow.png' | file_url }}"/>
+          {% endcomment %}
+        </div>
+        {% render 'product-media-carousal', customProductImages: customProductImages  %}
+        {% comment %}
+          {% render 'product-media-list', thumbnail: false, arrow: true, section: section, product: product, sectionId: sectionId %}
+        {% endcomment %}
+
+    <p style="
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+    background-color: #f8f8f8;
+    padding: 9px 5px;
+    margin-top: -8px;
+    color: #595959;
+">First Time Customer Offer Only.</p>
+
+
+      </div>
+      <div class="product_information_form_block">
+        <div class="main-product-box">
+          <div class="counter_box">1</div>
+          <div class="content_box flavor_box">
+            <h3><span>1.</span>{{ step1Title }}</h3>
+            <p class="content_short_info">{{ totalServes }} servings/bag</p>
+            <div class="content_box_product_wrap">
+              {% for item in bundleProducts %}
+                <div class="product_box" data-handle="{{ item.handle }}">
+                  <h2>{{ item.metafields.custom.flavor_name }}</h2>
+                  <div class="product_image">
+                    <img
+                      src="{{ item.metafields.custom.thumbnail_image | img_url : "150x" }}"
+                      srcset="{{ item.metafields.custom.thumbnail_image  | img_url : "250x" }}"
+                      alt="{{ item.metafields.custom.flavor_name }}" />
+                  </div>
+
+                  {% render 'quantity-controller', productId: item.id, index: forloop.index %}
+                </div>
+              {% endfor %}
+              
+            </div>
+
+            <div class="offer_info">
+              {{ section.settings.free_shipping_text }}
+            </div>
+
+          </div>
+        </div>
+
+        <div class="product_price_box">
+          <div class="counter_box">2</div>
+          <div class="content_box purchase_type_block">
+            <h3><span>2.</span>{{ step2Title }}</h3>
+            {% comment %} subscription box {% endcomment %}
+            <div class="subscription_box purchase_type_box">
+             
+              <div class="label_subsription">
+              *Most popular
+              </div>
+           
+              <label for="subscription_item">
+
+                <div class="purchase_type_info">
+                  <div class="radio_box">
+                    <input
+                      hidden
+                      type="radio"
+                      id="subscription_item"
+                      value="selling_plan"
+                      name="subscribe"
+                      checked
+                       />
+                    <span class="custom_radio"></span>
+                  </div>
+                  <div class="snippet_info_box">
+                    <div class="type_price_block">
+                      <h2>Subscribe & Save</h2>
+                      <div class="price_calc_box">
+                            <span class="original_price withpercentage">50% OFF</span>
+                      </div>
+                    </div>
+                    <div class="per_bag_cost">
+
+                            <div class="price_box">
+                                <span class="discounted_price_box">
+                                <span class="discounted_price">$24.97</span>/Bag</span>
+                            </div>
+                            <div class="discountBox">(
+                              <span class="discounted_price_per_bag">{{ pricePerBag }}</span>
+                              <span>/serving</span>
+                              )
+                            </div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="delivery_frequency_box">
+                  <div class="selected_frequency">
+                    <div class="selected">
+                      Deliver every <span> {{ productOne.selling_plan_groups[0].selling_plans[0].name | replace: 'Deliver every', ''  }}</span>
+                    </div>
+                    <span class="chevron_icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none">
+                        <path
+                          d="M6 9L12 15L18 9"
+                          stroke="#212121"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="delivery_frequency_dropdown">
+                    <ul class="available_frequency">
+                    {% for selling_plan_group in productOne.selling_plan_groups %}
+                      {% for plan in selling_plan_group.selling_plans %}
+                          <li>
+                            <label for="{{plan.id}}">
+                              <input
+                                type="radio"
+                                id="{{plan.id}}"
+                                value="{{ plan.name }}"
+                                name="frequency_unit"
+                                hidden 
+                                {% if forloop.index == 1%}
+                                checked
+                                {% endif %}
+                                />
+                              <span>Deliver every</span>
+                              <span> {{ plan.name | replace: 'Deliver every', ''  }}</span>
+                            </label>
+                        </li>
+                      {% endfor %}
+                    {% endfor %}
+
+                     
+                    </ul>
+                  </div>
+                </div>
+              </label>
+              <div class="subs_benefit_box">
+                <ul class="subs_benefit_list">
+              
+                    
+                  {% for block in blocks %}
+                    {% if forloop.index < 5 and block.type == 'subscription_benefits' %}
+                      <li>
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none">
+                        <path d="M9.79873 0L8.74395 1.10064L4.49427 5.35032L3.25605 4.15796L2.15541 3.05732L0 5.21274L1.10064 6.31338L3.39363 8.60637L4.44841 9.70701L5.54904 8.60637L10.8994 3.25605L12 2.15541L9.79873 0Z" fill="#0B0B0B" />
+                      </svg>
+                        <span>{{ block.settings.benefit }}</span>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+  
+                </ul>
+
+              </div>
+            </div>
+            {% comment %} onetime box {% endcomment %}
+            <div class="onetime_box purchase_type_box">
+              <label for="onetime_item">
+
+                <div class="purchase_type_info">
+                  <div class="radio_box">
+                    <input
+                      hidden
+                      type="radio"
+                      id="onetime_item"
+                      name="subscribe"
+                      value="onetime_plan" />
+                    <span class="custom_radio"></span>
+                  </div>
+                  <div class="snippet_info_box">
+                    <div class="type_price_block">
+                      <h2>One-time
+                      </h2>
+                        {% unless template contains 'superfood-v2' %}
+                        <div class="price_calc_box">
+                            <span class="discounted_price_box onetime_original_price">
+                                <span class="discounted_price">$49.95</span>/Bag
+                            </span>
+                        </div>
+                        {% endunless %}
+                    </div>
+                    <div class="per_bag_cost">
+                     
+                        <div class="price_box">
+                            <div class="price_calc_box">
+                                <span class="discounted_price_box onetime_original_price">
+                                    <span class="discounted_price">$49.95</span>/Bag
+                                </span>
+                            </div>
+                        </div>
+                        <div class="discountBox">(
+                          <span class="discounted_price_per_bag">$3.33</span>
+                          <span>/serving</span>
+                          )
+                        </div>
+
+                        
+                    </div>
+                  </div>
+                </div>
+
+
+              </label>
+
+            </div>
+            <div class="subtotal_box">
+              <p class="save_message">
+                YOU'RE SAVING $24.98!
+              </p>
+              <div class="subtotal_price">
+                <span class="original_subtotal_price">$49.95</span>
+                <span class="discounted_subtotal_price">$24.97</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="subscribe_box">
+          <div class="counter_box">3</div>
+          <div class="purchase_cta">
+            <button type="submit" class="product__button button button--tertiary disabled">{{ disabledText }}</button>
+            <button type="submit" class="product__button button button--tertiary hide add_product_cart">{{ subcribeText }}</button>
+          </div>
+        </div>
+        <div class="order_feature">
+          <h3>Checkout with confidence</h3>
+          <ul>
+          {% for block in blocks %}
+            {% if forloop.index > 2 and block.type == 'subscription_benefits' %}
+              <li>
+                {% render 'checkmark' %}
+                <span>{{ block.settings.benefit }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+            
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="modal_popup benefit_more_popup">
+    <div class="inner_container_box">
+      <div class="close_box">
+      {% render 'close-icon' %}
+      </div>
+      <h3>{{ section.settings.benefit_popup_title }}</h3>
+      <p class="subtext">{{ section.settings.benefit_popup_subtitle }}</p>
+      <ul>
+      {% for block in blocks %}
+        {% if forloop.index > 2 and block.type == 'subscription_benefits' %}
+          <li>
+            {% render 'checkmark-dark' %}
+            <span>{{ block.settings.benefit }}</span>
+          </li>
+        {% endif %}
+      {% endfor %}
+     
+       
+      </ul>
+      <p class="tagline">{{ section.settings.benefit_popup_tagline }}</p>
+    </div>
+</div>
+
+<div class="modal_popup upgrade_cart">
+  <div class="inner_container_box">
+    <div class="close_box">
+      {% render 'close-icon' %}
+    </div>
+    <h3>Why <span>Subscribe?</span></h3>
+    <p>
+    Join Kevin Hart and thousands of happy customers saving 50% (That's $24.98) off each bag!
+    </p>
+    <ul>
+        <li>
+          {% render 'checkmark-dark' %}
+          <span>
+          Manage your shipment online
+          </span>
+        </li>
+        <li>
+          {% render 'checkmark-dark' %}
+          <span>
+          No Commitments, Change / Cancel Anytime
+          </span>
+        </li>
+        <li>
+          {% render 'checkmark-dark' %}
+          <span>
+          60-Day money-back guarantee
+          </span>
+        </li>
+        
+      </ul>
+    <div class="subscribe_option">
+      Yes, I want to save $<span id="overall_saving">24.98</span>
+    </div>
+    <div class="continue_onetime">
+    No, I'll Pay Full Price
+    </div>
+  </div>
+</div>
+
+<style>
+.modal_popup{
+  position: fixed;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(33,33,33,.7);
+  z-index:99;
+  display: none;
+}
+
+.modal_popup .inner_container_box{
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 340px;
+  position: relative;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal_popup .inner_container_box .close_box{
+  width: 24px;
+  height: 24px; 
+  right: 18px;
+  top: 18px;
+  position: absolute;
+  cursor: pointer;
+}
+.modal_popup .inner_container_box h3{
+  color: #212121;
+  font-family: "FK Grotesk Bold", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+.modal_popup.upgrade_cart .inner_container_box{
+  max-width: 624px;
+  background-color: #F8FAEF;
+}
+.modal_popup.upgrade_cart .inner_container_box h3{
+  color: #212121;
+  text-align: center;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal; /* 0px */
+  text-transform: uppercase;
+  font-family: 'Druk Web', sans-serif;
+  margin-bottom: 12px;
+}
+.modal_popup.upgrade_cart .inner_container_box h3 span{
+  color: #AEC22F;
+}
+
+.modal_popup.upgrade_cart .inner_container_box p{
+  color: #4D201A;
+  text-align: center;
+  font-family: "Lato Bold", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; 
+  max-width: 90%;
+  margin: 0 auto;
+}
+.modal_popup .inner_container_box p.subtext{
+  color: #212121;
+  font-family: "FK Grotesk Bold", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.modal_popup .inner_container_box p.tagline{
+  color: #212121;
+  font-family: "FK Grotesk Bold", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.modal_popup .inner_container_box ul{
+  list-style: none;
+  padding:0;
+  margin:24px 0;
+}
+.modal_popup.upgrade_cart .inner_container_box ul{
+  margin:36px 0 43px 0;
+  padding: 0 85px;
+}
+.modal_popup.upgrade_cart .subscribe_option{
+  margin:0 36px;
+  text-align: center;
+  color: #121212;
+  text-align: center;
+  font-family: "Lato Bold", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  padding: 13px 0 15px 0;
+  border-radius: 74px;
+  background-color: #C9E14B;
+  transition: all 0.3s;
+  cursor:pointer;
+}
+.modal_popup.upgrade_cart .subscribe_option:hover{
+  background-color: #afc42f;
+}
+.modal_popup.upgrade_cart .continue_onetime{
+  margin-top: 16px;
+  color: #4D201A;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  text-decoration-line: underline;
+  text-align: center;
+  cursor: pointer;
+}
+.modal_popup.upgrade_cart .inner_container_box ul li span{
+  font-size: 14px;
+}
+.modal_popup .inner_container_box ul li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.modal_popup .inner_container_box ul li span{
+  margin-left: 12px;
+  color: #212121;
+  font-family: "Lato Bold", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17px;
+}
+.modal_popup .inner_container_box ul li:last-child{
+  margin-bottom: 0;
+}
+.order_feature{
+  padding:29px 24px;
+  border-radius: 10px;
+  border: 1px solid #E4E4E4;
+  background-color: #F8F8F8;
+  width: calc(100% - 26px - 48px);
+  margin-top: 24px;
+}
+.order_feature h3{
+  color: #212121;
+  font-family: "FK Grotesk Bold", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.order_feature ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+
+}
+.order_feature ul li{
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.order_feature ul li span{
+  color: #212121;
+  font-family: "Lato Bold", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17px;
+  margin-left: 8px;
+}
+.content_box h3 span{
+  display: none;
+}
+.product__button.button.button--tertiary.disabled{
+  background: #AEAEAE!important;
+  color: #fff;
+  border-color: #AEAEAE!important;
+}
+  .product-section-new .product_information_block .product-desktop-media {
+    top: 0 !important;
+
+  }
+  .product-section-new .product_information_block .product__container {
+    padding-left: 0;
+  }
+  .product_wrapper_block {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .product__media_block {
+    width: 100%;
+    max-width: 685px;
+  }
+  .product_information_form_block {
+    width: 100%;
+    max-width: 650px;
+    margin-left: 35px;
+  }
+  .counter_box {
+    font-family: "Druk Web", sans-serif;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 22px;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .product_information_form_block .main-product-box,
+  .product_information_form_block .product_price_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 12px 0;
+    position: relative;
+  }
+  .product_information_form_block .main-product-box .counter_box::after,
+  .product_information_form_block .product_price_box .counter_box::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 60px;
+    transform: translateX(-50%);
+    width: 1px;
+    background-color: #e4e4e4;
+    height: calc(100% - 36px - 24px);
+  }
+  .product_price_box .purchase_type_block h3 {
+    margin-bottom: 13px;
+  }
+  .product_price_box .purchase_type_block{
+    position: relative;
+  }
+  .label_subsription{
+    position: absolute;
+    right:0;
+    top: 115px;
+    padding: 9px 12px;
+    font-size: 9px;
+    font-family: "Lato Bold", sans-serif;
+    transform: translateX(66%) rotate(90deg);
+    background-color: #AFC42F;
+    border-radius: 3px 3px 0px 0px;
+    color: #000;
+    text-transform: uppercase;
+    opacity:1;
+  }
+  .label_subsription.active{
+    opacity:1;
+  }
+  .product_price_box .purchase_type_box {
+    padding: 18px 24px;
+    border-radius: 10px;
+    border: 1px solid #E4E4E4;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .product_price_box .purchase_type_box.active {
+    opacity: 1;
+    border-color: #AFC42F;
+  }
+  .product_price_box .subscription_box.purchase_type_box.active {
+    background-color: rgba(175, 196, 47, 0.10);
+  }
+  .product_information_form_block .content_box {
+    width: calc(100% - 36px - 97px);
+  }
+  .product_information_form_block .content_box.flavor_box {
+    width: calc(100% - 36px - 97px);
+  }
+  .content_box h3 {
+    margin-bottom: 4px;
+    color: #212121;
+    font-family: "FK Grotesk Bold", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: math-auto;
+  }
+  .flavor_box .content_short_info {
+    color: #959595;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    text-transform: capitalize;
+  }
+  .product_information_form_block{
+    padding-bottom:42px;
+  }
+  .product_information_form_block .content_box_product_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #E4E4E4;
+    margin-top: 16px;
+  }
+  .content_box_product_wrap .product_box {
+    width: calc(100% / 2);
+    padding: 27px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #E4E4E4;
+  }
+  .content_box_product_wrap .product_box:last-child {
+    border: none;
+  }
+  .content_box_product_wrap .product_box h2 {
+    color: #212121;
+    font-family: "FK Grotesk Bold", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .product_box .quanity_controller {
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 74px;
+    border: 1px solid #E2E2E2;
+    background: #F4F4F4;
+    width: 100%;
+    max-width: 86px;
+    display: none;
+  }
+  .quanity_controller .value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    width: 15px;
+  }
+  .quanity_controller svg {
+    display: block;
+  }
+  .product_box .quanity_controller .quantity_item_controller {
+    flex-grow: 1;
+    text-align: center;
+    align-self: stretch;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 7px 0;
+  }
+  .product_box .quanity_controller.active {
+    display: flex;
+  }
+  .content_box_product_wrap .product_box img {
+    width: 86px;
+    aspect-ratio: 86/129;
+  }
+  .product_box .add_cta {
+    padding: 7px 0;
+    width: 100%;
+    max-width: 86px;
+    border-radius: 74px;
+    background: #AEC22F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .product_box .add_cta span {
+    color: #121212;
+    text-align: center;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    margin-right: 3px;
+    text-transform: uppercase;
+  }
+  .flavor_box .offer_info {
+    color: #BF4E30;
+    font-family: Lato;
+    font-size: 10px;
+    font-family: "Lato Bold", sans-serif;
+    line-height: 14px; /* 140% */
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 12px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .flavor_box .offer_info span{
+    margin-left: 5px;
+  }
+  .purchase_type_box .purchase_type_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .purchase_type_box .purchase_type_info .radio_box {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #212121;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 3px;
+  }
+
+  .purchase_type_box .purchase_type_info .snippet_info_box {
+    width: calc(100% - 28px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .type_price_block h2 {
+    font-family: "FK Grotesk Bold", sans-serif;
+    color: #212121;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+  }
+  .purchase_type_box.subscription_box .purchase_type_info {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E4E4E4;
+  }
+  .purchase_type_box.subscription_box .delivery_frequency_box .selected_frequency {
+    padding: 11px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #E4E4E4;
+    cursor: pointer;
+  }
+  .delivery_frequency_box .selected_frequency .selected {
+    color: #212121;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+  }
+  // .delivery_frequency_box .selected_frequency .selected span {
+  //   text-transform: uppercase;
+  //   font-family: "Lato Heavy", sans-serif;
+  // }
+  .delivery_frequency_box .selected_frequency .selected span:last-child{
+    text-transform: uppercase;
+    font-family: "Lato Bold", sans-serif;
+  }
+  .purchase_type_box.subscription_box .delivery_frequency_box {
+    margin-top: 15px;
+    position: relative;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown {
+    position: absolute;
+    top: 60px;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.06), 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: all 0.3s;
+
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px 30px;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label {
+    font-family: "Lato Regular", sans-serif;
+    font-size: 13px;
+    line-height: normal;
+    padding: 5px 0;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label span{
+    color: rgba(33,33,33,0.5);
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label span:last-child{
+    text-transform: uppercase;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label.active span{
+    color: rgba(33,33,33,1);
+    font-family: 'Lato Bold',sans-serif;
+    font-weight:700;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label.active span:last-child,
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label input:checked ~ span:last-child{
+    font-family: 'Lato heavy',sans-serif;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label:hover span{
+
+    color: rgba(33,33,33,1);
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label input:checked ~ span{
+    color: rgba(33,33,33,1);
+    font-weight: 700;
+    font-family: 'Lato Bold',sans-serif;
+  }
+  .purchase_type_info .snippet_info_box .per_bag_cost {
+    align-self: flex-end;
+    color: #5E5F5E;
+    text-align: right;
+    font-family: "Lato Regular", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    text-transform: uppercase;
+  }
+  .purchase_type_box .purchase_type_info .radio_box span {
+    width: 11px;
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border-radius: 50%;
+  }
+  .purchase_type_box .purchase_type_info .radio_box input:checked ~ span {
+    background-color: #212121;
+  }
+  
+  .type_price_block .price_calc_box span.original_price {
+    color: #5E5F5E;
+    font-family: "Lato Regular", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    text-decoration: line-through;
+    margin-right: 6px;
+  }
+  .type_price_block .price_calc_box span.discounted_price_box {
+    color: #0A0A0A;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+  .onetime_box .type_price_block .price_calc_box span.discounted_price_box {
+    color: #212121;
+    font-family: "Lato Regular", sans-serif;
+  }
+  .type_price_block .price_calc_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .product_price_box .subscription_box.purchase_type_box {
+    padding-bottom: 24px;
+    margin-bottom: 12px;
+  }
+
+  .purchase_cta button{
+    width: 100%;
+    padding: 18px 20px;
+    box-shadow: none;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 74px;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: 'Lato Bold',sans-serif;
+  }
+  .purchase_cta button.add_product_cart{
+    background-color: #121212;
+    color:#fff;
+    cursor:pointer;
+    transition: all 0.3s;
+  }
+  .purchase_cta button.add_product_cart:hover{
+    background-color: #C8E812;
+    color: #121212;
+  }
+
+  .type_price_block .price_calc_box span.discounted_price_box .discounted_price {
+    font-size: 16px;
+  }
+  .subs_benefit_box {
+    margin-top: 16px;
+  }
+  .subs_benefit_box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .subs_benefit_box ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .subs_benefit_box ul li:last-child {
+    margin-bottom: 0;
+  }
+  .subs_benefit_box ul li span {
+    color: #212121;
+    font-family: "Lato Regular", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    margin-left: 8px;
+  }
+  .subs_benefit_box ul li:first-child span {
+    font-family: "Lato Heavy", sans-serif;
+  }
+
+  .product_information_form_block .subtotal_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    display: none;
+  }
+  .product_information_form_block .subtotal_box p {
+    color: #499167;
+    font-family: "Lato Heavy", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 14px;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+  }
+  .subtotal_price .original_subtotal_price {
+    color: rgba(35, 35, 35, 0.50);
+    font-family: "Lato Regular", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    text-decoration: line-through;
+    margin-right: 6px;
+  }
+  .subtotal_price .discounted_subtotal_price {
+    color: #0A0A0A;
+    font-family: "Lato Heavy", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 14px;
+  }
+  .subscribe_box {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .subscribe_box .purchase_cta {
+    width: calc(100% - 36px - 97px);
+  }
+  .image-banner .image-banner__content h2{
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 70px; 
+  }
+  .image-banner__content>*+.image-banner__text{
+    margin-top: 4px;
+  }
+  .image-banner__content *+.image-banner__btns{
+    margin-top: 48px;
+  }
+  .image-banner .image-banner__content .btn--solid{
+    padding: 12px 62px;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 19px;
+    line-height: normal;
+    background-color: #C9E14B;
+  }
+  .purchase_type_box.subscription_box.active .delivery_frequency_box .selected_frequency{
+    border-color: #212121;
+  }
+  .purchase_type_box.subscription_box.active .purchase_type_info{
+    border-bottom: 1px solid #AEC22F;
+  }
+  .product_information_form_block .main-product-box{
+    padding-top: 16px;
+  }
+  carousel-component carousel-btn{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    left:0;
+    z-index:3;
+    background-color: rgba(255, 255, 255, 0.60);
+  }
+  carousel-component carousel-btn[data-scroll-direction="next"]{
+    right:0;
+    left:unset;
+  }
+  .product-media-carousel__viewport.shape--portrait{
+    padding-bottom: 100%;
+  }
+
+  @media screen and (min-width: 1025px){
+    .product__media_block{
+      width: 50%;
+    }
+    .product_information_form_block{
+      width: 48%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 769px){
+    .product_information_form_block .content_box,
+    .product_information_form_block .content_box.flavor_box,.subscribe_box .purchase_cta{
+      width: 95%;
+    }
+    .order_feature{
+      width: 100%;
+    }
+    .product__media_block{
+      max-width:45%;
+    }
+    .product_information_form_block{
+      max-width: 55%;
+      margin-left: 25px;
+    }
+    .order_feature{
+      width: 97%;
+    }
+    .product_information_form_block .content_box, .product_information_form_block .content_box.flavor_box, .subscribe_box .purchase_cta{
+      width:85%;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .product_wrapper_block{
+      flex-direction: column;
+    }
+    .product__media_block{
+      max-width: 100%;
+    }
+    .modal_popup.upgrade_cart .subscribe_option{
+      width: 100%;
+      max-width: 320px;
+      margin:0 auto;
+    }
+    .order_feature h3{
+      font-size: 16px;
+    }
+    .purchase_type_box.subscription_box .delivery_frequency_box .selected_frequency{
+      padding: 13px 20px;
+    }
+    .purchase_type_box.subscription_box .delivery_frequency_box .selected_frequency svg {
+      width: 18px;
+    height: 18px;
+    }
+    .type_price_block .price_calc_box span.discounted_price_box .discounted_price,
+    .type_price_block .price_calc_box span.discounted_price_box{
+      font-size: 14px;
+    }
+    .counter_box{
+      display:none;
+    }
+    .product_information_form_block .content_box,
+    .product_information_form_block .content_box.flavor_box,
+    .subscribe_box .purchase_cta,
+    .order_feature{
+      width: 100%;
+    }
+    .product_information_form_block{
+      margin-left:0;
+      margin:0 auto;
+    }
+    .product-section-new .product_information_block .product__container{
+      padding-left:0px;
+      padding-right:0;
+    }
+    .product-section-new .product_information_form_block{
+      padding:0 20px 32px 20px;
+    }
+    .label_subsription{
+      padding: 3px 12px;
+      font-size: 8px;
+      transform: translateX(59%) rotate(90deg);
+    }
+    .content_box h3{
+      font-size: 18px;
+      text-align: center;
+    }
+    .flavor_box .content_short_info{
+      font-size: 12px;
+      text-align: center;
+    }
+    .content_box h3 span{
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .product-mobile-media__dots-carousel{
+      bottom: 15px;
+      padding:0px 15px;
+      border-radius: 37px;
+      background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+      backdrop-filter: blur(21px);
+      max-width: 102px;
+    }
+    .dots-carousel__slide-inner-circle{
+      background-color: rgba(0,0,0,0.3);
+      border: none;
+      box-shadow: none;
+      width: 0.8rem!important;
+
+      height: 0.8rem!important;
+    }
+  .product_information_block .product-mobile-media  .dots-carousel__slide{
+      min-width: 15px;
+    }
+    .dots-carousel__slide.is-prev-prev .dots-carousel__slide-inner-circle{
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+    .product-mobile-media__dots-carousel carousel-dot.is-selected svg{
+      fill: #fff;
+      width: 12px;
+      height: 12px;
+    }
+    .product-mobile-media__dots-carousel carousel-dot.is-selected svg circle{
+      fill: #fff;
+    }
+    .modal_popup.upgrade_cart .inner_container_box ul{
+      padding: 0 25px;
+    }
+    .modal_popup.upgrade_cart .inner_container_box{
+      width: calc(100% - 40px);
+      padding: 32px 20px;
+    }
+    .modal_popup.upgrade_cart .inner_container_box p{
+      max-width: 100%;
+      font-size: 18px;
+    }
+    .shape--portrait{
+      padding-bottom: 100%;
+      
+    }
+  }
+
+  @media screen and (min-width: 1600px){
+    .product_wrapper_block{
+      justify-content: center;
+    }
+  }
+  @media screen and (min-width: 769px){
+    .usp_wrapper .text_block p{
+      font-family: 'Lato Regular', sans-serif!important;
+      font-size: 20px!important;
+      max-width: 67vw!important;
+      margin-top: 12px!important;
+    }
+    .usp_wrapper .text_block h3{
+      font-size: 65px!important;
+      letter-spacing: 0.65px!important;
+    }
+    .usp_feature .feature_box{
+      max-width: 145px!important;
+    }
+    .usp_feature .feature_box img{
+      width:85px!important;
+    }
+    .usp_feature .feature_box span{
+      font-size: 12px!important;
+      margin-top: 22px!important;
+    }
+    .image-banner .image-banner__content h2{
+      font-size: 65px!important;
+    }
+    .upper_content_row .head_block h3{
+      font-size: 65px!important;
+    }
+    .upper_content_row .head_block p{
+      font-size: 20px!important;
+      margin-top:12px!important;
+    }
+    .upper_ingredient_row{
+      max-width: 452px!important;
+    }
+    .lower_ingredient_row{
+      margin-top:12px!important;
+    }
+    .upper_ingredient_row .ingredient_box img, .lower_ingredient_row .ingredient_box img{
+      max-width: 107px!important;
+    }
+    .upper_ingredient_row .ingredient_box span, .lower_ingredient_row .ingredient_box span{
+      font-size: 14px!important;
+      margin-top:10px!important;
+    }
+    .all_ingredient{
+      max-width: 980px!important;
+    }
+  }
+  .purchase_cta button.add_product_cart{
+    display: none;
+  }
+</style>
+
+<script>
+  window.addedBundle = {};
+  var totalSaving = 0;
+  var subscribeText = "{{ subcribeText }}";
+  var onetimeText = "{{ onetimeText }}";
+  var disableCtaText = "{{ disabledText }}";
+  var freeshippingText = "{{ freeshippingText }}";
+  var addMorebagsText = "{{ addMorebagsText }}";
+  var choosebagFirst = "{{ choosebagFirst }}";
+
+  var freeShipping = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1585 0.833666C15.3694 1.04463 15.4879 1.33073 15.4879 1.62904C15.4879 1.92735 15.3694 2.21345 15.1585 2.42442L6.72629 10.8567C6.61486 10.9681 6.48256 11.0565 6.33695 11.1169C6.19134 11.1772 6.03528 11.2082 5.87767 11.2082C5.72006 11.2082 5.56399 11.1772 5.41838 11.1169C5.27278 11.0565 5.14048 10.9681 5.02904 10.8567L0.839543 6.66792C0.732094 6.56414 0.646389 6.44 0.587429 6.30275C0.528469 6.16549 0.497434 6.01787 0.496136 5.86849C0.494838 5.71912 0.523303 5.57098 0.579869 5.43272C0.636435 5.29446 0.719969 5.16885 0.825599 5.06322C0.931228 4.95759 1.05684 4.87406 1.19509 4.81749C1.33335 4.76093 1.48149 4.73246 1.63087 4.73376C1.78025 4.73506 1.92787 4.76609 2.06512 4.82505C2.20238 4.88401 2.32651 4.96972 2.43029 5.07717L5.87729 8.52417L13.567 0.833666C13.6715 0.729124 13.7956 0.646192 13.9321 0.589611C14.0686 0.533029 14.215 0.503906 14.3628 0.503906C14.5106 0.503906 14.6569 0.533029 14.7935 0.589611C14.93 0.646192 15.0541 0.729124 15.1585 0.833666Z" fill="#499167"/>
+</svg>
+<span style="color:#499167">${freeshippingText}</span>
+`;
+
+var productFirst = `
+<span style="color:#212121;text-transform:uppercase;margin:0 5px 0 0;letter-spacing:0.2px">${choosebagFirst}</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  <path d="M8 12.6673V3.33398" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.33398 8.00065L8.00065 3.33398L12.6673 8.00065" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`;
+  document.addEventListener('DOMContentLoaded', () => {
+
+  
+    // dots limit
+    if($(window).width() < 769){
+    function setBoundries(slick, state) {
+      if (state === 'default') {
+        slick.find('ul.slick-dots li').eq(4).addClass('n-small-1');
+      }
+    }
+  
+    // Slick Selector.
+    var slickSlider = $('.media_carousal_wrapper');
+    var maxDots = 4;
+    var transformXIntervalNext = -14;
+    var transformXIntervalPrev = 14;
+  
+    slickSlider.on('init', function (event, slick) {
+      $(this).find('ul.slick-dots').wrap("<div class='slick-dots-container'></div>");
+      $(this).find('ul.slick-dots li').each(function (index) {
+        $(this).addClass('dot-index-' + index);
+      });
+      $(this).find('ul.slick-dots').css('transform', 'translateX(0)');
+      setBoundries($(this),'default');
+    });
+  
+    var transformCount = 0;
+    slickSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      var totalCount = $(this).find('.slick-dots li').length;
+      if (totalCount > maxDots) {
+        if (nextSlide > currentSlide) {
+          if ($(this).find('ul.slick-dots li.dot-index-' + nextSlide).hasClass('n-small-1')) {
+            if (!$(this).find('ul.slick-dots li:last-child').hasClass('n-small-1')) {
+              transformCount = transformCount + transformXIntervalNext;
+              $(this).find('ul.slick-dots li.dot-index-' + nextSlide).removeClass('n-small-1');
+              var nextSlidePlusOne = nextSlide + 1;
+              $(this).find('ul.slick-dots li.dot-index-' + nextSlidePlusOne).addClass('n-small-1');
+              $(this).find('ul.slick-dots').css('transform', 'translateX(' + transformCount + 'px)');
+              var pPointer = nextSlide - 3;
+              var pPointerMinusOne = pPointer - 1;
+              $(this).find('ul.slick-dots li').eq(pPointerMinusOne).removeClass('p-small-1');
+              $(this).find('ul.slick-dots li').eq(pPointer).addClass('p-small-1');
+            }
+          }
+        }
+        else {
+          if ($(this).find('ul.slick-dots li.dot-index-' + nextSlide).hasClass('p-small-1')) {
+            if (!$(this).find('ul.slick-dots li:first-child').hasClass('p-small-1')) {
+              transformCount = transformCount + transformXIntervalPrev;
+              $(this).find('ul.slick-dots li.dot-index-' + nextSlide).removeClass('p-small-1');
+              var nextSlidePlusOne = nextSlide - 1;
+              $(this).find('ul.slick-dots li.dot-index-' + nextSlidePlusOne).addClass('p-small-1');
+              $(this).find('ul.slick-dots').css('transform', 'translateX(' + transformCount + 'px)');
+              var nPointer = currentSlide + 3;
+              var nPointerMinusOne = nPointer - 1;
+              $(this).find('ul.slick-dots li').eq(nPointer).removeClass('n-small-1');
+              $(this).find('ul.slick-dots li').eq(nPointerMinusOne).addClass('n-small-1');
+            }
+          }
+        }
+      }
+    });
+  }
+    // dots limit
+
+    
+
+    var mediaSlide = $('.media_carousal_wrapper').slick({
+      dots: false,
+      infinite: true,
+      speed: 400,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      draggable: false,
+      swipe: false,
+      touchMove: false,
+      prevArrow: '<button class="slick_prev"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" transform="matrix(0 -1 -1 0 32 32)" fill="white" fill-opacity="0.6"/><path d="M20 24L12 16L20 8" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button class="slick_next"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" transform="matrix(0 -1 1 0 0 32)" fill="white" fill-opacity="0.6"/><path d="M12 24L20 16L12 8" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            autoplay: false,
+            slidesToShow: 1,
+            draggable: true,
+            dots: true,
+            slidesToScroll: 1,
+            infinite: false,
+            swipe: true,
+            touchMove: true
+          }
+        }
+
+      ]
+    });
+
+
+
+
+
+    $(document).on('click', '.product_price_box .purchase_type_box', function(e) {
+      $(this).find('input[name="subscribe"][type="radio"]').prop('checked', true);
+      let total = checkProductSelection();
+      if(total){
+        $('.product_price_box .purchase_type_box').removeClass('active');
+        $(this).addClass('active');
+        $('.product__button.button.button--tertiary.disabled').css('display', 'none');
+         $('.purchase_cta button.add_product_cart').css('display','block');
+        // $(this).find('input[name="subscribe"][type="radio"]').prop('checked', true);
+      }
+      else{
+        $('.purchase_cta button.add_product_cart').css('display','none');
+        $('.product__button.button.button--tertiary.disabled').css('display', 'block');
+         
+        $('.flavor_box .offer_info').html(productFirst).css('display','flex');
+      }
+      if($('.purchase_type_box.onetime_box').hasClass('active')){
+        $('.purchase_cta button.add_product_cart').text(onetimeText);
+        $('.label_subsription').removeClass('active');
+      }
+      else{
+        $('.purchase_cta button.add_product_cart').text(subscribeText);
+      }
+      
+    });
+
+    $('.selected_frequency').on('click', function(e) {
+      e.stopPropagation();
+      $(this).siblings('.delivery_frequency_dropdown').toggleClass('active');
+      // if(!$(e.target).hasClass('selected_frequency')) return;
+
+      // e.stopPropagation();
+      // if ($(this).closest('.purchase_type_box').hasClass('active')) {
+       
+      //   $(this).siblings('.delivery_frequency_dropdown').toggleClass('active');
+      // }
+    });
+
+    // $('.selected').on('click', function(e) {
+    //   if(!$(e.target).hasClass('selected')) return;
+
+    //   e.stopPropagation();
+    //   if ($(this).closest('.purchase_type_box').hasClass('active')) {
+       
+    //     $(this).parent('.selected_frequency').siblings('.delivery_frequency_dropdown').toggleClass('active');
+    //   }
+    // });
+
+    $('.delivery_frequency_dropdown ul li label').on('click', function(e){
+      e.stopPropagation();
+      let text  = $(this).find('span').clone()
+      // let text  = $(this).html();
+      $('.delivery_frequency_box .selected_frequency .selected').html(text);
+      $('.delivery_frequency_dropdown').removeClass('active');
+      $('.delivery_frequency_dropdown ul li label').removeClass('active');
+      $(this).addClass('active');
+    });
+
+
+  // outside click
+  $('.delivery_frequency_dropdown, .selected_frequency').on('click', function(e){
+    e.stopPropagation();
+  });
+
+  $(document).on('click', function(){
+     const el = $('.delivery_frequency_dropdown');
+     let isTrueVisible =  $(el).is(':visible') &&
+         $(el).css('opacity') !== '0' &&
+         $(el).css('visibility') !== 'hidden';
+     if(isTrueVisible){$('.delivery_frequency_dropdown').removeClass('active');}
+   })
+  
+  // outside click
+
+   
+
+    $(document).on('click', '.add_cta', function() {
+      
+        $('.product__button.button.button--tertiary.disabled').css('display', 'none');
+       $('.purchase_cta button.add_product_cart').css('display','block');
+      let planType = $('input[name="subscribe"]:checked').val();
+      if(planType == 'onetime_plan'){
+        $('.purchase_cta button.add_product_cart').text(onetimeText);
+      }
+      let index = parseInt($(this).attr('data-index'));
+      mediaSlide.slick('slickGoTo',index-1);
+  
+      let id = $(this).attr('data-id');
+      window.addedBundle[`${id}`] = 1;
+      $(this).addClass('hide');
+      $(this).siblings('.quanity_controller').addClass('active');
+      let inputVal = $('input[name="subscribe"]:checked').val();
+      if(!$('.product_price_box .purchase_type_box').hasClass('active')){
+        if(inputVal == 'selling_plan'){
+          $('.product_price_box .subscription_box.purchase_type_box').addClass('active');
+          $('.label_subsription').addClass('active');
+        }
+        else{
+          $('.product_price_box .onetime_box.purchase_type_box').addClass('active');
+          $('.label_subsription').removeClass('active');
+        }
+      }
+      
+      $('button.disabled').addClass('hide');
+      $('button.add_product_cart').removeClass('hide');
+      
+
+      let sum = 0;
+      for(let key in window.addedBundle){
+        sum += window.addedBundle[key];
+      }
+      if(sum > 1){
+        $('.flavor_box .offer_info').html(freeShipping).css('display','flex');
+        $('.product_information_form_block .subtotal_box').css('display', 'flex');
+        if(inputVal == 'onetime_plan'){
+          $('.discounted_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);
+        }
+        else{
+          $('.product_information_form_block .subtotal_box p').text(`You're saving $${sum*24.98}!`);
+          $('.discounted_subtotal_price').css('display','inline-block').text(`$${(24.97*sum).toFixed(2)}`);
+          $('.original_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);
+        }
+      }
+      else{
+       
+        $('.flavor_box .offer_info').text(`${addMorebagsText}`).css('display','flex');
+       
+          if(inputVal == 'onetime_plan'){
+            $('.product_information_form_block .subtotal_box').css('display', 'none');
+            $('.product_information_form_block .subtotal_box p').text('');
+            $('.discounted_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);
+          }
+          else{
+            
+            $('.discounted_subtotal_price').css('display','inline-block').text(`$${(24.97*sum).toFixed(2)}`);
+            $('.original_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);
+            $('.product_information_form_block .subtotal_box').css('display', 'flex');
+            $('.product_information_form_block .subtotal_box p').css('display', 'block');
+          }
+       
+      }
+
+    });
+
+    $(document).on('change', 'input[name="subscribe"]', function(){
+     
+      if($(this).val() == 'onetime_plan'){
+        $('.delivery_frequency_dropdown').removeClass('active');
+      } 
+    })
+
+    $(document).on('click', '.quanity_controller .quantity_item_controller', function() {
+      let val = parseInt($.trim($(this).siblings('.value').text()));
+      let id = $(this).attr('data-id');
+      if($(this).hasClass('decrement')){
+
+        if(val > 1) {
+          $(this).siblings('.value').text(val - 1);
+          window.addedBundle[`${id}`] = val - 1;
+        } else if (val == 1) {
+          $(this).parent('.quanity_controller').removeClass('active');
+          $(this).parent('.quanity_controller').siblings('.add_cta').removeClass('hide');
+          window.addedBundle[`${id}`] = 0;
+        }
+      }
+
+      else if($(this).hasClass('increment')){
+        $(this).siblings('.value').text(val + 1);
+         window.addedBundle[`${id}`] = val + 1;
+      }
+
+      const addedProduct = checkProductSelection();
+      if(addedProduct){
+        $('.product__button.button.button--tertiary.disabled').css('display', 'none');
+         $('.purchase_cta button.add_product_cart').css('display','block');
+        if(!$('.product_price_box .purchase_type_box').hasClass('active')){
+          $('.product_price_box .subscription_box.purchase_type_box').addClass('active');
+        }
+        $('button.disabled').addClass('hide');
+        $('button.add_product_cart').removeClass('hide');
+        $('.label_subsription').addClass('active');
+      }
+      else{
+        $('.purchase_cta button.add_product_cart').css('display','none');
+        $('.product__button.button.button--tertiary.disabled').css('display', 'block');
+       
+        $('.product_price_box .subscription_box.purchase_type_box').removeClass('active');
+        $('button.add_product_cart').addClass('hide');
+        $('button.disabled').removeClass('hide');
+        $('.label_subsription').removeClass('active');
+        
+      }
+
+    })
+
+    $('li#open_benefit_popup').on('click', function(){
+      if($('.product_price_box .purchase_type_box').hasClass('active')){
+        $('.modal_popup.benefit_more_popup').fadeIn();
+      }
+    })
+    $('.modal_popup .inner_container_box .close_box').on('click', function(){
+
+        $('.modal_popup').hide();
+      
+    })
+
+    function checkProductSelection(){
+      let sum = 0;
+      let selectedPlan = $('input[name="subscribe"]:checked').val();
+      for(let key in window.addedBundle){
+        sum += window.addedBundle[key];
+      }
+      totalSaving = sum*24.98;
+      if(sum > 1){
+        $('.flavor_box .offer_info').html(freeShipping).css('display','flex');
+      }
+      else if(sum == 1){
+        $('.flavor_box .offer_info').text(`${addMorebagsText}`).css('display','flex');
+      }
+      else if(sum == 0){
+        $('.flavor_box .offer_info').text('').css('display','none');
+      }
+      if(sum > 0){
+        
+        if(selectedPlan == 'selling_plan'){
+          $('.product_information_form_block .subtotal_box p').text(`You're saving $${sum*24.98}!`);
+          $('.product_information_form_block .subtotal_box').css('display', 'flex');
+          $('.discounted_subtotal_price').css('display','inline-block').text(`$${(24.97*sum).toFixed(2)}`);
+          $('.original_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);;
+        }
+        else{
+          $('.discounted_subtotal_price').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);
+          $('.original_subtotal_price').css('display','none');
+          $('.product_information_form_block .subtotal_box p').text(``);
+          $('.product_information_form_block .subtotal_box').css('display', 'flex');
+
+        }
+
+      }
+      else{
+        $('.product_information_form_block .subtotal_box').css('display', 'none');
+      }
+      return sum > 0 ? true : false;
+    }
+
+    $(document).on('click', 'button.add_product_cart' ,function(){
+      let plan = $('input[name="subscribe"]:checked').val();
+
+     
+        if(plan == 'onetime_plan'){
+          $('span#overall_saving').text(totalSaving);
+          $('.modal_popup.upgrade_cart').fadeIn();
+        }
+        else{
+          addTocart()
+        }
+      
+    });
+
+    $('.modal_popup.upgrade_cart .continue_onetime').on('click', function(){
+      addTocart();
+    });
+
+    $('.modal_popup.upgrade_cart .subscribe_option').on('click', function(){
+      let frequency = $('input[name="frequency_unit"]:checked').val();
+      let items = [];
+      for(let item in window.addedBundle){
+        let plan_id = '';
+        let variant = window.bundleProducts[item].variants[0].id;
+        let selling_plans = window.bundleProducts[item].selling_plan_groups[0].selling_plans;
+        if(window.addedBundle[item] > 0){
+
+            let sellPlan = selling_plans.find(s => s.name == frequency);
+            // return;
+            plan_id = sellPlan.id;
+            items.push({
+              id: variant,
+              quantity: window.addedBundle[item],
+              selling_plan: plan_id,
+              properties: {
+                    _fiftyoff: 'true'
+                }
+            });
+          
+        }
+     }
+      addTocart(items);
+    });
+
+
+
+
+    function addTocart(itemCart=null){
+      let frequency = $('input[name="frequency_unit"]:checked').val();
+      let plan = $('input[name="subscribe"]:checked').val();
+      let items = itemCart ? itemCart : [];
+      if(items.length == 0){
+
+        for(let item in window.addedBundle){
+          let plan_id = '';
+          let variant = window.bundleProducts[item].variants[0].id;
+          let selling_plans = window.bundleProducts[item].selling_plan_groups[0].selling_plans;
+
+          if(window.addedBundle[item] > 0){
+            if(plan == 'selling_plan'){
+              let sellPlan = selling_plans.find(s => s.name == frequency);
+              console.log('sellPlan',sellPlan, selling_plans);
+              // return;
+              plan_id = sellPlan.id;
+              items.push({
+                id: variant,
+                quantity: window.addedBundle[item],
+                selling_plan: plan_id,
+                properties: {
+                    _fiftyoff: 'true'
+                }
+              });
+            }
+            else{
+              items.push({
+                id: variant,
+                quantity: window.addedBundle[item]
+              });
+            }
+          }
+       }
+      }
+
+     $.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      data: {
+        items: items
+      },
+      dataType: 'json',
+      success: function(data) { 
+        // console.log('data=========>', data);
+        $('.modal_popup.upgrade_cart').hide();
+        $('.sidebar-cart__body').remove();
+        fetch(window.Shopify.routes.root + "?sections=cart-drawer")
+        .then(res => res.json()).then((res) => {
+          const response = $.parseHTML(res['cart-drawer']);          
+          
+          
+          $('.sidebar-cart').removeAttr('is-empty');     
+          $('.sidebar-cart').append($(response).find('#CartInSidebar')[0].innerHTML);
+          setTimeout(function() {
+            $('.sidebar-cart__body').addClass('dataAddedonSideBar');
+            $('.sidebar-cart').attr('data-aria-expanded', "true");  
+            $('.sidebar-cart').addClass('cartAdded');     
+          });          
+        })
+
+        fetch(window.Shopify.routes.root + "?sections=header")
+        .then(res => res.json()).then((res) => {
+          const response = $.parseHTML(res['header']);          
+            $('#CartCount').html($(response).find('#CartCount')[0].outerHTML);
+        })
+      }
+      
+    });
+
+    }  
+
+  })
+</script>
+<style>
+  .cartAdded {
+    --gsc-text-color: 33, 33, 33;
+    --gsc-background-color: 255, 255, 255;
+    --gsc-foreground-color: 245, 245, 245;
+    --gsc-border-color: 231, 231, 231;
+    --gsc-button-background-color: 200, 232, 18;
+    --gsc-button-text-color: 33, 33, 33;
+  }
+</style>
+
+
+      <style>
+            body .flavor_box .content_short_info{
+                font-family: "Lato Semibold";
+                font-size: 14px;
+                color: #5E5F5E;
+            }
+            body .product_box .add_cta span {
+                font-size: 14px;
+                font-weight: 800;
+            }
+            body .label_subsription {
+                top: -25px;
+                right: -1px;
+                transform: inherit;
+                border-radius: 10px 10px 0px 0px;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 3px 10px;
+            }
+            body .product_price_box .purchase_type_box {
+                border-radius: 10px 0px 10px 10px;
+            }
+            body .flavor_box .offer_info {
+                font-size: 14px;
+            }
+            body .price_box .discounted_price_box {
+                color: #212121;
+                font-family: "Lato Bold";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 14px;
+                text-transform: uppercase;
+            }
+            body .discountBox {
+                color: #212121;
+                text-align: right;
+                font-family: "Lato Regular";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px;
+                text-transform: uppercase;
+                margin-top: 10px;
+            }
+            body .price_calc_box .original_price.withpercentage {
+                color: var(--Black, #212121);
+                font-family: "Lato Regular";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 14px;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            body .delivery_frequency_box .selected_frequency .selected {
+                color: #212121;
+                font-family: "Lato Bold";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 14px;
+                text-transform: uppercase;
+            }
+            body .delivery_frequency_box .selected_frequency .selected span {
+                font-family: "Lato Heavy" !important;
+                font-size: 900;
+            }
+            body .subs_benefit_box ul li{
+                margin-bottom: 8px;
+            }
+            body .subs_benefit_box ul li span {
+                color: #212121;
+                font-family: "Lato Heavy";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 17px;
+            }
+            body .subs_benefit_box ul li:first-child span {
+                font-family: "Lato Heavy", sans-serif;
+            }
+            body .type_price_block h2 {
+                font-size: 16px;
+            }
+            body .product_information_form_block .subtotal_box p {
+                color: var(--Success-State, #499167);
+                font-family: "Lato Heavy";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 14px;
+                letter-spacing: 0;
+                text-transform: uppercase;
+            }
+            body .subtotal_price .original_subtotal_price {
+                color: var(--Black, #212121);
+                font-family: "Lato Regular";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 14px;
+                text-decoration: line-through;
+            }
+            body .subtotal_price .discounted_subtotal_price {
+                color: var(--Black, #212121);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 14px;
+            }
+            body .onetime_box  .type_price_block h2 {
+                margin-top: 3px;
+            }
+            body .product_price_box .purchase_type_box.onetime_box {
+                border-radius: 10px 10px 10px 10px;
+            }
+            body .order_feature h3{
+              color: #212121;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              text-transform: capitalize;
+            }
+            body .order_feature ul li span {
+                color: #212121;
+                font-family: "Lato Bold";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 17px;
+            }
+            body .delivery_frequency_box .delivery_frequency_dropdown ul li label {
+              font-size: 14px;
+            }
+            .product_price_box .purchase_type_box {
+              position: relative;
+            }
+            .subscription_box.purchase_type_box.active .label_subsription {
+                opacity: 1;
+            }
+            @media screen and (max-width: 767px) {
+                .product_price_box .purchase_type_block h3 {
+                    margin-bottom: 40px;
+                }
+            }
+      </style>
+ 
+{% schema %}
+  {
+    "name": "Superfood v2",
+    "tag": "section",
+    "class": "product-section-new",
+    "blocks": [],
+    "settings": [
+      {
+        "type": "number",
+        "id": "total_serves",
+        "label": "Total Serves per bag",
+        "default": 15
+      },
+      {
+        "type": "text",
+        "id": "benefit_popup_title",
+        "label": "Benefit popup title",
+        "default": "Subscribe & Save"
+      },
+      {
+        "type": "text",
+        "id": "benefit_popup_subtitle",
+        "label": "Benefit popup subtitle",
+        "default": "BENEFITS OF A SUBSCRIPTION:"
+      },
+      {
+        "type": "text",
+        "id": "benefit_popup_tagline",
+        "label": "Benefit popup tagline",
+        "default": "It's Your Plan. You're In Full Control"
+      },
+      {
+        "type": "text",
+        "id": "step1_title",
+        "label": "Step 1 title",
+        "default": "Choose your flavors"
+      },
+      {
+        "type": "text",
+        "id": "step2_title",
+        "label": "Step 2 title",
+        "default": "Choose your price"
+      },
+      {
+        "type": "text",
+        "id": "offer_free_shipping_text",
+        "label": "Text to offer free shipping",
+        "default": "ADD ANOTHER BAG FOR FREE SHIPPING"
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_text",
+        "label": "Free shipping text",
+        "default": "YOU GET FREE SHIPPING"
+      },
+      {
+        "type": "text",
+        "id": "bags_to_choose_text",
+        "label": "Text ask to add bags first",
+        "default": "CHOOSE A FLAVOR TO BEGIN WITH"
+      },
+      {
+        "type": "text",
+        "id": "subscribe_cta_text",
+        "label": "Subscription Product CTA",
+        "default": "Subscribe"
+      },
+      {
+        "type": "text",
+        "id": "onetime_cta_text",
+        "label": "Onetime Product CTA",
+        "default": "Add to cart"
+      },
+      {
+        "type": "text",
+        "id": "disabled_cta_text",
+        "label": "Disabled CTA text",
+        "default": "Add bags above to continue"
+      },
+      {
+        "type": "range",
+        "id": "section_spacing_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 48,
+        "unit": "t:sections.general_section_settings.section_spacing_top.unit",
+        "label": "t:sections.general_section_settings.section_spacing_top.label"
+      },
+      {
+        "type": "range",
+        "id": "section_spacing_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 96,
+        "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
+        "label": "t:sections.general_section_settings.section_spacing_bottom.label"
+      },
+      {
+        "type": "select",
+        "id": "layout",
+        "options": [
+          {
+            "value": "thumbnails-left",
+            "label": "t:sections.product.label_for_thumnails_left_option_in_layout_setting"
+          },
+          {
+            "value": "thumbnails-right",
+            "label": "t:sections.product.label_for_thumnails_right_option_in_layout_setting"
+          },
+          {
+            "value": "thumbnails-bottom",
+            "label": "t:sections.product.label_for_thumnails_bottom_option_in_layout_setting"
+          },
+          {
+            "value": "one-column",
+            "label": "t:sections.product.label_for_one_column_option_in_layout_setting"
+          }, {
+            "value": "two-column",
+            "label": "t:sections.product.label_for_two_column_option_in_layout_setting"
+          }
+        ],
+        "default": "thumbnails-bottom",
+        "label": "t:sections.product.label_for_layout_setting",
+        "info": "t:sections.product.info_for_layout_setting"
+      },
+      {
+        "type": "select",
+        "id": "img_ratio",
+        "options": [
+          {
+            "value": "default",
+            "label": "t:sections.general_section_settings.img_ratio_option_default_label"
+          },
+          {
+            "value": "square",
+            "label": "t:sections.general_section_settings.img_ratio_option_square_label"
+          },
+          {
+            "value": "portrait",
+            "label": "t:sections.general_section_settings.img_ratio_option_portrait_label"
+          },
+          {
+            "value": "portrait-xl",
+            "label": "t:sections.general_section_settings.img_ratio_option_portrait_xl_label"
+          }, {
+            "value": "landscape",
+            "label": "t:sections.general_section_settings.img_ratio_option_landscape_label"
+          }
+        ],
+        "default": "portrait",
+        "label": "t:sections.general_section_settings.img_ratio_label"
+      }, {
+        "type": "checkbox",
+        "id": "enable_image_zoom",
+        "default": true,
+        "label": "t:sections.product.label_for_enable_image_zoom_setting"
+      }, {
+        "type": "checkbox",
+        "id": "enable_video_looping",
+        "default": false,
+        "label": "t:sections.product.label_for_enable_video_looping_setting"
+      }, {
+        "type": "checkbox",
+        "id": "enable_video_autoplay",
+        "default": false,
+        "label": "t:sections.product.label_for_enable_video_autoplay_setting"
+      }, {
+        "type": "checkbox",
+        "id": "scale_video",
+        "default": true,
+        "label": "t:sections.product.scale_video.label"
+      }, {
+        "type": "checkbox",
+        "id": "show_part_of_next_slide",
+        "default": false,
+        "label": "t:sections.product.label_show_part_of_next_slide_setting"
+      }, {
+        "type": "header",
+        "content": "Superfood product"
+      }, {
+        "type": "text",
+        "id": "subscribe_label",
+        "default": "Subscribe & Save",
+        "label": "Title for Subscribe option"
+      }, {
+        "type": "text",
+        "id": "one_time_label",
+        "default": "One-time",
+        "label": "Title for One-time option"
+      }, {
+        "type": "product",
+        "id": "product_one_time",
+        "label": "Product One Time Purchase"
+      }, {
+        "type": "text",
+        "id": "title_accordion_tabs",
+        "label": "Title for accordion with tabs"
+      }, {
+        "type": "text",
+        "id": "best_savings",
+        "default": "BEST SAVINGS",
+        "label": "Label for BEST SAVINGS"
+      }, {
+        "type": "text",
+        "id": "free_shipping",
+        "default": "+ FREE Shipping",
+        "label": "Label for Subscribe Shipping"
+      }, {
+        "type": "text",
+        "id": "cost_shipping",
+        "default": "+ $7.95 Shipping",
+        "label": "Label for One-time Shipping"
+      }, {
+        "type": "text",
+        "id": "autoship_option",
+        "default": "Select autoship option:",
+        "label": "Label for autoship option"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Benefits",
+        "type": "subscription_benefits",
+        "settings": [
+          {
+            "type": "text",
+            "id": "benefit",
+            "label": "Benefit text"
+          }
+        ]
+        
+      }
+    ],
+    "presets": [
+      {
+        "name": "Superfood v2"
+      }
+    ]
+  }
+{% endschema %}

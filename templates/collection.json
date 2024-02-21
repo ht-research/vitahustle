@@ -1,0 +1,226 @@
+{
+  "sections": {
+    "collection-hero-banner": {
+      "type": "collection-hero-banner",
+      "settings": {
+        "color_scheme": "default",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_section_height": 140,
+        "mobile_section_height": 140,
+        "show_collection_image": false,
+        "show_breadcrumbs": false,
+        "show_collection_title": true,
+        "show_collection_description": false,
+        "desktop_overlay_opacity": 10,
+        "mobile_overlay_opacity": 10,
+        "desktop_content_position": "align-items:center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 1304,
+        "content_spacing": 48,
+        "mobile_content_position": "align-items:center;",
+        "mobile_content_align": "center"
+      }
+    },
+    "products": {
+      "type": "products",
+      "custom_css": [
+        "@media (max-width: 768px) {.btn--solid {padding: 1rem 2rem !important; } .product-card__btn-label-text {display: block; } .product-card__actions {justify-content: center; } .product-card__btn-icon {display: none; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 48,
+        "enable_sorting": false,
+        "show_product_count": false,
+        "show_column_count_switcher": false,
+        "enable_filtering": false,
+        "filters_position": "left",
+        "filter_style": "drawer",
+        "categories_style": "static",
+        "option_style": "checkbox-solid",
+        "show_color_swatches": true,
+        "show_divider": true,
+        "enable_uppercase_title": true,
+        "img_ratio": "square",
+        "product_card_align": "center",
+        "product_per_page": 20,
+        "desktop_columns": "4",
+        "desktop_space_between_cards": 12,
+        "mobile_columns": "2",
+        "mobile_space_between_cards": 8,
+        "pagination_type": "classic-pagination"
+      }
+    },
+    "84d05c36-bfe6-46a1-85cc-4f108d237ce4": {
+      "type": "images-with-text",
+      "blocks": {
+        "template--16961302659321__84d05c36-bfe6-46a1-85cc-4f108d237ce4-image-3": {
+          "type": "image",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/tolstoy_fa4fc690-6da7-415b-aace-ed073379d034.mp4"
+          }
+        },
+        "template--16961302659321__84d05c36-bfe6-46a1-85cc-4f108d237ce4-image-1": {
+          "type": "image",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/tolstoy_4eb0f8de-a1b9-4c22-b431-0e6a9c00b242.mp4"
+          }
+        },
+        "template--16961302659321__84d05c36-bfe6-46a1-85cc-4f108d237ce4-image-2": {
+          "type": "image",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/tolstoy_a713f8bb-773e-4b7e-80be-36c7ac3cd77a.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "template--16961302659321__84d05c36-bfe6-46a1-85cc-4f108d237ce4-image-3",
+        "template--16961302659321__84d05c36-bfe6-46a1-85cc-4f108d237ce4-image-1",
+        "template--16961302659321__84d05c36-bfe6-46a1-85cc-4f108d237ce4-image-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_custom_text_items": false,
+        "custom_text_1": "",
+        "custom_text_2": "",
+        "custom_text_3": "",
+        "custom_text_4": "",
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "content_layout": "left",
+        "image_layout": "collage",
+        "img_ratio": 1.3,
+        "rotate_images": false,
+        "icon": "none",
+        "subheading": "",
+        "heading": "86 superfoods & greens",
+        "body": "<p>Boost mood, energy & digestion with the plant based protein shake that everyone is talking about! <\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "desktop_content_width": 480,
+        "first_button_text": "get the one",
+        "first_button_link": "shopify:\/\/products\/starter-kit-1",
+        "first_button_style": "solid",
+        "second_button_text": "",
+        "second_button_link": "",
+        "second_button_style": "solid"
+      }
+    },
+    "fbf1c7a8-584f-4d82-8ce7-0e38fb8c677b": {
+      "type": "collage",
+      "blocks": {
+        "template--16961302659321__fbf1c7a8-584f-4d82-8ce7-0e38fb8c677b-image-2": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/DSCF1772.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Shop All",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/collections\/all",
+            "content_position": "bottom-left"
+          }
+        },
+        "2303180c-3a50-47d1-b975-7a9a8fb5237b": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/recipes_2.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Recipes",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/blogs\/the-hustle",
+            "content_position": "bottom-left"
+          }
+        },
+        "f0433052-cce5-4e37-a5d9-e76c26d9ed11": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/clean_ingredients.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Clean Ingredients",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/pages\/superfood-ingredients",
+            "content_position": "bottom-left"
+          }
+        },
+        "dff7fc6b-e264-4895-8c65-604af49199d4": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/reviews_2.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Reviews",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/pages\/vitahustle-reviews",
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16961302659321__fbf1c7a8-584f-4d82-8ce7-0e38fb8c677b-image-2",
+        "2303180c-3a50-47d1-b975-7a9a8fb5237b",
+        "f0433052-cce5-4e37-a5d9-e76c26d9ed11",
+        "dff7fc6b-e264-4895-8c65-604af49199d4"
+      ],
+      "custom_css": [
+        ".collage__image-block {border-radius: 15px;}",
+        ".h2 {font-size: 6rem;}",
+        "@media (max-width: 768px) {.h2 {font-size: 5.5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "",
+        "heading_size": "h2",
+        "alignment": "left",
+        "columns": 4,
+        "desktop_row_height": 240,
+        "mobile_row_height": 240,
+        "desktop_space_between_cards": 16,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false
+      }
+    }
+  },
+  "order": [
+    "collection-hero-banner",
+    "products",
+    "84d05c36-bfe6-46a1-85cc-4f108d237ce4",
+    "fbf1c7a8-584f-4d82-8ce7-0e38fb8c677b"
+  ]
+}

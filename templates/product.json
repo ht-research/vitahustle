@@ -1,0 +1,641 @@
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_size": "xs",
+            "show_tax_status": false,
+            "show_sale_amount_badge": true,
+            "highlight_sale_price": true
+          }
+        },
+        "28586830-d855-4547-8946-94914bac9e85": {
+          "type": "description",
+          "settings": {
+            "title": "",
+            "block_style": "static",
+            "icon": "none"
+          }
+        },
+        "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
+          "type": "variant_picker",
+          "settings": {
+            "option_type": "button-outline",
+            "primary_swatch_option_type": "variant-images",
+            "secondary_swatch_option_type": "dropdown-solid",
+            "option_name": "Flavor",
+            "information_drawer_button_label": "",
+            "text": "",
+            "page": "",
+            "image_width": 60
+          }
+        },
+        "a5695ed4-524b-45b1-a57e-48bebecb84a9": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "enable_pickup_availability": false,
+            "enable_gift_card": false
+          }
+        },
+        "b7435ba2-8e00-4538-be27-63a92d60e195": {
+          "type": "information_tag",
+          "settings": {
+            "tag_style": "none",
+            "heading": "60-Day Money-Back Guarantee",
+            "body": "",
+            "content_alignment": "center",
+            "icon": "none",
+            "custom_icon_image": "shopify:\/\/shop_images\/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
+            "icon_position": "inline",
+            "tag_background_color": "#f7f7f7",
+            "tag_text_color": "#141416",
+            "enable_drawer": false,
+            "drawer_text": "",
+            "drawer_page": "",
+            "drawer_media_size": 60
+          }
+        },
+        "d4eb13db-7552-4c51-9e99-d172de88b79f": {
+          "type": "product_drawer_with_tabs",
+          "settings": {
+            "popup_link_text": "Product Benefits",
+            "btn_style": "text",
+            "icon": "none",
+            "button_background_color": "#e9ffcd",
+            "button_text_color": "#141416",
+            "tab_1_title": "Tab 1",
+            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
+            "tab_1_page": "",
+            "tab_2_title": "",
+            "tab_2_text": "",
+            "tab_2_page": "",
+            "tab_3_title": "",
+            "tab_3_text": "",
+            "tab_3_page": ""
+          }
+        },
+        "a7f2bb40-cc36-4180-bdca-702e6583c0f3": {
+          "type": "product_drawer_with_tabs",
+          "settings": {
+            "popup_link_text": "How to Use",
+            "btn_style": "text",
+            "icon": "none",
+            "button_background_color": "#e9ffcd",
+            "button_text_color": "#141416",
+            "tab_1_title": "Tab 1",
+            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "tab_1_page": "",
+            "tab_2_title": "",
+            "tab_2_text": "",
+            "tab_2_page": "",
+            "tab_3_title": "",
+            "tab_3_text": "",
+            "tab_3_page": ""
+          }
+        },
+        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97": {
+          "type": "product_drawer_with_tabs",
+          "settings": {
+            "popup_link_text": "Supplement Facts",
+            "btn_style": "text",
+            "icon": "none",
+            "button_background_color": "#e9ffcd",
+            "button_text_color": "#141416",
+            "tab_1_title": "Tab 1",
+            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
+            "tab_1_page": "",
+            "tab_2_title": "",
+            "tab_2_text": "",
+            "tab_2_page": "",
+            "tab_3_title": "",
+            "tab_3_text": "",
+            "tab_3_page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b",
+        "price",
+        "28586830-d855-4547-8946-94914bac9e85",
+        "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
+        "a5695ed4-524b-45b1-a57e-48bebecb84a9",
+        "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
+        "buy_buttons",
+        "b7435ba2-8e00-4538-be27-63a92d60e195",
+        "d4eb13db-7552-4c51-9e99-d172de88b79f",
+        "a7f2bb40-cc36-4180-bdca-702e6583c0f3",
+        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97"
+      ],
+      "custom_css": [
+        "ul {padding-inline-start: 0px !important;}",
+        ".product-quantity__wrap {margin-top: 0px !important;}",
+        "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
+        ".product-desktop-media {position: sticky !important; top: 120px !important;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 48,
+        "layout": "thumbnails-bottom",
+        "img_ratio": "square",
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "enable_video_autoplay": true,
+        "scale_video": true,
+        "show_part_of_next_slide": false
+      }
+    },
+    "b4c4eb9f-9d1b-4656-8845-c8078452baf5": {
+      "type": "text-marquee",
+      "blocks": {
+        "d80840ba-5985-43a9-bc10-75325559ac4a": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Gluten Free"
+          }
+        },
+        "f213a26b-7972-44c4-b58f-c0aef6393eaf": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Dairy Free"
+          }
+        },
+        "ae143907-3e58-4d49-b9d2-47b76750d060": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Soy Free"
+          }
+        },
+        "4590b0a7-8b3e-45d3-ae52-2402cc4a8460": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Low Sugar"
+          }
+        },
+        "ff3bcd6f-a54a-455f-a1e6-46be080a97d8": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "no artificial flavors"
+          }
+        }
+      },
+      "block_order": [
+        "d80840ba-5985-43a9-bc10-75325559ac4a",
+        "f213a26b-7972-44c4-b58f-c0aef6393eaf",
+        "ae143907-3e58-4d49-b9d2-47b76750d060",
+        "4590b0a7-8b3e-45d3-ae52-2402cc4a8460",
+        "ff3bcd6f-a54a-455f-a1e6-46be080a97d8"
+      ],
+      "settings": {
+        "bg_color": "#212121",
+        "text_color": "#c8e812"
+      }
+    },
+    "0a917585-e6ae-4198-87c0-fec620632352": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16944483926265__0a917585-e6ae-4198-87c0-fec620632352-1688060215978781a1-2": {
+          "type": "heading",
+          "settings": {
+            "title": "VitaHustle ONE Reviews",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483926265__0a917585-e6ae-4198-87c0-fec620632352-1688060215978781a1-2"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "enable_background_around_container": false,
+        "container_size": "page-width",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "content_align": "center"
+      }
+    },
+    "product-details": {
+      "type": "product-details",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "enable_background_around_container": true,
+        "container_size": "large",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "style": "tabs",
+        "expand_first_collapsible_row": false
+      }
+    },
+    "168805997811e9e2b2": {
+      "type": "apps",
+      "blocks": {
+        "cb52da39-70ff-4f5c-a05e-cd12e031825b": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "cb52da39-70ff-4f5c-a05e-cd12e031825b"
+      ],
+      "custom_css": [
+        ".jdgm-rev-widg__title {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "small",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": ""
+      }
+    },
+    "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16944483926265__c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0-1688060295e78c2f52-0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/soy_free.svg",
+            "icon_size": 64,
+            "title": "Soy Free",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16944483926265__c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0-1688060295e78c2f52-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/dairy_free.svg",
+            "icon_size": 64,
+            "title": "Dairy Free",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16944483926265__c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0-1688060295e78c2f52-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/gluten_free.svg",
+            "icon_size": 64,
+            "title": "Gluten Free",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "916eb449-a1c7-4a24-9675-08dee2f4c436": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/non_gmo.svg",
+            "icon_size": 64,
+            "title": "Non GMO",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "353a2771-8647-49f3-96de-f30095244da0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/no_artificial_ingredients.svg",
+            "icon_size": 64,
+            "title": "No Artificial Ingredients",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "e74d433e-92f0-4d3f-bf81-62b0eea5158f": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/no_fillers.svg",
+            "icon_size": 64,
+            "title": "No Fillers",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483926265__c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0-1688060295e78c2f52-0",
+        "template--16944483926265__c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0-1688060295e78c2f52-1",
+        "template--16944483926265__c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0-1688060295e78c2f52-2",
+        "916eb449-a1c7-4a24-9675-08dee2f4c436",
+        "353a2771-8647-49f3-96de-f30095244da0",
+        "e74d433e-92f0-4d3f-bf81-62b0eea5158f"
+      ],
+      "custom_css": [
+        ".multicolumn__column-title {font-family: \"FK Grotesk Bold\"; text-transform: capitalize;}",
+        "@media (max-width: 768px) {.multicolumn__column {padding: 0; }}",
+        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 3 !important; }}"
+      ],
+      "settings": {
+        "color_scheme": "custom-1",
+        "container_size": "large",
+        "section_spacing_top": 60,
+        "section_spacing_bottom": 60,
+        "title": "All GOOD NO B.S. (BAD STUFF)",
+        "text": "Clean & green ingredients with no artificial sweetners or scary sounding ingredients.",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 6,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "9ddba0be-f879-4e43-9a11-aea6ba37821b": {
+      "type": "images-with-text",
+      "blocks": {
+        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0"
+      ],
+      "custom_css": [
+        ".images-with-text__image-list-item-media {border-radius: 20px;}"
+      ],
+      "settings": {
+        "display_custom_text_items": false,
+        "custom_text_1": "",
+        "custom_text_2": "",
+        "custom_text_3": "",
+        "custom_text_4": "",
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 60,
+        "section_spacing_bottom": 60,
+        "content_layout": "left",
+        "image_layout": "collage",
+        "img_ratio": 0.8,
+        "rotate_images": false,
+        "icon": "none",
+        "subheading": "",
+        "heading": "ZERO ADDED SUGAR. 100% DELICIOUS.",
+        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "left",
+        "desktop_content_width": 480,
+        "first_button_text": "LEARN MORE",
+        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_style": "solid",
+        "second_button_text": "",
+        "second_button_link": "",
+        "second_button_style": "solid"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 80,
+        "section_spacing_bottom": 80,
+        "section_layout": "carousel",
+        "title": "You may also like",
+        "heading_size": "h5",
+        "alignment": "center",
+        "product_recommendations_type": "auto",
+        "featured_collection": "",
+        "featured_products": [
+
+        ],
+        "img_ratio": "portrait",
+        "product_card_align": "center",
+        "cards_to_show": 18,
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 12,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_navigation_on_hover": true
+      }
+    },
+    "d7e5ae43-0bda-4830-acab-d2202fbad902": {
+      "type": "collage",
+      "blocks": {
+        "template--16944483926265__d7e5ae43-0bda-4830-acab-d2202fbad902-1688060978e5de004c-1": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/DSCF1772.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Shop All",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/collections\/all",
+            "content_position": "bottom-left"
+          }
+        },
+        "template--16944483926265__d7e5ae43-0bda-4830-acab-d2202fbad902-1688060978e5de004c-3": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/recipes_2.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Recipes",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/blogs\/the-hustle",
+            "content_position": "bottom-left"
+          }
+        },
+        "c2f0728e-3ade-45d4-baae-65b03908d8d4": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/clean_ingredients.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Clean Ingredients",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/pages\/superfood-ingredients",
+            "content_position": "bottom-left"
+          }
+        },
+        "c5006660-2a6e-4de6-88a4-ebf72d6b21f5": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "white",
+            "desktop_columns": 1,
+            "desktop_rows": 2,
+            "image": "shopify:\/\/shop_images\/reviews_2.png",
+            "overlay_opacity": 20,
+            "caption": "",
+            "title": "Reviews",
+            "text": "",
+            "heading_size": "h2",
+            "body_size": "body3",
+            "link_text": "",
+            "link": "shopify:\/\/pages\/vitahustle-reviews",
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483926265__d7e5ae43-0bda-4830-acab-d2202fbad902-1688060978e5de004c-1",
+        "template--16944483926265__d7e5ae43-0bda-4830-acab-d2202fbad902-1688060978e5de004c-3",
+        "c2f0728e-3ade-45d4-baae-65b03908d8d4",
+        "c5006660-2a6e-4de6-88a4-ebf72d6b21f5"
+      ],
+      "custom_css": [
+        ".collage__image-block {border-radius: 15px;}",
+        ".h2 {font-size: 6rem;}",
+        "@media (max-width: 768px) {.h2 {font-size: 5.5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "",
+        "heading_size": "h5",
+        "alignment": "left",
+        "columns": 4,
+        "desktop_row_height": 240,
+        "mobile_row_height": 240,
+        "desktop_space_between_cards": 16,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false
+      }
+    },
+    "bed2a76f-a55e-4479-825c-3e608236563f": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16944483926265__bed2a76f-a55e-4479-825c-3e608236563f-1688060873ba63e4af-1": {
+          "type": "title",
+          "settings": {
+            "title": "GET ON THE LIST",
+            "heading_size": "h1"
+          }
+        },
+        "template--16944483926265__bed2a76f-a55e-4479-825c-3e608236563f-1688060873ba63e4af-2": {
+          "type": "text",
+          "settings": {
+            "text": "Join our list for exclusive access to discounts, product launches and simple health hacks.",
+            "body_size": "body3"
+          }
+        },
+        "template--16944483926265__bed2a76f-a55e-4479-825c-3e608236563f-1688060873ba63e4af-3": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483926265__bed2a76f-a55e-4479-825c-3e608236563f-1688060873ba63e4af-1",
+        "template--16944483926265__bed2a76f-a55e-4479-825c-3e608236563f-1688060873ba63e4af-2",
+        "template--16944483926265__bed2a76f-a55e-4479-825c-3e608236563f-1688060873ba63e4af-3"
+      ],
+      "custom_css": [
+        ".newsletter__input {border-radius: 100px;}",
+        ".newsletter__input-btn:hover {background: #212121;}",
+        ".h1 {white-space: nowrap;}",
+        ".newsletter__input-btn {margin-left: -15%;}",
+        "@media (max-width: 768px) {.newsletter__input-btn {margin-left: 0px; }}"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 280,
+        "mobile_height": 440,
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 614,
+        "content_spacing": 16,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b4c4eb9f-9d1b-4656-8845-c8078452baf5",
+    "0a917585-e6ae-4198-87c0-fec620632352",
+    "product-details",
+    "168805997811e9e2b2",
+    "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0",
+    "9ddba0be-f879-4e43-9a11-aea6ba37821b",
+    "product-recommendations",
+    "d7e5ae43-0bda-4830-acab-d2202fbad902",
+    "bed2a76f-a55e-4479-825c-3e608236563f"
+  ]
+}

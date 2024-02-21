@@ -1,0 +1,925 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "show_heading": false
+      }
+    },
+    "4ecca5aa-c7ab-435b-9c2c-29a41c2f8fe4": {
+      "type": "image-banner",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "display_rating": false,
+        "number_of_reviews": 0,
+        "color_scheme": "custom-1",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 640,
+        "mobile_height": 440,
+        "desktop_img": "shopify:\/\/shop_images\/TDAVIS_Vitahustle_057.png",
+        "desktop_overlay_opacity": 16,
+        "mobile_overlay_opacity": 15,
+        "caption": "",
+        "title": "Electrolyte Hydration & vitamins",
+        "text": "",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 784,
+        "content_spacing": 116,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "Shop Now",
+        "btn_url": "shopify:\/\/collections\/electrolyte-hydration",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
+      }
+    },
+    "01f8dbd8-e86d-42f6-87b8-3b8ccb3dd0a5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16944483860729__01f8dbd8-e86d-42f6-87b8-3b8ccb3dd0a5-168866140160acc6bd-3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Premium ingredients elevate hydration to quench your thirst while optimizing performance. <\/p>",
+            "text_2": "",
+            "text_3": "",
+            "body_size": "body3"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483860729__01f8dbd8-e86d-42f6-87b8-3b8ccb3dd0a5-168866140160acc6bd-3"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "enable_background_around_container": false,
+        "container_size": "small",
+        "section_spacing_top": 30,
+        "section_spacing_bottom": 0,
+        "content_align": "center"
+      }
+    },
+    "583171cc-a900-4a5e-bb75-df3aee81c4a2": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16944483860729__583171cc-a900-4a5e-bb75-df3aee81c4a2-1688661431a575739a-0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/bunch-white-sugar-isolated-white-background.png",
+            "icon_size": 118,
+            "title": "SODIUM",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16944483860729__583171cc-a900-4a5e-bb75-df3aee81c4a2-1688661431a575739a-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/bunch-white-sugar-isolated-white-background.png",
+            "icon_size": 118,
+            "title": "POTASSIUM",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16944483860729__583171cc-a900-4a5e-bb75-df3aee81c4a2-1688661431a575739a-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/oat-flour-isolated.png",
+            "icon_size": 118,
+            "title": "Glucose",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483860729__583171cc-a900-4a5e-bb75-df3aee81c4a2-1688661431a575739a-0",
+        "template--16944483860729__583171cc-a900-4a5e-bb75-df3aee81c4a2-1688661431a575739a-1",
+        "template--16944483860729__583171cc-a900-4a5e-bb75-df3aee81c4a2-1688661431a575739a-2"
+      ],
+      "custom_css": [
+        ".h7 {font-family: \"FK Grotesk Bold\";}",
+        ".multicolumn__container {border-bottom: solid 1px #c7e813;}",
+        ".multicolumn__column {padding: 0px;}",
+        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 2 !important; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "Electrolyte Blend",
+        "text": "Perfected blend of minerals helps you maintain the proper hydration balance for optimal performance.",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 3,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "8930121e-10e8-40ad-a4d8-40d92dfc14d2": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16944483860729__8930121e-10e8-40ad-a4d8-40d92dfc14d2-1688661431a575739a-0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/Green_Tea_Leaf.png",
+            "icon_size": 118,
+            "title": "Green Tea Leaf",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16944483860729__8930121e-10e8-40ad-a4d8-40d92dfc14d2-1688661431a575739a-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/Elderberry.png",
+            "icon_size": 118,
+            "title": "Elderberry",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16944483860729__8930121e-10e8-40ad-a4d8-40d92dfc14d2-1688661431a575739a-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/Grape_seed_2.png",
+            "icon_size": 118,
+            "title": "Grape Seed Extract",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "c1a93208-010a-48fe-8769-f7fef7d22544": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/black-tea-with-green-leaf-isolated-white_1.png",
+            "icon_size": 118,
+            "title": "Oolong Tea Extract",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "d0a28442-185c-4f41-8a7f-3fbd1b48b906": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/Maqui_Berry.png",
+            "icon_size": 118,
+            "title": "Maqui Berry",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "59d0564f-2a3b-4230-b70d-c24630755168": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/oat-flour-isolated.png",
+            "icon_size": 118,
+            "title": "Beta Glucan",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "3329603c-f255-4964-a9ba-599c09e3ca50": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/zinc-powder-gray-colored-powder-used-pharmaceutical-industry.png",
+            "icon_size": 118,
+            "title": "Zinc",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "7c648f89-6bc3-4f56-9e0b-95988c904127": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/Vitamin_C.png",
+            "icon_size": 118,
+            "title": "Vitamin C",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "d8e60d14-f4e5-461e-9f21-4bbea8bad294": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/AdobeStock_483684962.png",
+            "icon_size": 118,
+            "title": "VITAMIN A",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "d39ba8ec-9b2e-40a8-b038-5a8bda812ef0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/AdobeStock_483684962.png",
+            "icon_size": 118,
+            "title": "VITAMIN B",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483860729__8930121e-10e8-40ad-a4d8-40d92dfc14d2-1688661431a575739a-0",
+        "template--16944483860729__8930121e-10e8-40ad-a4d8-40d92dfc14d2-1688661431a575739a-1",
+        "template--16944483860729__8930121e-10e8-40ad-a4d8-40d92dfc14d2-1688661431a575739a-2",
+        "c1a93208-010a-48fe-8769-f7fef7d22544",
+        "d0a28442-185c-4f41-8a7f-3fbd1b48b906",
+        "59d0564f-2a3b-4230-b70d-c24630755168",
+        "3329603c-f255-4964-a9ba-599c09e3ca50",
+        "7c648f89-6bc3-4f56-9e0b-95988c904127",
+        "d8e60d14-f4e5-461e-9f21-4bbea8bad294",
+        "d39ba8ec-9b2e-40a8-b038-5a8bda812ef0"
+      ],
+      "custom_css": [
+        ".h7 {font-family: \"FK Grotesk Bold\";}",
+        ".multicolumn__container {border-bottom: solid 1px #c7e813;}",
+        "@media (max-width 768px) {.card-grid {grid-template-columns: repeat (2, 1fr); }}",
+        ".multicolumn__column {padding: 0px;}",
+        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 2 !important; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "Immunity Blend",
+        "text": "Fortify your defenses with a blend of immunity boosting ingredients to keep you healthy.",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "409930d3-748c-4ef1-a3c9-fed8ca367fce": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16944483860729__409930d3-748c-4ef1-a3c9-fed8ca367fce-1688661431a575739a-0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_SFR_ORGANIC_POMEGRANATE.png",
+            "icon_size": 118,
+            "title": "Organic Pomegranate",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16944483860729__409930d3-748c-4ef1-a3c9-fed8ca367fce-1688661431a575739a-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/Turmeric_root.png",
+            "icon_size": 118,
+            "title": "Turmeric Root",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16944483860729__409930d3-748c-4ef1-a3c9-fed8ca367fce-1688661431a575739a-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/organic-tart-cherry.png",
+            "icon_size": 118,
+            "title": "Tart Cherry",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "97331ad8-3e8c-45d8-8674-c1d76a562746": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/bunch-white-sugar-isolated-white-background.png",
+            "icon_size": 118,
+            "title": "L-Glutamine",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483860729__409930d3-748c-4ef1-a3c9-fed8ca367fce-1688661431a575739a-0",
+        "template--16944483860729__409930d3-748c-4ef1-a3c9-fed8ca367fce-1688661431a575739a-1",
+        "template--16944483860729__409930d3-748c-4ef1-a3c9-fed8ca367fce-1688661431a575739a-2",
+        "97331ad8-3e8c-45d8-8674-c1d76a562746"
+      ],
+      "custom_css": [
+        ".h7 {font-family: \"FK Grotesk Bold\";}",
+        ".multicolumn__container {border-bottom: solid 1px #c7e813;}",
+        ".multicolumn__column {padding: 0px;}",
+        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 2 !important; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "RECOVERY Blend",
+        "text": "Fuel your body’s repair with a blend of mighty ingredients that boost recovery.",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 0,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "680d3059-c347-45dd-98d3-87c2e041bad4": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "template--16953333907705__680d3059-c347-45dd-98d3-87c2e041bad4-1688661431a575739a-0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_PRP_CHICORY_ROOT.png",
+            "icon_size": 118,
+            "title": "Prebiotic Fiber",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16953333907705__680d3059-c347-45dd-98d3-87c2e041bad4-1688661431a575739a-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_PRP_ACIDOPILUS.png",
+            "icon_size": 118,
+            "title": "Probiotic Blend",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16953333907705__680d3059-c347-45dd-98d3-87c2e041bad4-1688661431a575739a-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_PRP_BROMELAIN.png",
+            "icon_size": 118,
+            "title": "Digestive Enzymes",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16953333907705__680d3059-c347-45dd-98d3-87c2e041bad4-1688661431a575739a-0",
+        "template--16953333907705__680d3059-c347-45dd-98d3-87c2e041bad4-1688661431a575739a-1",
+        "template--16953333907705__680d3059-c347-45dd-98d3-87c2e041bad4-1688661431a575739a-2"
+      ],
+      "custom_css": [
+        ".h7 {font-family: \"FK Grotesk Bold\";}",
+        ".multicolumn__container {border-bottom: solid 1px #c7e813;}",
+        ".multicolumn__column {padding: 0px;}",
+        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 2 !important; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "Pre & Probiotics",
+        "text": "Unleash the secret to gut health with our blend of probiotics & digestive enzymes.",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 3,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "b39440b1-2ce2-4f83-92df-a660990ee93d": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "template--16953333907705__b39440b1-2ce2-4f83-92df-a660990ee93d-1688661431a575739a-0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_EVB_ORGANIC_MACA_ROOT.png",
+            "icon_size": 118,
+            "title": "Organic Maca Root",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16953333907705__b39440b1-2ce2-4f83-92df-a660990ee93d-1688661431a575739a-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/Siberian_Ginseng_1.png",
+            "icon_size": 118,
+            "title": "Ginseng",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16953333907705__b39440b1-2ce2-4f83-92df-a660990ee93d-1688661431a575739a-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/Grape_seed_2.png",
+            "icon_size": 118,
+            "title": "Grape Seed Extract",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "d7ff2757-d06f-4789-be3f-352618857236": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/bamboo-leaves-isolated-white-background.png",
+            "icon_size": 118,
+            "title": "Bamboo Leaf",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "fa8a704d-6e0f-4948-98de-46eaba81d4b8": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_EVB_ORGANIC_GINGER_ROOT.png",
+            "icon_size": 118,
+            "title": "Organic Ginger Root",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "1b26df68-9a1d-4829-a05e-9b499dccb8ab": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_EVB_ORGANIC_GINGKO_BILOBA_ROOT.png",
+            "icon_size": 118,
+            "title": "Gingko BilobA",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "499fa87e-afcd-41ee-b69d-f61672517431": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_EVB_ORGANIC_MATCHA_GREEN_TEA.png",
+            "icon_size": 118,
+            "title": "Organic Matcha Green Tea",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "bc362d6f-9cf2-460d-9ca4-d59a0cc36675": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/fenugreek-seeds-small-wooden-bowl-isolated-white.png",
+            "icon_size": 118,
+            "title": "Organic Fenugreek",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16953333907705__b39440b1-2ce2-4f83-92df-a660990ee93d-1688661431a575739a-0",
+        "template--16953333907705__b39440b1-2ce2-4f83-92df-a660990ee93d-1688661431a575739a-1",
+        "template--16953333907705__b39440b1-2ce2-4f83-92df-a660990ee93d-1688661431a575739a-2",
+        "d7ff2757-d06f-4789-be3f-352618857236",
+        "fa8a704d-6e0f-4948-98de-46eaba81d4b8",
+        "1b26df68-9a1d-4829-a05e-9b499dccb8ab",
+        "499fa87e-afcd-41ee-b69d-f61672517431",
+        "bc362d6f-9cf2-460d-9ca4-d59a0cc36675"
+      ],
+      "custom_css": [
+        ".h7 {font-family: \"FK Grotesk Bold\";}",
+        ".multicolumn__container {border-bottom: solid 1px #c7e813;}",
+        ".multicolumn__column {padding: 0px;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "Energy & Vitality Blend",
+        "text": "Power up with a blend of natural energy & cognitive herbs to boost your performance.",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "c4882474-7015-4e8f-9ad7-62e126df2b66": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "template--16953333907705__c4882474-7015-4e8f-9ad7-62e126df2b66-1688661431a575739a-0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_ADG_ASHWAGANDHA_EXTRACT.png",
+            "icon_size": 118,
+            "title": "Ashwagandha",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16953333907705__c4882474-7015-4e8f-9ad7-62e126df2b66-1688661431a575739a-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/VHST_LP_ADG_ORGANIC_CORDYCEPS.png",
+            "icon_size": 118,
+            "title": "Organic Cordyceps",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16953333907705__c4882474-7015-4e8f-9ad7-62e126df2b66-1688661431a575739a-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/bunch-green-parsley-with-word-dandelion-top.png",
+            "icon_size": 118,
+            "title": "Bacopa",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16953333907705__c4882474-7015-4e8f-9ad7-62e126df2b66-1688661431a575739a-0",
+        "template--16953333907705__c4882474-7015-4e8f-9ad7-62e126df2b66-1688661431a575739a-1",
+        "template--16953333907705__c4882474-7015-4e8f-9ad7-62e126df2b66-1688661431a575739a-2"
+      ],
+      "custom_css": [
+        ".h7 {font-family: \"FK Grotesk Bold\";}",
+        ".multicolumn__column {padding: 0px;}",
+        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 2 !important; }}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "Adaptogen Blend",
+        "text": "Harness the power of adaptogens to elevate your mind & lift your mood.",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 3,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "b0829d80-3798-434d-a7ef-8f163908ead2": {
+      "type": "text-marquee",
+      "blocks": {
+        "b5f5d8d7-7ce6-4cfa-bf43-7ec1b2863f9f": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "ALL GOOD, NO B.S."
+          }
+        },
+        "6f44041a-bab3-4f1f-92ea-e68bfffbfbac": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "•"
+          }
+        }
+      },
+      "block_order": [
+        "b5f5d8d7-7ce6-4cfa-bf43-7ec1b2863f9f",
+        "6f44041a-bab3-4f1f-92ea-e68bfffbfbac"
+      ],
+      "settings": {
+        "bg_color": "#212121",
+        "text_color": "#c8e812"
+      }
+    },
+    "70d19c76-5fe9-4015-ba5e-3946ee70d334": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16953333907705__70d19c76-5fe9-4015-ba5e-3946ee70d334-168866140160acc6bd-2": {
+          "type": "heading",
+          "settings": {
+            "title": "We don’t mess around when it comes to crafting the best",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16953333907705__70d19c76-5fe9-4015-ba5e-3946ee70d334-168866140160acc6bd-2"
+      ],
+      "custom_css": [
+        ".h1 {color: #afc42f;}"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "enable_background_around_container": true,
+        "container_size": "medium",
+        "section_spacing_top": 20,
+        "section_spacing_bottom": 0,
+        "content_align": "center"
+      }
+    },
+    "8ee8cb11-ae6c-4ae9-bbc9-1c4b1d242267": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16953333907705__8ee8cb11-ae6c-4ae9-bbc9-1c4b1d242267-1688661431a575739a-0": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/soy_free.svg",
+            "icon_size": 64,
+            "title": "Soy Free",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16953333907705__8ee8cb11-ae6c-4ae9-bbc9-1c4b1d242267-1688661431a575739a-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/dairy_free.svg",
+            "icon_size": 64,
+            "title": "Dairy Free",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16953333907705__8ee8cb11-ae6c-4ae9-bbc9-1c4b1d242267-1688661431a575739a-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/gluten_free.svg",
+            "icon_size": 64,
+            "title": "Gluten Free",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "274c2674-6bd2-4d6c-a701-dd52223e45a8": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/non_gmo.svg",
+            "icon_size": 64,
+            "title": "Non GMO",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "0de14ec9-5938-4c95-8442-51f0430c252c": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/no_artificial_ingredients.svg",
+            "icon_size": 64,
+            "title": "No Artificial Ingredients",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "54bcc9eb-b044-4d14-83b4-5d238a321404": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "custom_icon_image": "shopify:\/\/shop_images\/no_fillers.svg",
+            "icon_size": 64,
+            "title": "No Fillers",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16953333907705__8ee8cb11-ae6c-4ae9-bbc9-1c4b1d242267-1688661431a575739a-0",
+        "template--16953333907705__8ee8cb11-ae6c-4ae9-bbc9-1c4b1d242267-1688661431a575739a-1",
+        "template--16953333907705__8ee8cb11-ae6c-4ae9-bbc9-1c4b1d242267-1688661431a575739a-2",
+        "274c2674-6bd2-4d6c-a701-dd52223e45a8",
+        "0de14ec9-5938-4c95-8442-51f0430c252c",
+        "54bcc9eb-b044-4d14-83b4-5d238a321404"
+      ],
+      "custom_css": [
+        ".h7 {font-family: \"FK Grotesk Bold\"; text-transform: capitalize;}",
+        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 3 !important; } .multicolumn__column {padding: 0px; }}"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "container_size": "large",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 48,
+        "title": "",
+        "text": "",
+        "heading_size": "h5",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 6,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "571d872a-f7a5-4146-bf21-0eb47ce79d8f": {
+      "type": "images-with-text",
+      "blocks": {
+        "template--16944483860729__571d872a-f7a5-4146-bf21-0eb47ce79d8f-1688664042686909a3-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ATX_2946.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483860729__571d872a-f7a5-4146-bf21-0eb47ce79d8f-1688664042686909a3-0"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.container {padding-left: 0px; padding-right: 0px; }}",
+        "@media (max-width: 768px) {.container {padding-left: 0px; padding-right: 0px; } .images-with-text__content-wrapper {padding-left: 20px; padding-right: 20px; padding-bottom: 40px; }}"
+      ],
+      "settings": {
+        "display_custom_text_items": false,
+        "custom_text_1": "",
+        "custom_text_2": "",
+        "custom_text_3": "",
+        "custom_text_4": "",
+        "color_scheme": "custom-2",
+        "container_size": "page-width",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "content_layout": "right",
+        "image_layout": "collage",
+        "img_ratio": 0.8,
+        "rotate_images": false,
+        "icon": "none",
+        "subheading": "",
+        "heading": "Supercharge your Body",
+        "body": "",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "left",
+        "desktop_content_width": 460,
+        "first_button_text": "SHOP NOW",
+        "first_button_link": "shopify:\/\/collections\/electrolyte-hydration",
+        "first_button_style": "solid",
+        "second_button_text": "",
+        "second_button_link": "",
+        "second_button_style": "solid"
+      }
+    }
+  },
+  "order": [
+    "page",
+    "4ecca5aa-c7ab-435b-9c2c-29a41c2f8fe4",
+    "01f8dbd8-e86d-42f6-87b8-3b8ccb3dd0a5",
+    "583171cc-a900-4a5e-bb75-df3aee81c4a2",
+    "8930121e-10e8-40ad-a4d8-40d92dfc14d2",
+    "409930d3-748c-4ef1-a3c9-fed8ca367fce",
+    "680d3059-c347-45dd-98d3-87c2e041bad4",
+    "b39440b1-2ce2-4f83-92df-a660990ee93d",
+    "c4882474-7015-4e8f-9ad7-62e126df2b66",
+    "b0829d80-3798-434d-a7ef-8f163908ead2",
+    "70d19c76-5fe9-4015-ba5e-3946ee70d334",
+    "8ee8cb11-ae6c-4ae9-bbc9-1c4b1d242267",
+    "571d872a-f7a5-4146-bf21-0eb47ce79d8f"
+  ]
+}

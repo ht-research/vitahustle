@@ -1,0 +1,166 @@
+<div class="media_carousal_wrapper">
+  {% for img in customProductImages %}
+    <div class="img_block">
+      <img
+        loading="lazy"
+        src="{{ img | img_url: '750x' }}"
+        srcset="{{ img | img_url: '900x' }}" />
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .media_carousal_wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .media_carousal_wrapper .img_block {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  .media_carousal_wrapper .img_block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .media_carousal_wrapper button.slick-arrow {
+    border: none;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.60);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    cursor: pointer;
+  }
+  .media_carousal_wrapper button.slick-arrow.slick_next {
+    left: unset !important;
+    right: 12px;
+  }
+  ul.slick-dots {
+    /* position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding:0;
+        margin:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 102px;
+        padding:11px 10px;
+        border-radius: 37px;
+        background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+        backdrop-filter: blur(21px); */
+    list-style: none;
+  }
+  /* ul.slick-dots li button{
+        display: none;
+    } */
+  /* ul.slick-dots li{
+        width: calc(100%/4);
+        aspect-ratio: 1;
+        position: relative;
+    }
+    ul.slick-dots li::before{
+        content: '';
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.10);
+        width: 8px;
+        height:8px;
+        border-radius: 50%;
+    }
+    ul.slick-dots li.slick-active::before{
+        background-color: #fff;
+    } */
+  .slick-dots li button:before {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .media_carousal_wrapper button.slick-arrow {
+      left: 0;
+    }
+    .media_carousal_wrapper button.slick-arrow.slick_next {
+      left: unset !important;
+      right: 0;
+    }
+    .slick-dots-container {
+      width: 102px;
+      overflow: hidden;
+      display: block;
+      padding: 0;
+      margin: 0.625rem auto;
+      height: 30px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 15px;
+      background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+      backdrop-filter: blur(21px);
+      border-radius: 37px;
+    }
+
+    .slick-dots-container > ul {
+      padding: 0 12px;
+      display: flex;
+      transition: all 0.25s;
+      position: relative;
+      margin: 0;
+      list-style: none;
+      transform: translateX(0);
+      align-items: center;
+      bottom: unset;
+      height: 100%;
+      width: 100%;
+    }
+
+
+    .slick-dots-container > ul li {
+      width: calc(100% / 5);
+      aspect-ratio: 1 / 1;
+      margin: 0 4px;
+      background: rgba(0, 0, 0, 0.10);
+      border: none;
+      border-radius: 50%;
+    }
+
+    .slick-dots-container > ul li button {
+      font-size: 0;
+      line-height: 0;
+      display: block;
+      width: 8px;
+      height: 8px;
+      padding: 0.3125rem;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: 0;
+      background: 0 0;
+    }
+
+    .slick-dots-container > ul li.p-small-1,
+    .slick-dots-container > ul li.n-small-1 {
+      transform: scale(1);
+    }
+
+    .slick-dots-container > ul li.slick-active {
+      transform: scale(1);
+      transform-origin: center;
+      background-color: #fff;
+    }
+
+    .slick-dots li button:before {
+      display: none;
+    }
+  }
+</style>

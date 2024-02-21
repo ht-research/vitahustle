@@ -1,0 +1,126 @@
+<div class="vitahustle_one_wrapper">
+  <div class="text_block">
+    <h3>{{ section.settings.title | default: 'Title' }}
+    </h3>
+    <p>
+      {{ section.settings.subtext | default: 'Subtext' }}
+    </p>
+    <a href="{{ section.settings.cta_url | default: "#" }}" class="btn btn--solid">{{ section.settings.cta_text }}</a>
+  </div>
+</div>
+
+<style>
+  .vitahustle_one_wrapper {
+    padding: 2.9842vw 0;
+    width: 100%;
+    background-color: {{ section.settings.bg_color }}
+    ;
+  }
+  .vitahustle_one_wrapper .text_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .vitahustle_one_wrapper .text_block h3 {
+    color: #212121;
+    font-size: 4.511vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 0px */
+    text-transform: uppercase;
+    letter-spacing: calc(0.65*0.0694vw);
+  }
+  .vitahustle_one_wrapper .text_block h3 span {
+    color: #AFC42F;
+  }
+  .vitahustle_one_wrapper .text_block p {
+    color: #4D201A;
+    font-family: 'Lato Bold', sans-serif;
+    font-size: 1.388vw;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 34vw;
+    margin: 0.85vw auto 0;
+    text-align: center;
+  }
+  .vitahustle_one_wrapper .text_block a {
+    color: #121212;
+    text-align: center;
+    font-family: 'Lato Heavy', sans-serif;
+    font-size: 1.3186vw;
+    font-style: normal;
+    padding: 0.8328vw 4.164vw 1.014vw;
+  
+    border-radius: 5.13vw;
+    margin-top: 1.3186vw;
+    display: inline-block;
+    min-height: unset;
+  }
+  @media screen and (max-width: 768px) {
+    .vitahustle_one_wrapper {
+      padding: 42px 0 45px;
+      max-width: 335px;
+      margin: 0 auto;
+    }
+    .vitahustle_one_wrapper .text_block h3 {
+      font-size: 55px;
+      line-height: 93.5%;
+      text-align: center;
+      letter-spacing: 0.55px;
+    }
+    .vitahustle_one_wrapper .text_block p {
+      font-size: 20px;
+      margin-top: 45px;
+      margin-bottom: 28px;
+      text-align: center;
+      max-width: 100%;
+    }
+    .vitahustle_one_wrapper .text_block a {
+      font-size: 19px;
+      padding: 12px 60px;
+      min-width: 261px;
+      border-radius: 74px;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Vitahustle One",
+    "class": "vitahustle_one",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "html",
+        "id": "subtext",
+        "label": "Subtext"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cta_url",
+        "label": "CTA Url"
+      }, {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#fff"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Vitahustle One"
+      }
+    ]
+  }
+{% endschema %}
