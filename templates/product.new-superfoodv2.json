@@ -1,7 +1,7 @@
 {
   "sections": {
     "b50b4a7d-7333-44ee-89b6-d888375536cf": {
-      "type": "main-product-superfood-custom",
+      "type": "main-product-superfood-customv2",
       "blocks": {
         "35347329-5db9-47a6-bc93-42c0a23c5211": {
           "type": "subscription_benefits",
@@ -57,7 +57,7 @@
         "step2_title": "Choose your price",
         "offer_free_shipping_text": "ADD ANOTHER BAG FOR FREE SHIPPING",
         "free_shipping_text": "YOU GET FREE SHIPPING",
-        "bags_to_choose_text": "CHOOSE A FLAVOR TO BEGIN WITH",
+        "bags_to_choose_text": "CHOOSE A FLAVOR TO BEGIN",
         "subscribe_cta_text": "Subscribe",
         "onetime_cta_text": "Add to cart",
         "disabled_cta_text": "Add bags above to continue",
