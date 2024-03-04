@@ -10,7 +10,7 @@
           }
         },
         "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         },
@@ -34,9 +34,9 @@
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
           "type": "variant_picker",
           "settings": {
-            "option_type": "button-outline",
+            "option_type": "dropdown-solid",
             "primary_swatch_option_type": "variant-images",
-            "secondary_swatch_option_type": "swatches",
+            "secondary_swatch_option_type": "dropdown-solid",
             "option_name": "Flavor",
             "information_drawer_button_label": "",
             "text": "",
@@ -81,61 +81,49 @@
             "drawer_media_size": 60
           }
         },
-        "d4eb13db-7552-4c51-9e99-d172de88b79f": {
-          "type": "product_drawer_with_tabs",
+        "06c05680-9cfd-4c28-8b40-a64f24723e70": {
+          "type": "collapsible_row",
           "settings": {
-            "popup_link_text": "Product Benefits",
-            "btn_style": "text",
+            "style": "collapsible_row_closed",
+            "title": "HOW TO USE",
             "icon": "none",
-            "button_background_color": "#e9ffcd",
-            "button_text_color": "#141416",
-            "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
-            "tab_1_page": "",
-            "tab_2_title": "",
-            "tab_2_text": "",
-            "tab_2_page": "",
-            "tab_3_title": "",
-            "tab_3_text": "",
-            "tab_3_page": ""
+            "text": "<p>Add 2 scoops of powder, blend with 8-12 oz of ice cold water or milk, blend ior shake vigorously. Serve cold or over ice.<\/p>",
+            "page": "",
+            "image_width": 60
           }
         },
-        "a7f2bb40-cc36-4180-bdca-702e6583c0f3": {
-          "type": "product_drawer_with_tabs",
+        "418118f7-e71b-4ce3-bee0-cde3239694f7": {
+          "type": "collapsible_row",
           "settings": {
-            "popup_link_text": "How to Use",
-            "btn_style": "text",
+            "style": "collapsible_row_closed",
+            "title": "INGREDIENTS",
             "icon": "none",
-            "button_background_color": "#e9ffcd",
-            "button_text_color": "#141416",
-            "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
-            "tab_1_page": "",
-            "tab_2_title": "",
-            "tab_2_text": "",
-            "tab_2_page": "",
-            "tab_3_title": "",
-            "tab_3_text": "",
-            "tab_3_page": ""
+            "text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
+            "page": "",
+            "image_width": 60
           }
         },
-        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97": {
-          "type": "product_drawer_with_tabs",
+        "c5924e9f-2227-4047-ac6f-bfad6b346aa4": {
+          "type": "collapsible_row",
           "settings": {
-            "popup_link_text": "Supplement Facts",
-            "btn_style": "text",
+            "style": "collapsible_row_closed",
+            "title": "SUPPLEMENT FACTS",
             "icon": "none",
-            "button_background_color": "#e9ffcd",
-            "button_text_color": "#141416",
-            "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
-            "tab_1_page": "",
-            "tab_2_title": "",
-            "tab_2_text": "",
-            "tab_2_page": "",
-            "tab_3_title": "",
-            "tab_3_text": "",
-            "tab_3_page": ""
+            "text": "",
+            "page": "vitahustle-one-superfood-strawberry",
+            "image_width": 60
+          }
+        },
+        "cbfcea53-e238-4c35-a5c9-da334abf0c2d": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "style": "collapsible_row_closed",
+            "title": "BENEFITS",
+            "icon": "none",
+            "text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
+            "page": "",
+            "image_width": 60
           }
         }
       },
@@ -149,15 +137,19 @@
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
         "buy_buttons",
         "b7435ba2-8e00-4538-be27-63a92d60e195",
-        "d4eb13db-7552-4c51-9e99-d172de88b79f",
-        "a7f2bb40-cc36-4180-bdca-702e6583c0f3",
-        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97"
+        "06c05680-9cfd-4c28-8b40-a64f24723e70",
+        "418118f7-e71b-4ce3-bee0-cde3239694f7",
+        "c5924e9f-2227-4047-ac6f-bfad6b346aa4",
+        "cbfcea53-e238-4c35-a5c9-da334abf0c2d"
       ],
       "custom_css": [
         "ul {padding-inline-start: 0px !important;}",
         ".product-quantity__wrap {margin-top: 0px !important;}",
+        ".superfood-only {display: none;}",
         "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
-        ".product-desktop-media {position: sticky !important; top: 120px !important;}"
+        ".product-desktop-media {position: sticky !important; top: 120px !important;}",
+        ".variant-picker-dropdown__toggle--solid {background-color: white;}",
+        ".variant-picker-dropdown__color-swatch {display: none;}"
       ],
       "settings": {
         "color_scheme": "default",
@@ -166,11 +158,11 @@
         "section_spacing_bottom": 48,
         "layout": "thumbnails-left",
         "img_ratio": "square",
-        "enable_image_zoom": true,
+        "enable_image_zoom": false,
         "enable_video_looping": true,
         "enable_video_autoplay": true,
         "scale_video": true,
-        "show_part_of_next_slide": false
+        "show_part_of_next_slide": true
       }
     },
     "b4c4eb9f-9d1b-4656-8845-c8078452baf5": {
@@ -225,7 +217,7 @@
         "template--16944483926265__0a917585-e6ae-4198-87c0-fec620632352-1688060215978781a1-2": {
           "type": "heading",
           "settings": {
-            "title": "VitaHustle ONE Reviews",
+            "title": "VitaHustle Reviews",
             "heading_size": "h1"
           }
         }
@@ -259,7 +251,7 @@
       "type": "apps",
       "blocks": {
         "cb52da39-70ff-4f5c-a05e-cd12e031825b": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
@@ -548,6 +540,7 @@
         "c2f0728e-3ade-45d4-baae-65b03908d8d4",
         "c5006660-2a6e-4de6-88a4-ebf72d6b21f5"
       ],
+      "disabled": true,
       "custom_css": [
         ".collage__image-block {border-radius: 15px;}",
         ".h2 {font-size: 6rem;}",
@@ -567,6 +560,42 @@
         "desktop_space_between_cards": 16,
         "mobile_space_between_cards": 16,
         "enable_carousel_on_mobile": false
+      }
+    },
+    "3358a2f5-cc69-465d-9d0b-052f74fcdf6c": {
+      "type": "image-banner",
+      "settings": {
+        "display_rating": false,
+        "number_of_reviews": 451,
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 480,
+        "mobile_height": 600,
+        "desktop_img": "shopify:\/\/shop_images\/02-_Option2-GIF_-_R2_1a762390-6458-4c6c-9eed-d41d1df4279c.jpg",
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "caption": "RISK FREE",
+        "title": "60-DAY GUARANTEE",
+        "text": "<p>If for any reason VitaHustle ONE is not for you, simply return the bag for a full refund, less shipping & handling.<\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 528,
+        "content_spacing": 116,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "Get Started",
+        "btn_url": "shopify:\/\/products\/starter-kit-1",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
       }
     },
     "bed2a76f-a55e-4479-825c-3e608236563f": {
@@ -636,6 +665,7 @@
     "9ddba0be-f879-4e43-9a11-aea6ba37821b",
     "product-recommendations",
     "d7e5ae43-0bda-4830-acab-d2202fbad902",
+    "3358a2f5-cc69-465d-9d0b-052f74fcdf6c",
     "bed2a76f-a55e-4479-825c-3e608236563f"
   ]
 }
