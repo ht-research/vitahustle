@@ -1,0 +1,491 @@
+
+{% assign data = product.metafields.custom.product_feature_content.value %}
+
+<style>
+.product_feature_accordion_content_wrapper{
+    width: 100%;
+    max-width: 1440px;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper{
+    padding: 40px 100px 40px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content,.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper{
+    width: 50%;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content.mobile_only{
+    display: none;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content{
+    padding-right: 120px;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .title{
+    font-family: "Druk Web";
+    font-size: 4.514vw;
+    font-weight: 700;
+    {% comment %} line-height: 65.77px; {% endcomment %}
+    line-height: 93.5%;
+    text-align: left;
+    color: #212121;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .title span{
+    color: #AFC42F;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .subtitle{
+    font-family: "Lato Regular";
+    font-size: 20px;
+    {% comment %} line-height: 24px; {% endcomment %}
+    line-height: normal;
+    margin-bottom: 50px;
+    color: #000;
+    max-width: 400px;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 420px;
+    justify-content: space-between;
+    row-gap: 30px;
+    column-gap: 60px;
+}
+
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list.mobile_only{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 450px;
+    justify-content: space-between;
+    row-gap: 30px;
+    display: none;
+}
+
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list .product_feature_icon_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc((100%/3) - 60px);
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list .product_feature_icon_text .product_feature_icon{
+    width: 55px;
+    height: 55px;
+}
+
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list .product_feature_icon_text .product_feature_icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list .product_feature_icon_text p{
+    font-family: 'Lato Bold', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: normal;
+    {% comment %} line-height: 16.8px; {% endcomment %}
+    color: #4D201A;
+    margin-top: 10px;
+    text-align: center;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list{
+    display: flex;
+    flex-direction: column;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    border-bottom: 1px solid #A3A3A3;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper:last-child{
+    border-bottom: none;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_image_text_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_image_text_wrapper .product_feature_image_text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_image_text_wrapper .product_feature_image_text .product_feature_image{
+    width: 96px;
+    height: 96px;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_image_text_wrapper .product_feature_image_text .product_feature_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_image_text_wrapper .product_feature_image_text .product_feature_text{
+    font-family: 'Lato Bold';
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #4D201A;
+}
+
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_content_wrapper{
+    font-family: 'Lato Regular';
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #212121;
+    max-width: 551px;
+    display: none;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_content_wrapper.show_content{
+    display: block;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_image_text_wrapper .product_feature_accordion_buttons .hide_icon{
+    display: none;
+}
+.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_image_text_wrapper .product_feature_accordion_buttons .hide_icon.show{
+    display: block;
+}
+.product_feature_accordion_list .product-details__accordeon-btn img{
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    object-position: center;
+}
+.product_feature_accordion_list .product-details__accordeon-btn svg{
+    width: 24px;
+    height: 24px;
+}
+.product_feature_accordion_list .product-details__accordeon-btn{
+    font-family: 'Lato Bold';
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #4D201A;
+}
+.product_feature_accordion_list .product-details__rte{
+    font-family: 'Lato Regular';
+    font-size: 16px;
+    line-height: 25px;
+    color: #212121;
+}
+.product_feature_accordion_list .accordeon-plus--bottom-bordered:nth-child(1) .product-details__accordeon-btn{
+    padding: 0rem 0.8rem 2rem 0rem;
+
+}
+.product_feature_accordion_list .product-details__accordeon-btn{
+    text-transform: uppercase;
+}
+.footer{
+    border: none !important;
+}
+@media screen and (min-width:1441px) {
+    .product_feature_accordion_content_wrapper{
+        margin: 0 auto;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .title{
+        font-size: 65px;
+    }
+}
+@media screen and (max-width:912px) and (min-width:820px) {
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper{
+        padding: 40px 30px 40px 30px;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list{
+        max-width: 350px;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list .product_feature_icon_text{
+        justify-content: flex-start;
+        width: calc((100%/3) - 48px);
+    }
+}
+@media only screen and (max-width:820px) {
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content,.product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper{
+        width: 100%;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content{
+        padding-right: 0px;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .title{
+        font-size: 56px;
+        {% comment %} line-height: 47.77px; {% endcomment %}
+        line-height: 93.5%;
+        {% comment %} font-size: 13.467vw;
+        line-height: 105.77px; {% endcomment %}
+        text-align: center;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .subtitle{
+        font-size: 18px;
+        text-align: center;
+        color: #4D201A;
+        max-width: unset;
+        margin-bottom: 25px;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_accordion_wrapper .product_feature_accordion_list .product_feature_image_text_content_wrapper .product_feature_image_text_wrapper .product_feature_image_text .product_feature_text{
+        margin-right: 35px;
+        max-width: 175px;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list{
+        display: none;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list.mobile_only{
+        display: flex;
+        margin-top: 30px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 10px;
+        width: calc(100% + 40px);
+        overflow-y: scroll;
+        max-width: unset;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list .product_feature_icon_text{
+        min-width: 96px;
+        max-width: 100px;
+        align-items: center;
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list::-webkit-scrollbar {
+        display: none;
+    }
+    .product_feature_accordion_list .product-details__accordeon-btn img{
+        width: 96px;
+        height: 96px;
+        object-fit: contain;
+        object-position: center;
+    }
+    .product_feature_accordion_list .product-details__accordeon-btn{
+        font-family: 'Lato Bold';
+        font-size: 16px;
+        line-height: 19.2px;
+        color: #4D201A;
+        text-transform: uppercase;
+    }
+    .product_feature_accordion_list .product-details__rte{
+        font-family: 'Lato Regular';
+        font-size: 16px;
+        line-height: 25px;
+        color: #212121;
+    }
+    .product_feature_accordion_list .accordeon-plus--bottom-bordered:nth-child(1) .product-details__accordeon-btn{
+        padding: 0rem 0.8rem 2rem 0rem;
+    }
+}
+@media only screen and (max-width:430px) {
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .title{
+        font-size: 56px;
+        {% comment %} line-height: 52.36px; {% endcomment %}
+        line-height: 93.5%;
+
+    }
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper{
+        padding: 40px 20px 20px 20px;
+    }
+
+}
+@media only screen and (max-width:425px) {
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .title{
+        font-size: 50px;
+        line-height: 93.5%;
+        {% comment %} line-height: 52.36px; {% endcomment %}
+    }
+}
+@media only screen and (max-width:375px) {
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .title{
+        font-size: 48px;        
+    } 
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_icon_text_list.mobile_only{
+        display: flex;
+        margin-top: 30px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 10px;
+        width: calc(100% + 40px);
+        overflow-y: scroll;
+    }
+}
+@media only screen and (max-width:375px) {
+    .product_feature_accordion_content_wrapper .inner_iproduct_feature_accordion_content_wrapper .product_feature_content .product_feature_text_content .title{
+        font-size: 46px;
+    }
+}
+
+</style>
+
+<div class="product_feature_accordion_content_wrapper">
+    <div class="inner_iproduct_feature_accordion_content_wrapper">
+        <div class="product_feature_content">
+            <div class="product_feature_text_content">
+                <div class="title">{{ data.title }}</div>
+                <div class="subtitle">{{ data.subtitle }}</div>
+            </div>
+            <div class="product_feature_icon_text_list">
+                {% for metaobject in data.product_feature_pros_list.value %}
+                    <div class="product_feature_icon_text">
+                        <div class="product_feature_icon">
+                            {% comment %} <img src="https://i.postimg.cc/pdnBkpSb/Artboard-21.png"> {% endcomment %}
+                            <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+                        </div>
+                        <p>{{ metaobject.title }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="product_feature_accordion_wrapper">
+            <div class="product_feature_accordion_list">
+                {% comment %} {% for metaobject in data.product_feature_accordion_content_list.value %}
+                    <div class="product_feature_image_text_content_wrapper">
+                        <div class="product_feature_image_text_wrapper">
+                            <div class="product_feature_image_text">
+                                <div class="product_feature_image">
+                                    {% comment %} <img src="https://i.postimg.cc/rpB2YRFS/Ellipse-84.png"> {% endcomment %}
+                                    <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+
+                                </div>
+                                <p class="product_feature_text">{{ metaobject.heading }}</p>
+                            </div>
+                            <div class="product_feature_accordion_buttons">
+                                <span class="show_icon">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5.51172V19.5117" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                </span>
+                                <span class="hide_icon">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="product_feature_content_wrapper">
+                            {{ metaobject.content }}
+                        </div>
+                    </div>
+                {% endfor %} {% endcomment %}
+
+
+                {% for metaobject in data.product_feature_accordion_content_list.value %}
+                    <accordeon-component
+                        class='accordeon-plus {% unless forloop.last %} accordeon-plus--bottom-bordered{% endunless %} {% unless forloop.first %} accordeon-plus--top-bordered{% endunless %} block-{{block.id}}'
+                        data-aria-expanded='{% if expand_first_collapsible_row and forloop.index == 1 %}true{% else %}false{% endif %}'
+                        data-section-id='{{ section.id }}'
+                      >
+                        <accordeon-btn
+                          class='accordeon-plus__btn accordeon-plus__btn--small product-details__accordeon-btn'
+                          tabindex='0'
+                        >
+                          {%- if metaobject.image != blank -%}
+                            <img
+                              class='accordeon-plus__btn-icon lazyload'
+                              {% render 'image-attributes', image: metaobject.image, size: 'medium' %}
+                            >
+                          {%- elsif icon != 'none' -%}
+                            {% render 'icon-pack', icon: icon, class: 'accordeon-plus__btn-icon' %}
+                          {%- endif -%}
+                          {{ metaobject.heading }}
+                          {% render 'icon', icon_name: 'plus', class: 'accordeon-plus__icon' %}
+                        </accordeon-btn>
+                        <div class='accordeon-plus__content-wrap' data-accordeon-content-wrapper>
+                          <div class='accordeon-plus__content product-details__accordeon-content' data-accordeon-content>
+                            <div class='rte product-details__rte  body-font-weight-from-global-settings'>
+                              {{ metaobject.content }}
+                            </div>
+                          </div>
+                        </div>
+                      </accordeon-component>
+                      
+                    {% comment %} <div class="product_feature_image_text_content_wrapper">
+                        <div class="product_feature_image_text_wrapper">
+                            <div class="product_feature_image_text">
+                                <div class="product_feature_image">
+                                    {% comment %} <img src="https://i.postimg.cc/rpB2YRFS/Ellipse-84.png"> {% endcomment %}
+                                    <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+
+                                </div>
+                                <p class="product_feature_text">{{ metaobject.heading }}</p>
+                            </div>
+                            <div class="product_feature_accordion_buttons">
+                                <span class="show_icon">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5.51172V19.5117" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                </span>
+                                <span class="hide_icon">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="product_feature_content_wrapper">
+                            {{ metaobject.content }}
+                        </div>
+                    </div> {% endcomment %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="product_feature_content mobile_only">
+            <div class="product_feature_icon_text_list mobile_only">
+                {% for metaobject in data.product_feature_pros_list.value %}
+                    <div class="product_feature_icon_text">
+                        <div class="product_feature_icon">
+                            {% comment %} <img src="https://i.postimg.cc/pdnBkpSb/Artboard-21.png"> {% endcomment %}
+                            <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+                        </div>
+                        <p>{{ metaobject.title }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            $('.show_icon').on("click",function(){
+                console.log("clicked...")
+                $('.product_feature_content_wrapper').removeClass('show_content')
+                $('.hide_icon').removeClass('show');
+                $('.show_icon').removeClass('hide');
+                var contentElement = $(this).parent().parent().siblings();
+                var hide_icon = $(this).parent().children(".hide_icon").addClass('show');
+                var show_icon = $(this).parent().children(".show_icon").addClass('hide');
+
+                contentElement.addClass("show_content");
+                {% comment %} console.log("contentElement",contentElement,elem); {% endcomment %}
+            })
+            $('.hide_icon').on("click",function(){
+                var contentElement = $(this).parent().parent().siblings();
+                contentElement.removeClass("show_content"); 
+                var elem = $(this).parent().children('.hide_icon').removeClass('show'); 
+                var show_icon = $(this).parent().children('.show_icon').removeClass('hide'); 
+
+            })
+        }) 
+    </script>
+{% schema %}
+{
+    "name": "Product feature content",
+    "tag": "section",
+    "settings": [],
+    "presets": [
+        {
+          "name": "Product feature content"
+        }
+      ]
+}
+{% endschema %}

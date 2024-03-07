@@ -2,9 +2,13 @@
   assign options = block.settings
   assign block_style = options.block_style
   assign title = options.title
-  assign text = product.description
   assign custom_icon_image = options.custom_icon_image
   assign icon = options.icon
+  if product.metafields.custom.product_description != blank and template contains 'new-superfood-greens'
+    assign text = product.metafields.custom.product_description
+  else
+    assign text = product.description
+  endif
 %}
 {%- if product != blank and text != blank -%}
   {%- if block_style contains 'collapsible' -%}
@@ -55,6 +59,18 @@
             {{ text }}
           </div>
         </div>
+      {% endif %}
+      {% if product.metafields.custom.product_description_features != blank and template contains 'new-superfood-greens' %}
+        {% assign features = product.metafields.custom.product_description_features.value %}
+        <div class="product-features">
+          {% for feat in features %}
+            <div class="feature">
+              <img src="{{feat.feature_image | img_url: 'master' }}" alt="">
+              <p>{{feat.feature_text}}</p>
+            </div>
+          {% endfor %}
+        </div>
+       
       {% endif %}
     </div>
   {%- endif -%}
