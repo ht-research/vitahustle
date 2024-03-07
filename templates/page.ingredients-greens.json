@@ -358,7 +358,6 @@
     },
     "409930d3-748c-4ef1-a3c9-fed8ca367fce": {
       "type": "multicolumn",
-      "disabled": true,
       "blocks": {
         "template--16944483860729__409930d3-748c-4ef1-a3c9-fed8ca367fce-1688661431a575739a-0": {
           "type": "column_with_icon",
@@ -402,6 +401,7 @@
         "template--16944483860729__409930d3-748c-4ef1-a3c9-fed8ca367fce-1688661431a575739a-1",
         "template--16944483860729__409930d3-748c-4ef1-a3c9-fed8ca367fce-1688661431a575739a-2"
       ],
+      "disabled": true,
       "custom_css": [
         ".h7 {font-family: \"FK Grotesk Bold\";}",
         ".multicolumn__container {border-bottom: solid 1px #c7e813;}",
@@ -509,7 +509,6 @@
     },
     "b39440b1-2ce2-4f83-92df-a660990ee93d": {
       "type": "multicolumn",
-      "disabled": true,
       "blocks": {
         "template--16953333907705__b39440b1-2ce2-4f83-92df-a660990ee93d-1688661431a575739a-0": {
           "type": "column_with_icon",
@@ -618,6 +617,7 @@
         "499fa87e-afcd-41ee-b69d-f61672517431",
         "bc362d6f-9cf2-460d-9ca4-d59a0cc36675"
       ],
+      "disabled": true,
       "custom_css": [
         ".h7 {font-family: \"FK Grotesk Bold\";}",
         ".multicolumn__container {border-bottom: solid 1px #c7e813;}",
@@ -649,7 +649,6 @@
     },
     "c4882474-7015-4e8f-9ad7-62e126df2b66": {
       "type": "multicolumn",
-      "disabled": true,
       "blocks": {
         "template--16953333907705__c4882474-7015-4e8f-9ad7-62e126df2b66-1688661431a575739a-0": {
           "type": "column_with_icon",
@@ -693,6 +692,7 @@
         "template--16953333907705__c4882474-7015-4e8f-9ad7-62e126df2b66-1688661431a575739a-1",
         "template--16953333907705__c4882474-7015-4e8f-9ad7-62e126df2b66-1688661431a575739a-2"
       ],
+      "disabled": true,
       "custom_css": [
         ".h7 {font-family: \"FK Grotesk Bold\";}",
         ".multicolumn__column {padding: 0px;}",
