@@ -1,4 +1,4 @@
-<div class='product__info-wrapper {% if product.handle contains 'greens' and template contains 'new-superfood-greens' %}product-greens{% endif %}' id='ProductInfoWrapper-{{ product.id }}-{{ sectionId }}'>
+<div class='product__info-wrapper {% if template contains 'new-superfood-greens' %}product-greens{% endif %}' id='ProductInfoWrapper-{{ product.id }}-{{ sectionId }}'>
   <div class='product__info'>
     {%- liquid
       for block in section.blocks
