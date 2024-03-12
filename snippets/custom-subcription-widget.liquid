@@ -8,7 +8,8 @@
        type="radio"
        id="onetime_item"
        name="subscribe"
-       value="onetime_plan" />
+       value="onetime_plan"
+       checked />
 
        <div class="onetime_box purchase_type_box">
         <label for="onetime_item">
@@ -58,7 +59,6 @@
       id="subscription_item"
       value="selling_plan"
       name="subscribe"
-      checked
        />
       <div class="subscription_box purchase_type_box">
       
@@ -131,6 +131,7 @@
                         {% if forloop.index == 1%}
                         checked
                         {% endif %}
+                        disabled
                         />
                       <span>Deliver every</span>
                       <span> {{ plan.name | replace: 'Deliver every', ''  }}</span>
@@ -179,6 +180,7 @@
 
     // disable selling plan on onetime click
     $('input[name="subscribe"]').on('change',function(){
+      console.log("id",$(this).attr('id'))
       if($(this).attr('id') == 'onetime_item'){
         $('input[name="selling_plan"]').attr('disabled','disabled');
       } else{
