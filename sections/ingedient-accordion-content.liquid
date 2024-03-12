@@ -320,138 +320,140 @@
 
 </style>
 
-<div class="product_feature_accordion_content_wrapper">
-    <div class="inner_iproduct_feature_accordion_content_wrapper">
-        <div class="product_feature_content">
-            <div class="product_feature_text_content">
-                <div class="title">{{ data.title }}</div>
-                <div class="subtitle">{{ data.subtitle }}</div>
-            </div>
-            <div class="product_feature_icon_text_list">
-                {% for metaobject in data.product_feature_pros_list.value %}
-                    <div class="product_feature_icon_text">
-                        <div class="product_feature_icon">
-                            {% comment %} <img src="https://i.postimg.cc/pdnBkpSb/Artboard-21.png"> {% endcomment %}
-                            <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+{% if data != blank %}
+    <div class="product_feature_accordion_content_wrapper">
+        <div class="inner_iproduct_feature_accordion_content_wrapper">
+            <div class="product_feature_content">
+                <div class="product_feature_text_content">
+                    <div class="title">{{ data.title }}</div>
+                    <div class="subtitle">{{ data.subtitle }}</div>
+                </div>
+                <div class="product_feature_icon_text_list">
+                    {% for metaobject in data.product_feature_pros_list.value %}
+                        <div class="product_feature_icon_text">
+                            <div class="product_feature_icon">
+                                {% comment %} <img src="https://i.postimg.cc/pdnBkpSb/Artboard-21.png"> {% endcomment %}
+                                <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+                            </div>
+                            <p>{{ metaobject.title }}</p>
                         </div>
-                        <p>{{ metaobject.title }}</p>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-
-        <div class="product_feature_accordion_wrapper">
-            <div class="product_feature_accordion_list">
-                {% comment %} {% for metaobject in data.product_feature_accordion_content_list.value %}
-                    <div class="product_feature_image_text_content_wrapper">
-                        <div class="product_feature_image_text_wrapper">
-                            <div class="product_feature_image_text">
-                                <div class="product_feature_image">
-                                    {% comment %} <img src="https://i.postimg.cc/rpB2YRFS/Ellipse-84.png"> {% endcomment %}
-                                    <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
-
+    
+            <div class="product_feature_accordion_wrapper">
+                <div class="product_feature_accordion_list">
+                    {% comment %} {% for metaobject in data.product_feature_accordion_content_list.value %}
+                        <div class="product_feature_image_text_content_wrapper">
+                            <div class="product_feature_image_text_wrapper">
+                                <div class="product_feature_image_text">
+                                    <div class="product_feature_image">
+                                        {% comment %} <img src="https://i.postimg.cc/rpB2YRFS/Ellipse-84.png"> {% endcomment %}
+                                        <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+    
+                                    </div>
+                                    <p class="product_feature_text">{{ metaobject.heading }}</p>
                                 </div>
-                                <p class="product_feature_text">{{ metaobject.heading }}</p>
+                                <div class="product_feature_accordion_buttons">
+                                    <span class="show_icon">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 5.51172V19.5117" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                    </span>
+                                    <span class="hide_icon">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                </div>
                             </div>
-                            <div class="product_feature_accordion_buttons">
-                                <span class="show_icon">
-                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 5.51172V19.5117" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>  
-                                </span>
-                                <span class="hide_icon">
-                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
+                            <div class="product_feature_content_wrapper">
+                                {{ metaobject.content }}
                             </div>
                         </div>
-                        <div class="product_feature_content_wrapper">
-                            {{ metaobject.content }}
-                        </div>
-                    </div>
-                {% endfor %} {% endcomment %}
-
-
-                {% for metaobject in data.product_feature_accordion_content_list.value %}
-                    <accordeon-component
-                        class='accordeon-plus {% unless forloop.last %} accordeon-plus--bottom-bordered{% endunless %} {% unless forloop.first %} accordeon-plus--top-bordered{% endunless %} block-{{block.id}}'
-                        data-aria-expanded='{% if expand_first_collapsible_row and forloop.index == 1 %}true{% else %}false{% endif %}'
-                        data-section-id='{{ section.id }}'
-                      >
-                        <accordeon-btn
-                          class='accordeon-plus__btn accordeon-plus__btn--small product-details__accordeon-btn'
-                          tabindex='0'
-                        >
-                          {%- if metaobject.image != blank -%}
-                            <img
-                              class='accordeon-plus__btn-icon lazyload'
-                              {% render 'image-attributes', image: metaobject.image, size: 'medium' %}
+                    {% endfor %} {% endcomment %}
+    
+    
+                    {% for metaobject in data.product_feature_accordion_content_list.value %}
+                        <accordeon-component
+                            class='accordeon-plus {% unless forloop.last %} accordeon-plus--bottom-bordered{% endunless %} {% unless forloop.first %} accordeon-plus--top-bordered{% endunless %} block-{{block.id}}'
+                            data-aria-expanded='{% if expand_first_collapsible_row and forloop.index == 1 %}true{% else %}false{% endif %}'
+                            data-section-id='{{ section.id }}'
+                          >
+                            <accordeon-btn
+                              class='accordeon-plus__btn accordeon-plus__btn--small product-details__accordeon-btn'
+                              tabindex='0'
                             >
-                          {%- elsif icon != 'none' -%}
-                            {% render 'icon-pack', icon: icon, class: 'accordeon-plus__btn-icon' %}
-                          {%- endif -%}
-                          {{ metaobject.heading }}
-                          {% render 'icon', icon_name: 'plus', class: 'accordeon-plus__icon' %}
-                        </accordeon-btn>
-                        <div class='accordeon-plus__content-wrap' data-accordeon-content-wrapper>
-                          <div class='accordeon-plus__content product-details__accordeon-content' data-accordeon-content>
-                            <div class='rte product-details__rte  body-font-weight-from-global-settings'>
-                              {{ metaobject.content }}
-                            </div>
-                          </div>
-                        </div>
-                      </accordeon-component>
-                      
-                    {% comment %} <div class="product_feature_image_text_content_wrapper">
-                        <div class="product_feature_image_text_wrapper">
-                            <div class="product_feature_image_text">
-                                <div class="product_feature_image">
-                                    {% comment %} <img src="https://i.postimg.cc/rpB2YRFS/Ellipse-84.png"> {% endcomment %}
-                                    <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
-
+                              {%- if metaobject.image != blank -%}
+                                <img
+                                  class='accordeon-plus__btn-icon lazyload'
+                                  {% render 'image-attributes', image: metaobject.image, size: 'medium' %}
+                                >
+                              {%- elsif icon != 'none' -%}
+                                {% render 'icon-pack', icon: icon, class: 'accordeon-plus__btn-icon' %}
+                              {%- endif -%}
+                              {{ metaobject.heading }}
+                              {% render 'icon', icon_name: 'plus', class: 'accordeon-plus__icon' %}
+                            </accordeon-btn>
+                            <div class='accordeon-plus__content-wrap' data-accordeon-content-wrapper>
+                              <div class='accordeon-plus__content product-details__accordeon-content' data-accordeon-content>
+                                <div class='rte product-details__rte  body-font-weight-from-global-settings'>
+                                  {{ metaobject.content }}
                                 </div>
-                                <p class="product_feature_text">{{ metaobject.heading }}</p>
+                              </div>
                             </div>
-                            <div class="product_feature_accordion_buttons">
-                                <span class="show_icon">
-                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 5.51172V19.5117" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>  
-                                </span>
-                                <span class="hide_icon">
-                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
+                          </accordeon-component>
+                          
+                        {% comment %} <div class="product_feature_image_text_content_wrapper">
+                            <div class="product_feature_image_text_wrapper">
+                                <div class="product_feature_image_text">
+                                    <div class="product_feature_image">
+                                        {% comment %} <img src="https://i.postimg.cc/rpB2YRFS/Ellipse-84.png"> {% endcomment %}
+                                        <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+    
+                                    </div>
+                                    <p class="product_feature_text">{{ metaobject.heading }}</p>
+                                </div>
+                                <div class="product_feature_accordion_buttons">
+                                    <span class="show_icon">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 5.51172V19.5117" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                    </span>
+                                    <span class="hide_icon">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 12.5117H19" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product_feature_content_wrapper">
-                            {{ metaobject.content }}
-                        </div>
-                    </div> {% endcomment %}
-                {% endfor %}
+                            <div class="product_feature_content_wrapper">
+                                {{ metaobject.content }}
+                            </div>
+                        </div> {% endcomment %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-
-        <div class="product_feature_content mobile_only">
-            <div class="product_feature_icon_text_list mobile_only">
-                {% for metaobject in data.product_feature_pros_list.value %}
-                    <div class="product_feature_icon_text">
-                        <div class="product_feature_icon">
-                            {% comment %} <img src="https://i.postimg.cc/pdnBkpSb/Artboard-21.png"> {% endcomment %}
-                            <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+    
+            <div class="product_feature_content mobile_only">
+                <div class="product_feature_icon_text_list mobile_only">
+                    {% for metaobject in data.product_feature_pros_list.value %}
+                        <div class="product_feature_icon_text">
+                            <div class="product_feature_icon">
+                                {% comment %} <img src="https://i.postimg.cc/pdnBkpSb/Artboard-21.png"> {% endcomment %}
+                                <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.title }}"> 
+                            </div>
+                            <p>{{ metaobject.title }}</p>
                         </div>
-                        <p>{{ metaobject.title }}</p>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
+    
         </div>
-
     </div>
-</div>
+{% endif %}
 
 <script>
 

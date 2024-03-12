@@ -42,6 +42,7 @@
     },
     "new_banner2_AwyWnb": {
       "type": "new-banner2",
+      "disabled": true,
       "settings": {
         "new_banner_section_title": "<span>STRAWBERRY<\/span><br>DAMN DELICIOUS-NESS",
         "new_banner_section_subtitle": "",
@@ -56,6 +57,26 @@
         "Tablet_banner_max_height": 800,
         "btn_text": "SHOP NOW",
         "btn_url": "https:\/\/vitahustle.com\/products\/one-superfood-protein-shake-strawberry"
+      }
+    },
+    "get_lucky_banner_mp4hGf": {
+      "type": "get-lucky-banner",
+      "settings": {
+        "greens_new_banner_title": "50% OFF GREENS",
+        "greens_new_banner_subtitle": "IT’S YOUR LUCKY DAY",
+        "greens_new_banner_subtext": "USE CODE: LUCKY",
+        "greens_new_banner_offerText": "*offer applied to first bag only",
+        "background_larger_screen_image": "shopify:\/\/shop_images\/Background_3.png",
+        "larger_screen_banner_max_height": 700,
+        "background_desktop_image": "shopify:\/\/shop_images\/Background_4.png",
+        "desktop_banner_max_height": 780,
+        "background_mobile_image": "shopify:\/\/shop_images\/hp-banner-v2a-desktop_6.png",
+        "mobile_banner_min_height": 660,
+        "mobile_banner_max_height": 800,
+        "background_ipad_image": "shopify:\/\/shop_images\/hp-banner-v2a-desktop_8.png",
+        "Tablet_banner_max_height": 800,
+        "btn_text": "SAVE NOW",
+        "btn_url": "shopify:\/\/products\/vitahustle-one-superfood-greens"
       }
     },
     "8c9108e5-5763-41a5-8164-5e91fb2a073e": {
@@ -586,6 +607,7 @@
   "order": [
     "9fd9498c-6efb-476e-8d6a-a7a853124857",
     "new_banner2_AwyWnb",
+    "get_lucky_banner_mp4hGf",
     "8c9108e5-5763-41a5-8164-5e91fb2a073e",
     "0d20106d-cf81-4575-89b1-4dfd2ec13c66",
     "7104b9b8-98c9-4888-9248-7874a9f6472f",
