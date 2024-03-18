@@ -18,32 +18,6 @@
   endif
 -%}
 
-{% if template contains 'greens' %}
-<style>
-  .image-banner__btn{
-    background: #C9E14B;
-  }
-  .image-banner__caption {
-    font-family: 'Lato Bold';
-  }
-  .image-banner__content>*+.image-banner__text{
-    font-family: 'Lato Regular';
-  }
-  .image-banner__content .h1{
-    font-size: 64px;
-  }
-  @media screen and (max-width:600px) {
-    .image-banner__content{
-      padding: 0;
-    }
-    .image-banner__content>*+.image-banner__text{
-      font-size: 16px;
-    }
-  }
-</style>
-{% endif %}
-
-
 {%- if caption != blank or title != blank or text != blank or btn_text != blank or extra_btn_text != blank -%}
   <div class="image-banner__content-wrap">
     <div class="image-banner__content image-banner__content--desktop {% if desktop_content_background != 'none' %} image-banner__content--with-{{ desktop_content_background }}-background{% endif %}">

@@ -82,7 +82,7 @@
     "show_taxes_and_shipping_costs_label": true,
     "cart_status_background_color": "#ffffff",
     "cart_status_text_color": "#000000",
-    "cart_free_shipping_bar_visible": false,
+    "cart_free_shipping_bar_visible": true,
     "cart_free_shipping_bar_threshold": 39,
     "cart_free_shipping_bar_color": "#000000",
     "cart_free_shipping_bar_bg": "#c8e812",
@@ -239,40 +239,15 @@
         "settings": {
         }
       },
-      "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": true,
-        "settings": {
-          "button_color": "#212121",
-          "secondary_color": "#ffffff",
-          "button_icon": "chat_bubble",
-          "button_text": "live_chat",
-          "button_horizontal_position": "bottom_left",
-          "button_vertical_position": "lowest",
-          "greeting_message": "👋 Hello! Please message us if you have questions, or need help. You can also email us at help@vitahustle.com"
-        }
-      },
-      "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": true,
-        "settings": {
-        }
-      },
       "18228966181090706294": {
         "type": "shopify:\/\/apps\/selleasy\/blocks\/app-embed\/790c1a03-a71f-4bc1-9869-00dad526d3c2",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "storefrontAccessToken": "9cc49211d0583bc27a541080e515618c"
         }
       },
       "14952540001915115444": {
         "type": "shopify:\/\/apps\/upcart-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "17428600031447253342": {
-        "type": "shopify:\/\/apps\/attentive\/blocks\/attn-tag\/8df62c72-8fe4-407e-a5b3-72132be30a0d",
         "disabled": false,
         "settings": {
         }
