@@ -208,52 +208,50 @@
     }
 </style>
 
-{% if data != blank %}
-    <div class="ingredients_wrapper">
-        <div class="inner_ingredients_wrapper">
-            <div class="text_content">
-                <p>{{ data.newtitle }}</p>
-                <p class="subtitle">{{ data.subtitle }}</p>
+<div class="ingredients_wrapper">
+    <div class="inner_ingredients_wrapper">
+        <div class="text_content">
+            <p>{{ data.newtitle }}</p>
+            <p class="subtitle">{{ data.subtitle }}</p>
+        </div>
+        <div class="ingredients_list">
+            {% for metaobject in data.ingredient_object.value %}
+                {% comment %} ===>metaobject {{ metaobject.text }} {% endcomment %}
+                <div class="ingredient_icon_text">
+                    <div class="ingredient_icon">
+                      {% comment %} <img src="https://i.postimg.cc/br5dF7qF/zap.png">  {% endcomment %}
+                      <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.text }}"> 
+                    </div>
+                    <p class="ingredient_text">{{ metaobject.text }}</p>
+                </div>
+            {% endfor %}
+            {% comment %} <div class="ingredient_icon_text">
+                <div class="ingredient_icon">
+                  <img src="https://i.postimg.cc/br5dF7qF/zap.png">  
+                </div>
+                <p class="ingredient_text">Provides Balanced Energy</p>
             </div>
-            <div class="ingredients_list">
-                {% for metaobject in data.ingredient_object.value %}
-                    {% comment %} ===>metaobject {{ metaobject.text }} {% endcomment %}
-                    <div class="ingredient_icon_text">
-                        <div class="ingredient_icon">
-                          {% comment %} <img src="https://i.postimg.cc/br5dF7qF/zap.png">  {% endcomment %}
-                          <img src="{{metaobject.image | img_url: 'master'}}" alt="{{ metaobject.text }}"> 
-                        </div>
-                        <p class="ingredient_text">{{ metaobject.text }}</p>
-                    </div>
-                {% endfor %}
-                {% comment %} <div class="ingredient_icon_text">
-                    <div class="ingredient_icon">
-                      <img src="https://i.postimg.cc/br5dF7qF/zap.png">  
-                    </div>
-                    <p class="ingredient_text">Provides Balanced Energy</p>
+            <div class="ingredient_icon_text">
+                <div class="ingredient_icon">
+                  <img src="https://i.postimg.cc/br5dF7qF/zap.png">  
                 </div>
-                <div class="ingredient_icon_text">
-                    <div class="ingredient_icon">
-                      <img src="https://i.postimg.cc/br5dF7qF/zap.png">  
-                    </div>
-                    <p class="ingredient_text">Provides Balanced Energy</p>
-                </div>
-                <div class="ingredient_icon_text">
-                    <div class="ingredient_icon">
-                      <img src="https://i.postimg.cc/br5dF7qF/zap.png">  
-                    </div>
-                    <p class="ingredient_text">Provides Balanced Energy</p>
-                </div>
-                <div class="ingredient_icon_text">
-                    <div class="ingredient_icon">
-                      <img src="https://i.postimg.cc/br5dF7qF/zap.png">  
-                    </div>
-                    <p class="ingredient_text">Provides Balanced Energy</p>
-                </div> {% endcomment %}
+                <p class="ingredient_text">Provides Balanced Energy</p>
             </div>
+            <div class="ingredient_icon_text">
+                <div class="ingredient_icon">
+                  <img src="https://i.postimg.cc/br5dF7qF/zap.png">  
+                </div>
+                <p class="ingredient_text">Provides Balanced Energy</p>
+            </div>
+            <div class="ingredient_icon_text">
+                <div class="ingredient_icon">
+                  <img src="https://i.postimg.cc/br5dF7qF/zap.png">  
+                </div>
+                <p class="ingredient_text">Provides Balanced Energy</p>
+            </div> {% endcomment %}
         </div>
     </div>
-{% endif %}
+</div>
 
 {% schema %}
 {

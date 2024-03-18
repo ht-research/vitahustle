@@ -239,36 +239,33 @@
     }
 </style>
 
+<div class="how_to_use_wrapper">
+    <div class="inner_how_to_use_wrapper">
+        <div class="title">
+            <p>{{ data.how_to_use_title }}</p>
+            <div class="htu_arrow">
+                {% comment %} <img src="https://i.postimg.cc/wvW7dc4R/how-to-use-arraow.png"> {% endcomment %}
+                <img src="{{ 'how_to_use_arraow.png' | asset_img_url: '300x' }}" />
 
-{% if data != blank %}
-    <div class="how_to_use_wrapper">
-        <div class="inner_how_to_use_wrapper">
-            <div class="title">
-                <p>{{ data.how_to_use_title }}</p>
-                <div class="htu_arrow">
-                    {% comment %} <img src="https://i.postimg.cc/wvW7dc4R/how-to-use-arraow.png"> {% endcomment %}
-                    <img src="{{ 'how_to_use_arraow.png' | asset_img_url: '300x' }}" />
-    
-                </div>
-                <div class="htu_arrow mobile_only">
-                    <img src="{{ 'how_to_use_mobile_arraow.png' | asset_img_url: '300x' }}" />
-                </div>
             </div>
-            <div class="image_text_section_wrapper">
-                {%  for kk in data.steps_object.value %}
-                    <div class="image_text_section">
-                        <div class="how_to_use_image">
-                            <img src="{{kk.image | img_url: 'master'}}" alt="{{ kk.subtitle }}">
-                            <div class="steps"><span>{{ forloop.index }}</span><p>{{ kk.subtitle }}</p></div>
-                        </div>
-                        <div class="how_to_use_text">{{ kk.description }}</div>
-                    </div>
-                {% endfor %}
-    
+            <div class="htu_arrow mobile_only">
+                <img src="{{ 'how_to_use_mobile_arraow.png' | asset_img_url: '300x' }}" />
             </div>
         </div>
+        <div class="image_text_section_wrapper">
+            {%  for kk in data.steps_object.value %}
+                <div class="image_text_section">
+                    <div class="how_to_use_image">
+                        <img src="{{kk.image | img_url: 'master'}}" alt="{{ kk.subtitle }}">
+                        <div class="steps"><span>{{ forloop.index }}</span><p>{{ kk.subtitle }}</p></div>
+                    </div>
+                    <div class="how_to_use_text">{{ kk.description }}</div>
+                </div>
+            {% endfor %}
+
+        </div>
     </div>
-{% endif %}
+</div>
 
 {% schema %}
 {
