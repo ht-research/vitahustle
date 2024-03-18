@@ -23,31 +23,17 @@
             "highlight_sale_price": true
           }
         },
-        "28586830-d855-4547-8946-94914bac9e85": {
-          "type": "description",
-          "settings": {
-            "title": "",
-            "block_style": "static",
-            "icon": "none"
-          }
-        },
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
           "type": "variant_picker",
           "settings": {
             "option_type": "button-outline",
             "primary_swatch_option_type": "variant-images",
             "secondary_swatch_option_type": "swatches",
-            "option_name": "Flavor",
+            "option_name": "",
             "information_drawer_button_label": "",
             "text": "",
             "page": "",
             "image_width": 60
-          }
-        },
-        "a5695ed4-524b-45b1-a57e-48bebecb84a9": {
-          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
-          "settings": {
-            "product": "{{product}}"
           }
         },
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
@@ -81,61 +67,34 @@
             "drawer_media_size": 60
           }
         },
-        "d4eb13db-7552-4c51-9e99-d172de88b79f": {
-          "type": "product_drawer_with_tabs",
+        "81a07ed1-ce92-4c1c-b238-35ccb22a1d66": {
+          "type": "description",
           "settings": {
-            "popup_link_text": "Product Benefits",
-            "btn_style": "text",
-            "icon": "none",
-            "button_background_color": "#e9ffcd",
-            "button_text_color": "#141416",
-            "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
-            "tab_1_page": "",
-            "tab_2_title": "",
-            "tab_2_text": "",
-            "tab_2_page": "",
-            "tab_3_title": "",
-            "tab_3_text": "",
-            "tab_3_page": ""
+            "title": "Description",
+            "block_style": "collapsible_row_closed",
+            "icon": "none"
           }
         },
-        "a7f2bb40-cc36-4180-bdca-702e6583c0f3": {
-          "type": "product_drawer_with_tabs",
+        "ef44ab4f-427b-4ee6-9b28-7023ebe45406": {
+          "type": "collapsible_row",
           "settings": {
-            "popup_link_text": "How to Use",
-            "btn_style": "text",
+            "style": "collapsible_row_closed",
+            "title": "Ingredients",
             "icon": "none",
-            "button_background_color": "#e9ffcd",
-            "button_text_color": "#141416",
-            "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
-            "tab_1_page": "",
-            "tab_2_title": "",
-            "tab_2_text": "",
-            "tab_2_page": "",
-            "tab_3_title": "",
-            "tab_3_text": "",
-            "tab_3_page": ""
+            "text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
+            "page": "",
+            "image_width": 60
           }
         },
-        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97": {
-          "type": "product_drawer_with_tabs",
+        "413fb661-8432-431b-bea9-f7911576014e": {
+          "type": "collapsible_row",
           "settings": {
-            "popup_link_text": "Supplement Facts",
-            "btn_style": "text",
+            "style": "collapsible_row_closed",
+            "title": "How to Use",
             "icon": "none",
-            "button_background_color": "#e9ffcd",
-            "button_text_color": "#141416",
-            "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
-            "tab_1_page": "",
-            "tab_2_title": "",
-            "tab_2_text": "",
-            "tab_2_page": "",
-            "tab_3_title": "",
-            "tab_3_text": "",
-            "tab_3_page": ""
+            "text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "page": "",
+            "image_width": 60
           }
         }
       },
@@ -143,21 +102,16 @@
         "title",
         "8a594cf6-45bd-4c34-ba41-054c7b7bb43b",
         "price",
-        "28586830-d855-4547-8946-94914bac9e85",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
-        "a5695ed4-524b-45b1-a57e-48bebecb84a9",
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
         "buy_buttons",
         "b7435ba2-8e00-4538-be27-63a92d60e195",
-        "d4eb13db-7552-4c51-9e99-d172de88b79f",
-        "a7f2bb40-cc36-4180-bdca-702e6583c0f3",
-        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97"
+        "81a07ed1-ce92-4c1c-b238-35ccb22a1d66",
+        "ef44ab4f-427b-4ee6-9b28-7023ebe45406",
+        "413fb661-8432-431b-bea9-f7911576014e"
       ],
       "custom_css": [
-        "ul {padding-inline-start: 0px !important;}",
-        ".product-quantity__wrap {margin-top: 0px !important;}",
-        "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
-        ".product-desktop-media {position: sticky !important; top: 120px !important;}"
+        "ul {padding-inline-start: 0px !important;}"
       ],
       "settings": {
         "color_scheme": "default",
@@ -272,7 +226,7 @@
       ],
       "settings": {
         "color_scheme": "default",
-        "container_size": "small",
+        "container_size": "large",
         "section_spacing_top": 48,
         "section_spacing_bottom": 48,
         "custom_liquid": ""
@@ -341,7 +295,7 @@
             "link_url": ""
           }
         },
-        "e74d433e-92f0-4d3f-bf81-62b0eea5158f": {
+        "9b2d769a-8d5e-4c19-8d9e-67c965e61e82": {
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
@@ -360,12 +314,10 @@
         "template--16944483926265__c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0-1688060295e78c2f52-2",
         "916eb449-a1c7-4a24-9675-08dee2f4c436",
         "353a2771-8647-49f3-96de-f30095244da0",
-        "e74d433e-92f0-4d3f-bf81-62b0eea5158f"
+        "9b2d769a-8d5e-4c19-8d9e-67c965e61e82"
       ],
       "custom_css": [
-        ".multicolumn__column-title {font-family: \"FK Grotesk Bold\"; text-transform: capitalize;}",
-        "@media (max-width: 768px) {.multicolumn__column {padding: 0; }}",
-        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 3 !important; }}"
+        ".multicolumn__column-title {font-family: \"FK Grotesk Bold\"; text-transform: capitalize;}"
       ],
       "settings": {
         "color_scheme": "custom-1",
@@ -391,8 +343,19 @@
         "btn_style": "outline"
       }
     },
+    "480031ef-b0c0-4f58-8801-4b1e6b1e0d49": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": "<style>\n    \/* CSS for the two-column layout *\/\n    .custom-container {\n      display: flex;\n      flex-wrap: wrap;\n    }\n\n    .custom-column {\n      flex: 1 0 50%;\n      padding: 20px;\n      box-sizing: border-box;\n\n    }\n\n    \/* CSS for the FAQ accordion *\/\n    .custom-accordion {\n      cursor: pointer;\n      border: none;\n      outline: none;\n      transition: 0.4s;\n      width:100%;\n      text-align: left;\n      padding:10px;\nbackground:white;\nfont-size:18px;\nfont-family:\"FK Grotesk Bold\";\npadding-left:0;\n    }\n\n    .custom-accordion:hover {\n      background-color: #fff;\n    }\n\n    .custom-accordion:after {\n      content: '\\002B';\n      color: #212121;\n      font-weight: bold;\n      float: right;\n      margin-left: 5px;\n      font-size:18px;\n    }\n\n    .custom-active:after {\n      content: \"\\2212\";\n    }\n\n    .custom-panel {\n      padding: 0 18px;\n      background-color: white;\n      display: none;\n      overflow: hidden;\nfont-size:14px;\npadding-left:0;\n    }\n\n    \/* CSS for the centered image *\/\n    .custom-image-container {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      height: 100%;\n    }\n\n    .custom-image-container img {\n      max-width: 100%;\n      max-height: 100%;\n    }\n  <\/style>\n\n<div class=\"custom-container\">\n    <div class=\"custom-column\">\n      <h2 class=\"h1\">ZERO ADDED SUGAR. 100% DELICIOUS<\/h2>\n<p>Reboot your health and wellness journey with just one serving a day of:<\/p>\n\n      <button class=\"custom-accordion\">Superfood Fruits & Veggies<\/button>\n      <div class=\"custom-panel\">\n        <p>15 alkalizing greens, including kale, wheat grass, and chlorella PLUS 16 antioxidant-rich super fruits, including maqui berry, tart cherry, pomegranate and camu camu.<\/p>\n      <\/div>\n\n      <button class=\"custom-accordion\">20g Vegan Protein<\/button>\n      <div class=\"custom-panel\">\n        <p>20g of hunger-satisfying protein to fuel your day, using a high-quality plant-based blend of pea protein, quinoa, and mung bean protein.<\/p>\n      <\/div>\n\n <button class=\"custom-accordion\">2B CFU Probiotic \/ Prebiotic<\/button>\n      <div class=\"custom-panel\">\n        <p>Support a healthy gut and digestive system with 2 billion CFU from 9 strains of Lactobacilli and Bifidobacteria probiotics, as well as prebiotic fiber.<\/p>\n      <\/div>\n\n<button class=\"custom-accordion\">Clinically Tested Adaptogens<\/button>\n      <div class=\"custom-panel\">\n        <p>\nSupport memory and cognition, sexual wellness, and a healthy response to stress with clinically studied adaptogens like ashwagandha extract, rhodiola and bacopa.<\/p>\n      <\/div>\n    <\/div>\n\n    <div class=\"custom-column\">\n      <div class=\"custom-image-container\">\n        <img style=\"border-radius:20px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0133\/3562\/5792\/files\/afd0d9b713f683c70153c59e6aaec0f7.png?v=1688060747&width=960\" alt=\"Image\">\n      <\/div>\n    <\/div>\n  <\/div>\n\n<script>\n    \/\/ JavaScript for the FAQ accordion\n    var accordions = document.getElementsByClassName(\"custom-accordion\");\n    for (var i = 0; i < accordions.length; i++) {\n      accordions[i].addEventListener(\"click\", function() {\n        this.classList.toggle(\"custom-active\");\n        var panel = this.nextElementSibling;\n        if (panel.style.display === \"block\") {\n          panel.style.display = \"none\";\n        } else {\n          panel.style.display = \"block\";\n        }\n      });\n    }\n  <\/script>"
+      }
+    },
     "9ddba0be-f879-4e43-9a11-aea6ba37821b": {
       "type": "images-with-text",
+      "disabled": true,
       "blocks": {
         "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
           "type": "image",
@@ -430,7 +393,7 @@
         "content_alignment": "left",
         "desktop_content_width": 480,
         "first_button_text": "LEARN MORE",
-        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_link": "",
         "first_button_style": "solid",
         "second_button_text": "",
         "second_button_link": "",
@@ -468,6 +431,7 @@
     },
     "d7e5ae43-0bda-4830-acab-d2202fbad902": {
       "type": "collage",
+      "disabled": true,
       "blocks": {
         "template--16944483926265__d7e5ae43-0bda-4830-acab-d2202fbad902-1688060978e5de004c-1": {
           "type": "image",
@@ -483,7 +447,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/collections\/all",
+            "link": "",
             "content_position": "bottom-left"
           }
         },
@@ -501,7 +465,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/blogs\/the-hustle",
+            "link": "",
             "content_position": "bottom-left"
           }
         },
@@ -519,7 +483,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/superfood-ingredients",
+            "link": "",
             "content_position": "bottom-left"
           }
         },
@@ -537,7 +501,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/vitahustle-reviews",
+            "link": "",
             "content_position": "bottom-left"
           }
         }
@@ -549,9 +513,7 @@
         "c5006660-2a6e-4de6-88a4-ebf72d6b21f5"
       ],
       "custom_css": [
-        ".collage__image-block {border-radius: 15px;}",
-        ".h2 {font-size: 6rem;}",
-        "@media (max-width: 768px) {.h2 {font-size: 5.5rem; }}"
+        ".collage__image-block {border-radius: 15px;}"
       ],
       "settings": {
         "color_scheme": "default",
@@ -563,7 +525,7 @@
         "alignment": "left",
         "columns": 4,
         "desktop_row_height": 240,
-        "mobile_row_height": 240,
+        "mobile_row_height": 500,
         "desktop_space_between_cards": 16,
         "mobile_space_between_cards": 16,
         "enable_carousel_on_mobile": false
@@ -571,6 +533,7 @@
     },
     "bed2a76f-a55e-4479-825c-3e608236563f": {
       "type": "newsletter",
+      "disabled": true,
       "blocks": {
         "template--16944483926265__bed2a76f-a55e-4479-825c-3e608236563f-1688060873ba63e4af-1": {
           "type": "title",
@@ -624,6 +587,45 @@
         "desktop_content_background": "none",
         "mobile_content_background": "none"
       }
+    },
+    "1b8c48c1-2809-4997-a0db-618b68e83add": {
+      "type": "image-banner",
+      "custom_css": [
+        ".rte {color: white;}"
+      ],
+      "settings": {
+        "display_rating": false,
+        "number_of_reviews": 0,
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 320,
+        "mobile_height": 600,
+        "desktop_img": "shopify:\/\/shop_images\/02-_Option2-GIF_-_R2_1a762390-6458-4c6c-9eed-d41d1df4279c.jpg",
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "caption": "RISK FREE",
+        "title": "60-DAY GUARANTEE",
+        "text": "<p>If for any reason VitaHustle ONE is not for you, simply return the bag for a full refund less shipping & handling fees.<\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 608,
+        "content_spacing": 116,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "Get Started",
+        "btn_url": "",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
+      }
     }
   },
   "order": [
@@ -633,9 +635,11 @@
     "product-details",
     "168805997811e9e2b2",
     "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0",
+    "480031ef-b0c0-4f58-8801-4b1e6b1e0d49",
     "9ddba0be-f879-4e43-9a11-aea6ba37821b",
     "product-recommendations",
     "d7e5ae43-0bda-4830-acab-d2202fbad902",
-    "bed2a76f-a55e-4479-825c-3e608236563f"
+    "bed2a76f-a55e-4479-825c-3e608236563f",
+    "1b8c48c1-2809-4997-a0db-618b68e83add"
   ]
 }
