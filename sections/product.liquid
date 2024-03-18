@@ -9,8 +9,6 @@
   assign sectionIdWithMainSectionPrefix = section.id | append: '---MainSection'
 -%}
 
-{{ 'product-description.css' | asset_url | stylesheet_tag: preload: true }}
- 
 {% capture css %}
   {% style %}
     .section-{{section.id}} {

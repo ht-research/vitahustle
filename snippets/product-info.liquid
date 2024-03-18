@@ -1,4 +1,4 @@
-<div class='product__info-wrapper {% if template contains 'new-superfood-greens' %}product-greens{% endif %}' id='ProductInfoWrapper-{{ product.id }}-{{ sectionId }}'>
+<div class='product__info-wrapper' id='ProductInfoWrapper-{{ product.id }}-{{ sectionId }}'>
   <div class='product__info'>
     {%- liquid
       for block in section.blocks
@@ -19,8 +19,6 @@
             render 'product-price-block', product: product, section: section, block: block, sectionId: sectionId
           when 'description'
             render 'product-description-block', product: product, section: section, block: block, sectionId: sectionId
-          when 'subscription_widget'
-            render 'custom-subcription-widget', product: product, section: section, block: block, sectionId: sectionId
           when 'custom_liquid'
             render 'product-liquid-block', product: product, section: section, block: block, sectionId: sectionId
           when 'collapsible_row'

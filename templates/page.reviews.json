@@ -55,8 +55,9 @@
       "type": "apps",
       "blocks": {
         "63048845-c96c-4cef-a0bd-d0bc15354f28": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_page\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/all_reviews_page\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
+            "extra_wrapper_classes": "page-width page-width--narrow"
           }
         }
       },
