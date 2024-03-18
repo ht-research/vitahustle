@@ -109,7 +109,7 @@ tdl.identify()
   <meta name="facebook-domain-verification" content="ogc4geohnqpb6l0r31u95tvwoxab7k" />
 
 </head>
-  <body class="color-{{ settings.default_color_scheme }} theme-with-{{ settings.edge_rounding_degree }}-rounded-style {% if settings.edge_rounding_degree != 'none' %} theme-with-rounded-style{% endif %}">
+  <body class="{% if template contains 'index' %} home-page {% endif %} color-{{ settings.default_color_scheme }} theme-with-{{ settings.edge_rounding_degree }}-rounded-style {% if settings.edge_rounding_degree != 'none' %} theme-with-rounded-style{% endif %}">
   {% render 'elevar-body-end' %}
     {% if template.name == 'password' %}
       {% sections 'password-header-group' %}
@@ -250,5 +250,5 @@ tdl.identify()
 {% comment %}
   End of vitahustle Zendesk Widget script →
 {% endcomment %}
- {% include 'ins_opensend' %}</body>
+</body>
 </html>

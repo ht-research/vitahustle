@@ -2,6 +2,7 @@
   "sections": {
     "featured-blog-posts": {
       "type": "featured-blog-post",
+      "disabled": true,
       "blocks": {
         "post-1": {
           "type": "featured_post",
@@ -27,7 +28,6 @@
         "post-2",
         "post-3"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "default",
         "enable_background_around_container": false,
