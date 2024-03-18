@@ -201,6 +201,7 @@
             "icon": "none",
             "text": "",
             "page": "",
+            "image": "shopify:\/\/shop_images\/00850047812155_02_fc66fdfb-ae30-4df6-a6e4-6bd5e7c460e2.jpg",
             "image_width": 100
           }
         },
@@ -241,7 +242,7 @@
         "section_spacing_top": 32,
         "section_spacing_bottom": 96,
         "section_layout": "bottom-tabs",
-        "title": "yes, it really is all good, no b.s.",
+        "title": "yes, it really isall good, no b.s.",
         "text": "Click on the products to check out our clean ingredients, with absolutely no artificial ingredients.",
         "heading_size": "h5",
         "body_size": "body3",

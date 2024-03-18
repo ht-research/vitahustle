@@ -328,30 +328,7 @@
     })
   })
 </script>
-{% if template contains 'sl-35C38440' %}
-<style>
-  .section-{{ section.id}} .image-banner__content-wrap {top: 45% !important;height: 100%;}
-  .section-{{ section.id}} .image-banner__btns {bottom: 12% !important;position: absolute;}
-  .section-{{ section.id}} .image-banner__btn {background: #afc42f !important;}
-  @media screen and (min-width: 992px) {
-    .section-{{ section.id}} .image-banner__btn {padding: 20px 60px;font-size: 20px;}
-  }
-  @media screen and (min-width: 1600px) and (max-width: 1919px) {
-    .section-{{ section.id}} .image-banner__content-wrap {top: 50% !important;}
-    .section-{{ section.id}} .image-banner__btns {bottom: 16% !important;}
-  }
-  @media screen and (min-width: 1920px) {
-    .section-{{ section.id}} .image-banner__content-wrap {top: 45% !important;}
-    .section-{{ section.id}} .image-banner__btns {bottom: 12% !important;}
-  }
-  .section-{{ section.id}} .image-banner__btn:hover {background: #fff !important;}
-  @media screen and (max-width: 767px) {
-    .section-{{ section.id}} .image-banner__content h2 {font-size: 77px;}
-    .section-{{ section.id}} .image-banner__content-wrap {top: 50% !important;}
-    .section-{{ section.id}} .image-banner__btns {bottom: 22% !important;}
-  }
-</style>
-{% endif %}
+
 {% schema %}
   {
     "name": "Image banner new",

@@ -17,46 +17,23 @@
   assign container_size = options.container_size
   assign menu_trigger = options.menu_trigger
 
-  assign enable_upcart = options.enable_upcart
   if customer
     assign profile_url = routes.account_url
   endif
 -%}
+
 {%- capture css -%}
   {% style %}
-        @media (min-width: 768px) {
-          .product-thumbnail-carousel__container{
-            max-height: 568px;
-          }
-        }
-      {% if enable_upcart == true %}
-        body{
-          top: unset !important;
-        }
-      {% endif %}
     .section-{{section.id}}{
         --gsc-logo-width: {{mobile_logo_width}}px;
     }
-    {% comment %}
-    
-    {% endcomment %}
-    {% if enable_upcart == true %}
-      .sidebar-cart__body{
-        display: none;
-      }
-      .upcart-upsells-title{
-        margin-bottom: 10px;
-      }
-      .cart_button_wrapper:hover{
-        cursor: pointer;
-      }
-    {% endif %}
+
     @media {% render 'media-queries', screen: 'md' %} {
         .section-{{section.id}}{
             --gsc-logo-width: {{desktop_logo_width}}px;
         }
     }
-  
+
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'menu-1' %}
@@ -619,74 +596,34 @@
           </a>
         {%- else -%}
           <sidebar-button>
-            {% if enable_upcart == true %}
-              <button
-                  data-sidebar-button
-                  data-sidebar-id='sidebar-component-for-cart'
-                  class='unstyled-button icon header__icon'
-                  href='{{ routes.cart_url }}'
-                  aria-label='{{ 'sections.header.aria_label_for_cart_icon' | t }}'
-                >
-                  <div id="cart_button_wrapper" onclick="window.upcartOpenCart()">
-                      <div class='header__cart-icon'>
-                        {%- if cart_icon == 'bag' -%}
-                          {% render 'icon-pack', icon: 'header-bag-icon', class: '', icon_style: icon_style %}
-                        {%- else -%}
-                          {% render 'icon-pack', icon: 'header-cart-icon', class: '', icon_style: icon_style %}
-                        {%- endif -%}
-                        <div id='CartCount'>
-                          {%- if cart != empty -%}
-                            <div class='cart-count {% if cart.item_count > 9 %}cart-count--ellipse{% endif %}'>
-                              <span aria-hidden='true'>{{ cart.item_count }}</span>
-                            </div>
-                          {%- endif -%}
-                        </div>
-                      </div>
-                  </div>
-                </button
-            {% endif %}
-            {% if enable_upcart == false %}
-            
-              <button
-                data-sidebar-button
-                data-sidebar-id='sidebar-component-for-cart'
-                class='unstyled-button icon header__icon'
-                href='{{ routes.cart_url }}'
-                aria-label='{{ 'sections.header.aria_label_for_cart_icon' | t }}'
-              >
-                <div class='header__cart-icon'>
-                  {%- if cart_icon == 'bag' -%}
-                    {% render 'icon-pack', icon: 'header-bag-icon', class: '', icon_style: icon_style %}
-                  {%- else -%}
-                    {% render 'icon-pack', icon: 'header-cart-icon', class: '', icon_style: icon_style %}
+            <button
+              data-sidebar-button
+              data-sidebar-id='sidebar-component-for-cart'
+              class='unstyled-button icon header__icon'
+              href='{{ routes.cart_url }}'
+              aria-label='{{ 'sections.header.aria_label_for_cart_icon' | t }}'
+            >
+              <div class='header__cart-icon'>
+                {%- if cart_icon == 'bag' -%}
+                  {% render 'icon-pack', icon: 'header-bag-icon', class: '', icon_style: icon_style %}
+                {%- else -%}
+                  {% render 'icon-pack', icon: 'header-cart-icon', class: '', icon_style: icon_style %}
+                {%- endif -%}
+                <div id='CartCount'>
+                  {%- if cart != empty -%}
+                    <div class='cart-count {% if cart.item_count > 9 %}cart-count--ellipse{% endif %}'>
+                      <span aria-hidden='true'>{{ cart.item_count }}</span>
+                    </div>
                   {%- endif -%}
-                  <div id='CartCount'>
-                    {%- if cart != empty -%}
-                      <div class='cart-count {% if cart.item_count > 9 %}cart-count--ellipse{% endif %}'>
-                        <span aria-hidden='true'>{{ cart.item_count }}</span>
-                      </div>
-                    {%- endif -%}
-                  </div>
                 </div>
-              </button>
-          
-            {% endif %}
+              </div>
+            </button>
           </sidebar-button>
         {%- endif -%}
       </div>
     </div>
   </div>
 </header-component>
-
-{% if enable_upcart == true %}
-  <script>
-    document.addEventListener("DOMContentLoaded", (event) => {
-      window.upcartModifyCart = function(e){
-        $('#CartCount .cart-count span').text(e.item_count)
-      }
-    });
-  </script>
-{%  endif %}
 
 {% schema %}
 {
@@ -795,12 +732,6 @@
       "id": "enable_sticky",
       "default": false,
       "label": "t:sections.header.enable_sticky_label"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_upcart",
-      "default": false,
-      "label": "t:sections.header.enable_upcart_label"
     },
     {
       "type": "header",

@@ -55,12 +55,6 @@
   endif
 -%}
 
-{% style %}
-  .product-card__img{
-    border:none;
-  }
-{% endstyle %}
-
 {% if product.id != blank %}
   <product-card
     class="product-card product-card--{{ card_style }} theme-with-size{{ settings.primary_size_for_product_cards }}-swatch-in-product-card {% if settings.img_hover == 'zoom' %} product-card--zoom {% elsif settings.img_hover == 'show-product-media' and images.size > 1 %} product-card--show-product-media {% elsif settings.img_hover == 'show-secondary-media' and images.size > 1 %} product-card--show-secondary-media {% endif %} {{ class }} {% if color_swatches_when_to_show == 'always' %} product-card--with-color-swatches-always{% endif  %} {% if color_swatches_when_to_show == 'on_hover' %} product-card--with-color-swatches-on-hover{% endif  %} {% if product_card_align == 'center' %} product-card--center-alignment{% endif %}"
@@ -83,7 +77,7 @@
           class="product-card__images-wrapper "
           data-product-card-media-container
         >
-          {% comment %} {%- if show_mobile_carousel == true and images.size > 1 -%}
+          {%- if show_mobile_carousel == true and images.size > 1 -%}
             <carousel-component class="carousel product-card__carousel">
               <div class="carousel__viewport embla product-card__carousel-viewport" data-carousel-viewport>
                 <a
@@ -129,7 +123,7 @@
                 </div>
               </carousel-dots>
             </carousel-component>
-          {%- endif -%} {% endcomment %}
+          {%- endif -%}
           <div class="product-card__images {% if settings.enable_product_darken_background %}multiply-mode{% endif %}">
             <img
               class="product-card__img product-card__img--visible lazyload {% if settings.enable_product_darken_background %}multiply-mode__target{% endif %}"

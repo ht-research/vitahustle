@@ -1,20 +1,89 @@
 {
   "sections": {
     "page": {
-      "type": "page",
-      "custom_css": [
-        "h5 {font-family: \"Druk Web\"; font-size: 6rem; line-height: 1;}"
+      "type": "main-quiz",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "b3654053-189a-49a0-adb1-8e5ae857f764": {
+      "type": "quiz-banner",
+      "blocks": {
+        "b7d1e733-7b6b-4fb9-afbf-f96cf738ae47": {
+          "type": "quiz_offcode",
+          "settings": {
+            "title": "20% OFF WITH CODE",
+            "desc": "Auto applies in cart",
+            "code": "QUIZ20"
+          }
+        }
+      },
+      "block_order": [
+        "b7d1e733-7b6b-4fb9-afbf-f96cf738ae47"
       ],
       "settings": {
-        "color_scheme": "default",
-        "container_size": "medium",
-        "section_spacing_top": 50,
-        "section_spacing_bottom": 50,
-        "show_heading": true
+        "heading": "Welcome to VitaHuslte!",
+        "description": "Congrats, you’ve unlocked an exclusive offer:",
+        "bg_image_desktop": "shopify:\/\/shop_images\/Rectangle_29247.jpg",
+        "bg_image_mobile": "shopify:\/\/shop_images\/image_28.jpg"
+      }
+    },
+    "e0d70f7a-3e1f-40ed-b7cc-b760afd11d00": {
+      "type": "main-product-superfood-custom",
+      "blocks": {
+        "9b92e56b-44aa-4d7e-b01f-97a0ea97703d": {
+          "type": "subscription_benefits",
+          "settings": {
+            "benefit": "Save $10 per bag plus:"
+          }
+        },
+        "1950c367-2e9b-41a8-82da-13aaa338266e": {
+          "type": "subscription_benefits",
+          "settings": {
+            "benefit": "No commitments, cancel anytime"
+          }
+        }
+      },
+      "block_order": [
+        "9b92e56b-44aa-4d7e-b01f-97a0ea97703d",
+        "1950c367-2e9b-41a8-82da-13aaa338266e"
+      ],
+      "settings": {
+        "total_serves": 15,
+        "benefit_popup_title": "Subscribe & Save",
+        "benefit_popup_subtitle": "BENEFITS OF A SUBSCRIPTION:",
+        "benefit_popup_tagline": "It's Your Plan. You're In Full Control",
+        "step1_title": "Choose your flavors",
+        "step2_title": "Choose your price",
+        "offer_free_shipping_text": "ADD ANOTHER BAG FOR FREE SHIPPING",
+        "free_shipping_text": "YOU GET FREE SHIPPING",
+        "bags_to_choose_text": "CHOOSE A FLAVOR TO BEGIN WITH",
+        "subscribe_cta_text": "Subscribe",
+        "onetime_cta_text": "Add to cart",
+        "disabled_cta_text": "Add bags above to continue",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 96,
+        "layout": "thumbnails-bottom",
+        "img_ratio": "portrait",
+        "enable_image_zoom": true,
+        "enable_video_looping": false,
+        "enable_video_autoplay": false,
+        "scale_video": true,
+        "show_part_of_next_slide": false,
+        "subscribe_label": "Subscribe & Save",
+        "one_time_label": "One-time",
+        "product_one_time": "vitahustle-one-superfood-chocolate",
+        "title_accordion_tabs": "",
+        "best_savings": "BEST SAVINGS",
+        "free_shipping": "+ FREE Shipping",
+        "cost_shipping": "+ $7.95 Shipping",
+        "autoship_option": "Select autoship option:"
       }
     }
   },
   "order": [
-    "page"
+    "page",
+    "b3654053-189a-49a0-adb1-8e5ae857f764",
+    "e0d70f7a-3e1f-40ed-b7cc-b760afd11d00"
   ]
 }
