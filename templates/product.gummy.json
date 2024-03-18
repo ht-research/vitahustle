@@ -663,26 +663,6 @@
         "desktop_content_background": "none",
         "mobile_content_background": "none"
       }
-    },
-    "2c28ddbe-0817-47ab-9935-d4a2223aeb9d": {
-      "type": "product-review-block",
-      "disabled": true,
-      "settings": {
-        "title": "VITAHUSTLE REVIEWS",
-        "rating_text": "200+ 5 STAR REVIEWS",
-        "review_text_tagline": "We're Constantly Inspired By VitaHustle Users Sharing Their Success Stories, Embracing Healthier, More Energized Lives Every Single Day!",
-        "rating": 4.5
-      }
-    },
-    "a4aab75f-927c-4191-80c5-bae191de0e9f": {
-      "type": "custom-liquid",
-      "settings": {
-        "color_scheme": "default",
-        "container_size": "large",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
-        "custom_liquid": ""
-      }
     }
   },
   "order": [
@@ -695,8 +675,6 @@
     "9ddba0be-f879-4e43-9a11-aea6ba37821b",
     "product-recommendations",
     "d7e5ae43-0bda-4830-acab-d2202fbad902",
-    "bed2a76f-a55e-4479-825c-3e608236563f",
-    "2c28ddbe-0817-47ab-9935-d4a2223aeb9d",
-    "a4aab75f-927c-4191-80c5-bae191de0e9f"
+    "bed2a76f-a55e-4479-825c-3e608236563f"
   ]
 }

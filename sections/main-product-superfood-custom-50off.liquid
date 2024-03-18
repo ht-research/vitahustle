@@ -82,7 +82,7 @@
                 <div class="fifty-off-banner desktop">
             <span>LIMITED TIME OFFER</span>
           <h2>Get 50% OFF Your 1st Order</h2>
-          <p>When you subscribe & save.</p>
+          <p>When You Subscribe & Save.</p>
           {% comment %}
           <img class="double-arrow-offer" src="{{ 'double-arrow.png' | file_url }}"/>
           {% endcomment %}
@@ -91,17 +91,6 @@
         {% comment %}
           {% render 'product-media-list', thumbnail: false, arrow: true, section: section, product: product, sectionId: sectionId %}
         {% endcomment %}
-
-    <p style="
-    text-align: center;
-    font-size: 15px;
-    line-height: 20px;
-    background-color: #f8f8f8;
-    padding: 9px 5px;
-    margin-top: -8px;
-    color: #595959;
-">First Time Customer Offer Only.</p>
-
 
       </div>
       <div class="product_information_form_block">
@@ -170,7 +159,7 @@
 
                             <div class="price_box">
                                 <span class="discounted_price_box">
-                                <span class="discounted_price">$24.97</span>/Bag</span>
+                                <span class="discounted_price">{{ subPrice}}</span>/Bag</span>
                             </div>
                             <div class="discountBox">(
                               <span class="discounted_price_per_bag">{{ pricePerBag }}</span>
@@ -338,7 +327,6 @@
           {% endfor %}
             
           </ul>
-          
         </div>
       </div>
     </div>
@@ -377,7 +365,7 @@
     </div>
     <h3>Why <span>Subscribe?</span></h3>
     <p>
-    Join Kevin Hart and thousands of happy customers saving 50% (That's $24.98) off each bag!
+    Join Kevin Hart and thousands of happy customers saving $10 off each bag!
     </p>
     <ul>
         <li>
@@ -401,7 +389,7 @@
         
       </ul>
     <div class="subscribe_option">
-      Yes, I want to save $<span id="overall_saving">24.98</span>
+      Yes, I want to save $<span id="overall_saving">10</span>
     </div>
     <div class="continue_onetime">
     No, I'll Pay Full Price
@@ -1600,6 +1588,7 @@ var productFirst = `
       for(let key in window.addedBundle){
         sum += window.addedBundle[key];
       }
+      totalSaving = sum*10;
       if(sum > 1){
         $('.flavor_box .offer_info').html(freeShipping).css('display','flex');
         $('.product_information_form_block .subtotal_box').css('display', 'flex');
@@ -1607,8 +1596,8 @@ var productFirst = `
           $('.discounted_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);
         }
         else{
-          $('.product_information_form_block .subtotal_box p').text(`You're saving $${sum*24.98}!`);
-          $('.discounted_subtotal_price').css('display','inline-block').text(`$${(24.97*sum).toFixed(2)}`);
+          $('.product_information_form_block .subtotal_box p').text(`You're saving $${sum*24.97}`);
+          $('.discounted_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100/2)*sum).toFixed(2)}`);
           $('.original_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);
         }
       }
@@ -1623,7 +1612,7 @@ var productFirst = `
           }
           else{
             
-            $('.discounted_subtotal_price').css('display','inline-block').text(`$${(24.97*sum).toFixed(2)}`);
+            $('.discounted_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100/2)*sum).toFixed(2)}`);
             $('.original_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);
             $('.product_information_form_block .subtotal_box').css('display', 'flex');
             $('.product_information_form_block .subtotal_box p').css('display', 'block');
@@ -1701,7 +1690,7 @@ var productFirst = `
       for(let key in window.addedBundle){
         sum += window.addedBundle[key];
       }
-      totalSaving = sum*24.98;
+      totalSaving = sum*10;
       if(sum > 1){
         $('.flavor_box .offer_info').html(freeShipping).css('display','flex');
       }
@@ -1716,7 +1705,7 @@ var productFirst = `
         if(selectedPlan == 'selling_plan'){
           $('.product_information_form_block .subtotal_box p').text(`You're saving $${sum*24.98}!`);
           $('.product_information_form_block .subtotal_box').css('display', 'flex');
-          $('.discounted_subtotal_price').css('display','inline-block').text(`$${(24.97*sum).toFixed(2)}`);
+          $('.discounted_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100/2)*sum).toFixed(2)}`);
           $('.original_subtotal_price').css('display','inline-block').text(`$${((window.basePrice/100)*sum).toFixed(2)}`);;
         }
         else{
@@ -1767,10 +1756,7 @@ var productFirst = `
             items.push({
               id: variant,
               quantity: window.addedBundle[item],
-              selling_plan: plan_id,
-              properties: {
-                    _fiftyoff: 'true'
-                }
+              selling_plan: plan_id
             });
           
         }
@@ -1791,7 +1777,7 @@ var productFirst = `
           let plan_id = '';
           let variant = window.bundleProducts[item].variants[0].id;
           let selling_plans = window.bundleProducts[item].selling_plan_groups[0].selling_plans;
-
+          
           if(window.addedBundle[item] > 0){
             if(plan == 'selling_plan'){
               let sellPlan = selling_plans.find(s => s.name == frequency);
@@ -1801,10 +1787,7 @@ var productFirst = `
               items.push({
                 id: variant,
                 quantity: window.addedBundle[item],
-                selling_plan: plan_id,
-                properties: {
-                    _fiftyoff: 'true'
-                }
+                selling_plan: plan_id
               });
             }
             else{

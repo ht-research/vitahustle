@@ -1,17 +1,26 @@
 {
   "sections": {
     "main": {
-      "type": "new-product",
+      "type": "product",
       "blocks": {
-        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
             "heading_size": "h1"
+          }
+        },
+        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_size": "xs",
+            "show_tax_status": false,
+            "show_sale_amount_badge": true,
+            "highlight_sale_price": true
           }
         },
         "28586830-d855-4547-8946-94914bac9e85": {
@@ -25,9 +34,9 @@
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
           "type": "variant_picker",
           "settings": {
-            "option_type": "dropdown-solid",
+            "option_type": "button-outline",
             "primary_swatch_option_type": "variant-images",
-            "secondary_swatch_option_type": "dropdown-solid",
+            "secondary_swatch_option_type": "swatches",
             "option_name": "Flavor",
             "information_drawer_button_label": "",
             "text": "",
@@ -39,11 +48,6 @@
           "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {
             "product": "{{product}}"
-          }
-        },
-        "subscription_widget_64hgid": {
-          "type": "subscription_widget",
-          "settings": {
           }
         },
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
@@ -77,102 +81,142 @@
             "drawer_media_size": 60
           }
         },
-        "06c05680-9cfd-4c28-8b40-a64f24723e70": {
-          "type": "collapsible_row",
+        "d4eb13db-7552-4c51-9e99-d172de88b79f": {
+          "type": "product_drawer_with_tabs",
           "settings": {
-            "style": "collapsible_row_closed",
-            "title": "How To Use",
+            "popup_link_text": "Product Benefits",
+            "btn_style": "text",
             "icon": "none",
-            "text": "<p>Add 1 scoop of powder to 8-12 oz of ice cold water, milk or add to a smoothie. Shake vigorously or stir until blended. Natural vitamin sediment is normal.<\/p>",
-            "page": "",
-            "image_width": 60
+            "button_background_color": "#e9ffcd",
+            "button_text_color": "#141416",
+            "tab_1_title": "Tab 1",
+            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
+            "tab_1_page": "",
+            "tab_2_title": "",
+            "tab_2_text": "",
+            "tab_2_page": "",
+            "tab_3_title": "",
+            "tab_3_text": "",
+            "tab_3_page": ""
           }
         },
-        "418118f7-e71b-4ce3-bee0-cde3239694f7": {
-          "type": "collapsible_row",
+        "a7f2bb40-cc36-4180-bdca-702e6583c0f3": {
+          "type": "product_drawer_with_tabs",
           "settings": {
-            "style": "collapsible_row_closed",
-            "title": "Ingredients",
+            "popup_link_text": "How to Use",
+            "btn_style": "text",
             "icon": "none",
-            "text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
-            "page": "",
-            "image_width": 60
+            "button_background_color": "#e9ffcd",
+            "button_text_color": "#141416",
+            "tab_1_title": "Tab 1",
+            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "tab_1_page": "",
+            "tab_2_title": "",
+            "tab_2_text": "",
+            "tab_2_page": "",
+            "tab_3_title": "",
+            "tab_3_text": "",
+            "tab_3_page": ""
           }
         },
-        "c5924e9f-2227-4047-ac6f-bfad6b346aa4": {
-          "type": "collapsible_row",
+        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97": {
+          "type": "product_drawer_with_tabs",
           "settings": {
-            "style": "collapsible_row_closed",
-            "title": "Supplement Facts",
+            "popup_link_text": "Supplement Facts",
+            "btn_style": "text",
             "icon": "none",
-            "text": "",
-            "page": "copy-of-vitahustle-one-supplement-facts-panel",
-            "image_width": 60
-          }
-        },
-        "cbfcea53-e238-4c35-a5c9-da334abf0c2d": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "style": "collapsible_row_closed",
-            "title": "BENEFITS",
-            "icon": "none",
-            "text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
-            "page": "",
-            "image_width": 60
+            "button_background_color": "#e9ffcd",
+            "button_text_color": "#141416",
+            "tab_1_title": "Tab 1",
+            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
+            "tab_1_page": "",
+            "tab_2_title": "",
+            "tab_2_text": "",
+            "tab_2_page": "",
+            "tab_3_title": "",
+            "tab_3_text": "",
+            "tab_3_page": ""
           }
         }
       },
       "block_order": [
-        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b",
         "title",
+        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b",
+        "price",
         "28586830-d855-4547-8946-94914bac9e85",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
         "a5695ed4-524b-45b1-a57e-48bebecb84a9",
-        "subscription_widget_64hgid",
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
         "buy_buttons",
         "b7435ba2-8e00-4538-be27-63a92d60e195",
-        "06c05680-9cfd-4c28-8b40-a64f24723e70",
-        "418118f7-e71b-4ce3-bee0-cde3239694f7",
-        "c5924e9f-2227-4047-ac6f-bfad6b346aa4",
-        "cbfcea53-e238-4c35-a5c9-da334abf0c2d"
+        "d4eb13db-7552-4c51-9e99-d172de88b79f",
+        "a7f2bb40-cc36-4180-bdca-702e6583c0f3",
+        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97"
       ],
       "custom_css": [
+        "ul {padding-inline-start: 0px !important;}",
         ".product-quantity__wrap {margin-top: 0px !important;}",
-        ".superfood-only {display: none;}",
         "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
-        ".product-desktop-media {position: sticky !important; top: 120px !important;}",
-        ".variant-picker-dropdown__toggle--solid {background-color: white;}",
-        ".variant-picker-dropdown__color-swatch {display: none;}"
+        ".product-desktop-media {position: sticky !important; top: 120px !important;}"
       ],
       "settings": {
         "color_scheme": "default",
         "container_size": "page-width",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 17,
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 48,
         "layout": "thumbnails-left",
         "img_ratio": "square",
-        "enable_image_zoom": false,
+        "enable_image_zoom": true,
         "enable_video_looping": true,
         "enable_video_autoplay": true,
         "scale_video": true,
-        "show_part_of_next_slide": true
+        "show_part_of_next_slide": false
       }
     },
-    "how_to_use_a7XzaM": {
-      "type": "how-to-use",
+    "b4c4eb9f-9d1b-4656-8845-c8078452baf5": {
+      "type": "text-marquee",
+      "blocks": {
+        "d80840ba-5985-43a9-bc10-75325559ac4a": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Gluten Free"
+          }
+        },
+        "f213a26b-7972-44c4-b58f-c0aef6393eaf": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Dairy Free"
+          }
+        },
+        "ae143907-3e58-4d49-b9d2-47b76750d060": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Soy Free"
+          }
+        },
+        "4590b0a7-8b3e-45d3-ae52-2402cc4a8460": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Low Sugar"
+          }
+        },
+        "ff3bcd6f-a54a-455f-a1e6-46be080a97d8": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "no artificial flavors"
+          }
+        }
+      },
+      "block_order": [
+        "d80840ba-5985-43a9-bc10-75325559ac4a",
+        "f213a26b-7972-44c4-b58f-c0aef6393eaf",
+        "ae143907-3e58-4d49-b9d2-47b76750d060",
+        "4590b0a7-8b3e-45d3-ae52-2402cc4a8460",
+        "ff3bcd6f-a54a-455f-a1e6-46be080a97d8"
+      ],
       "settings": {
-      }
-    },
-    "ingredients_ghjfBg": {
-      "type": "Ingredients",
-      "settings": {
-      }
-    },
-    "ingedient_accordion_content_bJBRED": {
-      "type": "ingedient-accordion-content",
-      "settings": {
+        "bg_color": "#212121",
+        "text_color": "#c8e812"
       }
     },
     "0a917585-e6ae-4198-87c0-fec620632352": {
@@ -181,7 +225,7 @@
         "template--16944483926265__0a917585-e6ae-4198-87c0-fec620632352-1688060215978781a1-2": {
           "type": "heading",
           "settings": {
-            "title": "VitaHustle Reviews",
+            "title": "VitaHustle ONE Reviews",
             "heading_size": "h1"
           }
         }
@@ -189,7 +233,6 @@
       "block_order": [
         "template--16944483926265__0a917585-e6ae-4198-87c0-fec620632352-1688060215978781a1-2"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "default",
         "enable_background_around_container": false,
@@ -212,155 +255,11 @@
         "expand_first_collapsible_row": false
       }
     },
-    "product_review_block_VQbQiH": {
-      "type": "product-review-block",
-      "settings": {
-        "title": "VITAHUSTLE REVIEWS",
-        "rating_text": "200+ 5 STAR REVIEWS",
-        "review_text_tagline": "We're Constantly Inspired By VitaHustle Users Sharing Their Success Stories, Embracing Healthier, More Energized Lives Every Single Day!",
-        "rating": 4.8
-      }
-    },
-    "main_pdp_review_AHEkTP": {
-      "type": "main-pdp-review",
-      "blocks": {
-        "testimonial_box_VjMjjq": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/ANDREW_LISCIO.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
-          }
-        },
-        "testimonial_box_e69kRT": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/BEN_HO.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cd0dba5beec04092ba712f45bba8aa1a.mp4"
-          }
-        },
-        "testimonial_box_n3GG7a": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/BRITTANY_WOODCOX.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e301b71b26d74dea980f3457ce5e6db2.mp4"
-          }
-        },
-        "testimonial_box_KDUzaH": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/GLORIA_GARAYUA_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f5cabf0584f94b51b61580789c4cff3f.mp4"
-          }
-        },
-        "testimonial_box_UPqdLV": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/JESS_WEBER_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/59417e6e97e3421fb7d1b06564f241a1.mp4"
-          }
-        },
-        "testimonial_box_j6fQgq": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/JONI_BOVILL_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8a428787c9f84392bee52882876364ff.mp4"
-          }
-        },
-        "testimonial_box_Tk68KH": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/JUSTIN_SANDLER_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a6007d9e679c4e529b28cc46abd352d7.mp4"
-          }
-        },
-        "testimonial_box_zCrpMe": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/KATIE_DUPIN-2.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/337ad2ea9fc047abb74ccb3eb668d484.mp4"
-          }
-        },
-        "testimonial_box_WLbA4w": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/KEESA_FORD_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0c7c8058fed746659aebbaf9199f30b2.mp4"
-          }
-        },
-        "testimonial_box_XpUCpz": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/KINYUMBA_MUTAKABIR_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af8a3916815947ef9f8d34f84671fda5.mp4"
-          }
-        },
-        "testimonial_box_qqzXRL": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/MELISSA_ARDON.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c87e435462724016a9acb2ebda611d7c.mp4"
-          }
-        },
-        "testimonial_box_LrFwX7": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/OLIVIA_KAPLAN_004.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4a81af1a7d694f89ae9cce69a9775974.mp4"
-          }
-        },
-        "testimonial_box_nHqBf4": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/PALM_SURICHANYA_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9cd77643acba49609fa6feb3798d562e.mp4"
-          }
-        },
-        "testimonial_box_pUhEJp": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/PAUL_DUFF_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/62de7359b4d04fa69e0754b4d0cb9326.mp4"
-          }
-        },
-        "testimonial_box_YrGjUM": {
-          "type": "testimonial_box",
-          "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/STEVE_DUPIN.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/de358ce7905c40ee8e112c6240c815b2.mp4"
-          }
-        },
-        "judge_me_reviews_review_widget_xKWpka": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_box_VjMjjq",
-        "testimonial_box_e69kRT",
-        "testimonial_box_n3GG7a",
-        "testimonial_box_KDUzaH",
-        "testimonial_box_UPqdLV",
-        "testimonial_box_j6fQgq",
-        "testimonial_box_Tk68KH",
-        "testimonial_box_zCrpMe",
-        "testimonial_box_WLbA4w",
-        "testimonial_box_XpUCpz",
-        "testimonial_box_qqzXRL",
-        "testimonial_box_LrFwX7",
-        "testimonial_box_nHqBf4",
-        "testimonial_box_pUhEJp",
-        "testimonial_box_YrGjUM",
-        "judge_me_reviews_review_widget_xKWpka"
-      ],
-      "settings": {
-      }
-    },
     "168805997811e9e2b2": {
       "type": "apps",
       "blocks": {
         "cb52da39-70ff-4f5c-a05e-cd12e031825b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
@@ -368,7 +267,6 @@
       "block_order": [
         "cb52da39-70ff-4f5c-a05e-cd12e031825b"
       ],
-      "disabled": true,
       "custom_css": [
         ".jdgm-rev-widg__title {display: none;}"
       ],
@@ -464,7 +362,6 @@
         "353a2771-8647-49f3-96de-f30095244da0",
         "e74d433e-92f0-4d3f-bf81-62b0eea5158f"
       ],
-      "disabled": true,
       "custom_css": [
         ".multicolumn__column-title {font-family: \"FK Grotesk Bold\"; text-transform: capitalize;}",
         "@media (max-width: 768px) {.multicolumn__column {padding: 0; }}",
@@ -507,7 +404,6 @@
       "block_order": [
         "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0"
       ],
-      "disabled": true,
       "custom_css": [
         ".images-with-text__image-list-item-media {border-radius: 20px;}"
       ],
@@ -652,7 +548,6 @@
         "c2f0728e-3ade-45d4-baae-65b03908d8d4",
         "c5006660-2a6e-4de6-88a4-ebf72d6b21f5"
       ],
-      "disabled": true,
       "custom_css": [
         ".collage__image-block {border-radius: 15px;}",
         ".h2 {font-size: 6rem;}",
@@ -672,43 +567,6 @@
         "desktop_space_between_cards": 16,
         "mobile_space_between_cards": 16,
         "enable_carousel_on_mobile": false
-      }
-    },
-    "3358a2f5-cc69-465d-9d0b-052f74fcdf6c": {
-      "type": "image-banner",
-      "settings": {
-        "display_rating": false,
-        "number_of_reviews": 451,
-        "color_scheme": "white",
-        "enable_background_around_container": false,
-        "container_size": "full-screen",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "desktop_height": 480,
-        "mobile_height": 600,
-        "desktop_img": "shopify:\/\/shop_images\/riskfree-image-desktop.jpg",
-        "mobile_img": "shopify:\/\/shop_images\/risk-free-image-mobile.jpg",
-        "desktop_overlay_opacity": 40,
-        "mobile_overlay_opacity": 50,
-        "caption": "RISK FREE",
-        "title": "60-DAY GUARANTEE",
-        "text": "<p>If for any reason VitaHustle ONE is not for you,<br\/>simply return the bag for a full refund less shipping<br\/>& handling fees.<\/p>",
-        "heading_size": "h1",
-        "body_size": "body3",
-        "desktop_content_position": "align-items:center;justify-content:center;",
-        "desktop_content_align": "center",
-        "content_max_width": 528,
-        "content_spacing": 116,
-        "mobile_content_position": "align-items:center;justify-content:center;",
-        "mobile_content_align": "center",
-        "desktop_content_background": "none",
-        "mobile_content_background": "none",
-        "btn_text": "Get Started",
-        "btn_url": "shopify:\/\/products\/starter-kit-1",
-        "btn_style": "solid",
-        "extra_btn_text": "",
-        "extra_btn_url": "",
-        "extra_btn_style": "solid"
       }
     },
     "bed2a76f-a55e-4479-825c-3e608236563f": {
@@ -740,7 +598,6 @@
         "template--16944483926265__bed2a76f-a55e-4479-825c-3e608236563f-1688060873ba63e4af-2",
         "template--16944483926265__bed2a76f-a55e-4479-825c-3e608236563f-1688060873ba63e4af-3"
       ],
-      "disabled": true,
       "custom_css": [
         ".newsletter__input {border-radius: 100px;}",
         ".newsletter__input-btn:hover {background: #212121;}",
@@ -771,19 +628,14 @@
   },
   "order": [
     "main",
-    "how_to_use_a7XzaM",
-    "ingredients_ghjfBg",
-    "ingedient_accordion_content_bJBRED",
+    "b4c4eb9f-9d1b-4656-8845-c8078452baf5",
     "0a917585-e6ae-4198-87c0-fec620632352",
     "product-details",
-    "product_review_block_VQbQiH",
-    "main_pdp_review_AHEkTP",
     "168805997811e9e2b2",
     "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0",
     "9ddba0be-f879-4e43-9a11-aea6ba37821b",
     "product-recommendations",
     "d7e5ae43-0bda-4830-acab-d2202fbad902",
-    "3358a2f5-cc69-465d-9d0b-052f74fcdf6c",
     "bed2a76f-a55e-4479-825c-3e608236563f"
   ]
 }

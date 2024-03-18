@@ -2,39 +2,6 @@
   "type": "footer",
   "name": "Footer Group",
   "sections": {
-    "efb7ced4-ced4-491b-9dcc-c2e0f7ae8ebc": {
-      "type": "collection-list",
-      "disabled": true,
-      "settings": {
-        "color_scheme": "default",
-        "container_size": "page-width",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
-        "section_layout": "carousel",
-        "title": "Shop VItaHustle",
-        "heading_size": "h5",
-        "alignment": "center",
-        "collection_list": [
-          "kevs-faves",
-          "electrolyte-hydration",
-          "gummy-vitamins",
-          "all",
-          "accessories"
-        ],
-        "img_ratio": "default",
-        "text_style": "under-image",
-        "collection_card_content_align": "center",
-        "collection_card_heading_size": "h6",
-        "show_product_count": false,
-        "desktop_columns": 4,
-        "desktop_space_between_cards": 16,
-        "mobile_space_between_cards": 16,
-        "enable_carousel_on_mobile": true,
-        "enable_autoplay": false,
-        "autoplay_interval": 3,
-        "show_navigation_on_hover": true
-      }
-    },
     "bf5c45f3-b550-4799-a594-e3f35817bd9f": {
       "type": "banner-new",
       "disabled": true,
@@ -46,15 +13,15 @@
         "container_size": "full-screen",
         "section_spacing_top": 0,
         "section_spacing_bottom": 0,
-        "desktop_height": 560,
+        "desktop_height": 960,
         "mobile_height": 600,
         "desktop_img": "shopify:\/\/shop_images\/Untitled-1_2d1e0e05-b4be-4aa0-891b-dd0fe21519d0.jpg",
         "mobile_img": "shopify:\/\/shop_images\/Untitled-2_32fb544d-45c2-4974-8b42-108e763dddb4.jpg",
         "desktop_overlay_opacity": 20,
         "mobile_overlay_opacity": 20,
-        "caption": "",
-        "title": "",
-        "text": "",
+        "caption": "FUEL YOUR HUSTLE",
+        "title": "VITAHUSTLE ONE SUPERFOOD",
+        "text": "<p>86 superfood ingredients. One delicious drink. <\/p>",
         "heading_size": "h2",
         "body_size": "body3",
         "desktop_content_position": "align-items:center;justify-content:center;",
@@ -128,7 +95,7 @@
         "enable_border": false,
         "bottom_bar": "footer-last",
         "show_payment_icons": false,
-        "copyright_text": "© 2024 VitaHustle LLC",
+        "copyright_text": "© 2023 VitaHustle LLC",
         "enable_follow_on_shop": true,
         "show_language_selector": false,
         "show_currency_selector": false
@@ -136,7 +103,6 @@
     }
   },
   "order": [
-    "efb7ced4-ced4-491b-9dcc-c2e0f7ae8ebc",
     "bf5c45f3-b550-4799-a594-e3f35817bd9f",
     "footer"
   ]
