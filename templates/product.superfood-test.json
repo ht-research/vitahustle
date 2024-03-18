@@ -37,7 +37,7 @@
             "option_type": "button-outline",
             "primary_swatch_option_type": "variant-images",
             "secondary_swatch_option_type": "swatches",
-            "option_name": "Flavor",
+            "option_name": "",
             "information_drawer_button_label": "",
             "text": "",
             "page": "",
@@ -61,24 +61,6 @@
             "show_dynamic_checkout": false,
             "enable_pickup_availability": false,
             "enable_gift_card": false
-          }
-        },
-        "b7435ba2-8e00-4538-be27-63a92d60e195": {
-          "type": "information_tag",
-          "settings": {
-            "tag_style": "none",
-            "heading": "60-Day Money-Back Guarantee",
-            "body": "",
-            "content_alignment": "center",
-            "icon": "none",
-            "custom_icon_image": "shopify:\/\/shop_images\/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
-            "icon_position": "inline",
-            "tag_background_color": "#f7f7f7",
-            "tag_text_color": "#141416",
-            "enable_drawer": false,
-            "drawer_text": "",
-            "drawer_page": "",
-            "drawer_media_size": 60
           }
         },
         "d4eb13db-7552-4c51-9e99-d172de88b79f": {
@@ -137,6 +119,24 @@
             "tab_3_text": "",
             "tab_3_page": ""
           }
+        },
+        "b7435ba2-8e00-4538-be27-63a92d60e195": {
+          "type": "information_tag",
+          "settings": {
+            "tag_style": "none",
+            "heading": "60-Day Money-Back Guarantee",
+            "body": "",
+            "content_alignment": "center",
+            "icon": "none",
+            "custom_icon_image": "shopify:\/\/shop_images\/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
+            "icon_position": "inline",
+            "tag_background_color": "#f7f7f7",
+            "tag_text_color": "#141416",
+            "enable_drawer": false,
+            "drawer_text": "",
+            "drawer_page": "",
+            "drawer_media_size": 60
+          }
         }
       },
       "block_order": [
@@ -148,16 +148,13 @@
         "a5695ed4-524b-45b1-a57e-48bebecb84a9",
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
         "buy_buttons",
-        "b7435ba2-8e00-4538-be27-63a92d60e195",
         "d4eb13db-7552-4c51-9e99-d172de88b79f",
         "a7f2bb40-cc36-4180-bdca-702e6583c0f3",
-        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97"
+        "66a5e2d4-2f7c-49df-bb7e-2f42be899b97",
+        "b7435ba2-8e00-4538-be27-63a92d60e195"
       ],
       "custom_css": [
-        "ul {padding-inline-start: 0px !important;}",
-        ".product-quantity__wrap {margin-top: 0px !important;}",
-        "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
-        ".product-desktop-media {position: sticky !important; top: 120px !important;}"
+        "ul {padding-inline-start: 0px !important;}"
       ],
       "settings": {
         "color_scheme": "default",
@@ -272,7 +269,7 @@
       ],
       "settings": {
         "color_scheme": "default",
-        "container_size": "small",
+        "container_size": "large",
         "section_spacing_top": 48,
         "section_spacing_bottom": 48,
         "custom_liquid": ""
@@ -364,8 +361,7 @@
       ],
       "custom_css": [
         ".multicolumn__column-title {font-family: \"FK Grotesk Bold\"; text-transform: capitalize;}",
-        "@media (max-width: 768px) {.multicolumn__column {padding: 0; }}",
-        "@media (max-width: 768px) {.multicolumn__container {--gsc-columns: 3 !important; }}"
+        "@media (max-width: 768px) {.multicolumn__column {padding: 0; }}"
       ],
       "settings": {
         "color_scheme": "custom-1",

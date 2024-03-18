@@ -270,52 +270,6 @@
         "custom_liquid": ""
       }
     },
-    "9ddba0be-f879-4e43-9a11-aea6ba37821b": {
-      "type": "images-with-text",
-      "blocks": {
-        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png"
-          }
-        }
-      },
-      "block_order": [
-        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0"
-      ],
-      "custom_css": [
-        ".images-with-text__image-list-item-media {border-radius: 20px;}"
-      ],
-      "settings": {
-        "display_custom_text_items": false,
-        "custom_text_1": "",
-        "custom_text_2": "",
-        "custom_text_3": "",
-        "custom_text_4": "",
-        "color_scheme": "default",
-        "container_size": "page-width",
-        "section_spacing_top": 60,
-        "section_spacing_bottom": 60,
-        "content_layout": "left",
-        "image_layout": "collage",
-        "img_ratio": 0.8,
-        "rotate_images": false,
-        "icon": "none",
-        "subheading": "",
-        "heading": "ZERO ADDED SUGAR. 100% DELICIOUS.",
-        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
-        "heading_size": "h1",
-        "body_size": "body3",
-        "content_alignment": "left",
-        "desktop_content_width": 480,
-        "first_button_text": "LEARN MORE",
-        "first_button_link": "shopify:\/\/pages\/about",
-        "first_button_style": "solid",
-        "second_button_text": "",
-        "second_button_link": "",
-        "second_button_style": "solid"
-      }
-    },
     "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0": {
       "type": "multicolumn",
       "blocks": {
@@ -427,6 +381,52 @@
         "btn_text": "",
         "btn_url": "",
         "btn_style": "outline"
+      }
+    },
+    "9ddba0be-f879-4e43-9a11-aea6ba37821b": {
+      "type": "images-with-text",
+      "blocks": {
+        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0"
+      ],
+      "custom_css": [
+        ".images-with-text__image-list-item-media {border-radius: 20px;}"
+      ],
+      "settings": {
+        "display_custom_text_items": false,
+        "custom_text_1": "",
+        "custom_text_2": "",
+        "custom_text_3": "",
+        "custom_text_4": "",
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 60,
+        "section_spacing_bottom": 60,
+        "content_layout": "left",
+        "image_layout": "collage",
+        "img_ratio": 0.8,
+        "rotate_images": false,
+        "icon": "none",
+        "subheading": "",
+        "heading": "ZERO ADDED SUGAR. 100% DELICIOUS.",
+        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "left",
+        "desktop_content_width": 480,
+        "first_button_text": "LEARN MORE",
+        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_style": "solid",
+        "second_button_text": "",
+        "second_button_link": "",
+        "second_button_style": "solid"
       }
     },
     "product-recommendations": {
@@ -661,8 +661,8 @@
     "0a917585-e6ae-4198-87c0-fec620632352",
     "product-details",
     "168805997811e9e2b2",
-    "9ddba0be-f879-4e43-9a11-aea6ba37821b",
     "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0",
+    "9ddba0be-f879-4e43-9a11-aea6ba37821b",
     "product-recommendations",
     "d7e5ae43-0bda-4830-acab-d2202fbad902",
     "3358a2f5-cc69-465d-9d0b-052f74fcdf6c",
