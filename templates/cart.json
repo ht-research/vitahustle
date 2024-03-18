@@ -4,10 +4,10 @@
       "type": "cart-items",
       "custom_css": [
         ".cart-items__title {font-family: \"Druk Web\"; font-size: 7rem;}",
-        ".subtotal__label {font-family: \"FK Grotesk Bold\" !important;}"
+        ".subtotal__label {font-family: \"FK Grotesk Bold\"!important;}"
       ],
       "settings": {
-        "color_scheme": "primary",
+        "color_scheme": "default",
         "container_size": "large",
         "img_ratio": "square"
       }

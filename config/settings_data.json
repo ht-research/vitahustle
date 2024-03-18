@@ -47,7 +47,7 @@
     "custom_3_border_color": "#cbc8bd",
     "custom_3_button_background_color": "#746b5d",
     "custom_3_button_text_color": "#edece7",
-    "default_img_ratio": "portrait",
+    "default_img_ratio": "portrait-xl",
     "show_vendor": false,
     "show_currency_code": false,
     "show_color_count": false,
@@ -55,7 +55,7 @@
     "enable_product_darken_background": false,
     "enable_product_review": true,
     "product_card_price_size": "xs",
-    "img_hover": "none",
+    "img_hover": "zoom",
     "color_swatches_when_to_show": "on_hover",
     "show_quick_view": false,
     "show_add_to_cart": true,
@@ -76,15 +76,14 @@
     "product_card_custom_badge_1_bg": "#ffffff",
     "product_card_custom_badge_1_color": "#000000",
     "product_card_custom_badge_2_bg": "#5d54a3",
-    "cart_type": "drawer_only",
+    "cart_type": "page_only",
     "show_sticky_cart": false,
     "show_cart_order_note": false,
     "show_taxes_and_shipping_costs_label": true,
-    "cart_status_background_color": "#ffffff",
-    "cart_status_text_color": "#000000",
-    "cart_free_shipping_bar_visible": false,
-    "cart_free_shipping_bar_threshold": 39,
-    "cart_free_shipping_bar_color": "#000000",
+    "cart_status_background_color": "#dbff00",
+    "cart_status_text_color": "#383930",
+    "cart_free_shipping_bar_visible": true,
+    "cart_free_shipping_bar_threshold": 65,
     "cart_free_shipping_bar_bg": "#c8e812",
     "favicon": "shopify:\/\/shop_images\/vita_favicon.svg",
     "search_type": "hide",
@@ -114,13 +113,11 @@
     "secondary_shape_for_product_pages": "square",
     "secondary_size_for_product_pages": 4,
     "secondary_size_for_filters": 2,
-    "checkout_logo_image": "shopify:\/\/shop_images\/Vita-Hustle-logo.svg",
-    "checkout_logo_position": "left",
+    "checkout_logo_image": "shopify:\/\/shop_images\/VH_Logo_BLK_e37fe1f3-6284-46a5-b7c9-86090dbbe199.png",
     "checkout_logo_size": "large",
     "checkout_body_background_color": "#ffffff",
-    "checkout_input_background_color_mode": "white",
-    "checkout_sidebar_background_color": "#ffffff",
-    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_sidebar_background_color": "#f5f5f5",
+    "checkout_heading_font": "Roboto",
     "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
     "checkout_accent_color": "#212121",
     "checkout_button_color": "#212121",
@@ -199,6 +196,12 @@
         "settings": {
         }
       },
+      "573254258818049612": {
+        "type": "shopify:\/\/apps\/crazy-egg\/blocks\/app-embed\/7ea73823-6ad9-4252-a63e-088397d54aed",
+        "disabled": false,
+        "settings": {
+        }
+      },
       "17143716568830177004": {
         "type": "shopify:\/\/apps\/shop-protector\/blocks\/shop-protector\/c35d1411-093f-400e-8977-af1ac4720d6d",
         "disabled": false,
@@ -231,50 +234,6 @@
           "images_aspect_ratio": "1",
           "cards_background": "#ffffff",
           "cards_border_color": "rgba(0,0,0,0)"
-        }
-      },
-      "1877152918344802950": {
-        "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": true,
-        "settings": {
-          "button_color": "#212121",
-          "secondary_color": "#ffffff",
-          "button_icon": "chat_bubble",
-          "button_text": "live_chat",
-          "button_horizontal_position": "bottom_left",
-          "button_vertical_position": "lowest",
-          "greeting_message": "👋 Hello! Please message us if you have questions, or need help. You can also email us at help@vitahustle.com"
-        }
-      },
-      "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "18228966181090706294": {
-        "type": "shopify:\/\/apps\/selleasy\/blocks\/app-embed\/790c1a03-a71f-4bc1-9869-00dad526d3c2",
-        "disabled": false,
-        "settings": {
-          "storefrontAccessToken": "9cc49211d0583bc27a541080e515618c"
-        }
-      },
-      "14952540001915115444": {
-        "type": "shopify:\/\/apps\/upcart-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "17428600031447253342": {
-        "type": "shopify:\/\/apps\/attentive\/blocks\/attn-tag\/8df62c72-8fe4-407e-a5b3-72132be30a0d",
-        "disabled": false,
-        "settings": {
         }
       }
     }

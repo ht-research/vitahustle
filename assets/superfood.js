@@ -250,24 +250,7 @@ $('.product__button_subscribe').click(function(){
 	  data: data,
 	  dataType: 'json',
 	  success: function() {  
-		fetch(window.Shopify.routes.root + "?sections=cart-drawer")
-        .then(res => res.json()).then((res) => {
-          const response = $.parseHTML(res['cart-drawer']);          
-          
-          $('.sidebar-cart').removeAttr('is-empty');
-          $('.sidebar-cart').append($(response).find('#CartInSidebar')[0].innerHTML);
-          setTimeout(function() {
-            $('.sidebar-cart__body').addClass('dataAddedonSideBar');
-            $('.sidebar-cart').attr('data-aria-expanded', "true");  
-            $('.sidebar-cart').addClass('cartAdded');          
-          });          
-        })
-
-        fetch(window.Shopify.routes.root + "?sections=header")
-        .then(res => res.json()).then((res) => {
-          const response = $.parseHTML(res['header']);          
-            $('#CartCount').html($(response).find('#CartCount')[0].outerHTML);
-        })
+		
 	  }
 	});
 	
@@ -306,26 +289,7 @@ function addItemToCart(variant_id1,qty1,variant_id2,qty2) {
 	  data: data,
 	  dataType: 'json',
 	  success: function() { 
-
-        fetch(window.Shopify.routes.root + "?sections=cart-drawer")
-        .then(res => res.json()).then((res) => {
-          const response = $.parseHTML(res['cart-drawer']);          
-          
-          $('.sidebar-cart').removeAttr('is-empty');
-          $('.sidebar-cart').append($(response).find('#CartInSidebar')[0].innerHTML);
-          setTimeout(function() {
-            $('.sidebar-cart__body').addClass('dataAddedonSideBar');
-            $('.sidebar-cart').attr('data-aria-expanded', "true");  
-            $('.sidebar-cart').addClass('cartAdded');          
-          });          
-        })
-
-        fetch(window.Shopify.routes.root + "?sections=header")
-        .then(res => res.json()).then((res) => {
-          const response = $.parseHTML(res['header']);          
-            $('#CartCount').html($(response).find('#CartCount')[0].outerHTML);
-        })
-        
+		
 	  }
 	});
 }

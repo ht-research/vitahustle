@@ -50,7 +50,7 @@
       "label_for_total_price": "Total",
       "text_for_go_to_cart_button": "Go to cart",
       "text_for_checkout_button": "Check out",
-      "taxes_and_shipping_policy_at_checkout_html": "Discounts, taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
       "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
       "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Discounts, taxes and shipping calculated at checkout"

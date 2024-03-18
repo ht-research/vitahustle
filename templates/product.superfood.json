@@ -4,7 +4,7 @@
       "type": "main-product-superfood",
       "blocks": {
         "77d8802a-0529-462e-9620-5cc58249e9d0": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         },
@@ -140,7 +140,7 @@
         "show_part_of_next_slide": true,
         "subscribe_label": "Subscribe & Save",
         "one_time_label": "One-Time",
-        "product_one_time": "vitahustle-one-superfood-one-time",
+        "product_one_time": "vitahustle-one-superfood-test",
         "title_accordion_tabs": "",
         "best_savings": "VitaHustle ONE Starter Kit",
         "free_shipping": "when you purchase 2 bags",
@@ -158,7 +158,7 @@
           }
         },
         "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         },
@@ -399,7 +399,7 @@
       "type": "apps",
       "blocks": {
         "cb52da39-70ff-4f5c-a05e-cd12e031825b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
@@ -813,6 +813,30 @@
         "extra_btn_url": "",
         "extra_btn_style": "solid"
       }
+    },
+    "1693465082ba44112a": {
+      "type": "apps",
+      "blocks": {
+        "9ce5f00a-d012-4a20-9276-ac466817ef81": {
+          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "113902",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "9ce5f00a-d012-4a20-9276-ac466817ef81"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": ""
+      }
     }
   },
   "order": [
@@ -828,6 +852,7 @@
     "product-recommendations",
     "d7e5ae43-0bda-4830-acab-d2202fbad902",
     "bed2a76f-a55e-4479-825c-3e608236563f",
-    "327a4f24-9bad-48e9-b9af-859a08ed5c39"
+    "327a4f24-9bad-48e9-b9af-859a08ed5c39",
+    "1693465082ba44112a"
   ]
 }

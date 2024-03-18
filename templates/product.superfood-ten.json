@@ -4,7 +4,7 @@
       "type": "main-product-superfood-ten",
       "blocks": {
         "77d8802a-0529-462e-9620-5cc58249e9d0": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         },
@@ -158,7 +158,7 @@
           }
         },
         "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         },
@@ -399,7 +399,7 @@
       "type": "apps",
       "blocks": {
         "cb52da39-70ff-4f5c-a05e-cd12e031825b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
@@ -813,6 +813,30 @@
         "extra_btn_url": "",
         "extra_btn_style": "solid"
       }
+    },
+    "1693292860dde1d6ce": {
+      "type": "apps",
+      "blocks": {
+        "d990d8a9-9b13-4864-a2f6-f9bae1315663": {
+          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": false,
+            "id": "104518",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "d990d8a9-9b13-4864-a2f6-f9bae1315663"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": ""
+      }
     }
   },
   "order": [
@@ -828,6 +852,7 @@
     "product-recommendations",
     "d7e5ae43-0bda-4830-acab-d2202fbad902",
     "bed2a76f-a55e-4479-825c-3e608236563f",
-    "327a4f24-9bad-48e9-b9af-859a08ed5c39"
+    "327a4f24-9bad-48e9-b9af-859a08ed5c39",
+    "1693292860dde1d6ce"
   ]
 }

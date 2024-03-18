@@ -78,11 +78,6 @@
             <h3><span>2.</span>{{ step2Title }}</h3>
             {% comment %} subscription box {% endcomment %}
             <div class="subscription_box purchase_type_box">
-             
-              <div class="label_subsription">
-              *Most popular
-              </div>
-           
               <label for="subscription_item">
 
                 <div class="purchase_type_info">
@@ -101,54 +96,14 @@
                     <div class="type_price_block">
                       <h2>Subscribe & Save</h2>
                       <div class="price_calc_box">
-                        {% comment %}
-                        {% unless template contains 'superfood-v2' %}
-                            <span class="original_price">{{ productPrice }}</span>
-                            <span class="discounted_price_box">
-                                <span class="discounted_price">{{ subPrice}}</span>/Bag</span>
-                        {% else %}
-                            {% assign percentage = 0 %}                            
-                            {% assign subPriceNew = price | minus: 1000 %}
-                            {% assign saving = price | minus: subPriceNew | times: 100 | divided_by: price | round %}
-                            {% assign percentage = saving | at_least: percentage %}
-                            <span class="original_price withpercentage">{{ percentage }}% OFF</span>
-                        {% endunless %}
-                        {% endcomment %}
-                            {% assign percentage = 0 %}                            
-                            {% assign subPriceNew = price | minus: 1000 %}
-                            {% assign saving = price | minus: subPriceNew | times: 100 | divided_by: price | round %}
-                            {% assign percentage = saving | at_least: percentage %}
-                            <span class="original_price withpercentage">{{ percentage }}% OFF</span>
+                        <span class="original_price">{{ productPrice }}</span>
+                        <span class="discounted_price_box">
+                          <span class="discounted_price">{{ subPrice}}</span>/Bag</span>
                       </div>
                     </div>
                     <div class="per_bag_cost">
-
-                            <div class="price_box">
-                                <span class="discounted_price_box">
-                                <span class="discounted_price">{{ subPrice}}</span>/Bag</span>
-                            </div>
-                            <div class="discountBox">(
-                              <span class="discounted_price_per_bag">{{ pricePerBag }}</span>
-                              <span>/serving</span>
-                              )
-                            </div>
-
-                      {% comment %}
-                        {% if template contains 'superfood-v2' %}
-                            <div class="price_box">
-                                <span class="discounted_price_box">
-                                <span class="discounted_price">{{ subPrice}}</span>/Bag</span>
-                            </div>
-                            <div class="discountBox">(
-                              <span class="discounted_price_per_bag">{{ pricePerBag }}</span>
-                              <span>/serving</span>
-                              )
-                            </div>
-                        {% else %}
-                            <span class="discounted_price_per_bag">{{ pricePerBag }}</span>
-                            <span>/serving</span>
-                        {% endif %}
-                        {% endcomment %}
+                      <span class="discounted_price_per_bag">{{ pricePerBag }}</span>
+                      <span>/serving</span>
                     </div>
                   </div>
                 </div>
@@ -251,30 +206,15 @@
                     <div class="type_price_block">
                       <h2>One-time
                       </h2>
-                        {% unless template contains 'superfood-v2' %}
-                        <div class="price_calc_box">
-                            <span class="discounted_price_box onetime_original_price">
-                                <span class="discounted_price">$49.95</span>/Bag
-                            </span>
-                        </div>
-                        {% endunless %}
+                      <div class="price_calc_box">
+                        <span class="discounted_price_box onetime_original_price">
+                          <span class="discounted_price">$49.95</span>/Bag
+                        </span>
+                      </div>
                     </div>
                     <div class="per_bag_cost">
-                     
-                        <div class="price_box">
-                            <div class="price_calc_box">
-                                <span class="discounted_price_box onetime_original_price">
-                                    <span class="discounted_price">$49.95</span>/Bag
-                                </span>
-                            </div>
-                        </div>
-                        <div class="discountBox">(
-                          <span class="discounted_price_per_bag">$3.33</span>
-                          <span>/serving</span>
-                          )
-                        </div>
-
-                        
+                      <span class="discounted_price_per_bag">$3.33</span>
+                      <span>/serving</span>
                     </div>
                   </div>
                 </div>
@@ -292,13 +232,9 @@
                 <span class="discounted_subtotal_price">$39.95</span>
               </div>
             </div>
-            {% comment %}
-            {% unless template contains 'superfood-v2' %}
-             <div class="label_subsription">
+            <div class="label_subsription">
              *Most popular
-            </div> 
-            {% endunless %}
-            {% endcomment %}
+            </div>
           </div>
 
         </div>
@@ -661,7 +597,7 @@
     border-radius: 3px 3px 0px 0px;
     color: #000;
     text-transform: uppercase;
-    opacity:1;
+    opacity:0.6;
   }
   .label_subsription.active{
     opacity:1;
@@ -671,7 +607,7 @@
     border-radius: 10px;
     border: 1px solid #E4E4E4;
     cursor: pointer;
-    opacity: 1;
+    opacity: 0.6;
     transition: all 0.3s;
   }
   .product_price_box .purchase_type_box.active {
@@ -1189,9 +1125,6 @@
     .product_wrapper_block{
       flex-direction: column;
     }
-    .product__media_block{
-      max-width: 100%;
-    }
     .modal_popup.upgrade_cart .subscribe_option{
       width: 100%;
       max-width: 320px;
@@ -1222,7 +1155,6 @@
     }
     .product_information_form_block{
       margin-left:0;
-      margin:0 auto;
     }
     .product-section-new .product_information_block .product__container{
       padding-left:0px;
@@ -1725,16 +1657,13 @@ var productFirst = `
 
     $(document).on('click', 'button.add_product_cart' ,function(){
       let plan = $('input[name="subscribe"]:checked').val();
-
-     
-        if(plan == 'onetime_plan'){
-          $('span#overall_saving').text(totalSaving);
-          $('.modal_popup.upgrade_cart').fadeIn();
-        }
-        else{
-          addTocart()
-        }
-      
+      if(plan == 'onetime_plan'){
+        $('span#overall_saving').text(totalSaving);
+        $('.modal_popup.upgrade_cart').fadeIn();
+      }
+      else{
+        addTocart()
+      }
     });
 
     $('.modal_popup.upgrade_cart .continue_onetime').on('click', function(){
@@ -1808,200 +1737,20 @@ var productFirst = `
       },
       dataType: 'json',
       success: function(data) { 
-        // console.log('data=========>', data);
+        console.log(data);
         $('.modal_popup.upgrade_cart').hide();
-        $('.sidebar-cart__body').remove();
-        fetch(window.Shopify.routes.root + "?sections=cart-drawer")
-        .then(res => res.json()).then((res) => {
-          const response = $.parseHTML(res['cart-drawer']);          
-          
-          
-          $('.sidebar-cart').removeAttr('is-empty');     
-          $('.sidebar-cart').append($(response).find('#CartInSidebar')[0].innerHTML);
-          setTimeout(function() {
-            $('.sidebar-cart__body').addClass('dataAddedonSideBar');
-            $('.sidebar-cart').attr('data-aria-expanded', "true");  
-            $('.sidebar-cart').addClass('cartAdded');     
-          });          
-        })
-
-        fetch(window.Shopify.routes.root + "?sections=header")
-        .then(res => res.json()).then((res) => {
-          const response = $.parseHTML(res['header']);          
-            $('#CartCount').html($(response).find('#CartCount')[0].outerHTML);
-        })
       }
       
     });
 
-    }  
+    }
 
   })
 </script>
-<style>
-  .cartAdded {
-    --gsc-text-color: 33, 33, 33;
-    --gsc-background-color: 255, 255, 255;
-    --gsc-foreground-color: 245, 245, 245;
-    --gsc-border-color: 231, 231, 231;
-    --gsc-button-background-color: 200, 232, 18;
-    --gsc-button-text-color: 33, 33, 33;
-  }
-</style>
 
-
-      <style>
-            body .flavor_box .content_short_info{
-                font-family: "Lato Semibold";
-                font-size: 14px;
-                color: #5E5F5E;
-            }
-            body .product_box .add_cta span {
-                font-size: 14px;
-                font-weight: 800;
-            }
-            body .label_subsription {
-                top: -25px;
-                right: -1px;
-                transform: inherit;
-                border-radius: 10px 10px 0px 0px;
-                font-size: 12px;
-                font-weight: 700;
-                padding: 3px 10px;
-            }
-            body .product_price_box .purchase_type_box {
-                border-radius: 10px 0px 10px 10px;
-            }
-            body .flavor_box .offer_info {
-                font-size: 14px;
-            }
-            body .price_box .discounted_price_box {
-                color: #212121;
-                font-family: "Lato Bold";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 14px;
-                text-transform: uppercase;
-            }
-            body .discountBox {
-                color: #212121;
-                text-align: right;
-                font-family: "Lato Regular";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 14px;
-                text-transform: uppercase;
-                margin-top: 10px;
-            }
-            body .price_calc_box .original_price.withpercentage {
-                color: var(--Black, #212121);
-                font-family: "Lato Regular";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 14px;
-                text-transform: uppercase;
-                text-decoration: none;
-            }
-            body .delivery_frequency_box .selected_frequency .selected {
-                color: #212121;
-                font-family: "Lato Bold";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 900;
-                line-height: 14px;
-                text-transform: uppercase;
-            }
-            body .delivery_frequency_box .selected_frequency .selected span {
-                font-family: "Lato Heavy" !important;
-                font-size: 900;
-            }
-            body .subs_benefit_box ul li{
-                margin-bottom: 8px;
-            }
-            body .subs_benefit_box ul li span {
-                color: #212121;
-                font-family: "Lato Heavy";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 800;
-                line-height: 17px;
-            }
-            body .subs_benefit_box ul li:first-child span {
-                font-family: "Lato Heavy", sans-serif;
-            }
-            body .type_price_block h2 {
-                font-size: 16px;
-            }
-            body .product_information_form_block .subtotal_box p {
-                color: var(--Success-State, #499167);
-                font-family: "Lato Heavy";
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 800;
-                line-height: 14px;
-                letter-spacing: 0;
-                text-transform: uppercase;
-            }
-            body .subtotal_price .original_subtotal_price {
-                color: var(--Black, #212121);
-                font-family: "Lato Regular";
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 14px;
-                text-decoration: line-through;
-            }
-            body .subtotal_price .discounted_subtotal_price {
-                color: var(--Black, #212121);
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 800;
-                line-height: 14px;
-            }
-            body .onetime_box  .type_price_block h2 {
-                margin-top: 3px;
-            }
-            body .product_price_box .purchase_type_box.onetime_box {
-                border-radius: 10px 10px 10px 10px;
-            }
-            body .order_feature h3{
-              color: #212121;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: normal;
-              text-transform: capitalize;
-            }
-            body .order_feature ul li span {
-                color: #212121;
-                font-family: "Lato Bold";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 17px;
-            }
-            body .delivery_frequency_box .delivery_frequency_dropdown ul li label {
-              font-size: 14px;
-            }
-            .product_price_box .purchase_type_box {
-              position: relative;
-            }
-            .subscription_box.purchase_type_box.active .label_subsription {
-                opacity: 1;
-            }
-            @media screen and (max-width: 767px) {
-                .product_price_box .purchase_type_block h3 {
-                    margin-bottom: 40px;
-                }
-            }
-      </style>
- 
 {% schema %}
   {
-    "name": "Superfood custom v2",
+    "name": "Superfood v2",
     "tag": "section",
     "class": "product-section-new",
     "blocks": [],
@@ -2236,7 +1985,7 @@ var productFirst = `
     ],
     "presets": [
       {
-        "name": "Superfood custom v2"
+        "name": "Superfood v2"
       }
     ]
   }

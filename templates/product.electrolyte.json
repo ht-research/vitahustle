@@ -10,7 +10,7 @@
           }
         },
         "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         },
@@ -276,7 +276,7 @@
       "type": "apps",
       "blocks": {
         "cb52da39-70ff-4f5c-a05e-cd12e031825b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
@@ -642,6 +642,30 @@
         "desktop_content_background": "none",
         "mobile_content_background": "none"
       }
+    },
+    "16929356097a8fb9ba": {
+      "type": "apps",
+      "blocks": {
+        "b6f3b3a0-1342-4268-9bb4-9c279976c913": {
+          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "96293",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "b6f3b3a0-1342-4268-9bb4-9c279976c913"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": ""
+      }
     }
   },
   "order": [
@@ -654,6 +678,7 @@
     "9ddba0be-f879-4e43-9a11-aea6ba37821b",
     "product-recommendations",
     "d7e5ae43-0bda-4830-acab-d2202fbad902",
-    "bed2a76f-a55e-4479-825c-3e608236563f"
+    "bed2a76f-a55e-4479-825c-3e608236563f",
+    "16929356097a8fb9ba"
   ]
 }

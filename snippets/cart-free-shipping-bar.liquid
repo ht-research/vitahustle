@@ -9,9 +9,9 @@
   endif
 
   if uses_comma_decimals
-    assign cart_total = cart.total_price | money_without_currency | replace: '.', '' | replace: ',', '.' | times: 1.0
+    assign cart_total = cart.original_total_price | money_without_currency | replace: '.', '' | replace: ',', '.' | times: 1.0
   else
-    assign cart_total = cart.total_price | money_without_currency | replace: ',', '' | times: 1.0
+    assign cart_total = cart.original_total_price | money_without_currency | replace: ',', '' | times: 1.0
   endif
 -%}
 

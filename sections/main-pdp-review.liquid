@@ -1,16 +1,16 @@
 <div class="main_review_wrapper">
   <div class="main_review_inner_box">
     <div class="review_switch">
-      <div class="written_review switch-item active" data-tab="reviews">
+      <div class="written_review switch-item" data-tab="reviews">
         Written Reviews
       </div>
-      <div class="testimonial switch-item" data-tab="testimonial">
+      <div class="testimonial switch-item active" data-tab="testimonial">
         Testimonials
       </div>
     </div>
 
     <div class="main_container">
-      <div class="all_reviews active" data-container="reviews">
+      <div class="all_reviews" data-container="reviews">
         {% for block in section.blocks %}
           {% case block.type %}
             {% when '@app' %}
@@ -19,7 +19,7 @@
         {% endfor %}
       </div>
 
-      <div class="testimonials" data-container="testimonial">
+      <div class="testimonials active" data-container="testimonial">
         <div class="testimonial_wrapper">
           {% for block in section.blocks %}
             {% if block.type == "testimonial_box" %}
