@@ -2,7 +2,6 @@
   "sections": {
     "9fd9498c-6efb-476e-8d6a-a7a853124857": {
       "type": "banner-new",
-      "disabled": true,
       "settings": {
         "display_rating": false,
         "number_of_reviews": 426,
@@ -38,45 +37,6 @@
         "extra_btn_text": "",
         "extra_btn_url": "",
         "extra_btn_style": "outline"
-      }
-    },
-    "new_banner2_AwyWnb": {
-      "type": "new-banner2",
-      "disabled": true,
-      "settings": {
-        "new_banner_section_title": "<span>STRAWBERRY<\/span><br>DAMN DELICIOUS-NESS",
-        "new_banner_section_subtitle": "",
-        "background_larger_screen_image": "shopify:\/\/shop_images\/TopBanner_1_7.png",
-        "larger_screen_banner_max_height": 800,
-        "background_desktop_image": "shopify:\/\/shop_images\/TopBanner_1_4.png",
-        "desktop_banner_max_height": 620,
-        "background_mobile_image": "shopify:\/\/shop_images\/TopBanner_1_5.png",
-        "mobile_banner_min_height": 620,
-        "mobile_banner_max_height": 760,
-        "background_ipad_image": "shopify:\/\/shop_images\/Rectangle_29287.png",
-        "Tablet_banner_max_height": 800,
-        "btn_text": "SHOP NOW",
-        "btn_url": "https:\/\/vitahustle.com\/products\/one-superfood-protein-shake-strawberry"
-      }
-    },
-    "get_lucky_banner_mp4hGf": {
-      "type": "get-lucky-banner",
-      "settings": {
-        "greens_new_banner_title": "50% OFF GREENS",
-        "greens_new_banner_subtitle": "IT’S YOUR LUCKY DAY",
-        "greens_new_banner_subtext": "USE CODE: LUCKY",
-        "greens_new_banner_offerText": "*offer applied to first bag only",
-        "background_larger_screen_image": "shopify:\/\/shop_images\/Background_3.png",
-        "larger_screen_banner_max_height": 700,
-        "background_desktop_image": "shopify:\/\/shop_images\/Background_4.png",
-        "desktop_banner_max_height": 780,
-        "background_mobile_image": "shopify:\/\/shop_images\/hp-banner-v2a-desktop_6.png",
-        "mobile_banner_min_height": 660,
-        "mobile_banner_max_height": 800,
-        "background_ipad_image": "shopify:\/\/shop_images\/hp-banner-v2a-desktop_8.png",
-        "Tablet_banner_max_height": 800,
-        "btn_text": "SAVE NOW",
-        "btn_url": "shopify:\/\/products\/vitahustle-one-superfood-greens"
       }
     },
     "8c9108e5-5763-41a5-8164-5e91fb2a073e": {
@@ -157,7 +117,6 @@
         "cfcfed6d-af62-4892-af7f-f60dca1ecb9a",
         "ac6c04e0-e288-44c8-895d-8ed228d0661f"
       ],
-      "disabled": true,
       "settings": {
         "title": "ALL IN <span>ONE<\/span>",
         "primary_color": "#ffffff",
@@ -368,46 +327,8 @@
         "section_spacing_bottom": 48
       }
     },
-    "new_all_in_one_Vd9zRh": {
-      "type": "new-all-in-one",
-      "blocks": {
-        "rich_text_f7kffR": {
-          "type": "rich_text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/Group_48096021_1.png"
-          }
-        },
-        "rich_text_HFGchF": {
-          "type": "rich_text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/Group_48096022_1.png"
-          }
-        },
-        "rich_text_wjfUJq": {
-          "type": "rich_text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/Group_48096023_1.png"
-          }
-        }
-      },
-      "block_order": [
-        "rich_text_f7kffR",
-        "rich_text_HFGchF",
-        "rich_text_wjfUJq"
-      ],
-      "settings": {
-        "new_all_in_one_title": "ALL IN <span>ONE<\/span>",
-        "new_all_in_one_subtitle": "Everything you need for mind and body",
-        "background_desktop_image": "shopify:\/\/shop_images\/Shakefruits_1_2_9a4064c1-d3c4-492b-b56b-39064b485cb4.png",
-        "background_mobile_image": "shopify:\/\/shop_images\/Rectangle_29285_1.png",
-        "background_ipad_image": "shopify:\/\/shop_images\/Rectangle_29285_2.png",
-        "btn_text": "SHOP NOW",
-        "btn_url": "https:\/\/vitahustle.com\/collections\/vitahustle-one"
-      }
-    },
     "cab30cee-3dd0-4da8-9392-756aff6c1cee": {
       "type": "image-with-text-new",
-      "disabled": true,
       "settings": {
         "title": "And, it tastes <span>damn delicious!<\/span>",
         "subtext": "VitaHustle ONE is the real deal, no chalkiness, just lip-smacking, soul-satisfying taste!",
@@ -426,36 +347,36 @@
     "1fa8ddd8-c62b-4a4b-81e1-e1e801d2dff3": {
       "type": "flavors",
       "blocks": {
-        "36d001dd-c9d0-43f3-a29f-62ba993250a6": {
-          "type": "flavor_box",
-          "settings": {
-            "thumbnail": "shopify:\/\/shop_images\/Strawberry_with_shadow_V2_3.png",
-            "main_image": "shopify:\/\/shop_images\/web_VitaHustle_r2_06B_1449_2aab87db-0c6c-43cf-a3c5-0f312b7cafeb.jpg",
-            "flavor_name": "STRAWBERRY",
-            "main_banner_title": "",
-            "main_banner_subtext": ""
-          }
-        },
         "5a757184-498a-49bd-aae7-534b3a151bab": {
           "type": "flavor_box",
           "settings": {
-            "thumbnail": "shopify:\/\/shop_images\/choc_van.png",
+            "thumbnail": "shopify:\/\/shop_images\/Image3.png",
             "main_image": "shopify:\/\/shop_images\/image5-min.jpg",
-            "flavor_name": "CACAO & VANILLA",
-            "main_banner_title": "",
-            "main_banner_subtext": ""
+            "flavor_name": "Dark Cacao",
+            "main_banner_title": "Dark Cacao",
+            "main_banner_subtext": "\"The healthy chocolate shake is the real deal\""
+          }
+        },
+        "36d001dd-c9d0-43f3-a29f-62ba993250a6": {
+          "type": "flavor_box",
+          "settings": {
+            "thumbnail": "shopify:\/\/shop_images\/Image4.png",
+            "main_image": "shopify:\/\/shop_images\/image6_1_1_1.png",
+            "flavor_name": "Vanilla Bean",
+            "main_banner_title": "Vanilla Bean",
+            "main_banner_subtext": "\"Tastes like a creamy and delicious vanilla shake.”"
           }
         }
       },
       "block_order": [
-        "36d001dd-c9d0-43f3-a29f-62ba993250a6",
-        "5a757184-498a-49bd-aae7-534b3a151bab"
+        "5a757184-498a-49bd-aae7-534b3a151bab",
+        "36d001dd-c9d0-43f3-a29f-62ba993250a6"
       ],
       "settings": {
-        "title": "TREAT YOURSELF TO <br><span>3 DELICIOUS FLAVORS<\/span>",
+        "title": "TREAT YOURSELF TO <br><span>2 DELICIOUS FLAVORS<\/span>",
         "subtext": "A Bag Full of Nutrition - simply add Water!",
         "cta_text": "Shop",
-        "cta_url": "shopify:\/\/collections\/vitahustle-one"
+        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood"
       }
     },
     "48b62c86-ee21-4dd4-982a-3b2d19f4db86": {
@@ -606,12 +527,9 @@
   },
   "order": [
     "9fd9498c-6efb-476e-8d6a-a7a853124857",
-    "new_banner2_AwyWnb",
-    "get_lucky_banner_mp4hGf",
     "8c9108e5-5763-41a5-8164-5e91fb2a073e",
     "0d20106d-cf81-4575-89b1-4dfd2ec13c66",
     "7104b9b8-98c9-4888-9248-7874a9f6472f",
-    "new_all_in_one_Vd9zRh",
     "cab30cee-3dd0-4da8-9392-756aff6c1cee",
     "1fa8ddd8-c62b-4a4b-81e1-e1e801d2dff3",
     "48b62c86-ee21-4dd4-982a-3b2d19f4db86",
