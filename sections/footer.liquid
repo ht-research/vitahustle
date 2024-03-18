@@ -207,46 +207,33 @@
       
      <!-- MOBILE FOOTER -->
        <div class="mf-mobile-footer-menu">
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when 'menu' -%}
-              <div class="mf-menu-item">
-                <a href="#" class="mf-menu-link">{{ block.settings.title }}<svg class="drawer-menu__chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 7L14.5 12L9.5 17" stroke="currentColor" stroke-width="2"></path></svg></a>
-                <div class="mf-dropdown">
-                  {%- for link in block.settings.menu.links -%}
-                    <a href="{{ link.url }}">{{ link.title }}</a>
-                  {%- endfor -%}
-                </div>
-          </div>
-          {%- endcase -%}
-        {%- endfor -%}
-          {% comment %} <div class="mf-menu-item">
-              <a href="#" class="mf-menu-link">SHOP ALL<svg class="drawer-menu__chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 7L14.5 12L9.5 17" stroke="currentColor" stroke-width="2"></path></svg></a>
-              <div class="mf-dropdown">
-                  <a href="https://vitahustle.com/collections/all">Shop All</a>
-                  <a href="https://vitahustle.com/collections/vithustle-one">Superfoods</a>
-                  <a href="https://vitahustle.com/collections/electrolyte-hydration">Electrolytes</a>
-                  <a href="https://vitahustle.com/collections/gummy-vitamins">Gummies</a>
-                  <a href="https://vitahustle.com/collections/accessories">Accessories</a>
-              </div>
-          </div>
-          <div class="mf-menu-item">
-              <a href="#" class="mf-menu-link">LEARN MORE<svg class="drawer-menu__chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 7L14.5 12L9.5 17" stroke="currentColor" stroke-width="2"></path></svg></a>
-              <div class="mf-dropdown">
-                  <a href="https://vitahustle.com/pages/superfood-ingredients">Ingredients</a>
-                  <a href="https://vitahustle.com/pages/about">About Us</a>
-                  <a href="https://vitahustle.com/blogs/the-hustle">Hustle Blog</a>
-                  <a target="blank_" href="https://vitahustle.zendesk.com/hc/en-us">FAQs</a>
-              </div>
-          </div>
-          <div class="mf-menu-item">
-              <a href="#" class="mf-menu-link">HELP<svg class="drawer-menu__chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 7L14.5 12L9.5 17" stroke="currentColor" stroke-width="2"></path></svg></a>
-              <div class="mf-dropdown">
-                  <a target="blank_" href="https://vitahustle.zendesk.com/hc/en-us/requests/new">Contact Us</a>
-                  <a href="https://vitahustle.com/account/login">Manage Subscription</a>
-              </div>
-          </div> {% endcomment %}
+    <div class="mf-menu-item">
+        <a href="#" class="mf-menu-link">SHOP ALL<svg class="drawer-menu__chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 7L14.5 12L9.5 17" stroke="currentColor" stroke-width="2"></path></svg></a>
+        <div class="mf-dropdown">
+            <a href="https://vitahustle.com/collections/all">Shop All</a>
+            <a href="https://vitahustle.com/collections/vithustle-one">Superfoods</a>
+            <a href="https://vitahustle.com/collections/electrolyte-hydration">Electrolytes</a>
+            <a href="https://vitahustle.com/collections/gummy-vitamins">Gummies</a>
+            <a href="https://vitahustle.com/collections/accessories">Accessories</a>
         </div>
+    </div>
+    <div class="mf-menu-item">
+        <a href="#" class="mf-menu-link">LEARN MORE<svg class="drawer-menu__chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 7L14.5 12L9.5 17" stroke="currentColor" stroke-width="2"></path></svg></a>
+        <div class="mf-dropdown">
+            <a href="https://vitahustle.com/pages/superfood-ingredients">Ingredients</a>
+            <a href="https://vitahustle.com/pages/about">About Us</a>
+            <a href="https://vitahustle.com/blogs/the-hustle">Hustle Blog</a>
+            <a target="blank_" href="https://vitahustle.zendesk.com/hc/en-us">FAQs</a>
+        </div>
+    </div>
+    <div class="mf-menu-item">
+        <a href="#" class="mf-menu-link">HELP<svg class="drawer-menu__chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 7L14.5 12L9.5 17" stroke="currentColor" stroke-width="2"></path></svg></a>
+        <div class="mf-dropdown">
+            <a target="blank_" href="https://vitahustle.zendesk.com/hc/en-us/requests/new">Contact Us</a>
+            <a href="https://vitahustle.com/account/login">Manage Subscription</a>
+        </div>
+    </div>
+</div>
 
       <script>
   document.addEventListener('DOMContentLoaded', function() {
