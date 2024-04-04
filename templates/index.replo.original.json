@@ -40,26 +40,6 @@
         "extra_btn_style": "outline"
       }
     },
-    "free_shaker_banner_EqDm9r": {
-      "type": "free-shaker-banner",
-      "settings": {
-        "free_shaker_banner_title": "FREE SHAKER",
-        "free_shaker_banner_subtitle": "WITH SUPERFOOD PURCHASE",
-        "free_shaker_banner_subtext": "USE CODE: SHAKE",
-        "free_shaker_banner_offerText": "",
-        "background_larger_screen_image": "shopify:\/\/shop_images\/Background_8.png",
-        "larger_screen_banner_max_height": 700,
-        "background_desktop_image": "shopify:\/\/shop_images\/Background_7.png",
-        "desktop_banner_max_height": 600,
-        "background_mobile_image": "shopify:\/\/shop_images\/hp-banner-v2a-desktop_10.png",
-        "mobile_banner_min_height": 660,
-        "mobile_banner_max_height": 800,
-        "background_ipad_image": "shopify:\/\/shop_images\/hp-banner-v2a-tablet_1.png",
-        "Tablet_banner_max_height": 800,
-        "btn_text": "SHOP NOW",
-        "btn_url": "https:\/\/vitahustle.com\/discount\/shake?redirect=%2Fproducts%2Fshaker-bottle-stainless-20oz"
-      }
-    },
     "new_banner2_AwyWnb": {
       "type": "new-banner2",
       "disabled": true,
@@ -81,7 +61,6 @@
     },
     "get_lucky_banner_mp4hGf": {
       "type": "get-lucky-banner",
-      "disabled": true,
       "settings": {
         "greens_new_banner_title": "50% OFF GREENS",
         "greens_new_banner_subtitle": "IT’S YOUR LUCKY DAY",
@@ -178,7 +157,6 @@
         "cfcfed6d-af62-4892-af7f-f60dca1ecb9a",
         "ac6c04e0-e288-44c8-895d-8ed228d0661f"
       ],
-      "disabled": true,
       "settings": {
         "title": "ALL IN <span>ONE<\/span>",
         "primary_color": "#ffffff",
@@ -416,6 +394,7 @@
         "rich_text_HFGchF",
         "rich_text_wjfUJq"
       ],
+      "disabled": true,
       "settings": {
         "new_all_in_one_title": "ALL IN <span>ONE<\/span>",
         "new_all_in_one_subtitle": "Everything you need for mind and body",
@@ -627,7 +606,6 @@
   },
   "order": [
     "9fd9498c-6efb-476e-8d6a-a7a853124857",
-    "free_shaker_banner_EqDm9r",
     "new_banner2_AwyWnb",
     "get_lucky_banner_mp4hGf",
     "8c9108e5-5763-41a5-8164-5e91fb2a073e",
