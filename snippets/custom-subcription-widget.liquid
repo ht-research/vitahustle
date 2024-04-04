@@ -1,5 +1,6 @@
-{%- assign selling_plans = product.selling_plan_groups[0].selling_plans -%}
-{%- assign sellingPlan = product.selling_plan_groups[0].selling_plans[0] -%}
+{% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', '294517' %}
+{%- assign selling_plans = sellingPlanGroup[0].selling_plans -%}
+{%- assign sellingPlan = sellingPlanGroup[0].selling_plans[0] -%}
 <div class="product_price_box">
     <div class="content_box purchase_type_block">
        {% comment %} onetime box {% endcomment %}

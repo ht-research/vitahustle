@@ -7,7 +7,8 @@
     assign price = productOne.price
     assign productPrice = price | money
     assign subPrice = price | minus: 1000 | money
-    assign selling_plans = productOne.selling_plan_groups[0].selling_plans
+    assign sellingPlanGroup = productOne.selling_plan_groups | where: 'app_id', '294517'
+    assign selling_plans = sellingPlanGroup[0].selling_plans
     assign pricePerBag = price | minus: 1000 | divided_by: totalServes | money
     assign subcribeText = section.settings.subscribe_cta_text
     
