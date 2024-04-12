@@ -46,8 +46,14 @@
         },
         "a5695ed4-524b-45b1-a57e-48bebecb84a9": {
           "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
+          }
+        },
+        "subscription_widget_mG4pMY": {
+          "type": "subscription_widget",
+          "settings": {
           }
         },
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
@@ -146,6 +152,7 @@
         "28586830-d855-4547-8946-94914bac9e85",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
         "a5695ed4-524b-45b1-a57e-48bebecb84a9",
+        "subscription_widget_mG4pMY",
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
         "buy_buttons",
         "b7435ba2-8e00-4538-be27-63a92d60e195",

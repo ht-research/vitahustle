@@ -11,6 +11,10 @@
   assign container_size = options.container_size
   assign desktop_column_count = options.desktop_column_count
   assign enable_follow_on_shop = options.enable_follow_on_shop
+
+  assign new_instagram_link = settings.social_instagram_link
+  assign new_tiktok_link = settings.social_tiktok_link
+
 -%}
 
 {%- capture css -%}
@@ -273,13 +277,13 @@
             >
           </div>
           <div class="header-custom__column header-custom__column2">
-            <a target="blank_" href="https://www.instagram.com/getvitahustle/"
+            <a target="blank_" href="{new_instagram_link}"
               ><img
                 src="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/ig_icon_22e68090-7b99-4432-bee1-1f6c094865fd.svg?v=1689273323"
                 alt="Instagram"
                 style="margin-right: 10px;"
             ></a>
-            <a target="blank_" href="https://www.tiktok.com/@vitahustle"
+            <a target="blank_" href="{new_tiktok_link}"
               ><img
                 src="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/tiktok_icon_643930f0-bfcc-4077-95f0-6813e9bf57fc.svg?v=1689273323"
                 alt="TikTok"

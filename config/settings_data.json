@@ -91,7 +91,7 @@
     "show_back_to_top_button": false,
     "back_to_top_button_position": "bottom-left",
     "social_icon_style": "solid",
-    "social_instagram_link": "https:\/\/www.instagram.com\/getvitahustle\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/vitahustle\/",
     "social_facebook_link": "",
     "social_twitter_link": "",
     "social_youtube_link": "",
@@ -217,22 +217,6 @@
         "settings": {
         }
       },
-      "17151115064775110295": {
-        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
-        "disabled": false,
-        "settings": {
-          "color_brand": "#000000",
-          "contrast_color": "#ffffff",
-          "color_brand_secondary": "#afc42f",
-          "corners": "8px",
-          "app_background": "#f0f2f2",
-          "app_container": 1200,
-          "app_vertical_padding": 32,
-          "images_aspect_ratio": "1",
-          "cards_background": "#ffffff",
-          "cards_border_color": "rgba(0,0,0,0)"
-        }
-      },
       "1877152918344802950": {
         "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
         "disabled": true,
@@ -275,6 +259,22 @@
         "type": "shopify:\/\/apps\/attentive\/blocks\/attn-tag\/8df62c72-8fe4-407e-a5b3-72132be30a0d",
         "disabled": false,
         "settings": {
+        }
+      },
+      "17151115064775110295": {
+        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": true,
+        "settings": {
+          "color_brand": "#000000",
+          "contrast_color": "#ffffff",
+          "color_brand_secondary": "#afc42f",
+          "corners": "8px",
+          "app_background": "#f0f2f2",
+          "app_container": 1200,
+          "app_vertical_padding": 32,
+          "images_aspect_ratio": "1",
+          "cards_background": "#ffffff",
+          "cards_border_color": "rgba(0,0,0,0)"
         }
       }
     }

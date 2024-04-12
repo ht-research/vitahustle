@@ -2110,24 +2110,6 @@
       "mobile_banner_max_height": "Mobile banner max height",
       "Tablet_banner_max_height": "Tablet banner max height"
     },
-    "free_shaker_banner": {
-      "name": "New Banner Section",
-      "free_shaker_banner_title": "Heading",
-      "free_shaker_banner_subtitle": "Sub heading",
-      "free_shaker_banner_subtext": "Sub Text",
-      "free_shaker_banner_offerText": "Offer Text",
-      "background_larger_screen_image": "background Larger Screen image",
-      "background_desktop_image": "Background desktop image",
-      "background_mobile_image": "Background mobile image",
-      "background_ipad_image": "Background ipad image",
-      "btn_text": "Button Text",
-      "btn_url": "Button Url",
-      "larger_screen_banner_max_height": "Larger Screen banner max height",
-      "desktop_banner_max_height": "Desktop banner max height",
-      "mobile_banner_min_height": "Mobile banner min height",
-      "mobile_banner_max_height": "Mobile banner max height",
-      "Tablet_banner_max_height": "Tablet banner max height"
-    },
     "new_all_in_one": {
       "name": "New all in one",
       "new_all_in_one_title": "Heading",
