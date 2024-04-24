@@ -1,5 +1,5 @@
 <div class="quanity_controller">
-  <div class="quantity_item_controller decrement" data-id="{{ productId }}" data-index="{{ index }}">
+  <div class="quantity_item_controller decrement" data-id="{{ productId }}_{{ variantId }}" data-index="{{ index }}">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="8"
@@ -16,7 +16,7 @@
   <div class="value">
     1
   </div>
-  <div class="quantity_item_controller increment" data-id="{{ productId }}" data-index="{{ index }}">
+  <div class="quantity_item_controller increment" data-id="{{ productId }}_{{ variantId }}" data-index="{{ index }}">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="8"
@@ -27,7 +27,7 @@
     </svg>
   </div>
 </div>
-<div class="add_cta" data-id="{{ productId }}" data-index="{{ index }}">
+<div class="add_cta" data-id="{{ productId }}_{{ variantId }}" data-index="{{ index }}">
   <span>Add</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
