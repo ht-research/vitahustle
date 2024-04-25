@@ -7,7 +7,7 @@
     assign price = productOne.price
     assign productPrice = price | money
     assign subPrice = price | divided_by: 2 | money
-    assign sellingPlanGroup = productOne.selling_plan_groups | where: 'app_id', '294517'
+    assign sellingPlanGroup = productOne.selling_plan_groups | where: 'app_id', '5859381'
     assign selling_plans = sellingPlanGroup[0].selling_plans
     assign pricePerBag = price | divided_by: 2 | divided_by: totalServes | money
     assign subcribeText = section.settings.subscribe_cta_text
@@ -1860,7 +1860,8 @@ var productFirst = `
       for(let item in window.addedBundle){
         let plan_id = '';
         let variant = window.bundleProducts[item].variants[0].id;
-        let selling_plans = window.bundleProducts[item].selling_plan_groups[0].selling_plans;
+        let sellingPlanGroups = window.bundleProducts[item].selling_plan_groups.filter((plan) => plan.app_id === '5859381')
+        let selling_plans = sellingPlanGroups[0].selling_plans;
         if(window.addedBundle[item] > 0){
 
             let sellPlan = selling_plans.find(s => s.name == frequency);
@@ -1889,12 +1890,12 @@ var productFirst = `
         for(let item in window.addedBundle){
           let plan_id = '';
           let variant = window.bundleProducts[item].variants[0].id;
-          let selling_plans = window.bundleProducts[item].selling_plan_groups[0].selling_plans;
+          let sellingPlanGroups = window.bundleProducts[item].selling_plan_groups.filter((plan) => plan.app_id === '5859381')
+          let selling_plans = sellingPlanGroups[0].selling_plans;
           
           if(window.addedBundle[item] > 0){
             if(plan == 'selling_plan'){
               let sellPlan = selling_plans.find(s => s.name == frequency);
-              console.log('sellPlan',sellPlan, selling_plans);
               // return;
               plan_id = sellPlan.id;
               items.push({

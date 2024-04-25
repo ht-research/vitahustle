@@ -139,7 +139,6 @@
         "cbfcea53-e238-4c35-a5c9-da334abf0c2d"
       ],
       "custom_css": [
-        ".product-quantity__wrap {margin-top: 0px !important;}",
         ".superfood-only {display: none;}",
         "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
         ".product-desktop-media {position: sticky !important; top: 120px !important;}",

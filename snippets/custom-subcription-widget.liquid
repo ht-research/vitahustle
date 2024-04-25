@@ -1,18 +1,20 @@
-{% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', '294517' %}
+{% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', '5859381' %}
 {%- assign selling_plans = sellingPlanGroup[0].selling_plans -%}
 {%- assign sellingPlan = sellingPlanGroup[0].selling_plans[0] -%}
-<div class="product_price_box">
-    <div class="content_box purchase_type_block">
-       {% comment %} onetime box {% endcomment %}
-       <input
-       hidden
-       type="radio"
-       id="onetime_item"
-       name="subscribe"
-       value="onetime_plan"
-       checked />
 
-       <div class="onetime_box purchase_type_box">
+{% if selling_plans %}
+  <div class="product_price_box">
+    <div class="content_box purchase_type_block">
+        {% comment %} onetime box {% endcomment %}
+        <input
+        hidden
+        type="radio"
+        id="onetime_item"
+        name="subscribe"
+        value="onetime_plan"
+        checked />
+
+        <div class="onetime_box purchase_type_box">
         <label for="onetime_item">
 
           <div class="purchase_type_info">
@@ -26,7 +28,7 @@
                 </h2>
               </div>
               <div class="per_bag_cost">
-               
+                
                   <div class="price_box">
                       <div class="price_calc_box">
                           <span class="discounted_price_box onetime_original_price">
@@ -60,7 +62,7 @@
       id="subscription_item"
       value="selling_plan"
       name="subscribe"
-       />
+        />
       <div class="subscription_box purchase_type_box">
       
         <label for="subscription_item">
@@ -139,7 +141,7 @@
                     </label>
                 </li>
               {% endfor %}
-               
+          
               </ul>
             </div>
           </div>
@@ -149,6 +151,7 @@
     </div>
 
   </div>
+{% endif %}
 
 
   <script>
