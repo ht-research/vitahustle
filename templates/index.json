@@ -455,13 +455,13 @@
         "rich_text_wjfUJq"
       ],
       "settings": {
-        "new_all_in_one_title": "ALL IN <span>ONE<\/span>",
+        "new_all_in_one_title": "ALL IN ONE",
         "new_all_in_one_subtitle": "Everything you need for mind and body",
         "background_desktop_image": "shopify:\/\/shop_images\/Shakefruits_1_2_9a4064c1-d3c4-492b-b56b-39064b485cb4.png",
         "background_mobile_image": "shopify:\/\/shop_images\/Rectangle_29285_1.png",
         "background_ipad_image": "shopify:\/\/shop_images\/Rectangle_29285_2.png",
         "btn_text": "SHOP NOW",
-        "btn_url": "https:\/\/vitahustle.com\/collections\/vitahustle-one"
+        "btn_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry"
       }
     },
     "cab30cee-3dd0-4da8-9392-756aff6c1cee": {
@@ -499,7 +499,7 @@
           "type": "flavor_box",
           "settings": {
             "thumbnail": "shopify:\/\/shop_images\/choc_van.png",
-            "main_image": "shopify:\/\/shop_images\/image5-min.jpg",
+            "main_image": "shopify:\/\/shop_images\/image5-min_650x_2a9fb01c-73ec-4e65-8a76-f657680d4035.webp",
             "flavor_name": "CACAO & VANILLA",
             "main_banner_title": "",
             "main_banner_subtext": ""
@@ -512,9 +512,9 @@
       ],
       "settings": {
         "title": "TREAT YOURSELF TO <br><span>3 DELICIOUS FLAVORS<\/span>",
-        "subtext": "A Bag Full of Nutrition - simply add Water!",
+        "subtext": "A Bag Full of Nutrition -  Just add Water!",
         "cta_text": "Shop",
-        "cta_url": "shopify:\/\/collections\/vitahustle-one"
+        "cta_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry"
       }
     },
     "48b62c86-ee21-4dd4-982a-3b2d19f4db86": {
