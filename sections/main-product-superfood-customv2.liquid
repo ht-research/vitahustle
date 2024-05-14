@@ -7,7 +7,8 @@
     assign price = productOne.price
     assign productPrice = price | money
     assign subPrice = price | minus: 1000 | money
-    assign selling_plans = productOne.selling_plan_groups[0].selling_plans
+    assign sellingPlanGroup = productOne.selling_plan_groups | where: 'app_id', '5859381'
+    assign selling_plans = sellingPlanGroup[0].selling_plans
     assign pricePerBag = price | minus: 1000 | divided_by: totalServes | money
     assign subcribeText = section.settings.subscribe_cta_text
     
@@ -1483,6 +1484,14 @@
       font-size: 12px !important;
     }
   }
+  @media screen and (max-width: 1190px) and (min-width: 769px){
+    .product_information_form_block .content_box.flavor_box,.product_information_form_block .content_box,
+    .subscribe_box .purchase_cta,.order_feature
+    {
+      width: 100%;
+    }
+    
+  }
 </style>
 
 <script>
@@ -1885,7 +1894,8 @@ var productFirst = `
       for(let item in window.addedBundle){
         let plan_id = '';
         let variant = window.bundleProducts[item].variants[0].id;
-        let selling_plans = window.bundleProducts[item].selling_plan_groups[0].selling_plans;
+        let sellingPlanGroups = window.bundleProducts[item].selling_plan_groups.filter((plan) => plan.app_id === '5859381')
+        let selling_plans = sellingPlanGroups[0].selling_plans;
         if(window.addedBundle[item] > 0){
 
             let sellPlan = selling_plans.find(s => s.name == frequency);
@@ -1914,12 +1924,12 @@ var productFirst = `
         for(let item in window.addedBundle){
           let plan_id = '';
           let variant = window.bundleProducts[item].variants[0].id;
-          let selling_plans = window.bundleProducts[item].selling_plan_groups[0].selling_plans;
+          let sellingPlanGroups = window.bundleProducts[item].selling_plan_groups.filter((plan) => plan.app_id === '5859381')
+          let selling_plans = sellingPlanGroups[0].selling_plans;
           
           if(window.addedBundle[item] > 0){
             if(plan == 'selling_plan'){
               let sellPlan = selling_plans.find(s => s.name == frequency);
-              console.log('sellPlan',sellPlan, selling_plans);
               // return;
               plan_id = sellPlan.id;
               items.push({

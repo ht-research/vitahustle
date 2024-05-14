@@ -1,0 +1,195 @@
+{% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', '5859381' %}
+{%- assign selling_plans = sellingPlanGroup[0].selling_plans -%}
+{%- assign sellingPlan = sellingPlanGroup[0].selling_plans[0] -%}
+
+{% if selling_plans %}
+  <div class="product_price_box">
+    <div class="content_box purchase_type_block">
+        {% comment %} onetime box {% endcomment %}
+        <input
+        hidden
+        type="radio"
+        id="onetime_item"
+        name="subscribe"
+        value="onetime_plan"
+        checked />
+
+        <div class="onetime_box purchase_type_box">
+        <label for="onetime_item">
+
+          <div class="purchase_type_info">
+            <div class="radio_box">
+
+              <span class="custom_radio"></span>
+            </div>
+            <div class="snippet_info_box">
+              <div class="type_price_block">
+                <h2>One-time
+                </h2>
+              </div>
+              <div class="per_bag_cost">
+                
+                  <div class="price_box">
+                      <div class="price_calc_box">
+                          <span class="discounted_price_box onetime_original_price">
+                              <span class="discounted_price">{{product.price | money_with_currency | split: 'USD' | first}}</span>
+                          </span>
+                      </div>
+                  </div>
+                  {% if product.metafields.custom.product_servings != blank %}
+                    {% assign servings = product.metafields.custom.product_servings %}
+                  {% else %}
+                    {% assign servings = 15  %}
+                  {% endif %}
+                  <div class="discountBox">
+                    <span class="discounted_price_per_bag">{{ product.price | divided_by: servings | money_with_currency | split: 'USD' | first }}</span>
+                    /serving
+                  </div>
+
+                  
+              </div>
+            </div>
+          </div>
+
+
+        </label>
+
+      </div>
+      {% comment %} subscription box {% endcomment %}
+      <input
+      hidden
+      type="radio"
+      id="subscription_item"
+      value="selling_plan"
+      name="subscribe"
+        />
+      <div class="subscription_box purchase_type_box">
+      
+        <label for="subscription_item">
+
+          <div class="purchase_type_info">
+            <div class="radio_box">
+
+              <span class="custom_radio"></span>
+            </div>
+            <div class="snippet_info_box">
+              <div class="type_price_block">
+                {%- assign subscriptionDiscount = sellingPlan.price_adjustments[0].value -%}
+                <h2>Subscribe & <span>Save {{ subscriptionDiscount }}%</span></h2>
+                <p>Modify, Skip Or Cancel Anytime!</p>
+              </div>
+              <div class="per_bag_cost">
+
+                      <div class="price_box">
+                          <span class="discounted_price_box">
+                            <s class="discounted_price">{{product.price | money_with_currency | split: 'USD' | first}}</s>
+                          <span class="discounted_price">{{product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_with_currency | split: 'USD' | first }}</span></span>
+                      </div>
+                      {% if product.metafields.custom.product_servings != blank %}
+                        {% assign servings = product.metafields.custom.product_servings %}
+                    {% else %}
+                        {% assign servings = 15 %}
+                    {% endif %}
+                      <div class="discountBox">
+                        <span class="discounted_price_per_bag">{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | divided_by: servings | money_with_currency | split: 'USD' | first }}</span>/serving
+                      </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="delivery_frequency_box">
+            <div class="selected_frequency">
+              <div class="selected">
+                Deliver every <span> {{ selling_plans[0].name | replace: 'Deliver every', ''  }}</span>
+              </div>
+              <span class="chevron_icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none">
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="#212121"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </div>
+            <div class="delivery_frequency_dropdown">
+              <ul class="available_frequency">
+              {% for plan in selling_plans %}
+                  <li>
+                    <label for="{{plan.id}}">
+                      <input
+                        type="radio"
+                        id="{{plan.id}}"
+                        data-selling-plans
+                        value="{{ plan.id }}"
+                        name="selling_plan"
+                        form="product-form-{{ product.id }}-{{ sectionId }}"
+                        hidden 
+                        {% if forloop.index == 1%}
+                        checked
+                        {% endif %}
+                        disabled
+                        />
+                      <span>Deliver every</span>
+                      <span> {{ plan.name | replace: 'Deliver every', ''  }}</span>
+                    </label>
+                </li>
+              {% endfor %}
+          
+              </ul>
+            </div>
+          </div>
+        </label>
+      </div>
+    
+    </div>
+
+  </div>
+{% endif %}
+
+
+  <script>
+    $('.selected_frequency').on('click', function(e) {
+      e.stopPropagation();
+      $(this).siblings('.delivery_frequency_dropdown').toggleClass('active');
+    });
+    $('.delivery_frequency_dropdown ul li label').on('click', function(e){
+      e.stopPropagation();
+      let text  = $(this).find('span').clone()
+      // let text  = $(this).html();
+      $('.delivery_frequency_box .selected_frequency .selected').html(text);
+      $('.delivery_frequency_dropdown').removeClass('active');
+      $('.delivery_frequency_dropdown ul li label').removeClass('active');
+      $(this).addClass('active');
+    });
+
+      // outside click
+    $('.delivery_frequency_dropdown, .selected_frequency').on('click', function(e){
+      e.stopPropagation();
+    });
+
+    $(document).on('click', function(){
+      const el = $('.delivery_frequency_dropdown');
+      let isTrueVisible =  $(el).is(':visible') &&
+          $(el).css('opacity') !== '0' &&
+          $(el).css('visibility') !== 'hidden';
+      if(isTrueVisible){$('.delivery_frequency_dropdown').removeClass('active');}
+    })
+
+    // disable selling plan on onetime click
+    $('input[name="subscribe"]').on('change',function(){
+      console.log("id",$(this).attr('id'))
+      if($(this).attr('id') == 'onetime_item'){
+        $('input[name="selling_plan"]').attr('disabled','disabled');
+      } else{
+        $('input[name="selling_plan"]').attr('disabled',false);
+      }
+    })
+
+  </script>

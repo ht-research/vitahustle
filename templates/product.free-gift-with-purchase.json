@@ -165,7 +165,6 @@
       ],
       "custom_css": [
         "ul {padding-inline-start: 0px !important;}",
-        ".product-quantity__wrap {margin-top: 0px !important;}",
         "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
         ".product-desktop-media {position: sticky !important; top: 120px !important;}"
       ],

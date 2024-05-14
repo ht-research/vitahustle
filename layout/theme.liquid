@@ -11,7 +11,6 @@ window.TriplePixelData={TripleName:"vita-hustle.myshopify.com",ver:"2.12",plat:"
 </script>
 
 
-
 {% render 'intelligems-tracking' %}
     
 {% comment %}{% endcomment %}
@@ -250,5 +249,30 @@ tdl.identify()
 {% comment %}
   End of vitahustle Zendesk Widget script →
 {% endcomment %}
+ {% include 'ins_opensend' %}
+
+{% comment %}
+  Getor tag
+{% endcomment %}
+<script src="https://www.chiefmedia.com/moment.js"></script>
+<script src="https://www.chiefmedia.com/moment-timezone-with-data-10-year-range.js"></script>
+<script src="https://www.chiefmedia.com/cookie_referrerv2.js"></script>
+<script type="text/javascript">
+if (!Aggregator){var Aggregator=function(o){
+    var d=document,p=Aggregator.prototype;this.options=o;this.q=[];d.cookie='__na_c=1';p.p=function(c){return function(){
+    this.q.push([c,arguments])}};p.setPerson=p.p(4,arguments);p.logEvent=p.p(0,arguments);p.logPageview=p.p(1,arguments);
+    p.ready=p.p(2,arguments);p.logOutbound=p.p(3,arguments);p.updatePerson=p.p(5,arguments);p.updateSession=p.p(6,arguments);
+    p.updateEvent=p.p(7,arguments);p.push=p.p(8,arguments);var s=d.createElement('script');s.type='text/javascript';
+    s.async=true;(function(i){s.onreadystatechange=function(){if(s.readyState=='loaded'||s.readyState=='complete'){i.run();}};
+    s.onload=function(){i.run();}})(this);e=location.protocol=='https:';s.src='http'+(e?'s://':'://')+
+    (e&&navigator.userAgent.indexOf('MSIE')>-1?'a-{0}.gatorapi.com':'a-{0}.scripts.gatorapi.com').replace('{0}',o.projectId)+
+    '/web?t='+Math.floor((new Date()*.00001)/36);var e=d.getElementsByTagName('script')[0];e.parentNode.insertBefore(s,e);
+}}
+
+var gator = new Aggregator({
+    "projectId": "131127304"
+});
+gator.logPageview();
+</script>
 </body>
 </html>

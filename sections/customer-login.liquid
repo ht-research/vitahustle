@@ -170,6 +170,8 @@
             {{ 'customer.login_page.new_customer_at_html' | t: url: routes.account_register_url }}
           </div>
 
+          {% render 'rtx-account-btn' %}
+
           {%- if form.errors -%}
             <script>
               window.addEventListener('load', () => {

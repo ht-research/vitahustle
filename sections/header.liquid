@@ -220,7 +220,7 @@
 {% render 'drawer-menu', menu: menu, section: section, profile_url: profile_url %}
 
 <header-component
-  class='header section-{{ section.id }} color-{{ color_scheme }} header--desktop {% if enable_border == true %}header--bordered{% endif %}'
+  class='header section-{{ section.id }} color-{{ color_scheme }} header--desktop {% if enable_border == true %}{% endif %}'
   {% if enable_sticky == true %}
     is-sticky
   {% endif %}
