@@ -1,5 +1,10 @@
 <p class="rtxn_customer_portal_login" style="display: none;">
-  <a class="rtxn_manage_subscriptions_btn" href="#">Manage Subscriptions</a>
+  <a class="rtxn_manage_subscriptions_btn {{class}}" href="#">
+    {% if is_account %}
+      {% render 'icon', icon_name: 'account', class: 'account-menu__icon' %}
+    {% endif %}
+    Manage Subscriptions
+  </a>
 </p>
 
 <style>

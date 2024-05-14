@@ -10,15 +10,7 @@
     {% render 'icon', icon_name: 'order', class: 'account-menu__icon' %}
     {{ 'customer.menu.order_history' | t }}
   </a>
-
-    <a
-    class='account-menu__item'
-    href='/apps/retextion'
-  >
-    {% render 'icon', icon_name: 'account', class: 'account-menu__icon' %}
-    Manage Subscriptions
-  </a>
-  
+  {% render 'rtx-account-btn', class: 'account-menu__item', is_account: true %}
   
   <a class='account-menu__item' href='{{ routes.account_logout_url }}' aria-label='{{ 'customer.menu.log_out' | t }}'>
     {% render 'icon', icon_name: 'enter', class: 'account-menu__icon' %}
