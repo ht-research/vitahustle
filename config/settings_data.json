@@ -110,7 +110,7 @@
     "primary_shape_for_product_pages": "square",
     "primary_size_for_product_pages": 5,
     "primary_size_for_filters": 2,
-    "secondary_option_names": "Color,Size",
+    "secondary_option_names": "Size",
     "secondary_shape_for_product_pages": "square",
     "secondary_size_for_product_pages": 4,
     "secondary_size_for_filters": 2,
@@ -217,6 +217,12 @@
         "settings": {
         }
       },
+      "1877152918344802950": {
+        "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
+        "disabled": true,
+        "settings": {
+        }
+      },
       "15683396631634586217": {
         "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": true,
@@ -228,6 +234,12 @@
           "button_horizontal_position": "bottom_left",
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hello! Please message us if you have questions, or need help. You can also email us at help@vitahustle.com"
+        }
+      },
+      "17676059084223943535": {
+        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": true,
+        "settings": {
         }
       },
       "17428600031447253342": {
@@ -250,24 +262,6 @@
           "images_aspect_ratio": "1",
           "cards_background": "#ffffff",
           "cards_border_color": "rgba(0,0,0,0)"
-        }
-      },
-      "1877152918344802950": {
-        "type": "shopify:\/\/apps\/intelligems-a-b-testing\/blocks\/intelligems-script\/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "10312807297210203588": {
-        "type": "shopify:\/\/apps\/aftersell\/blocks\/utm-triggers\/509ec35d-0632-4dfc-a105-fa799cd9d149",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": false,
-        "settings": {
         }
       }
     }
