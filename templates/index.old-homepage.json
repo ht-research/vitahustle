@@ -20,7 +20,7 @@
         "mobile_overlay_opacity": 39,
         "caption": "",
         "title": "YOUR DAILY <span>SUPERFOODS<\/span>",
-        "text": "<p>All-in-One nutrition supports gut health, immunity, focus & overall wellness<\/p>",
+        "text": "<p>Clean and green ingredients support gut health, immunity, muscle recovery & overall wellness<\/p>",
         "heading_size": "h1",
         "body_size": "body3",
         "desktop_content_position": "align-items:center;justify-content:center;",
@@ -162,7 +162,7 @@
     "8c9108e5-5763-41a5-8164-5e91fb2a073e": {
       "type": "banner-strip",
       "settings": {
-        "title": "Founded by <span>Kevin Hart<\/span>",
+        "title": "Founded &amp; Created by <span>Kevin Hart<\/span>",
         "bg_color": "#121212",
         "primary_color": "#ffffff",
         "secondary_color": "#c8e812"
@@ -216,13 +216,13 @@
         "cfcfed6d-af62-4892-af7f-f60dca1ecb9a": {
           "type": "key_highlight",
           "settings": {
-            "key_point": "Low Sugar"
+            "key_point": "Super Mushrooms"
           }
         },
         "ac6c04e0-e288-44c8-895d-8ed228d0661f": {
           "type": "key_highlight",
           "settings": {
-            "key_point": "+ MORE"
+            "key_point": "+ WAY MORE"
           }
         }
       },
@@ -237,231 +237,16 @@
         "cfcfed6d-af62-4892-af7f-f60dca1ecb9a",
         "ac6c04e0-e288-44c8-895d-8ed228d0661f"
       ],
+      "disabled": true,
       "settings": {
         "title": "ALL IN <span>ONE<\/span>",
         "primary_color": "#ffffff",
         "secondary_color": "#afc42f",
-        "subtext": "Everything you need for mind and body",
+        "subtext": "Everything you need for mind and body<br>",
         "text_color": "#4d201a",
         "cta_text": "Shop Now",
         "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
         "list_color": "#797a74"
-      }
-    },
-    "new_all_in_one_Vd9zRh": {
-      "type": "new-all-in-one",
-      "blocks": {
-        "rich_text_f7kffR": {
-          "type": "rich_text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/Group_48096021_1.png"
-          }
-        },
-        "rich_text_HFGchF": {
-          "type": "rich_text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/Group_48096022_1.png"
-          }
-        },
-        "rich_text_wjfUJq": {
-          "type": "rich_text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/Group_48096023_1.png"
-          }
-        }
-      },
-      "block_order": [
-        "rich_text_f7kffR",
-        "rich_text_HFGchF",
-        "rich_text_wjfUJq"
-      ],
-      "disabled": true,
-      "settings": {
-        "new_all_in_one_title": "ALL IN ONE",
-        "new_all_in_one_subtitle": "Everything you need for mind and body",
-        "background_desktop_image": "shopify:\/\/shop_images\/Shakefruits_1_2_9a4064c1-d3c4-492b-b56b-39064b485cb4.png",
-        "background_mobile_image": "shopify:\/\/shop_images\/Rectangle_29285_1.png",
-        "background_ipad_image": "shopify:\/\/shop_images\/Rectangle_29285_2.png",
-        "btn_text": "SHOP NOW",
-        "btn_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry"
-      }
-    },
-    "1fa8ddd8-c62b-4a4b-81e1-e1e801d2dff3": {
-      "type": "flavors",
-      "blocks": {
-        "36d001dd-c9d0-43f3-a29f-62ba993250a6": {
-          "type": "flavor_box",
-          "settings": {
-            "thumbnail": "shopify:\/\/shop_images\/Strawberry_with_shadow_V2_3.png",
-            "main_image": "shopify:\/\/shop_images\/web_VitaHustle_r2_06B_1449_2aab87db-0c6c-43cf-a3c5-0f312b7cafeb.jpg",
-            "flavor_name": "STRAWBERRY",
-            "main_banner_title": "",
-            "main_banner_subtext": ""
-          }
-        },
-        "5a757184-498a-49bd-aae7-534b3a151bab": {
-          "type": "flavor_box",
-          "settings": {
-            "thumbnail": "shopify:\/\/shop_images\/choc_van.png",
-            "main_image": "shopify:\/\/shop_images\/image5-min_650x_2a9fb01c-73ec-4e65-8a76-f657680d4035.webp",
-            "flavor_name": "CACAO & VANILLA",
-            "main_banner_title": "",
-            "main_banner_subtext": ""
-          }
-        }
-      },
-      "block_order": [
-        "36d001dd-c9d0-43f3-a29f-62ba993250a6",
-        "5a757184-498a-49bd-aae7-534b3a151bab"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "TREAT YOURSELF TO <br><span>3 DELICIOUS FLAVORS<\/span>",
-        "subtext": "A Bag Full of Nutrition -  Just add Water!",
-        "cta_text": "Shop",
-        "cta_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry"
-      }
-    },
-    "custom_product_section_iWg9mK": {
-      "type": "custom-product-section",
-      "blocks": {
-        "rich_text_9NGnki": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/Artboard_21_3.png",
-            "text_content": "Soy Free"
-          }
-        },
-        "rich_text_a6tAzE": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/Artboard_22_4338315a-01a9-41fa-9ac6-c82f6459d482.png",
-            "text_content": "Dairy Free"
-          }
-        },
-        "rich_text_HMUwaU": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/Artboard_23_1aacaf61-7e59-4d2b-9773-f70dc55ae67d.png",
-            "text_content": "Gluten Free"
-          }
-        },
-        "rich_text_WYFL9g": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/Artboard_24_9f442155-0072-4308-a2c4-3c45fe4b52b3.png",
-            "text_content": "Non GMO"
-          }
-        },
-        "rich_text_eDcHVh": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/Artboard_26_7d306e54-cb1a-4927-b592-e292d67b51ca.png",
-            "text_content": "No Fillers"
-          }
-        }
-      },
-      "block_order": [
-        "rich_text_9NGnki",
-        "rich_text_a6tAzE",
-        "rich_text_HMUwaU",
-        "rich_text_WYFL9g",
-        "rich_text_eDcHVh"
-      ],
-      "settings": {
-        "custom_product_title": "VITAHUSTLE ONE.<br> <span>ACHIEVE YOUR MAXIMUM POTENTIAL<\/span>",
-        "custom_product_subtitle": "",
-        "custom_single_product": "",
-        "product_list": [
-          "one-superfood-protein-shake-strawberry",
-          "one-superfood-protein-shake-strawberry",
-          "one-superfood-protein-shake-strawberry"
-        ]
-      }
-    },
-    "9fd9498c-6efb-476e-8d6a-a7a8531248572": {
-      "type": "how-to-use-homepage",
-      "blocks": {
-        "text_hLYYRX": {
-          "type": "text",
-          "settings": {
-            "how_to_use_step_title": "Scoop",
-            "how_to_use_step_content": "2 Scoops of powder"
-          }
-        },
-        "text_m9wbic": {
-          "type": "text",
-          "settings": {
-            "how_to_use_step_title": "BLEND",
-            "how_to_use_step_content": "With 8-12 oz of ice cold water or milk"
-          }
-        },
-        "text_kyDfXj": {
-          "type": "text",
-          "settings": {
-            "how_to_use_step_title": "GO",
-            "how_to_use_step_content": "Pour over ice & drink immediately"
-          }
-        }
-      },
-      "block_order": [
-        "text_hLYYRX",
-        "text_m9wbic",
-        "text_kyDfXj"
-      ],
-      "settings": {
-        "display_rating": false,
-        "number_of_reviews": 426,
-        "color_scheme": "white",
-        "enable_background_around_container": false,
-        "container_size": "full-screen",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "desktop_height": 960,
-        "mobile_height": 600,
-        "desktop_img": "shopify:\/\/shop_images\/GIF.gif",
-        "mobile_img": "shopify:\/\/shop_images\/GIF.gif",
-        "viddeo_poster": "shopify:\/\/shop_images\/VitaHustle_Banner_Edit_16x9_01.jpg",
-        "m_video_poster": "shopify:\/\/shop_images\/VitaHustle_Banner_Edit_9x16_01_1.jpg",
-        "desktop_overlay_opacity": 56,
-        "mobile_overlay_opacity": 39,
-        "caption": "",
-        "title": "",
-        "Heading": "All Day Nutrition Ready <br><span>in Less than a Minute<\/span>",
-        "text": "",
-        "heading_size": "h1",
-        "body_size": "body3",
-        "desktop_content_position": "align-items:center;justify-content:center;",
-        "desktop_content_align": "center",
-        "content_max_width": 528,
-        "content_spacing": 116,
-        "mobile_content_position": "align-items:center;justify-content:center;",
-        "mobile_content_align": "center",
-        "desktop_content_background": "none",
-        "mobile_content_background": "none",
-        "btn_text": "",
-        "btn_url": "",
-        "btn_style": "solid",
-        "extra_btn_text": "",
-        "extra_btn_url": "",
-        "extra_btn_style": "outline"
-      }
-    },
-    "cab30cee-3dd0-4da8-9392-756aff6c1cee": {
-      "type": "homepage-image-with-text-new",
-      "settings": {
-        "title": "And, it tastes <span>damn delicious!<\/span>",
-        "subtext": "\"Hands down one of the best tasting drinks I've ever had. Better ingredients and less sugar.\"",
-        "title_font_size": 80,
-        "title_box_width": 390,
-        "cta_text": "Shop Now",
-        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
-        "top_spacing": 110,
-        "bottom_spacing": 290,
-        "background_image": "shopify:\/\/shop_images\/Image2_1_1.png",
-        "background_image_mobile": "shopify:\/\/shop_images\/Kevin_1_1.png",
-        "alignment": "left",
-        "mobile_height": 520
       }
     },
     "7104b9b8-98c9-4888-9248-7874a9f6472f": {
@@ -663,121 +448,104 @@
         "section_spacing_bottom": 48
       }
     },
+    "new_all_in_one_Vd9zRh": {
+      "type": "new-all-in-one",
+      "blocks": {
+        "rich_text_f7kffR": {
+          "type": "rich_text",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/Group_48096021_1.png"
+          }
+        },
+        "rich_text_HFGchF": {
+          "type": "rich_text",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/Group_48096022_1.png"
+          }
+        },
+        "rich_text_wjfUJq": {
+          "type": "rich_text",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/Group_48096023_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "rich_text_f7kffR",
+        "rich_text_HFGchF",
+        "rich_text_wjfUJq"
+      ],
+      "settings": {
+        "new_all_in_one_title": "ALL IN ONE",
+        "new_all_in_one_subtitle": "Everything you need for mind and body",
+        "background_desktop_image": "shopify:\/\/shop_images\/Shakefruits_1_2_9a4064c1-d3c4-492b-b56b-39064b485cb4.png",
+        "background_mobile_image": "shopify:\/\/shop_images\/Rectangle_29285_1.png",
+        "background_ipad_image": "shopify:\/\/shop_images\/Rectangle_29285_2.png",
+        "btn_text": "SHOP NOW",
+        "btn_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry"
+      }
+    },
+    "cab30cee-3dd0-4da8-9392-756aff6c1cee": {
+      "type": "image-with-text-new",
+      "disabled": true,
+      "settings": {
+        "title": "And, it tastes <span>damn delicious!<\/span>",
+        "subtext": "VitaHustle ONE is the real deal, no chalkiness, just lip-smacking, soul-satisfying taste!",
+        "title_font_size": 65,
+        "title_box_width": 350,
+        "cta_text": "SEE REVIEWS",
+        "cta_url": "shopify:\/\/pages\/vitahustle-reviews",
+        "top_spacing": 245,
+        "bottom_spacing": 275,
+        "background_image": "shopify:\/\/shop_images\/Image2_1_1.png",
+        "background_image_mobile": "shopify:\/\/shop_images\/Kevin_1_1.png",
+        "alignment": "left",
+        "mobile_height": 548
+      }
+    },
+    "1fa8ddd8-c62b-4a4b-81e1-e1e801d2dff3": {
+      "type": "flavors",
+      "blocks": {
+        "36d001dd-c9d0-43f3-a29f-62ba993250a6": {
+          "type": "flavor_box",
+          "settings": {
+            "thumbnail": "shopify:\/\/shop_images\/Strawberry_with_shadow_V2_3.png",
+            "main_image": "shopify:\/\/shop_images\/web_VitaHustle_r2_06B_1449_2aab87db-0c6c-43cf-a3c5-0f312b7cafeb.jpg",
+            "flavor_name": "STRAWBERRY",
+            "main_banner_title": "",
+            "main_banner_subtext": ""
+          }
+        },
+        "5a757184-498a-49bd-aae7-534b3a151bab": {
+          "type": "flavor_box",
+          "settings": {
+            "thumbnail": "shopify:\/\/shop_images\/choc_van.png",
+            "main_image": "shopify:\/\/shop_images\/image5-min_650x_2a9fb01c-73ec-4e65-8a76-f657680d4035.webp",
+            "flavor_name": "CACAO & VANILLA",
+            "main_banner_title": "",
+            "main_banner_subtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "36d001dd-c9d0-43f3-a29f-62ba993250a6",
+        "5a757184-498a-49bd-aae7-534b3a151bab"
+      ],
+      "settings": {
+        "title": "TREAT YOURSELF TO <br><span>3 DELICIOUS FLAVORS<\/span>",
+        "subtext": "A Bag Full of Nutrition -  Just add Water!",
+        "cta_text": "Shop",
+        "cta_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry"
+      }
+    },
     "48b62c86-ee21-4dd4-982a-3b2d19f4db86": {
       "type": "vitahustle-one",
-      "disabled": true,
       "settings": {
         "title": "VitaHustle One. <span>Achieve Your Maximum Potential<\/span>",
         "subtext": "Leave all the others behind. <br>\nExperience what no other nutrition shake can offer.",
         "cta_text": "GET STARTED",
         "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
         "bg_color": "#ffffff"
-      }
-    },
-    "9db44892-cf73-44af-adaa-4185d0a6bf2b": {
-      "type": "image-with-text-new",
-      "disabled": true,
-      "settings": {
-        "title": "<span>FUEL<\/span> YOUR HUSTLE",
-        "subtext": "",
-        "title_font_size": 110,
-        "title_box_width": 600,
-        "cta_text": "Get Started",
-        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
-        "top_spacing": 460,
-        "bottom_spacing": 260,
-        "background_image": "shopify:\/\/shop_images\/image7_1_1.jpg",
-        "background_image_mobile": "shopify:\/\/shop_images\/image7_1_1.jpg",
-        "alignment": "center",
-        "mobile_height": 450
-      }
-    },
-    "testimonial_PGKReh": {
-      "type": "testimonial",
-      "blocks": {
-        "video_text_3f4eVi": {
-          "type": "video_text",
-          "settings": {
-            "testimonial_thumbnail_image": "shopify:\/\/shop_images\/ANDREW_LISCIO.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
-          }
-        },
-        "rich_text_eJM369": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/Ellipse_91_1.png",
-            "review_text": "\"I drink it right after my workout and can tell it's helping my body develop. Also a very good meal replacement, and gives energy all around.\"",
-            "customer_name": "James",
-            "customer_designation": "Finance Professional"
-          }
-        },
-        "rich_text_cADijJ": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/Ellipse_91.png",
-            "review_text": "\"I drink it every morning before I go to work because I never have time to get breakfast. It wakes me up and fills me up and makes me feel alert and energized.\"",
-            "customer_name": "Tasha",
-            "customer_designation": "Creative Director"
-          }
-        },
-        "video_text_Lci3qn": {
-          "type": "video_text",
-          "settings": {
-            "testimonial_thumbnail_image": "shopify:\/\/shop_images\/BRITTANY_WOODCOX.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e301b71b26d74dea980f3457ce5e6db2.mp4"
-          }
-        },
-        "video_text_DmxB7t": {
-          "type": "video_text",
-          "settings": {
-            "testimonial_thumbnail_image": "shopify:\/\/shop_images\/MELISSA_ARDON.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c87e435462724016a9acb2ebda611d7c.mp4"
-          }
-        },
-        "rich_text_ncUaTt": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/1661800899__image__original.jpg",
-            "review_text": "\"I've been looking for a quick and easy way to fit all my daily vitamins and nutrients into my busy schedule. I found VitaHustle and it has allowed me to feel my best while juggling my kids and my busy schedule... and it tastes amazing!\"",
-            "customer_name": "Kristin",
-            "customer_designation": "Teacher"
-          }
-        },
-        "rich_text_XngqNK": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/Ellipse_90.png",
-            "review_text": "\"Definitely can feel a difference after just a couple days. Awesome stuff thx for putting in the work to get this out there\"",
-            "customer_name": "Justin",
-            "customer_designation": "Finance Professional"
-          }
-        },
-        "video_text_8i6AEP": {
-          "type": "video_text",
-          "settings": {
-            "testimonial_thumbnail_image": "shopify:\/\/shop_images\/PALM_SURICHANYA_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9cd77643acba49609fa6feb3798d562e.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "video_text_DmxB7t",
-        "rich_text_cADijJ",
-        "rich_text_eJM369",
-        "video_text_3f4eVi",
-        "video_text_Lci3qn",
-        "rich_text_ncUaTt",
-        "rich_text_XngqNK",
-        "video_text_8i6AEP"
-      ],
-      "settings": {
-        "testimonial_title": "Who uses VitaHustle?",
-        "testimonial_subtitle": "Thousands of athletes, celebrities, fitness enthusiasts and every day people looking to optimize their wellness.",
-        "testimonial_review_title": "Over 5,000 verified reviews",
-        "testimonial_review_subtitle": "third party verified reviews",
-        "testimonial_review_count": "4.8",
-        "btn_text": "ALL REVIEWS",
-        "btn_url": "shopify:\/\/pages\/vitahustle-reviews"
       }
     },
     "a58bbcfa-ff9e-493b-9b88-4f16d0c602d6": {
@@ -839,13 +607,21 @@
         "subtext": "Clean & Green: No Artificial Ingredients, No Added Sugar & No Junky Fillers"
       }
     },
-    "founded_by_RwxeHW": {
-      "type": "founded-by",
+    "9db44892-cf73-44af-adaa-4185d0a6bf2b": {
+      "type": "image-with-text-new",
       "settings": {
-        "founded_by_title": "FOUNDED BY  KEVIN HART",
-        "founded_by_subtitle": "VitaHustle is all about fueling your hustle and maximizing every single day. With the ONE, you can conquer your day effortlessly, as it's not only nutritious, but damn delicious!",
-        "founder_desktop_image": "shopify:\/\/shop_images\/image_341.png",
-        "founder_mobile_image": "shopify:\/\/shop_images\/image_342.png"
+        "title": "<span>FUEL<\/span> YOUR HUSTLE",
+        "subtext": "",
+        "title_font_size": 110,
+        "title_box_width": 600,
+        "cta_text": "Get Started",
+        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "top_spacing": 460,
+        "bottom_spacing": 260,
+        "background_image": "shopify:\/\/shop_images\/image7_1_1.jpg",
+        "background_image_mobile": "shopify:\/\/shop_images\/image7_1_1.jpg",
+        "alignment": "center",
+        "mobile_height": 450
       }
     },
     "d80b875a-9a8a-4e72-a0cf-8e6bb77e7726": {
@@ -917,17 +693,13 @@
     "get_lucky_banner_mp4hGf",
     "8c9108e5-5763-41a5-8164-5e91fb2a073e",
     "0d20106d-cf81-4575-89b1-4dfd2ec13c66",
-    "new_all_in_one_Vd9zRh",
-    "1fa8ddd8-c62b-4a4b-81e1-e1e801d2dff3",
-    "custom_product_section_iWg9mK",
-    "9fd9498c-6efb-476e-8d6a-a7a8531248572",
-    "cab30cee-3dd0-4da8-9392-756aff6c1cee",
     "7104b9b8-98c9-4888-9248-7874a9f6472f",
+    "new_all_in_one_Vd9zRh",
+    "cab30cee-3dd0-4da8-9392-756aff6c1cee",
+    "1fa8ddd8-c62b-4a4b-81e1-e1e801d2dff3",
     "48b62c86-ee21-4dd4-982a-3b2d19f4db86",
-    "9db44892-cf73-44af-adaa-4185d0a6bf2b",
-    "testimonial_PGKReh",
     "a58bbcfa-ff9e-493b-9b88-4f16d0c602d6",
-    "founded_by_RwxeHW",
+    "9db44892-cf73-44af-adaa-4185d0a6bf2b",
     "d80b875a-9a8a-4e72-a0cf-8e6bb77e7726"
   ]
 }

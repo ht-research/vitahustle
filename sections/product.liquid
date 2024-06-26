@@ -20,6 +20,22 @@
   {% endstyle %}
 {% endcapture %}
 
+{% if product.handle=="one-superfood-protein-shake-strawberry" %}
+
+<style>
+  
+  @media screen and (max-width: 768px) {
+    .section-spacing.product--page .product__container{
+         padding: 0px;
+        }
+    }
+    .subscription_box .delivery_frequency_dropdown ul.available_frequency li{
+      
+      padding-inline-start: 30px !important;
+    }
+    </style>
+  {% endif %}
+
 {% render 'inline-css-minifier', css: css %}
 
 <div class="product section section-{{ section.id }} color-{{ color_scheme }} section-spacing product--page {% if block_layout == 'two-column' or block_layout == 'one-column' %} product--with-desktop-media-grid {% endif %} {% if block_layout == 'thumbnails-left' or block_layout == 'thumbnails-right' or block_layout == 'thumbnails-bottom' %}  {% if container_size == 'page-width' %} product--with-page-width-container-and-desktop-media-carousel {% else %} product--with-desktop-media-carousel {% endif %}  {% endif %}">

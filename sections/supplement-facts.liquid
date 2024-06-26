@@ -8,9 +8,11 @@
                 <div class="vanilla switch_item" data-tab="vanilla">
                     Vanilla Bean
                 </div>
-                <div class="strawberry switch_item" data-tab="strawberry">
-                    Strawberry
-                </div>
+                {% unless template contains 'offer-landing-page' %}
+                    <div class="strawberry switch_item" data-tab="strawberry">
+                        Strawberry
+                    </div>
+                {% endunless %}
             </div>
         </div>
 
@@ -21,13 +23,15 @@
             </div>
 
             <div class="vanilla_main supplement_box" data-container="vanilla">
-            <img class="desktop_only" src="{{ section.settings.d_v_suplement | img_url: '1440x' }}" loading="lazy" />
-            <img class="mobile_only" src="{{ section.settings.m_v_suplement | img_url: '800x' }}" loading="lazy" />
+                <img class="desktop_only" src="{{ section.settings.d_v_suplement | img_url: '1440x' }}" loading="lazy" />
+                <img class="mobile_only" src="{{ section.settings.m_v_suplement | img_url: '800x' }}" loading="lazy" />
             </div>
-            <div class="strawberry_main supplement_box" data-container="strawberry">
-                <img class="desktop_only" src="{{ section.settings.d_s_suplement | img_url: '1440x' }}" loading="lazy" />
-                <img class="mobile_only" src="{{ section.settings.m_s_suplement | img_url: '800x' }}" loading="lazy" />
-            </div>
+            {% unless template contains 'offer-landing-page' %}
+                <div class="strawberry_main supplement_box" data-container="strawberry">
+                    <img class="desktop_only" src="{{ section.settings.d_s_suplement | img_url: '1440x' }}" loading="lazy" />
+                    <img class="mobile_only" src="{{ section.settings.m_s_suplement | img_url: '800x' }}" loading="lazy" />
+                </div>
+            {% endunless %}
         </div>
 
     </div>

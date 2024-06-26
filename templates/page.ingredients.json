@@ -554,7 +554,7 @@
         "mobile_space_between_cards": 16,
         "content_spacing": 0,
         "show_column_background": false,
-        "enable_carousel_on_mobile": false,
+        "enable_carousel_on_mobile": true,
         "btn_text": "",
         "btn_url": "",
         "btn_style": "outline"
@@ -629,7 +629,7 @@
         "mobile_space_between_cards": 16,
         "content_spacing": 24,
         "show_column_background": false,
-        "enable_carousel_on_mobile": false,
+        "enable_carousel_on_mobile": true,
         "btn_text": "",
         "btn_url": "",
         "btn_style": "outline"
@@ -763,12 +763,12 @@
         "column_heading_size": "h7",
         "column_body_size": "body4",
         "column_alignment": "center",
-        "desktop_columns": 4,
+        "desktop_columns": 3,
         "desktop_space_between_cards": 24,
         "mobile_space_between_cards": 16,
         "content_spacing": 24,
         "show_column_background": false,
-        "enable_carousel_on_mobile": false,
+        "enable_carousel_on_mobile": true,
         "btn_text": "",
         "btn_url": "",
         "btn_style": "outline"
@@ -842,7 +842,7 @@
         "mobile_space_between_cards": 16,
         "content_spacing": 24,
         "show_column_background": false,
-        "enable_carousel_on_mobile": false,
+        "enable_carousel_on_mobile": true,
         "btn_text": "",
         "btn_url": "",
         "btn_style": "outline"

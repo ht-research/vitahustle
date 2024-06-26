@@ -25,8 +25,7 @@ window.TriplePixelData={TripleName:"vita-hustle.myshopify.com",ver:"2.12",plat:"
          window.location.href = '/products/vitahustle-one-superfood';
    }
 </script> 
-  {% render 'elevar-head-listener' %}
-  {% render 'elevar-head' %}
+
 {% include 'booster-seo' %}
 {% render 'replo-head' %}
 
@@ -38,7 +37,7 @@ tdl.identify()
 </script>
     
  {% render 'pagefly-head' %}
- {% if page.template_suffix == 'homepage-v2' or template.name == 'product' or template.name == 'index' %}
+ {% if page.template_suffix == 'homepage-v2' or template.name == 'product' or template.name == 'index' or template contains 'offer-landing-page' %}
 		<script  src="{{ 'jquery.min.js' | asset_url }}"></script>
 		<script  src="{{ 'slick.min.js' | asset_url }}"></script>
 {% endif %}
@@ -106,10 +105,14 @@ tdl.identify()
 }
 </style>
   <meta name="facebook-domain-verification" content="ogc4geohnqpb6l0r31u95tvwoxab7k" />
-
+ {% if template.name == 'index' %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ {% endif %} 
 </head>
   <body class="color-{{ settings.default_color_scheme }} theme-with-{{ settings.edge_rounding_degree }}-rounded-style {% if settings.edge_rounding_degree != 'none' %} theme-with-rounded-style{% endif %}">
-  {% render 'elevar-body-end' %}
+
     {% if template.name == 'password' %}
       {% sections 'password-header-group' %}
     {% else %}

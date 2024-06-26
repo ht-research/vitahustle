@@ -36,7 +36,11 @@
           when 'variant_picker'
             render 'product-variant-picker-block', product: product, section: section, block: block, sectionId: sectionId
           when 'buy_buttons'
-            render 'product-form-block', product: product, section: section, block: block, sectionId: sectionId
+            if template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry"
+              render 'product-new-form-block', product: product, section: section, block: block, sectionId: sectionId
+            else
+              render 'product-form-block', product: product, section: section, block: block, sectionId: sectionId
+            endif
           when 'button'
             render 'product-button-block', product: product, section: section, block: block, sectionId: sectionId
           when 'complementary_products'

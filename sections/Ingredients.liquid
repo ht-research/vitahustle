@@ -1,5 +1,6 @@
 
 {% assign data = product.metafields.custom.ingredients_content.value %}
+{% assign ingredient_wrapper_background_colour = product.metafields.custom.ingredient_wrapper_background_colour %}
 
 <style>
     .ingredients_wrapper{
@@ -8,14 +9,18 @@
         background-image: url("{{ data.background_desktop_image | img_url: '1440x' }}");
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: #F8FAEF;
+        {% if ingredient_wrapper_background_colour != blank %}
+            background-color: {{ingredient_wrapper_background_colour }};
+        {% else %}
+            background-color: #F8FAEF;
+        {% endif %}
     }
     .ingredients_wrapper .inner_ingredients_wrapper{
         width: 100%;
         height: 54.501vw;
         max-height: 784.82px;
         padding: 40px 0px 0px 0px;
-        margin: 20px 0px;
+        margin: 20px 0px 0px 0px;
     }
     .ingredients_wrapper .inner_ingredients_wrapper .text_content{
         max-width: 800px;

@@ -1,0 +1,376 @@
+{%- liquid
+    assign options = block.settings
+    assign enable_pickup_availability = options.enable_pickup_availability
+    assign show_pickup_availability = false
+    assign selected_variant = product.selected_or_first_available_variant
+    assign available = selected_variant.available
+    assign product_form_id = 'product-form-' | append: product.id | append: '-' | append: sectionId
+    assign pick_up_locations = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true
+    assign pick_up_availabilities = false
+    assign add_to_cart_label = 'products.product.add_to_cart' | t
+    assign sold_out_label = 'products.product.sold_out' | t
+  
+    for location in pick_up_locations
+      if location.available == true
+        assign pick_up_availabilities = true
+      endif
+    endfor
+  
+    assign enable_gift_card = false
+    if options.enable_gift_card and product.gift_card?
+      assign enable_gift_card = true
+    endif
+  
+    assign show_dynamic_checkout = false
+    if options.show_dynamic_checkout and enable_gift_card == false
+      assign show_dynamic_checkout = true
+    endif
+  
+    if product.template_suffix contains 'pre-order'
+      assign show_dynamic_checkout = false
+      assign add_to_cart_label = 'products.product.pre_order' | t
+    endif
+  
+    if enable_pickup_availability and pick_up_availabilities == true
+      unless product.template_suffix contains 'pre-order'
+        assign show_pickup_availability = true
+      endunless
+    endif
+  -%}
+  
+  {% if template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %}
+    <style>
+      .add_to_cart_strawberry{
+        display: none;
+        width: 100%;
+        background-color: rgb(200, 232, 18);
+        padding: 2rem 6rem;
+        border-radius: 100px;
+        letter-spacing: -0.7px;
+        border: none;
+        font-family: "FK Grotesk Bold";
+        text-transform: uppercase;
+        font-size: 17px;
+        text-align: center;
+        cursor: pointer;
+        min-height: 5.6rem;
+      }
+      .add_to_cart_strawberry span{
+      
+      }
+    </style>
+  {% endif %}
+  
+  {%- if product != blank -%}
+     {% if template contains 'new-superfood-greens' %} 
+  <div class=""style="display: flex;" >
+    {% endif %}
+    {% if template contains 'greens' %}
+    <div
+    class="product-quantity__wrap"
+    id="product-quantity-{{ product.id }}-{{ sectionId }}"
+    {{ block.shopify_attributes }}
+  >
+    <!--
+      <label class='product-quantity__label' for='Quantity-{{ product.id }}-{{ sectionId }}'>
+        {{ 'products.product.quantity.label' | t }}
+      </label>
+    -->
+    <quantity-component
+      class="quantity product-quantity__quantity"
+      data-stock="{% if product.selected_or_first_available_variant.inventory_policy == 'deny' %}{% if available == true %}{% if product.selected_or_first_available_variant.inventory_quantity > 0 %}{{ product.selected_or_first_available_variant.inventory_quantity }}{% else %}1{% endif %}{% else %}0{% endif %}{% else %}9999{% endif %}"
+    >
+      <quantity-btn class="quantity__btn" name="minus" data-action="minus" type="button" disabled tabindex="0">
+        {%- render 'icon', icon_name: 'minus', class: 'quantity__btn-icon' -%}
+      </quantity-btn>
+      <input
+        class="quantity__input"
+        form="product-form-{{ product.id }}-{{ sectionId }}"
+        id="Quantity-{{ product.id }}-{{ sectionId }}"
+        min="{% if available %}1{% else %}0{% endif %}"
+        name="quantity"
+        type="number"
+        value="{% if available %}1{% else %}0{% endif %}"
+        data-quantity-input
+        {% if available == false %}
+          disabled
+        {% endif %}
+      >
+      <quantity-btn
+        class="quantity__btn"
+        name="plus"
+        type="button"
+        data-action="plus"
+        {% if available == false %}
+          disabled
+        {% endif %}
+        tabindex="0"
+      >
+        {%- render 'icon', icon_name: 'plus', class: 'quantity__btn-icon' -%}
+      </quantity-btn>
+    </quantity-component>
+  </div>
+    {% endif %}
+  
+    {% if template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %}
+      {%- render 'why-subscribe' -%}
+    {% endif %}
+    <div class="" {{ block.shopify_attributes }}>
+  
+
+      <product-form data-product-id="{{ product.id }}" id="product-form-component-{{ product.id }}-{{ sectionId }}">
+        {%- form 'product',
+          product,
+          id: product_form_id,
+          class: 'product-form',
+          novalidate: 'novalidate',
+          data-type: 'add-to-cart-form'
+        -%}
+          {% if enable_gift_card %}
+            {% render 'gift-card-recipient-form', product: product, form: form, section: section, block: block %}
+          {% endif %}
+  
+          <input
+            type="hidden"
+            name="id"
+            value="{{ selected_variant.id }}"
+            data-product-form-variant
+            id="{{ product_form_id }}-IdInput-{{ form.id }}"
+            class="selectedvariant"
+          >
+          {{ form | payment_terms }}
+          <div class="product-form__btns ccc">
+            {% if template.name == 'product' and sectionId contains '---MainSection' %}
+              <div>
+                <div class="product-form__btn-wrapper">
+                        <button class="add_to_cart_strawberry"
+                            {% if available == false %}
+                                disabled
+                            {% endif %}
+                        >
+                          <span>
+                            {%- if available -%}
+                              {{ add_to_cart_label }}
+                            {%- else -%}
+                              {{ sold_out_label }}
+                            {%- endif -%}
+                          </span>
+                        </button>
+
+                        <button
+                        type="submit"
+                        name="add"
+                        id="product-buy-btn-{{ product.id }}-{{ sectionId }}"
+                        class="product-form__btn btn btn--lg {% if show_dynamic_checkout == true %}btn--outline{% else %}btn--solid{% endif %}"
+                        {% if available == false %}
+                            disabled
+                        {% endif %}
+                        aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
+                        >
+                        <span data-button-text>
+                            {%- if available -%}
+                            {{ add_to_cart_label }}
+                            {%- else -%}
+                            {{ sold_out_label }}
+                            {%- endif -%}
+                        </span>
+                        {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
+                        </button>
+
+                </div>
+              </div>
+  
+              <product-form-button class="product-form__mobile-sticky-button">
+                <div
+                  class="product-form__btn-wrapper product-form__btn-wrapper--sticky-mobile-button"
+                >
+                    <button class="add_to_cart_strawberry sticky"
+                        {% if available == false %}
+                            disabled
+                        {% endif %}
+                    >
+                      <span>
+                        {%- if available -%}
+                          {{ add_to_cart_label }}
+                        {%- else -%}
+                          {{ sold_out_label }}
+                        {%- endif -%}
+                      </span>
+                    </button>
+                  <button
+                    type="submit"
+                    name="add"
+                    id="sticky-product-buy-btn-{{ product.id }}-{{ sectionId }}"
+                    class="product-form__btn btn btn--lg btn--solid"
+                    {% if available == false %}
+                      disabled
+                    {% endif %}
+                    data-product-form-button
+                    aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
+                  >
+                    <span data-button-text>
+                      {%- if available -%}
+                        {{ add_to_cart_label }}
+                      {%- else -%}
+                        {{ sold_out_label }}
+                      {%- endif -%}
+                    </span>
+                    {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
+                  </button>
+                </div>
+              </product-form-button>
+            {%- else -%}
+              <button
+                type="submit"
+                name="add"
+                id="product-buy-btn-{{ product.id }}-{{ sectionId }}"
+                class="product-form__btn btn btn--lg {% if show_dynamic_checkout == true %}btn--outline{% else %}btn--solid{% endif %}"
+                {% if available == false %}
+                  disabled
+                {% endif %}
+                aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
+              >
+                <span data-button-text>
+                  {%- if available -%}
+                    {{ product.price | money }} | {{ add_to_cart_label }}
+                  {%- else -%}
+                    {{ sold_out_label }}
+                  {%- endif -%}
+                </span>
+                {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
+              </button>
+            {% endif %}
+  
+            {%- if show_dynamic_checkout == true -%}
+              <div class="dynamic-checkout-buttons">
+                {{ form | payment_button }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endform -%}
+      </product-form>
+  
+      {%- if show_pickup_availability == true -%}
+        <pickup-availability
+          class="pickup-availability body-font-weight-from-global-settings"
+          data-base-url="{{ shop.url }}{{ routes.root_url }}"
+          data-variant-id="{{ selected_variant.id }}"
+          data-has-only-default-variant="{{ product.has_only_default_variant }}"
+          id="product-pickup-availability-{{ product.id }}-{{ sectionId }}"
+        >
+          <pickup-availability-content class="pickup-availability-info"> </pickup-availability-content>
+        </pickup-availability>
+      {%- endif -%}
+    </div>
+     {% if template contains 'new-superfood-greens' %} 
+  </div>
+        {%- endif -%}
+  
+  {%- endif -%}
+  
+  <script>
+    var selling_plaID = "{{product.selling_plan_groups[0].selling_plans[0].id}}"
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+
+        $('.modal_popup.upgrade_cart .continue_onetime').on('click', function(){
+           let variantId = $('.selectedvariant').val();
+           let quantity__input = $('.quantity__input').val();
+           addTocart(variantId,quantity__input,"onetime");
+           console.log("variantId",variantId,quantity__input);
+        });
+
+        $('.modal_popup.upgrade_cart .subscribe_option').on('click', function(){
+            let variantId = $('.selectedvariant').val();
+            let quantity__input = $('.quantity__input').val();
+            addTocart(variantId,quantity__input,"subscribe",selling_plaID);
+        });
+
+        $('.modal_popup .inner_container_box .close_box').on('click', function(){
+            $('.modal_popup').hide();
+        })
+
+        $('.add_to_cart_strawberry').on('click', function(event){
+            event.preventDefault();
+            console.log("it's working");
+            $('.modal_popup').fadeIn();
+        })
+        let items = [];
+        let plan_type = $('input[name="subscribe"]:checked').val();
+        if(plan_type=="selling_plan"){
+            $('.add_to_cart_strawberry').css("display","none");
+            $('.product-form__btn').css("display", "inline-flex");
+        }
+        else{
+            $('.product-form__btn').css("display", "none");
+            $('.add_to_cart_strawberry').css("display","block");
+        }
+
+        $('input[name="subscribe"]').on('change',function(){
+            console.log("id",$(this).attr('id'))
+            if($(this).attr('id') == 'onetime_item'){
+                $('.product-form__btn').css("display", "none");
+                $('.add_to_cart_strawberry').css("display","block");
+            }
+            else{
+                $('.add_to_cart_strawberry').css("display","none");
+                $('.product-form__btn').css("display", "inline-flex");
+            }
+        });
+        console.log("plan_type",plan_type);
+
+        function addTocart(id,qty,purchase_type,selling_planID){
+
+            if(purchase_type=="onetime"){
+                items = [
+                    {
+                        id: id,
+                        quantity: qty
+                    }
+                ]
+            
+            }
+            else{
+                items = [
+                    {
+                        id: id,
+                        selling_plan: selling_planID,
+                        quantity: qty
+                    }
+                ]
+            }
+
+            console.log("items",items);
+            $.ajax({
+                type: 'POST',
+                url: '/cart/add.js',
+                data: {
+                    items: items
+                },
+                dataType: 'json',
+                success: function(data) {
+                    $('.modal_popup.upgrade_cart').hide(); 
+                    console.log('data=========>', data);
+                    $('.sidebar-cart__body').remove();
+                    fetch(window.Shopify.routes.root + "?sections=cart-drawer")
+                    .then(res => res.json()).then((res) => {
+                      const response = $.parseHTML(res['cart-drawer']);          
+                      
+                      
+                      $('.sidebar-cart').removeAttr('is-empty');     
+                      $('.sidebar-cart').append($(response).find('#CartInSidebar')[0].innerHTML);
+                      setTimeout(function() {
+                        $('.sidebar-cart__body').addClass('dataAddedonSideBar');
+                        $('.sidebar-cart').attr('data-aria-expanded', "true");  
+                        $('.sidebar-cart').addClass('cartAdded');     
+                      }); 
+                    });
+                }
+                
+            });
+        }
+
+      });
+    
+  </script>
