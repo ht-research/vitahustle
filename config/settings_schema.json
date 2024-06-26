@@ -1140,6 +1140,17 @@
     ]
   },
   {
+    "name": "Quiz code",
+    "settings": [
+      {
+        "type": "text",
+        "id": "quiz_code",
+        "label": "Offcode Text",
+        "default": "QUIZ20"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.color_swatch.name",
     "settings": [
       {

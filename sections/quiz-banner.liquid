@@ -1,0 +1,409 @@
+{%- style -%}
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900 &display=swap');
+  
+    .quiz-banner-block {
+      {% if section.settings.bg_image_mobile != blank %}
+        background-image: url('{{ section.settings.bg_image_mobile | image_url: width: master }}');
+      {% endif %}
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 175px;
+      padding-top: 38px;
+      padding-bottom: 46px;
+      margin-bottom: -16px;
+    }
+  
+    .quiz-banner-container {
+      text-align: center;
+    }
+  
+    .quiz-banner-container .quiz-banner-heading {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 48px;
+      margin-bottom: 10px;
+    }
+    .quiz-banner-container .quiz-banner-desc {
+      font-family: 'Lato'
+      , sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  
+    .quiz-offcode-section {
+      background-color: #C8E812;
+      padding-top: 32px;
+      padding-bottom: 40px;
+      position: relative;
+      font-family: 'Lato'
+      , sans-serif;
+      border-radius: 16px 16px 0 0;
+    }
+  
+    .quiz-offcode-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+  
+    .quiz-offcode-text {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .quiz-offcode-text span:first-child {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 26px;
+      text-transform: uppercase;
+    }
+  
+    .quiz-offcode-text span:last-child {
+      color: #777777;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      letter-spacing: 0.02em;
+    }
+  
+    .quiz-offcode-code {
+      position: relative;
+    }
+  
+    .quiz-offcode-code span {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lato'
+      , sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+    }
+  
+    .quiz-offcode-expire {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #212121;
+      border-radius: 3px;
+      max-width: 235px;
+      padding: 0 15px;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -16px;
+      transform: skewX(-10deg);
+    }
+  
+    .quiz-offcode-expire > span {
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      gap: 1px;
+      transform: skewX(10deg);
+    }
+  
+    .quiz-offcode-expire .quiz-offcode-expire-timer {
+      color: #C7E813;
+      font-weight: 700;
+    }
+  
+    .quiz-offcode-section.sticky-top {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 0;
+    }
+  
+    .quiz-offcode-section.sticky-top .quiz-offcode-expire {
+      bottom: -32px;
+      max-width: 100%;
+      transform: none;
+      border-radius: 0;
+    }
+  
+    .quiz-offcode-section.sticky-top .quiz-offcode-expire > span {
+      transform: none;
+    }
+  
+    @media screen and (min-width: 901px) {
+      .quiz-banner-section {
+        margin-bottom: 32px;
+      }
+  
+      .quiz-banner-block {
+        {% if section.settings.bg_image_desktop != blank %}
+          background-image: url('{{ section.settings.bg_image_desktop | image_url: width: master }}');
+        {% endif %}
+        padding-top: 44px;
+        padding-bottom: 82px;
+        min-height: 220px;
+        margin-bottom: -34px;
+      }
+  
+      .quiz-banner-container .quiz-banner-heading {
+        font-size: 65px;
+        line-height: 61px;
+        letter-spacing: 0.01em;
+      }
+      .quiz-banner-container .quiz-banner-desc {
+        font-size: 21px;
+        font-weight: 900;
+        line-height: 26px;
+        max-width: none;
+      }
+  
+      .quiz-offcode-section {
+        padding-top: 25px;
+        padding-bottom: 32px;
+      }
+  
+      .quiz-offcode-text span:last-child {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+      }
+  
+      .quiz-offcode-section.sticky-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+  
+      .quiz-offcode-section.sticky-top .quiz-offcode-expire {
+        margin: 0;
+        position: relative;
+        bottom: 0;
+      }
+  
+      .quiz-offcode-section.sticky-top .quiz-offcode-expire {
+        transform: skewX(-10deg);
+        border-radius: 3px;
+      }
+  
+      .quiz-offcode-section.sticky-top .quiz-offcode-expire > span {
+        transform: skewX(10deg);
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .quiz-offcode-text span:first-child {    font-size: 18px;}
+    }
+  {%- endstyle -%}
+  
+  <div class="section-{{ section.id }} quiz-banner-section">
+    <div class="quiz-banner-block">
+      <div class="container">
+        <div class="quiz-banner-container">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="quiz-banner-heading">
+              {{ section.settings.heading }}
+            </h2>
+          {%- endif -%}
+            {%- if section.settings.description != blank -%}
+            <p class="quiz-banner-desc">
+              {{ section.settings.description }}
+            </p>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    <div class="quiz-offcode-section">
+      <div class="quiz-offcode-block">
+        {%- for block in section.blocks -%}
+          <div class="quiz-offcode-text">
+            {%- if block.settings.title != blank -%}
+              <span>{{ block.settings.title }}</span>
+            {%- endif -%}
+              {%- if block.settings.desc != blank -%}
+              <span>{{ block.settings.desc }}</span>
+            {%- endif -%}
+          </div>
+          {%- if block.settings.code != blank -%}
+            <div class="quiz-offcode-code">
+              <svg
+                width="106"
+                height="36"
+                viewBox="0 0 106 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <mask id="path-1-inside-1_1880_6590" fill="white">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0H106V10.2272C101.74 11.4288 98.6875 14.6729 98.6875 18.4862C98.6875 22.2996 101.74 25.5437 106 26.7453V36H0V27.026C4.88326 26.1411 8.52869 22.6536 8.52869 18.4862C8.52869 14.3188 4.88326 10.8314 0 9.94649V0Z" />
+                </mask>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 0H106V10.2272C101.74 11.4288 98.6875 14.6729 98.6875 18.4862C98.6875 22.2996 101.74 25.5437 106 26.7453V36H0V27.026C4.88326 26.1411 8.52869 22.6536 8.52869 18.4862C8.52869 14.3188 4.88326 10.8314 0 9.94649V0Z"
+                  fill="#B6D313" />
+                <path
+                  d="M106 0H106.5V-0.5H106V0ZM0 0V-0.5H-0.5V0H0ZM106 10.2272L106.136 10.7084L106.5 10.6056V10.2272H106ZM106 26.7453H106.5V26.3669L106.136 26.2641L106 26.7453ZM106 36V36.5H106.5V36H106ZM0 36H-0.5V36.5H0V36ZM0 27.026L-0.0891527 26.534L-0.5 26.6085V27.026H0ZM0 9.94649H-0.5V10.364L-0.0891527 10.4385L0 9.94649ZM106 -0.5H105.019V0.5H106V-0.5ZM103.056 -0.5H101.093V0.5H103.056V-0.5ZM99.1296 -0.5H97.1667V0.5H99.1296V-0.5ZM95.2037 -0.5H93.2407V0.5H95.2037V-0.5ZM91.2778 -0.5H89.3148V0.5H91.2778V-0.5ZM87.3519 -0.5H85.3889V0.5H87.3519V-0.5ZM83.4259 -0.5H81.463V0.5H83.4259V-0.5ZM79.5 -0.5H77.537V0.5H79.5V-0.5ZM75.5741 -0.5H73.6111V0.5H75.5741V-0.5ZM71.6481 -0.5H69.6852V0.5H71.6481V-0.5ZM67.7222 -0.5H65.7593V0.5H67.7222V-0.5ZM63.7963 -0.5H61.8333V0.5H63.7963V-0.5ZM59.8704 -0.5H57.9074V0.5H59.8704V-0.5ZM55.9444 -0.5H53.9815V0.5H55.9444V-0.5ZM52.0185 -0.5H50.0556V0.5H52.0185V-0.5ZM48.0926 -0.5H46.1296V0.5H48.0926V-0.5ZM44.1667 -0.5H42.2037V0.5H44.1667V-0.5ZM40.2407 -0.5H38.2778V0.5H40.2407V-0.5ZM36.3148 -0.5H34.3519V0.5H36.3148V-0.5ZM32.3889 -0.5H30.4259V0.5H32.3889V-0.5ZM28.463 -0.5H26.5V0.5H28.463V-0.5ZM24.5371 -0.5H22.5741V0.5H24.5371V-0.5ZM20.6111 -0.5H18.6482V0.5H20.6111V-0.5ZM16.6852 -0.5H14.7223V0.5H16.6852V-0.5ZM12.7593 -0.5H10.7963V0.5H12.7593V-0.5ZM8.83339 -0.5H6.87043V0.5H8.83339V-0.5ZM4.90747 -0.5H2.94451V0.5H4.90747V-0.5ZM0.981554 -0.5H0V0.5H0.981554V-0.5ZM-0.5 0V1.24331H0.5V0H-0.5ZM-0.5 3.72993V6.21656H0.5V3.72993H-0.5ZM-0.5 8.70318V9.94649H0.5V8.70318H-0.5ZM-0.0891527 10.4385C0.259213 10.5016 0.600827 10.5785 0.934746 10.6682L1.19442 9.70255C0.833527 9.60551 0.464765 9.52257 0.0891527 9.4545L-0.0891527 10.4385ZM2.89922 11.3842C3.54522 11.6874 4.14531 12.0434 4.6903 12.4439L5.28246 11.6381C4.68322 11.1978 4.02685 10.8088 3.32412 10.479L2.89922 11.3842ZM6.21203 13.8405C6.67021 14.3699 7.05071 14.9413 7.34297 15.5442L8.24282 15.108C7.91009 14.4216 7.48 13.7775 6.96815 13.1861L6.21203 13.8405ZM7.95097 17.476C8.00226 17.8069 8.02869 18.144 8.02869 18.4862H9.02869C9.02869 18.0924 8.99826 17.7041 8.93916 17.3228L7.95097 17.476ZM8.02869 18.4862C8.02869 18.8284 8.00226 19.1656 7.95097 19.4965L8.93916 19.6497C8.99826 19.2684 9.02869 18.8801 9.02869 18.4862H8.02869ZM7.34297 21.4283C7.05071 22.0312 6.67021 22.6026 6.21203 23.132L6.96815 23.7864C7.48 23.195 7.91009 22.5509 8.24282 21.8645L7.34297 21.4283ZM4.6903 24.5286C4.14531 24.9291 3.54522 25.2851 2.89922 25.5883L3.32412 26.4935C4.02685 26.1637 4.68322 25.7747 5.28246 25.3344L4.6903 24.5286ZM0.934747 26.3043C0.600827 26.394 0.259213 26.4709 -0.0891527 26.534L0.0891527 27.518C0.464766 27.4499 0.833527 27.367 1.19442 27.2699L0.934747 26.3043ZM-0.5 27.026V28.1478H0.5V27.026H-0.5ZM-0.5 30.3913V32.6348H0.5V30.3913H-0.5ZM-0.5 34.8783V36H0.5V34.8783H-0.5ZM0 36.5H0.981481V35.5H0V36.5ZM2.94444 36.5H4.90741V35.5H2.94444V36.5ZM6.87037 36.5H8.83333V35.5H6.87037V36.5ZM10.7963 36.5H12.7593V35.5H10.7963V36.5ZM14.7222 36.5H16.6852V35.5H14.7222V36.5ZM18.6481 36.5H20.6111V35.5H18.6481V36.5ZM22.5741 36.5H24.537V35.5H22.5741V36.5ZM26.5 36.5H28.463V35.5H26.5V36.5ZM30.4259 36.5H32.3889V35.5H30.4259V36.5ZM34.3519 36.5H36.3148V35.5H34.3519V36.5ZM38.2778 36.5H40.2407V35.5H38.2778V36.5ZM42.2037 36.5H44.1667V35.5H42.2037V36.5ZM46.1296 36.5H48.0926V35.5H46.1296V36.5ZM50.0556 36.5H52.0185V35.5H50.0556V36.5ZM53.9815 36.5H55.9444V35.5H53.9815V36.5ZM57.9074 36.5H59.8704V35.5H57.9074V36.5ZM61.8333 36.5H63.7963V35.5H61.8333V36.5ZM65.7593 36.5H67.7222V35.5H65.7593V36.5ZM69.6852 36.5H71.6481V35.5H69.6852V36.5ZM73.6111 36.5H75.5741V35.5H73.6111V36.5ZM77.537 36.5H79.5V35.5H77.537V36.5ZM81.4629 36.5H83.4259V35.5H81.4629V36.5ZM85.3889 36.5H87.3518V35.5H85.3889V36.5ZM89.3148 36.5H91.2777V35.5H89.3148V36.5ZM93.2407 36.5H95.2037V35.5H93.2407V36.5ZM97.1666 36.5H99.1296V35.5H97.1666V36.5ZM101.093 36.5H103.055V35.5H101.093V36.5ZM105.018 36.5H106V35.5H105.018V36.5ZM106.5 36V34.8432H105.5V36H106.5ZM106.5 32.5295V30.2158H105.5V32.5295H106.5ZM106.5 27.9022V26.7453H105.5V27.9022H106.5ZM106.136 26.2641C105.828 26.1774 105.527 26.0796 105.234 25.9715L104.888 26.9097C105.206 27.027 105.532 27.1328 105.864 27.2266L106.136 26.2641ZM103.522 25.1754C102.964 24.8562 102.448 24.4952 101.982 24.099L101.335 24.8608C101.849 25.2985 102.416 25.6947 103.025 26.0434L103.522 25.1754ZM100.694 22.7518C100.311 22.2524 99.9938 21.7203 99.7513 21.1633L98.8344 21.5624C99.1112 22.1982 99.4706 22.8003 99.9008 23.3607L100.694 22.7518ZM99.2511 19.4008C99.2091 19.1007 99.1875 18.7955 99.1875 18.4862H98.1875C98.1875 18.8422 98.2124 19.1936 98.2608 19.5394L99.2511 19.4008ZM99.1875 18.4862C99.1875 18.177 99.2091 17.8718 99.2511 17.5717L98.2608 17.4331C98.2124 17.7789 98.1875 18.1303 98.1875 18.4862H99.1875ZM99.7513 15.8092C99.9938 15.2522 100.311 14.7201 100.694 14.2207L99.9008 13.6118C99.4706 14.1722 99.1112 14.7743 98.8344 15.4101L99.7513 15.8092ZM101.982 12.8735C102.448 12.4773 102.964 12.1163 103.522 11.797L103.025 10.9291C102.416 11.2778 101.849 11.674 101.335 12.1117L101.982 12.8735ZM105.234 11.001C105.527 10.8929 105.828 10.7951 106.136 10.7084L105.864 9.74594C105.532 9.83972 105.206 9.94553 104.888 10.0628L105.234 11.001ZM106.5 10.2272V9.3749H105.5V10.2272H106.5ZM106.5 7.67037V5.96584H105.5V7.67037H106.5ZM106.5 4.26132V2.55679H105.5V4.26132H106.5ZM106.5 0.852263V0H105.5V0.852263H106.5ZM106 0H107V-1H106V0ZM0 0V-1H-1V0H0ZM106 10.2272L106.271 11.1896L107 10.9841V10.2272H106ZM106 26.7453H107V25.9884L106.271 25.7829L106 26.7453ZM106 36V37H107V36H106ZM0 36H-1V37H0V36ZM0 27.026L-0.178305 26.042L-1 26.1909V27.026H0ZM0 9.94649H-1V10.7816L-0.178305 10.9305L0 9.94649ZM106 -1H105.019V1H106V-1ZM103.056 -1H101.093V1H103.056V-1ZM99.1296 -1H97.1667V1H99.1296V-1ZM95.2037 -1H93.2407V1H95.2037V-1ZM91.2778 -1H89.3148V1H91.2778V-1ZM87.3519 -1H85.3889V1H87.3519V-1ZM83.4259 -1H81.463V1H83.4259V-1ZM79.5 -1H77.537V1H79.5V-1ZM75.5741 -1H73.6111V1H75.5741V-1ZM71.6481 -1H69.6852V1H71.6481V-1ZM67.7222 -1H65.7593V1H67.7222V-1ZM63.7963 -1H61.8333V1H63.7963V-1ZM59.8704 -1H57.9074V1H59.8704V-1ZM55.9444 -1H53.9815V1H55.9444V-1ZM52.0185 -1H50.0556V1H52.0185V-1ZM48.0926 -1H46.1296V1H48.0926V-1ZM44.1667 -1H42.2037V1H44.1667V-1ZM40.2407 -1H38.2778V1H40.2407V-1ZM36.3148 -1H34.3519V1H36.3148V-1ZM32.3889 -1H30.4259V1H32.3889V-1ZM28.463 -1H26.5V1H28.463V-1ZM24.5371 -1H22.5741V1H24.5371V-1ZM20.6111 -1H18.6482V1H20.6111V-1ZM16.6852 -1H14.7223V1H16.6852V-1ZM12.7593 -1H10.7963V1H12.7593V-1ZM8.83339 -1H6.87043V1H8.83339V-1ZM4.90747 -1H2.94451V1H4.90747V-1ZM0.981554 -1H0V1H0.981554V-1ZM-1 0V1.24331H1V0H-1ZM-1 3.72993V6.21656H1V3.72993H-1ZM-1 8.70318V9.94649H1V8.70318H-1ZM-0.178305 10.9305C0.156437 10.9911 0.484477 11.0649 0.804911 11.1511L1.32425 9.2197C0.949877 9.11903 0.567542 9.03305 0.178305 8.96251L-0.178305 10.9305ZM2.68677 11.8368C3.3044 12.1267 3.87635 12.4663 4.39421 12.8468L5.57854 11.2352C4.95218 10.7749 4.26766 10.3695 3.53657 10.0264L2.68677 11.8368ZM5.83397 14.1677C6.26531 14.6661 6.62102 15.2011 6.89305 15.7623L8.69275 14.8899C8.33978 14.1617 7.8849 13.4813 7.34621 12.8589L5.83397 14.1677ZM7.45687 17.5526C7.50426 17.8584 7.52869 18.1699 7.52869 18.4862H9.52869C9.52869 18.0666 9.49626 17.6527 9.43326 17.2463L7.45687 17.5526ZM7.52869 18.4862C7.52869 18.8026 7.50426 19.1141 7.45687 19.4199L9.43326 19.7262C9.49626 19.3198 9.52869 18.9059 9.52869 18.4862H7.52869ZM6.89305 21.2102C6.62102 21.7714 6.26531 22.3064 5.83397 22.8048L7.34621 24.1136C7.8849 23.4912 8.33978 22.8108 8.69275 22.0826L6.89305 21.2102ZM4.39421 24.1257C3.87635 24.5062 3.3044 24.8458 2.68677 25.1357L3.53658 26.9461C4.26766 26.603 4.95218 26.1976 5.57854 25.7373L4.39421 24.1257ZM0.804912 25.8214C0.484477 25.9076 0.156437 25.9814 -0.178305 26.042L0.178305 28.01C0.567542 27.9395 0.949878 27.8535 1.32425 27.7528L0.804912 25.8214ZM-1 27.026V28.1478H1V27.026H-1ZM-1 30.3913V32.6348H1V30.3913H-1ZM-1 34.8783V36H1V34.8783H-1ZM0 37H0.981481V35H0V37ZM2.94444 37H4.90741V35H2.94444V37ZM6.87037 37H8.83333V35H6.87037V37ZM10.7963 37H12.7593V35H10.7963V37ZM14.7222 37H16.6852V35H14.7222V37ZM18.6481 37H20.6111V35H18.6481V37ZM22.5741 37H24.537V35H22.5741V37ZM26.5 37H28.463V35H26.5V37ZM30.4259 37H32.3889V35H30.4259V37ZM34.3519 37H36.3148V35H34.3519V37ZM38.2778 37H40.2407V35H38.2778V37ZM42.2037 37H44.1667V35H42.2037V37ZM46.1296 37H48.0926V35H46.1296V37ZM50.0556 37H52.0185V35H50.0556V37ZM53.9815 37H55.9444V35H53.9815V37ZM57.9074 37H59.8704V35H57.9074V37ZM61.8333 37H63.7963V35H61.8333V37ZM65.7593 37H67.7222V35H65.7593V37ZM69.6852 37H71.6481V35H69.6852V37ZM73.6111 37H75.5741V35H73.6111V37ZM77.537 37H79.5V35H77.537V37ZM81.4629 37H83.4259V35H81.4629V37ZM85.3889 37H87.3518V35H85.3889V37ZM89.3148 37H91.2777V35H89.3148V37ZM93.2407 37H95.2037V35H93.2407V37ZM97.1666 37H99.1296V35H97.1666V37ZM101.093 37H103.055V35H101.093V37ZM105.018 37H106V35H105.018V37ZM107 36V34.8432H105V36H107ZM107 32.5295V30.2158H105V32.5295H107ZM107 27.9022V26.7453H105V27.9022H107ZM106.271 25.7829C105.976 25.6997 105.688 25.6059 105.407 25.5024L104.715 27.3788C105.046 27.5006 105.384 27.6105 105.729 27.7078L106.271 25.7829ZM103.77 24.7415C103.238 24.4369 102.748 24.0935 102.306 23.7181L101.011 25.2418C101.55 25.7002 102.142 26.114 102.777 26.4774L103.77 24.7415ZM101.091 22.4473C100.731 21.9785 100.435 21.4814 100.21 20.9637L98.376 21.762C98.6699 22.4372 99.0506 23.0742 99.5041 23.6651L101.091 22.4473ZM99.7463 19.3315C99.7075 19.0542 99.6875 18.7722 99.6875 18.4862H97.6875C97.6875 18.8655 97.714 19.2401 97.7656 19.6088L99.7463 19.3315ZM99.6875 18.4862C99.6875 18.2003 99.7075 17.9183 99.7463 17.641L97.7656 17.3637C97.714 17.7324 97.6875 18.107 97.6875 18.4862H99.6875ZM100.21 16.0088C100.435 15.4911 100.731 14.994 101.091 14.5252L99.5041 13.3074C99.0506 13.8983 98.6699 14.5353 98.376 15.2105L100.21 16.0088ZM102.306 13.2544C102.748 12.879 103.238 12.5356 103.77 12.231L102.777 10.4951C102.142 10.8585 101.55 11.2723 101.011 11.7307L102.306 13.2544ZM105.407 11.4701C105.688 11.3666 105.976 11.2728 106.271 11.1896L105.729 9.26471C105.384 9.36202 105.046 9.47186 104.715 9.59365L105.407 11.4701ZM107 10.2272V9.3749H105V10.2272H107ZM107 7.67037V5.96584H105V7.67037H107ZM107 4.26132V2.55679H105V4.26132H107ZM107 0.852263V0H105V0.852263H107Z"
+                  fill="#212121"
+                  mask="url(#path-1-inside-1_1880_6590)" />
+              </svg>
+              <span>{{ block.settings.code }}</span>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="quiz-offcode-expire">
+        <span>Offer expires in</span>
+        <span class="quiz-offcode-expire-timer">
+          <span class="minutes"></span>
+          <span class="dot-divider">:</span>
+          <span class="seconds"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <section class="empty-section"></section>
+  
+  <script>
+
+  var quizContent = localStorage.getItem('quiz_step');
+  if(quizContent != null) {
+    const quizJson = JSON.parse(quizContent);
+    if(quizJson.step_1.answer[0] == 'More Energy') {
+        document.querySelector('.quiz-banner-heading').innerHTML = 'Get Energized with VitaHustle';
+    } else if(quizJson.step_1.answer[0] == 'Loose Weight') {
+        document.querySelector('.quiz-banner-heading').innerHTML = 'Achieve your Weight Goals with VitaHustle'
+    } else if(quizJson.step_1.answer[0] == 'Improved Fitness Level') {
+        document.querySelector('.quiz-banner-heading').innerHTML = 'Improve Your Fitness Levels with VitaHustle'
+    } else if(quizJson.step_1.answer[0] == 'Improved Overall Health') {
+        document.querySelector('.quiz-banner-heading').innerHTML = 'Improve Overall Health with VitaHustle'
+    } else if(quizJson.step_1.answer[0] == 'Other') {
+        document.querySelector('.quiz-banner-heading').innerHTML = 'Level Up Your Wellness with VitaHustle'
+    }
+  }
+  
+
+  const siteHeader = document.querySelector('.header');
+  const banner = document.querySelector('.quiz-banner-section');
+  const quizCodeSection = document.querySelector('.quiz-offcode-section')
+  const sectionHeight = siteHeader.offsetHeight + banner.offsetHeight + 20;
+
+  // sticky timer section
+  function stickyOnScroll() {
+      if (window.scrollY >= sectionHeight) {
+          document.body.style.paddingTop = quizCodeSection.offsetHeight + 'px';
+          quizCodeSection.classList.add('sticky-top');
+          quizCodeSection.classList.add('container');
+      } else {
+          document.body.style.paddingTop = 0;
+          quizCodeSection.classList.remove('sticky-top');
+          quizCodeSection.classList.remove('container');
+      }
+  }
+
+  window.addEventListener('scroll', function() {
+      stickyOnScroll();
+  });
+
+  window.addEventListener('resize', () => {
+      stickyOnScroll();
+  });
+
+
+  // timer
+  var interval = 3600000;
+
+  function timerReset() {
+      localStorage.endTime = +new Date + interval;
+  }
+  if (!localStorage.endTime) {
+      timerReset();
+  }
+
+  setInterval(function() {
+      var remaining = localStorage.endTime - new Date;
+      const timerText = document.querySelector('.quiz-offcode-expire-timer');
+      const minutesSpan = timerText.querySelector('.minutes');
+      const secondsSpan = timerText.querySelector('.seconds');
+      if (remaining >= 0) {
+          minutesSpan.innerHTML = Math.floor(remaining / 60000);
+          let seconds = ((remaining % 60000) / 1000).toFixed(0)
+          secondsSpan.innerHTML = (seconds < 10 ? '0' : '') + seconds;
+      } else {
+          // timer end condition
+          timerReset();
+      }
+  }, 100);
+  </script>
+  
+  {% schema %}
+    {
+      "name": "Quiz Banner",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        }, {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }, {
+          "type": "image_picker",
+          "id": "bg_image_desktop",
+          "label": "Background Image Desktop"
+        }, {
+          "type": "image_picker",
+          "id": "bg_image_mobile",
+          "label": "Background Mobile Desktop"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "quiz_offcode",
+          "name": "Quiz Offcode",
+          "settings": [
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Offcode Heading",
+              "default": "20% OFF WITH CODE"
+            }, {
+              "type": "text",
+              "id": "desc",
+              "label": "Offcode Description",
+              "default": "Auto applies in cart"
+            }, {
+              "type": "text",
+              "id": "code",
+              "label": "Offcode Text",
+              "default": "QUIZ20"
+            }
+          ],
+          "limit": 1
+        }
+      ],
+      "presets": [
+        {
+          "name": "Quiz Banner"
+        }
+      ]
+    }
+  {% endschema %}
