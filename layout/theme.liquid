@@ -11,7 +11,6 @@ window.TriplePixelData={TripleName:"vita-hustle.myshopify.com",ver:"2.12",plat:"
 </script>
 
 
-
 {% render 'intelligems-tracking' %}
     
 {% comment %}{% endcomment %}
@@ -38,7 +37,7 @@ tdl.identify()
 </script>
     
  {% render 'pagefly-head' %}
- {% if page.template_suffix == 'homepage-v2' or template.name == 'product' or template.name == 'index' or template contains 'offer-landing-page' or page.template_suffix == 'quiz-results' %}
+ {% if page.template_suffix == 'homepage-v2' or template.name == 'product' or template.name == 'index' or template contains 'offer-landing-page' %}
 		<script  src="{{ 'jquery.min.js' | asset_url }}"></script>
 		<script  src="{{ 'slick.min.js' | asset_url }}"></script>
 {% endif %}
@@ -92,7 +91,7 @@ tdl.identify()
 <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/soehne-breit-dreiviertelfett.woff2?v=1687553835" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/FKGrotesk-Bold.woff2?v=1687553861" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/FKGroteskNeue-Regular.woff2?v=1687809875" as="font" type="font/woff2" crossorigin="anonymous">
-  {% if template.name == 'product' or page.template_suffix == 'homepage-v2' or page.template_suffix == 'quiz-results' %}
+  {% if template.name == 'product' or page.template_suffix == 'homepage-v2' %}
 <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Regular.woff2?v=1693063109" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Bold.woff2?v=1693063109" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Heavy.woff2?v=1693063109" as="font" type="font/woff2" crossorigin="anonymous">
@@ -253,125 +252,6 @@ tdl.identify()
 {% comment %}
   End of vitahustle Zendesk Widget script →
 {% endcomment %}
-
-{% comment %} {% if template contains 'index' %}
-  <div class="quizModal">
-    <div class="quizModal--overlay"></div>
-    <div class="quiz-wrapper">
-        <div class="quiz--init">
-            <h3>Welcome to VITAHUSTLE </h3>
-            <p>Get Started</p>
-            <a href="/pages/quiz" class="btn btn--started"  id="btn-quizInit">Unlock Exclusive Offer</a>
-        </div>
-    </div>
-  </div>
-  <style>
-    .quizModal {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 9;
-    }
-    .quizModal--overlay {
-        background-color: rgba(0, 0, 0, 0.7);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-    .quiz-wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        background: radial-gradient(86.72% 57.24% at 52.49% 42.82%, #CC6 0%, #9C6 100%);
-        padding: 85px 50px;
-        border-radius: 10px;
-        max-width: 642px;
-        width: 100%;
-    }
-    .quiz--init {
-        text-align: center;
-        
-    }
-    .quiz--init h3 {
-        font-size: 65px;
-        color: #000;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: 0.65px;
-        text-transform: uppercase;
-      }
-    .quiz--init p {
-        font-size: 22px;
-        font-family: "Sohne_Breit_regular";
-        color: #FFF;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        margin-top: 14px;
-    }
-    .quiz--init .btn--started {
-        background-color: #212121;
-        color: #fff;
-        margin-top: 39px;
-        font-size: 20px;
-        font-family: 'Lato Bold', sans-serif; 
-        height: 55px;
-        padding: 5px 90px 5px 105px !important;      
-    }
-    @media screen and (min-width: 768px) {
-      .quiz--init .btn--started {
-        padding: 15px 130px;
-      }
-    }
-    @media screen and (max-width: 767px) {
-      .quiz-wrapper {
-          padding: 20px;
-          width: 90%;
-      }
-      .quiz--init .btn--started {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 900;
-        margin-top: 31px;
-        padding: 25px 18px !important;
-      }
-      .quiz--init p{
-        margin-top: 24px;
-      }
-      .quiz--init h3{
-        font-size: 56px;
-      }
-    }
-    @media screen and (max-width: 400px) {
-      .quiz--init .btn--started{
-        font-size: 14px;
-      }
-    }
-    @media screen and (max-width: 320px) {
-      .quiz--init .btn--started{
-        padding: 1.2rem 1.5rem;
-      }
-    }
-  </style>
-  <script>
-    const getEnabledORNot = localStorage.getItem('quiz_enabled');
-    if(getEnabledORNot == 'true') {
-      document.querySelector('.quizModal').remove();
-    }
-    document.querySelector('.quizModal--overlay').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector('.quizModal').classList.add('hidden');
-      localStorage.setItem('quiz_enabled','true');
-    });
-  </script>
-  {% endif %} {% endcomment %}
  {% include 'ins_opensend' %}
 
 {% comment %}

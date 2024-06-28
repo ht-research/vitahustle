@@ -22,19 +22,6 @@
     assign profile_url = routes.account_url
   endif
 -%}
-
-<style>
-
-  .header__item.quiz{
-    padding: 0 2rem 0rem;
-  }
-  @media (max-width: 768px) {
-    .header__item.quiz{
-      display: none;
-    }
-  }
-</style>
-
 {%- capture css -%}
   {% style %}
         @media (min-width: 768px) {
@@ -258,7 +245,7 @@
       -%}
       {%- if menu != blank and menu.links != blank and grid != '6' -%}
         <div class='header__nav' data-desktop-nav>
-          {%- for link in menu.links limit: 4 -%}
+          {%- for link in menu.links -%}
             {%- liquid
               assign link_title_downcase = link.title | downcase
               assign has_menu = false
@@ -578,16 +565,6 @@
       </sidebar-button>
 
       <div class='icon-list header__icons'>
-        {%- for link in menu.links offset: 4 -%}
-          <a
-            href='{{ link.url }}'
-            class='underline-text header__item quiz {% if link.active %}active{% endif %}'
-            aria-label='quiz'
-          >
-            <span class='underline-text__label'>{{ link.title }}</span>
-          </a>
-
-        {%- endfor -%}
         {% if settings.search_type != 'hide' %}
           {%- if settings.search_type == 'page_only' or template.name contains 'search' -%}
             <a
