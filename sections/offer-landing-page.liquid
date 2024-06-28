@@ -51,6 +51,8 @@
 ====>Total compare price {{ temp_compare_price | plus: serving_product.compare_at_price }}
 ====> serving_product {{ serving_product.variants[0].selling_plan_allocations[0].price }}
 ====>Total price {{ temp_total_price | plus: serving_product.variants[0].selling_plan_allocations[0].price }} {% endcomment %}
+
+
 {% assign total_compare_price = temp_total_price | plus: serving_product.price | money_with_currency | split: 'USD' | first %}
 {% assign total_compare_price_wc = temp_total_price | plus: serving_product.price %}
 
@@ -191,6 +193,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 14px;
+    align-items: center;
 }
 .offer_landing_page .inner_offer_landing_page .product_kit_description_wrapper .product_kit_description.mobile_only{
     display: none;
@@ -1730,9 +1733,11 @@
                                 {% comment %} <span>{{ serving_product.price | money_with_currency }}/mo</span> {% endcomment %}
     
                             </div>
+                          {% comment %}
                             <div class="save_mark">
                                 {{ save_mark }}
                             </div>
+                         {% endcomment %}
                         </div>
                     </div>
                     <div class="first_order_gift_image_text_container">
@@ -1808,7 +1813,15 @@
                     {% assign serving_product_price =  serving_product.price | minus : serving_discount | money_with_currency | split: 'USD' | first %}
                     <div class="total_price_container remove_section">
                         <div class="total_text">
-                            You're Saving {{ total_compare_price_wc | minus: serving_product_price_wc | money_with_currency | split: 'USD' | first }}
+                          {% assign savings = total_compare_price_wc | minus: serving_product_price_wc | times: 1.0 %}
+                          {% assign total_compare_price_wc = total_compare_price_wc | times: 1.0 %}
+                          {% assign savings_per = savings | divided_by: total_compare_price_wc | times: 100 | round %}
+                        
+                            You're Saving 
+                          {% comment %}
+                          {{ total_compare_price_wc | minus: serving_product_price_wc | money_with_currency | split: 'USD' | first }}
+                          {% endcomment %}
+                          {{ savings_per }}%
                         </div>
 
                         <div class="total_price_compare_price">
