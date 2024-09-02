@@ -10,6 +10,8 @@
   
     if product.metafields.custom.custom_product_images != blank
      assign product_media = product.metafields.custom.custom_product_images.value
+     assign thumb_image = product_media | first
+
     else
      assign product_media = product.media | default: (1..12)
     endif
@@ -56,6 +58,23 @@
                   sectionId: sectionId
                 %}
               </div> {% endcomment %}
+              <div
+                class='carousel__slide product-media-carousel__slide'
+                {% if featured_media.media_type == 'image' and enable_image_zoom %}
+                  data-zoom-cursor-target
+                {% endif %}
+                data-media-id='{{ featured_media.id }}'
+              >
+                {% render 'product-media',
+                  product: product,
+                  enable_image_zoom: enable_image_zoom,
+                  enable_video_autoplay: enable_video_autoplay,
+                  media: thumb_image,
+                  modal_media_id: thumb_image.id,
+                  enable_video_looping: enable_video_looping,
+                  sectionId: sectionId
+                %}
+              </div> 
             {%- endif -%}
             {%- for media in product_media -%}
               {%- if media.id != featured_media.id or media.id == blank -%}
@@ -133,9 +152,10 @@
           >
             <div class='carousel__container product-thumbnail-carousel__container' data-carousel-container>
               {%- if featured_media != null -%}
-                {%- assign image = featured_media | default: featured_media.image -%}
+              {% comment %}  {%- assign image = featured_media | default: featured_media.image -%} {% endcomment %} 
+                {%- assign image = featured_media | default: product_media[0].media.preview_image  -%}
   
-                {% comment %} <carousel-dot
+                <carousel-dot
                   class='carousel__slide product-thumbnail-carousel__thumb is-primary'
                   tabindex='0'
                   data-dot-index='{{ forloop.index0 }}'
@@ -148,7 +168,7 @@
                       >
                     </div>
                   </div>
-                </carousel-dot> {% endcomment %}
+                </carousel-dot> 
               {%- endif -%}
               {%- for media in product_media -%}
                 {% assign index = forloop.index0 %}
@@ -227,13 +247,25 @@
       var all_gallery_images = $('.carousel__slide.product-media-carousel__slide');
 
       thumbnail_images.map((item,i)=>{
-        let temp_thumbnail_elem = all_thumbnail_images[i+1].querySelector('.product-thumbnail-carousel__thumb-image-wrapper');
+        let temp_thumbnail_elem = all_thumbnail_images[i].querySelector('.product-thumbnail-carousel__thumb-image-wrapper');
         temp_thumbnail_elem.innerHTML = thumbnail_images[i];
-        let temp_gallery_elem = all_gallery_images[i+1].querySelector('.product-media__image-wrapper');
+
+      });
+  
+   
+      thumbnail_images.map((item,i)=>{
+        let temp_gallery_elem = all_gallery_images[i].querySelector('.product-media__image-wrapper');
         temp_gallery_elem.innerHTML = gallery_images[i];
 
       })
     });
   </script>
+  <style>
+    /* @media screen and (min-width: 769px){
+     .carousel__slide.product-media-carousel__slide:last-child{
+        display: none;
+      }
+    } */
+  </style>
 
   

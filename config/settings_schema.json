@@ -1140,6 +1140,54 @@
     ]
   },
   {
+    "name": "Social Media icon",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "instagram_icon",
+            "label": "Add Instagram Icon"
+        },
+        {
+            "type": "image_picker",
+            "id": "tiktok_icon",
+            "label": "Add Tiktok Icon"
+        },
+        {
+            "type": "image_picker",
+            "id": "vitahusle_logo",
+            "label": "Add Vitahustle logo"
+        }
+    ]
+  },
+  {
+    "name": "Quiz code",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_quiz_offcode",
+        "default":true,
+        "label": "Enable quiz discount"
+      },
+      {
+        "type": "text",
+        "id": "quiz_offcode_title",
+        "label": "Offcode Heading",
+        "default": "15% OFF WITH CODE"
+      }, {
+        "type": "text",
+        "id": "quiz_offcode_desc",
+        "label": "Offcode Description",
+        "default": "Auto applies in cart"
+      },
+      {
+        "type": "text",
+        "id": "quiz_code",
+        "label": "Offcode Text",
+        "default": "QUIZ15"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.color_swatch.name",
     "settings": [
       {

@@ -75,7 +75,7 @@
     >
       <a
         class="product-card__link"
-        href="{{ product.url }}"
+        href="{% if product.handle == 'vitahustle-one-superfood'  %} /products/one-superfood-protein-shake-strawberry {% else %} {{product.url}} {% endif %}"
         aria-label="{{ product.title }}"
       ></a>
       {%- if images.size > 0 -%}
@@ -260,6 +260,9 @@
                     tabindex="-1"
                     style="display: flex;"
                     data-product-card-button
+                    data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                     aria-label="{{- 'cards.product_card.add_to_cart_button_label' | t -}}"
                   >
                     <span style="display: flex; align-items: center; justify-content: center;">
@@ -510,10 +513,18 @@
         <div class="product-card__info">
           <a
             class="product-card__title unstyled-link"
-            href="{{ product.url }}"
-            aria-label="{{ product.title }}"
+            href="{% if product.handle == 'vitahustle-one-superfood'  %} /products/one-superfood-protein-shake-strawberry {% else %} {{product.url}} {% endif %}"
+            aria-label="{% if product.handle == 'vitahustle-one-superfood'  %}
+                          ONE Superfood Protein + Greens 
+                        {% else %} 
+                          {{product.title}} 
+                        {% endif %}"
           >
-            {{- product.title -}}
+            {% if product.handle == 'vitahustle-one-superfood'  %}
+              ONE Superfood Protein + Greens 
+           {% else %} 
+             {{product.title}} 
+           {% endif %}
           </a>
           {%- if show_vendor -%}
             <a class="product-card__vendor unstyled-link" href="/collections/all?filter.p.vendor={{ product.vendor }}">

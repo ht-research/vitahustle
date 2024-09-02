@@ -1,17 +1,39 @@
 {
   "sections": {
+    "page": {
+      "type": "page",
+      "custom_css": [
+        "h5 {font-family: \"Druk Web\"; font-size: 6rem; line-height: 1;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "medium",
+        "section_spacing_top": 50,
+        "section_spacing_bottom": 50,
+        "show_heading": true
+      }
+    },
     "main": {
-      "type": "new-product",
+      "type": "product",
       "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
         "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
           "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         },
-        "title": {
-          "type": "title",
+        "price": {
+          "type": "price",
           "settings": {
-            "heading_size": "h1"
+            "price_size": "xs",
+            "show_tax_status": false,
+            "show_sale_amount_badge": true,
+            "highlight_sale_price": true
           }
         },
         "28586830-d855-4547-8946-94914bac9e85": {
@@ -35,13 +57,7 @@
             "image_width": 60
           }
         },
-        "a5695ed4-524b-45b1-a57e-48bebecb84a9": {
-          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
-        "subscription_widget_64hgid": {
+        "subscription_widget_xJhk8P": {
           "type": "subscription_widget",
           "settings": {
           }
@@ -76,69 +92,20 @@
             "drawer_page": "",
             "drawer_media_size": 60
           }
-        },
-        "06c05680-9cfd-4c28-8b40-a64f24723e70": {
-          "type": "collapsible_row",
-          "settings": {
-            "style": "collapsible_row_closed",
-            "title": "How To Use",
-            "icon": "none",
-            "text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
-            "page": "",
-            "image_width": 60
-          }
-        },
-        "418118f7-e71b-4ce3-bee0-cde3239694f7": {
-          "type": "collapsible_row",
-          "settings": {
-            "style": "collapsible_row_closed",
-            "title": "Ingredients",
-            "icon": "none",
-            "text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
-            "page": "",
-            "image_width": 60
-          }
-        },
-        "c5924e9f-2227-4047-ac6f-bfad6b346aa4": {
-          "type": "collapsible_row",
-          "settings": {
-            "style": "collapsible_row_closed",
-            "title": "Supplement Facts",
-            "icon": "none",
-            "text": "",
-            "page": "copy-of-vitahustle-one-supplement-facts-panel",
-            "image_width": 60
-          }
-        },
-        "cbfcea53-e238-4c35-a5c9-da334abf0c2d": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "style": "collapsible_row_closed",
-            "title": "BENEFITS",
-            "icon": "none",
-            "text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
-            "page": "",
-            "image_width": 60
-          }
         }
       },
       "block_order": [
-        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b",
         "title",
+        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b",
+        "price",
         "28586830-d855-4547-8946-94914bac9e85",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
-        "a5695ed4-524b-45b1-a57e-48bebecb84a9",
-        "subscription_widget_64hgid",
+        "subscription_widget_xJhk8P",
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
-        "buy_buttons",
-        "b7435ba2-8e00-4538-be27-63a92d60e195",
-        "06c05680-9cfd-4c28-8b40-a64f24723e70",
-        "418118f7-e71b-4ce3-bee0-cde3239694f7",
-        "c5924e9f-2227-4047-ac6f-bfad6b346aa4",
-        "cbfcea53-e238-4c35-a5c9-da334abf0c2d"
+        "buy_buttons"
       ],
       "custom_css": [
+        "ul {padding-inline-start: 0px !important;}",
         ".superfood-only {display: none;}",
         "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
         ".product-desktop-media {position: sticky !important; top: 120px !important;}",
@@ -148,8 +115,8 @@
       "settings": {
         "color_scheme": "default",
         "container_size": "page-width",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 17,
+        "section_spacing_top": 32,
+        "section_spacing_bottom": 10,
         "layout": "thumbnails-left",
         "img_ratio": "square",
         "enable_image_zoom": false,
@@ -157,6 +124,53 @@
         "enable_video_autoplay": true,
         "scale_video": true,
         "show_part_of_next_slide": true
+      }
+    },
+    "b4c4eb9f-9d1b-4656-8845-c8078452baf5": {
+      "type": "text-marquee",
+      "blocks": {
+        "d80840ba-5985-43a9-bc10-75325559ac4a": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Gluten Free"
+          }
+        },
+        "f213a26b-7972-44c4-b58f-c0aef6393eaf": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Dairy Free"
+          }
+        },
+        "ae143907-3e58-4d49-b9d2-47b76750d060": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Soy Free"
+          }
+        },
+        "4590b0a7-8b3e-45d3-ae52-2402cc4a8460": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "Low Sugar"
+          }
+        },
+        "ff3bcd6f-a54a-455f-a1e6-46be080a97d8": {
+          "type": "marquee",
+          "settings": {
+            "marquee_text": "no artificial flavors"
+          }
+        }
+      },
+      "block_order": [
+        "d80840ba-5985-43a9-bc10-75325559ac4a",
+        "f213a26b-7972-44c4-b58f-c0aef6393eaf",
+        "ae143907-3e58-4d49-b9d2-47b76750d060",
+        "4590b0a7-8b3e-45d3-ae52-2402cc4a8460",
+        "ff3bcd6f-a54a-455f-a1e6-46be080a97d8"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#212121",
+        "text_color": "#c8e812"
       }
     },
     "how_to_use_a7XzaM": {
@@ -174,28 +188,13 @@
       "settings": {
       }
     },
-    "0a917585-e6ae-4198-87c0-fec620632352": {
-      "type": "rich-text",
-      "blocks": {
-        "template--16944483926265__0a917585-e6ae-4198-87c0-fec620632352-1688060215978781a1-2": {
-          "type": "heading",
-          "settings": {
-            "title": "VitaHustle Reviews",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "template--16944483926265__0a917585-e6ae-4198-87c0-fec620632352-1688060215978781a1-2"
-      ],
-      "disabled": true,
+    "5096cd4d-03ff-4554-87ca-b668ea4df472": {
+      "type": "product-review-block",
       "settings": {
-        "color_scheme": "default",
-        "enable_background_around_container": false,
-        "container_size": "page-width",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "content_align": "center"
+        "title": "VITAHUSTLE REVIEWS",
+        "rating_text": "200+ 5 STAR REVIEWS",
+        "review_text_tagline": "We're Constantly Inspired By VitaHustle Users Sharing Their Success Stories, Embracing Healthier, More Energized Lives Every Single Day!",
+        "rating": 4.5
       }
     },
     "product-details": {
@@ -211,172 +210,139 @@
         "expand_first_collapsible_row": false
       }
     },
-    "product_review_block_VQbQiH": {
-      "type": "product-review-block",
-      "settings": {
-        "title": "VITAHUSTLE REVIEWS",
-        "rating_text": "200+ 5 STAR REVIEWS",
-        "review_text_tagline": "We're Constantly Inspired By VitaHustle Users Sharing Their Success Stories, Embracing Healthier, More Energized Lives Every Single Day!",
-        "rating": 4.8
-      }
-    },
-    "main_pdp_review_AHEkTP": {
+    "a64e57db-eb92-4095-8e12-fd59d76e9a3c": {
       "type": "main-pdp-review",
       "blocks": {
-        "testimonial_box_VjMjjq": {
+        "176a989d-ffb8-4524-ae12-49b4d634c6a8": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/ANDREW_LISCIO.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
           }
         },
-        "testimonial_box_e69kRT": {
+        "29b22d82-c946-4966-af21-046a886c8ae6": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/BEN_HO.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cd0dba5beec04092ba712f45bba8aa1a.mp4"
           }
         },
-        "testimonial_box_n3GG7a": {
+        "589a1982-73c9-4086-97c1-1120eb8069d4": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/BRITTANY_WOODCOX.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e301b71b26d74dea980f3457ce5e6db2.mp4"
           }
         },
-        "testimonial_box_KDUzaH": {
+        "66c7ecd7-bb0b-40b1-8a59-4d30c0666728": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/GLORIA_GARAYUA_001.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f5cabf0584f94b51b61580789c4cff3f.mp4"
           }
         },
-        "testimonial_box_UPqdLV": {
+        "c49ff97e-cd38-47f0-8dcc-810327899465": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/JESS_WEBER_002.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/59417e6e97e3421fb7d1b06564f241a1.mp4"
           }
         },
-        "testimonial_box_j6fQgq": {
+        "cb2e5d5a-1cae-4240-b4c5-c53a187c9751": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/JONI_BOVILL_002.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8a428787c9f84392bee52882876364ff.mp4"
           }
         },
-        "testimonial_box_Tk68KH": {
+        "4480c349-fb73-488e-bc6f-c236d2a85057": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/JUSTIN_SANDLER_001.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a6007d9e679c4e529b28cc46abd352d7.mp4"
           }
         },
-        "testimonial_box_zCrpMe": {
+        "e73d9beb-4a4f-47c2-8c26-a575b2891100": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/KATIE_DUPIN-2.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/337ad2ea9fc047abb74ccb3eb668d484.mp4"
           }
         },
-        "testimonial_box_WLbA4w": {
+        "744bed83-c84f-4350-ad33-397cdb62ad1e": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/KEESA_FORD_001.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0c7c8058fed746659aebbaf9199f30b2.mp4"
           }
         },
-        "testimonial_box_XpUCpz": {
+        "a0f1ca5d-0f2e-433e-83d5-525e480346c5": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/KINYUMBA_MUTAKABIR_002.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af8a3916815947ef9f8d34f84671fda5.mp4"
           }
         },
-        "testimonial_box_qqzXRL": {
+        "ce9a8ae7-22af-46f9-9d0c-57dd7184fa18": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/MELISSA_ARDON.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c87e435462724016a9acb2ebda611d7c.mp4"
           }
         },
-        "testimonial_box_LrFwX7": {
+        "08df336b-1475-40f7-b374-8c909ffc03d3": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/OLIVIA_KAPLAN_004.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4a81af1a7d694f89ae9cce69a9775974.mp4"
           }
         },
-        "testimonial_box_nHqBf4": {
+        "c7acc696-ad84-42f2-b72d-cf4ab9c929d7": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/PALM_SURICHANYA_001.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9cd77643acba49609fa6feb3798d562e.mp4"
           }
         },
-        "testimonial_box_pUhEJp": {
+        "f2ab0b7e-48b9-4f75-9702-a18960a72b11": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/PAUL_DUFF_002.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/62de7359b4d04fa69e0754b4d0cb9326.mp4"
           }
         },
-        "testimonial_box_YrGjUM": {
+        "5d3a73d3-e168-4189-bc0e-e95287473236": {
           "type": "testimonial_box",
           "settings": {
             "thumbnail_image": "shopify:\/\/shop_images\/STEVE_DUPIN.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/de358ce7905c40ee8e112c6240c815b2.mp4"
           }
         },
-        "judge_me_reviews_review_widget_xKWpka": {
+        "4d0555c6-5a62-4d2e-b344-14be49ac2fbc": {
           "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
       },
       "block_order": [
-        "testimonial_box_VjMjjq",
-        "testimonial_box_e69kRT",
-        "testimonial_box_n3GG7a",
-        "testimonial_box_KDUzaH",
-        "testimonial_box_UPqdLV",
-        "testimonial_box_j6fQgq",
-        "testimonial_box_Tk68KH",
-        "testimonial_box_zCrpMe",
-        "testimonial_box_WLbA4w",
-        "testimonial_box_XpUCpz",
-        "testimonial_box_qqzXRL",
-        "testimonial_box_LrFwX7",
-        "testimonial_box_nHqBf4",
-        "testimonial_box_pUhEJp",
-        "testimonial_box_YrGjUM",
-        "judge_me_reviews_review_widget_xKWpka"
+        "176a989d-ffb8-4524-ae12-49b4d634c6a8",
+        "29b22d82-c946-4966-af21-046a886c8ae6",
+        "589a1982-73c9-4086-97c1-1120eb8069d4",
+        "66c7ecd7-bb0b-40b1-8a59-4d30c0666728",
+        "c49ff97e-cd38-47f0-8dcc-810327899465",
+        "cb2e5d5a-1cae-4240-b4c5-c53a187c9751",
+        "4480c349-fb73-488e-bc6f-c236d2a85057",
+        "e73d9beb-4a4f-47c2-8c26-a575b2891100",
+        "744bed83-c84f-4350-ad33-397cdb62ad1e",
+        "a0f1ca5d-0f2e-433e-83d5-525e480346c5",
+        "ce9a8ae7-22af-46f9-9d0c-57dd7184fa18",
+        "08df336b-1475-40f7-b374-8c909ffc03d3",
+        "c7acc696-ad84-42f2-b72d-cf4ab9c929d7",
+        "f2ab0b7e-48b9-4f75-9702-a18960a72b11",
+        "5d3a73d3-e168-4189-bc0e-e95287473236",
+        "4d0555c6-5a62-4d2e-b344-14be49ac2fbc"
       ],
       "settings": {
-      }
-    },
-    "168805997811e9e2b2": {
-      "type": "apps",
-      "blocks": {
-        "cb52da39-70ff-4f5c-a05e-cd12e031825b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "cb52da39-70ff-4f5c-a05e-cd12e031825b"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".jdgm-rev-widg__title {display: none;}"
-      ],
-      "settings": {
-        "color_scheme": "default",
-        "container_size": "small",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
-        "custom_liquid": ""
       }
     },
     "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0": {
@@ -769,15 +735,15 @@
     }
   },
   "order": [
+    "page",
     "main",
+    "b4c4eb9f-9d1b-4656-8845-c8078452baf5",
     "how_to_use_a7XzaM",
     "ingredients_ghjfBg",
     "ingedient_accordion_content_bJBRED",
-    "0a917585-e6ae-4198-87c0-fec620632352",
+    "5096cd4d-03ff-4554-87ca-b668ea4df472",
     "product-details",
-    "product_review_block_VQbQiH",
-    "main_pdp_review_AHEkTP",
-    "168805997811e9e2b2",
+    "a64e57db-eb92-4095-8e12-fd59d76e9a3c",
     "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0",
     "9ddba0be-f879-4e43-9a11-aea6ba37821b",
     "product-recommendations",

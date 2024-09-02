@@ -3,7 +3,7 @@
 {%- assign sellingPlan = sellingPlanGroup[0].selling_plans[0] -%}
 {%- assign no_of_serving = product.metafields.custom.no_of_serving -%}
 
-{% if template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %}
+{% if template contains 'new-greens-strawberry' or template contains 'new-superfood-greens' or template contains 'new-superfood-strawberry' %}
   <style>
     .content_box.purchase_type_block{
       display: flex;
@@ -13,7 +13,7 @@
 {% endif %}
 
 {% if selling_plans %}
-  <div class="product_price_box" {% if template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %} handle='{{ product.handle }}' {% endif %}>
+  <div class="product_price_box" {% if template contains 'new-greens-strawberry' or template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %} handle='{{ product.handle }}' {% endif %}>
     <div class="content_box purchase_type_block">
         {% comment %} onetime box {% endcomment %}
         <input
@@ -22,7 +22,7 @@
         id="onetime_item"
         name="subscribe"
         value="onetime_plan"
-        {% unless template contains 'new-superfood-greens' %}
+        {% unless template contains 'new-superfood-greens' or template contains 'new-greens-strawberry' %}
            checked
         {% endunless %}
          />

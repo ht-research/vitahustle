@@ -60,7 +60,7 @@
           </div>
         </div>
       {% endif %}
-      {% if product.metafields.custom.product_description_features != blank and template contains 'new-superfood-greens' %}
+      {% if product.metafields.custom.product_description_features != blank and template contains 'new-superfood-greens' or template contains 'new-greens-strawberry' %}
         {% assign features = product.metafields.custom.product_description_features.value %}
         <div class="product-features">
           {% for feat in features %}

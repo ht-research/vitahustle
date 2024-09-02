@@ -2,6 +2,7 @@
     assign sectionId = section.id | append: '---MainSection'
     assign totalServes = section.settings.total_serves
     assign blocks = section.blocks
+    assign product = product | default: all_products['vitahustle-one-superfood']
     assign bundleProducts = product.metafields.custom.product_bundles.value
     assign productOne = bundleProducts | first
     assign price = productOne.price
@@ -21,7 +22,6 @@
     assign choosebagFirst = section.settings.bags_to_choose_text
     assign customProductImages = product.metafields.custom.custom_product_images.value
 %}
-
 
 <script>
   window.bundleProducts = {};
@@ -62,11 +62,11 @@
                     </div>
                     {% if forloop.index<2 %}
                       {% assign newIndex = forloop.index  | plus : 2 %}
-                      {% render 'quantity-controller', productId: items.id, index: newIndex, variantId: variant.id, variant: variant %}
+                      {% render 'quantity-controller', productId: items.id, index: newIndex, variantId: variant.id %}
                       
                     {% else %}
                       {% assign newIndex = forloop.index  | minus : 1 %}
-                      {% render 'quantity-controller', productId: items.id, index: newIndex, variantId: variant.id, variant: variant %}
+                      {% render 'quantity-controller', productId: items.id, index: newIndex, variantId: variant.id %}
                     {% endif %}
                   </div>
 
@@ -2141,7 +2141,6 @@ var productFirst = `
     "name": "Superfood custom v3",
     "tag": "section",
     "class": "product-section-new",
-    "blocks": [],
     "settings": [
       {
         "type": "number",

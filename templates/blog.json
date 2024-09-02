@@ -45,7 +45,7 @@
       "type": "blog",
       "custom_css": [
         ".article-card__read-more-link {color: #afc42f;}",
-        ".link__text:before {background:#afc42f;}"
+        ".link__text:before {background: #afc42f;}"
       ],
       "settings": {
         "color_scheme": "primary",
@@ -59,7 +59,7 @@
         "show_tags": true,
         "show_author": true,
         "show_date": true,
-        "show_comment_count": true,
+        "show_comment_count": false,
         "show_subheading": true,
         "show_read_more": true,
         "article_per_page": 6,

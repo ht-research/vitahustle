@@ -15,6 +15,11 @@
         align-items: flex-start;
         padding: 40px 58px;
     }
+    {% if template contains 'new-greens-strawberry' %}
+        .how_to_use_wrapper .inner_how_to_use_wrapper{
+            padding: 60px 58px;
+        }
+    {% endif %}
     .how_to_use_wrapper .inner_how_to_use_wrapper .title{
         font-family: "Druk Web";
         font-size: 4.514vw;
@@ -28,6 +33,11 @@
         flex-direction: row;
         text-transform: uppercase;
     }
+    {% if template contains 'new-greens-strawberry' %}
+        .how_to_use_wrapper .inner_how_to_use_wrapper .title{
+            max-width: 290px;
+        }
+    {% endif %}
     .how_to_use_wrapper .inner_how_to_use_wrapper .title::after{
         position: absolute;
         content: "";
@@ -47,6 +57,11 @@
         bottom: -10px;
         right: calc(-3* 2vw);
     }
+    {% if template contains 'new-greens-strawberry' %}
+        .how_to_use_wrapper .inner_how_to_use_wrapper .title .htu_arrow{
+            right: calc(-3* 0.6vw);
+        }
+    {% endif %}
     .how_to_use_wrapper .inner_how_to_use_wrapper .title .htu_arrow.mobile_only{
         display: none;
     }
@@ -63,6 +78,11 @@
         align-items: flex-start;
         column-gap: 40px;
     }
+    {% if template contains 'new-greens-strawberry' %}
+        .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper{
+            column-gap: 30px;
+        }
+    {% endif %}
     .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper .image_text_section{
     }
     .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper .image_text_section .how_to_use_image{
@@ -123,11 +143,37 @@
         letter-spacing: 0.38px;
         {% comment %} line-height: 35.53px; {% endcomment %}
     }
+    {% if template contains 'new-greens-strawberry' %}
+
+        .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper .image_text_section .how_to_use_image .steps p{
+            color: #ffffff;
+        }
+        {% comment %} .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper .image_text_section .how_to_use_image .steps span{
+            background-color: #000000;
+            color: #ffffff;
+        } {% endcomment %}
+    {% endif %}
     @media screen and (min-width:1441px) {
         .how_to_use_wrapper .inner_how_to_use_wrapper .title{
             font-size: 70px;
         }
+        .how_to_use_wrapper .inner_how_to_use_wrapper .title .htu_arrow{
+          right: -100px;
+        }
+        {% if template contains 'new-greens-strawberry' %}
+          .how_to_use_wrapper .inner_how_to_use_wrapper{
+            padding: 4vw 40px !important;
+          }
+        {% endif %}
     }
+    {% if template contains 'new-greens-strawberry' %}
+        .how_to_use_wrapper .inner_how_to_use_wrapper .title{
+            font-size: 60px;
+        }
+        .how_to_use_wrapper .inner_how_to_use_wrapper{
+            padding: 4vw 4vw;
+        }
+    {% endif %}
     @media screen and (max-width:912px) and (min-width:820px) {
         .how_to_use_wrapper .inner_how_to_use_wrapper{
             padding: 40px 40px;
@@ -183,6 +229,7 @@
             line-height: 16.8px;
         }
         .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper .image_text_section .how_to_use_image .steps p{
+            color: #000000;
             font-size: 28px;
             font-weight: 700;
             line-height: 26.18px;
@@ -202,6 +249,21 @@
         }
 
     }
+    {% if template contains 'new-greens-strawberry' %}
+        @media only screen and (max-width:820px) {
+            .how_to_use_wrapper .inner_how_to_use_wrapper .title p{
+                max-width: 260px;
+            }
+            .how_to_use_wrapper .inner_how_to_use_wrapper .title .htu_arrow.mobile_only{
+                bottom: -32px;
+                right: -20px;
+            }
+            .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper .image_text_section .how_to_use_image img{
+                border-radius: 20px;
+                aspect-ratio: 1 / 1;
+            }
+        }
+    {% endif %}
     @media screen and (max-width:820px) and (min-width:500px) {
         .how_to_use_wrapper .inner_how_to_use_wrapper .title .htu_arrow.mobile_only{
             right: -43px;
@@ -232,6 +294,15 @@
             left: 5px;
             transform: translateX(0px);
         }
+    }
+    @media only screen and (max-width:375px) {
+        {% if template contains 'new-greens-strawberry' %}
+            .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper .image_text_section .how_to_use_image .steps{
+                top: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        {% endif %}
     }
     @media only screen and (max-width:320px) {
         .how_to_use_wrapper .inner_how_to_use_wrapper .title{

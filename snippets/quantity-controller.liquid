@@ -1,22 +1,35 @@
-<div class="quanity_controller">
-  <div class="quantity_item_controller decrement" data-id="{{ productId }}_{{ variantId }}" data-index="{{ index }}">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="8"
-      height="14"
-      viewBox="0 0 8 14"
-      fill="none">
-      <line
-        y1="7.5"
-        x2="8"
-        y2="7.5"
-        stroke="#212121" />
-    </svg>
+{% unless variant.title contains 'Strawberry' %}
+  <div class="quanity_controller">
+    <div class="quantity_item_controller decrement" data-id="{{ productId }}_{{ variantId }}" data-index="{{ index }}">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="8"
+        height="14"
+        viewBox="0 0 8 14"
+        fill="none">
+        <line
+          y1="7.5"
+          x2="8"
+          y2="7.5"
+          stroke="#212121" />
+      </svg>
+    </div>
+    <div class="value">
+      1
+    </div>
+    <div class="quantity_item_controller increment" data-id="{{ productId }}_{{ variantId }}" data-index="{{ index }}">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="8"
+        height="14"
+        viewBox="0 0 8 14"
+        fill="none">
+        <path d="M0.173828 7.7915V6.56104H3.36719V3.3457H4.61963V6.56104H7.813V7.7915H4.61963V10.9995H3.36719V7.7915H0.173828Z" fill="#212121" />
+      </svg>
+    </div>
   </div>
-  <div class="value">
-    1
-  </div>
-  <div class="quantity_item_controller increment" data-id="{{ productId }}_{{ variantId }}" data-index="{{ index }}">
+  <div class="add_cta" data-id="{{ productId }}_{{ variantId }}" data-index="{{ index }}">
+    <span>Add</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="8"
@@ -26,15 +39,33 @@
       <path d="M0.173828 7.7915V6.56104H3.36719V3.3457H4.61963V6.56104H7.813V7.7915H4.61963V10.9995H3.36719V7.7915H0.173828Z" fill="#212121" />
     </svg>
   </div>
+{% else %}
+<div class="sold_out">
+  <span>Sold Out</span>
 </div>
-<div class="add_cta" data-id="{{ productId }}_{{ variantId }}" data-index="{{ index }}">
-  <span>Add</span>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="8"
-    height="14"
-    viewBox="0 0 8 14"
-    fill="none">
-    <path d="M0.173828 7.7915V6.56104H3.36719V3.3457H4.61963V6.56104H7.813V7.7915H4.61963V10.9995H3.36719V7.7915H0.173828Z" fill="#212121" />
-  </svg>
-</div>
+{% endunless %}
+<style>
+  .sold_out{
+    padding: 7px 0;
+    width: 100%;
+    max-width: 100px;
+    border-radius: 74px;
+    background: #d5d5d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+  }
+  .sold_out span{
+    color: #121212;
+    text-align: center;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    margin-right: 3px;
+    text-transform: uppercase;
+    {% comment %} font-size: 14px; {% endcomment %}
+    font-weight: 800;
+  }
+</style>
