@@ -38,7 +38,7 @@
     endif
   -%}
   
-  {% if template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %}
+  {% if template contains 'new-greens-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %}
     <style>
       .add_to_cart_strawberry{
         display: none;
@@ -51,6 +51,7 @@
         font-family: "FK Grotesk Bold";
         text-transform: uppercase;
         font-size: 17px;
+        color: black;
         text-align: center;
         cursor: pointer;
         min-height: 5.6rem;
@@ -112,7 +113,7 @@
   </div>
     {% endif %}
   
-    {% if template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %}
+    {% if template contains 'new-greens-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %}
       {%- render 'why-subscribe' -%}
     {% endif %}
     <div class="" {{ block.shopify_attributes }}>
@@ -165,6 +166,9 @@
                         {% if available == false %}
                             disabled
                         {% endif %}
+                           data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                         aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
                         >
                         <span data-button-text>
@@ -206,6 +210,9 @@
                       disabled
                     {% endif %}
                     data-product-form-button
+                     data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                     aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
                   >
                     <span data-button-text>
@@ -228,6 +235,9 @@
                 {% if available == false %}
                   disabled
                 {% endif %}
+                 data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                 aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
               >
                 <span data-button-text>

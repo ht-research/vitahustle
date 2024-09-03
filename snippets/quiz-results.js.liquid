@@ -1,0 +1,94 @@
+var template = window.location.href;
+var quizContent = localStorage.getItem('quiz_step');
+var custom_header = {
+  "More Energy": "Get Energized",
+  "Lose Weight": "Achieve your Weight Goals",
+  "Improved Fitness Level":"Improve Your Fitness Levels",
+  "Improved Overall Health": "Improve Overall Health",
+  "Other":"Level Up Your Wellness"
+};
+if(quizContent != null) {
+  const quizJson = JSON.parse(quizContent);
+  let quizTitle = null;
+  let quizTitlesuffix = '';
+  if(template.includes('quiz-results')){
+    quizTitle = document.querySelector('.quiz-banner-heading');
+    quizTitlesuffix = ' with VitaHustle';
+  } else if(template.includes('offer-landing')){
+    quizTitle = document.querySelector('.product_kit_description_wrapper .subtitle');
+    quizTitlesuffix = ' with';
+  }
+  if(quizTitle){
+    quizTitle.innerHTML = custom_header[quizJson.step_1.answer[0]] ? custom_header[quizJson.step_1.answer[0]] + quizTitlesuffix : "Fuel With";
+  }  // if(quizJson.step_1.answer[0] == 'More Energy') {
+  //     quizTitle.innerHTML = 'Get Energized'+quizTitlesuffix;
+  // } else if(quizJson.step_1.answer[0] == 'Loose Weight') {
+  //     quizTitle.innerHTML = 'Achieve your Weight Goals'+quizTitlesuffix
+  // } else if(quizJson.step_1.answer[0] == 'Improved Fitness Level') {
+  //     quizTitle.innerHTML = 'Improve Your Fitness Levels'+quizTitlesuffix
+  // } else if(quizJson.step_1.answer[0] == 'Improved Overall Health') {
+  //     quizTitle.innerHTML = 'Improve Overall Health'+quizTitlesuffix
+  // } else if(quizJson.step_1.answer[0] == 'Other') {
+  //     quizTitle.innerHTML = 'Level Up Your Wellness'+quizTitlesuffix
+  // }
+}
+
+
+const siteHeader = document.querySelector('.header');
+const banner = document.querySelector('.quiz-banner-section');
+const quizCodeSection = document.querySelector('.quiz-offcode-section');
+let sectionHeight;
+if(banner){
+   sectionHeight = siteHeader.offsetHeight + banner.offsetHeight + 20;
+}
+else{
+   sectionHeight = siteHeader.offsetHeight + 20;
+
+}
+
+// sticky timer section
+function stickyOnScroll() {
+    if (window.scrollY >= sectionHeight) {
+        document.body.style.paddingTop = quizCodeSection.offsetHeight + 'px';
+        quizCodeSection.classList.add('sticky-top');
+        quizCodeSection.classList.add('container');
+    } else {
+        document.body.style.paddingTop = 0;
+        quizCodeSection.classList.remove('sticky-top');
+        quizCodeSection.classList.remove('container');
+    }
+}
+
+window.addEventListener('scroll', function() {
+    stickyOnScroll();
+});
+
+window.addEventListener('resize', () => {
+    stickyOnScroll();
+});
+
+
+// timer
+var interval = 3600000;
+
+function timerReset() {
+    localStorage.endTime = +new Date + interval;
+}
+if (!localStorage.endTime) {
+    timerReset();
+}
+
+setInterval(function() {
+    var remaining = localStorage.endTime - new Date;
+    const timerText = document.querySelector('.quiz-offcode-expire-timer');
+    const minutesSpan = timerText.querySelector('.minutes');
+    const secondsSpan = timerText.querySelector('.seconds');
+    if (remaining >= 0) {
+        minutesSpan.innerHTML = Math.floor(remaining / 60000);
+        let seconds = ((remaining % 60000) / 1000).toFixed(0)
+        secondsSpan.innerHTML = (seconds < 10 ? '0' : '') + seconds;
+    } else {
+        // timer end condition
+        timerReset();
+    }
+}, 100);

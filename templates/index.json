@@ -2,6 +2,7 @@
   "sections": {
     "9fd9498c-6efb-476e-8d6a-a7a853124857": {
       "type": "banner-new",
+      "disabled": true,
       "settings": {
         "display_rating": false,
         "number_of_reviews": 426,
@@ -32,11 +33,54 @@
         "desktop_content_background": "none",
         "mobile_content_background": "none",
         "btn_text": "SHOP NOW",
-        "btn_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "btn_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry",
         "btn_style": "solid",
         "extra_btn_text": "",
         "extra_btn_url": "",
         "extra_btn_style": "outline"
+      }
+    },
+    "labor_day_banner_dLjjkY": {
+      "type": "labor-day-banner",
+      "settings": {
+        "labor_day_banner_title": "20% OFF",
+        "labor_day_banner_subtitle": "LABOR DAY SALE",
+        "labor_day_banner_subtext": "CODE: LABOR20",
+        "labor_day_banner_offerText": "",
+        "background_larger_screen_image": "shopify:\/\/shop_images\/BG_2.png",
+        "larger_screen_banner_max_height": 700,
+        "background_desktop_image": "shopify:\/\/shop_images\/Frame_48097379_1.png",
+        "desktop_banner_max_height": 640,
+        "background_mobile_image": "shopify:\/\/shop_images\/Bg.png",
+        "mobile_banner_min_height": 660,
+        "mobile_banner_max_height": 800,
+        "background_ipad_image": "shopify:\/\/shop_images\/Bg_1.png",
+        "Tablet_banner_max_height": 940,
+        "btn_text": "Shop Now",
+        "btn_url": "https:\/\/vitahustle.com\/discount\/labor20?redirect=%2Fproducts%2Fone-superfood-protein-shake-strawberry"
+      }
+    },
+    "new_prime_day_banner_Y6JjfG": {
+      "type": "new-prime-day-banner",
+      "disabled": true,
+      "settings": {
+        "greens_new_banner_title": "30% OFF",
+        "greens_new_banner_subtitle": "Superfoods are",
+        "greens_new_banner_subtext": "",
+        "greens_new_banner_offerText": "",
+        "background_larger_screen_image": "shopify:\/\/shop_images\/primedaylarge.jpg",
+        "larger_screen_banner_max_height": 700,
+        "background_desktop_image": "shopify:\/\/shop_images\/Desktop_dbadd2b5-bd27-4ba5-ad0e-6504c99b6fd7.png",
+        "desktop_banner_max_height": 700,
+        "background_mobile_image": "shopify:\/\/shop_images\/Mobile.png",
+        "mobile_banner_min_height": 700,
+        "mobile_banner_max_height": 800,
+        "background_ipad_image": "shopify:\/\/shop_images\/Tablet.png",
+        "background_small_mobile_image": "shopify:\/\/shop_images\/Frame_48096467_1.png",
+        "Tablet_banner_max_height": 900,
+        "brand_logo": "shopify:\/\/shop_images\/Prime_Day_Logo_1.png",
+        "btn_text": "SHOP NOW",
+        "btn_url": "https:\/\/www.amazon.com\/stores\/page\/1006D45C-6150-4BC3-B133-F9BD652E5D33?maas=maas_adg_07EFD182C9233B35D3A201D721056CE2_afap_abs&ref_=aa_maas&tag=maas&ingress=0&visitId=301e633c-b5f2-4a44-9dd3-b5b16828bab5"
       }
     },
     "memorial_day_sale_banner_hjwiiD": {
@@ -244,7 +288,7 @@
         "subtext": "Everything you need for mind and body",
         "text_color": "#4d201a",
         "cta_text": "Shop Now",
-        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "cta_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry",
         "list_color": "#797a74"
       }
     },
@@ -455,7 +499,7 @@
         "title_font_size": 80,
         "title_box_width": 390,
         "cta_text": "Shop Now",
-        "cta_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "cta_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry",
         "top_spacing": 110,
         "bottom_spacing": 290,
         "background_image": "shopify:\/\/shop_images\/Image2_1_1.png",
@@ -695,20 +739,11 @@
     "testimonial_PGKReh": {
       "type": "testimonial",
       "blocks": {
-        "video_text_3f4eVi": {
+        "video_text_DmxB7t": {
           "type": "video_text",
           "settings": {
-            "testimonial_thumbnail_image": "shopify:\/\/shop_images\/ANDREW_LISCIO.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
-          }
-        },
-        "rich_text_eJM369": {
-          "type": "rich_text",
-          "settings": {
-            "image_content": "shopify:\/\/shop_images\/Ellipse_91_1.png",
-            "review_text": "\"I drink it right after my workout and can tell it's helping my body develop. Also a very good meal replacement, and gives energy all around.\"",
-            "customer_name": "James",
-            "customer_designation": "Finance Professional"
+            "testimonial_thumbnail_image": "shopify:\/\/shop_images\/MELISSA_ARDON.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c87e435462724016a9acb2ebda611d7c.mp4"
           }
         },
         "rich_text_cADijJ": {
@@ -720,18 +755,27 @@
             "customer_designation": "Creative Director"
           }
         },
+        "rich_text_eJM369": {
+          "type": "rich_text",
+          "settings": {
+            "image_content": "shopify:\/\/shop_images\/Ellipse_91_1.png",
+            "review_text": "\"I drink it right after my workout and can tell it's helping my body develop. Also a very good meal replacement, and gives energy all around.\"",
+            "customer_name": "James",
+            "customer_designation": "Finance Professional"
+          }
+        },
+        "video_text_3f4eVi": {
+          "type": "video_text",
+          "settings": {
+            "testimonial_thumbnail_image": "shopify:\/\/shop_images\/ANDREW_LISCIO.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
+          }
+        },
         "video_text_Lci3qn": {
           "type": "video_text",
           "settings": {
             "testimonial_thumbnail_image": "shopify:\/\/shop_images\/BRITTANY_WOODCOX.jpg",
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e301b71b26d74dea980f3457ce5e6db2.mp4"
-          }
-        },
-        "video_text_DmxB7t": {
-          "type": "video_text",
-          "settings": {
-            "testimonial_thumbnail_image": "shopify:\/\/shop_images\/MELISSA_ARDON.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c87e435462724016a9acb2ebda611d7c.mp4"
           }
         },
         "rich_text_ncUaTt": {
@@ -910,6 +954,8 @@
   },
   "order": [
     "9fd9498c-6efb-476e-8d6a-a7a853124857",
+    "labor_day_banner_dLjjkY",
+    "new_prime_day_banner_Y6JjfG",
     "memorial_day_sale_banner_hjwiiD",
     "new_banner_p3zbmw",
     "free_shaker_banner_EqDm9r",

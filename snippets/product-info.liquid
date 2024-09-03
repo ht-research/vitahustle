@@ -16,7 +16,9 @@
           when 'inventory_status'
             render 'product-stock-block', product: product, section: section, block: block, sectionId: sectionId
           when 'price'
-            render 'product-price-block', product: product, section: section, block: block, sectionId: sectionId
+            unless template contains 'new-greens-strawberry'
+              render 'product-price-block', product: product, section: section, block: block, sectionId: sectionId
+            endunless
           when 'description'
             render 'product-description-block', product: product, section: section, block: block, sectionId: sectionId
           when 'subscription_widget'
@@ -24,7 +26,11 @@
           when 'custom_liquid'
             render 'product-liquid-block', product: product, section: section, block: block, sectionId: sectionId
           when 'collapsible_row'
-            render 'product-content-tab-block', product: product, section: section, block: block, sectionId: sectionId
+            if block.settings.title contains "Supplement Facts" 
+              render 'product-content-tab-block-new', product: product, section: section, block: block, sectionId: sectionId
+            else
+              render 'product-content-tab-block', product: product, section: section, block: block, sectionId: sectionId
+            endif
           when 'quantity_selector'
             render 'product-quantity-block', product: product, section: section, block: block, sectionId: sectionId
           when 'information_tag'
@@ -36,7 +42,7 @@
           when 'variant_picker'
             render 'product-variant-picker-block', product: product, section: section, block: block, sectionId: sectionId
           when 'buy_buttons'
-            if template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry"
+            if template contains 'new-greens-strawberry' and product.handle=="one-superfood-protein-shake-strawberry"
               render 'product-new-form-block', product: product, section: section, block: block, sectionId: sectionId
             else
               render 'product-form-block', product: product, section: section, block: block, sectionId: sectionId

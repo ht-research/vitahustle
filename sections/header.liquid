@@ -6,6 +6,8 @@
   assign mobile_logo_img = options.mobile_logo_img
   assign mobile_logo_width = options.mobile_logo_width
   assign menu = options.menu
+  assign mobile_menu = options.mobile_menu
+  
   assign grid = options.grid
 
   assign cart_icon = options.cart_icon
@@ -22,6 +24,25 @@
     assign profile_url = routes.account_url
   endif
 -%}
+
+<style>
+
+  .header__item.quiz{
+    padding: 0 2rem 0rem;
+  }
+  @media (max-width: 1015px) {
+    .header__item.quiz{
+      display: none;
+    }
+    .drawer-menu__menu-item.active{
+      background: transparent;
+    }
+    .drawer-menu__list-body{
+      max-width: unset;
+    }
+  }
+</style>
+
 {%- capture css -%}
   {% style %}
         @media (min-width: 768px) {
@@ -30,7 +51,7 @@
           }
         }
       .sidebar-cart{
-        z-index: 9999999;
+        z-index: 999999999;
       }
       {% if enable_upcart == true %}
         body{
@@ -220,7 +241,7 @@
   </sticky-cart-button>
 {%- endif -%}
 
-{% render 'drawer-menu', menu: menu, section: section, profile_url: profile_url %}
+{% render 'drawer-menu-new', menu: mobile_menu, section: section, profile_url: profile_url %}
 
 <header-component
   class='header section-{{ section.id }} color-{{ color_scheme }} header--desktop {% if enable_border == true %}{% endif %}'
@@ -245,7 +266,7 @@
       -%}
       {%- if menu != blank and menu.links != blank and grid != '6' -%}
         <div class='header__nav' data-desktop-nav>
-          {%- for link in menu.links -%}
+          {%- for link in menu.links limit: 4 -%}
             {%- liquid
               assign link_title_downcase = link.title | downcase
               assign has_menu = false
@@ -565,6 +586,16 @@
       </sidebar-button>
 
       <div class='icon-list header__icons'>
+        {%- for link in menu.links offset: 4 -%}
+          <a
+            href='{{ link.url }}'
+            class='underline-text header__item quiz {% if link.active %}active{% endif %}'
+            aria-label='quiz'
+          >
+            <span class='underline-text__label'>{{ link.title }}</span>
+          </a>
+
+        {%- endfor -%}
         {% if settings.search_type != 'hide' %}
           {%- if settings.search_type == 'page_only' or template.name contains 'search' -%}
             <a
@@ -830,6 +861,12 @@
       "id": "menu",
       "default": "main-menu",
       "label": "t:sections.header.menu_label"
+    },
+    {
+      "type": "link_list",
+      "id": "mobile_menu",
+      "default": "main-menu",
+      "label": "Choose mobile navigation menu"
     },
     {
       "type": "header",
@@ -1855,6 +1892,69 @@
           "default": 3,
           "unit": "t:sections.header.collection_list_block_autoplay_interval_unit",
           "label": "t:sections.header.collection_list_block_autoplay_interval_label"
+        }
+      ]
+    },
+    {
+      "type": "new_button_menu",
+      "name": "New Button Menu",
+      "settings": [
+        {
+           "type": "text",
+           "id": "new_button_menu_text",
+           "label": "Menu Label"
+        },
+        {
+           "type": "url",
+           "id": "new_button_menu_url",
+           "label": "Menu URL"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "options": [
+            {
+              "value": "Solid",
+              "label": "Solid"
+            },
+            {
+              "value": "Outline",
+              "label": "Outline"
+            }
+          ],
+          "default": "Solid",
+          "label": "Button Menu style"
+        },
+        {
+          "type": "color",
+          "id": "button_background_color",
+          "label": "Button Background color"
+        },
+        {
+          "type": "color",
+          "id": "button_outline_color",
+          "label": "Button Outline color"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button Text color"
+        }
+      ]
+    },
+    {
+      "type": "new_menu",
+      "name": "New Mobile Menu",
+      "settings": [
+        {
+           "type": "text",
+           "id": "new_menu_text",
+           "label": "Menu Label"
+        },
+        {
+           "type": "url",
+           "id": "new_menu_url",
+           "label": "Menu URL"
         }
       ]
     }

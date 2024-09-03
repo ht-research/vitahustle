@@ -1,173 +1,157 @@
 {
   "sections": {
-    "main": {
-      "type": "product",
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "custom_css": [
+        "h5 {font-family: \"Druk Web\"; font-size: 6rem; line-height: 1;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "medium",
+        "section_spacing_top": 50,
+        "section_spacing_bottom": 50,
+        "show_heading": true
+      }
+    },
+    "offer_landing_page_pBQV3x": {
+      "type": "offer-landing-page",
       "blocks": {
-        "title": {
-          "type": "title",
+        "image_text_XpKtjL": {
+          "type": "image_text",
           "settings": {
-            "heading_size": "h1"
+            "offer_landing_page_feature_text": "86 <br>Superfoods",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Orange_1.png"
           }
         },
-        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "image_text_B4iART": {
+          "type": "image_text",
           "settings": {
+            "offer_landing_page_feature_text": "Pre & <br>Probiotics",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Vector_7_1.png"
           }
         },
-        "price": {
-          "type": "price",
+        "image_text_KgiACU": {
+          "type": "image_text",
           "settings": {
-            "price_size": "xs",
-            "show_tax_status": false,
-            "show_sale_amount_badge": true,
-            "highlight_sale_price": true
+            "offer_landing_page_feature_text": "20g <br>Plant Protein",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Frame_48096425.png"
           }
         },
-        "28586830-d855-4547-8946-94914bac9e85": {
-          "type": "description",
+        "image_text_6jqy6C": {
+          "type": "image_text",
           "settings": {
-            "title": "",
-            "block_style": "static",
-            "icon": "none"
+            "offer_landing_page_feature_text": "Clinically Proven <br>Ashwagandha",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Frame_48096458.png"
           }
         },
-        "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
-          "type": "variant_picker",
+        "image_text_w9pg3i": {
+          "type": "image_text",
           "settings": {
-            "option_type": "dropdown-solid",
-            "primary_swatch_option_type": "variant-images",
-            "secondary_swatch_option_type": "dropdown-solid",
-            "option_name": "Flavor",
-            "information_drawer_button_label": "",
-            "text": "",
-            "page": "",
-            "image_width": 60
+            "offer_landing_page_feature_text": "$48.80 worth of gifts!",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Frame_48096072_1.png"
           }
         },
-        "subscription_widget_xJhk8P": {
-          "type": "subscription_widget",
+        "image_text_PqJW3V": {
+          "type": "image_text",
           "settings": {
+            "offer_landing_page_feature_text": "Free Shipping",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Frame_48096073_1.png"
           }
         },
-        "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
-          "type": "quantity_selector",
+        "feature_text_mdwimd": {
+          "type": "feature-text",
           "settings": {
+            "offer_landing_page_feature_text": "60-Day Money-Back Guarantee"
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "feature_text_NqDMeX": {
+          "type": "feature-text",
           "settings": {
-            "show_dynamic_checkout": false,
-            "enable_pickup_availability": false,
-            "enable_gift_card": false
+            "offer_landing_page_feature_text": "30 Day Supply, Ships Every 30-Days"
           }
         },
-        "b7435ba2-8e00-4538-be27-63a92d60e195": {
-          "type": "information_tag",
+        "feature_text_ccExJK": {
+          "type": "feature-text",
           "settings": {
-            "tag_style": "none",
-            "heading": "60-Day Money-Back Guarantee",
-            "body": "",
-            "content_alignment": "center",
-            "icon": "none",
-            "custom_icon_image": "shopify:\/\/shop_images\/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
-            "icon_position": "inline",
-            "tag_background_color": "#f7f7f7",
-            "tag_text_color": "#141416",
-            "enable_drawer": false,
-            "drawer_text": "",
-            "drawer_page": "",
-            "drawer_media_size": 60
+            "offer_landing_page_feature_text": "Pause, Cancel or Change Anytime"
           }
         },
-        "c5924e9f-2227-4047-ac6f-bfad6b346aa4": {
-          "type": "collapsible_row",
-          "disabled": true,
+        "subscription_benefit_HTddwB": {
+          "type": "subscription-benefit",
           "settings": {
-            "style": "collapsible_row_closed",
-            "title": "SUPPLEMENT FACTS",
-            "icon": "none",
-            "text": "",
-            "page": "vitahustle-one-superfood-strawberry",
-            "image_width": 60
+            "offer_landing_page_feature_text": "Free Shipping"
           }
         },
-        "cbfcea53-e238-4c35-a5c9-da334abf0c2d": {
-          "type": "collapsible_row",
+        "subscription_benefit_AADXy7": {
+          "type": "subscription-benefit",
           "settings": {
-            "style": "collapsible_row_closed",
-            "title": "BENEFITS",
-            "icon": "none",
-            "text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
-            "page": "",
-            "image_width": 60
+            "offer_landing_page_feature_text": "Free Welcome Kit (Shaker Bottle + Recipe Book)"
           }
         },
-        "418118f7-e71b-4ce3-bee0-cde3239694f7": {
-          "type": "collapsible_row",
+        "subscription_benefit_34jqra": {
+          "type": "subscription-benefit",
           "settings": {
-            "style": "collapsible_row_closed",
-            "title": "INGREDIENTS",
-            "icon": "none",
-            "text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
-            "page": "",
-            "image_width": 60
+            "offer_landing_page_feature_text": "Free Hydration Electrolytes"
           }
         },
-        "06c05680-9cfd-4c28-8b40-a64f24723e70": {
-          "type": "collapsible_row",
+        "subscription_benefit_XAKgjc": {
+          "type": "subscription-benefit",
           "settings": {
-            "style": "collapsible_row_closed",
-            "title": "HOW TO USE",
-            "icon": "none",
-            "text": "<p>Add 2 scoops of powder, blend with 8-12 oz of ice cold water or milk, blend ior shake vigorously. Serve cold or over ice.<\/p>",
-            "page": "",
-            "image_width": 60
+            "offer_landing_page_feature_text": "60 Day Money Back Guarantee"
           }
         }
       },
       "block_order": [
-        "title",
-        "8a594cf6-45bd-4c34-ba41-054c7b7bb43b",
-        "price",
-        "28586830-d855-4547-8946-94914bac9e85",
-        "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
-        "subscription_widget_xJhk8P",
-        "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
-        "buy_buttons",
-        "b7435ba2-8e00-4538-be27-63a92d60e195",
-        "c5924e9f-2227-4047-ac6f-bfad6b346aa4",
-        "cbfcea53-e238-4c35-a5c9-da334abf0c2d",
-        "418118f7-e71b-4ce3-bee0-cde3239694f7",
-        "06c05680-9cfd-4c28-8b40-a64f24723e70"
-      ],
-      "custom_css": [
-        "ul {padding-inline-start: 0px !important;}",
-        ".superfood-only {display: none;}",
-        "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
-        ".product-desktop-media {position: sticky !important; top: 120px !important;}",
-        ".variant-picker-dropdown__toggle--solid {background-color: white;}",
-        ".variant-picker-dropdown__color-swatch {display: none;}"
+        "image_text_XpKtjL",
+        "image_text_B4iART",
+        "image_text_KgiACU",
+        "image_text_6jqy6C",
+        "image_text_w9pg3i",
+        "image_text_PqJW3V",
+        "feature_text_mdwimd",
+        "feature_text_NqDMeX",
+        "feature_text_ccExJK",
+        "subscription_benefit_HTddwB",
+        "subscription_benefit_AADXy7",
+        "subscription_benefit_34jqra",
+        "subscription_benefit_XAKgjc"
       ],
       "settings": {
-        "color_scheme": "default",
-        "container_size": "page-width",
-        "section_spacing_top": 32,
-        "section_spacing_bottom": 10,
-        "layout": "thumbnails-left",
-        "img_ratio": "square",
-        "enable_image_zoom": false,
-        "enable_video_looping": true,
-        "enable_video_autoplay": true,
-        "scale_video": true,
-        "show_part_of_next_slide": true
+        "serving_product": "vitahustle-one-superfood-protein-greens-30-servings",
+        "electrolytes_product": [
+          "electrolyte-hydration-12-pack",
+          "vitahustle-welcome-gift-set"
+        ],
+        "offer_landing_page_product_kit_image": "shopify:\/\/shop_images\/desktop-welcome-kit.png",
+        "offer_landing_page_product_kit_image_mobile": "shopify:\/\/shop_images\/mobile-welcome-kit.png",
+        "offer_landing_page_title": "You've Unlocked <span>40%<\/span> Off",
+        "offer_landing_page_subtitle": "Kevin Hart's Starter Kit",
+        "offer_landing_page_main_product_title": "VitaHustle ONE <br>Superfood Protein",
+        "offer_landing_page_main_product_sub_desc": "",
+        "offer_landing_page_main_product_compare_price": "$98.85",
+        "offer_landing_page_main_product_actual_price": "$74.95",
+        "offer_landing_page_first_order_text": "First Order Includes",
+        "offer_landing_page_welcome_kit_title": "Welcome Kit",
+        "offer_landing_page_welcome_kit_sub_desc": "Shaker Bottle, Recipe Book",
+        "offer_landing_page_welcome_kit_compare_price": "$24.95",
+        "offer_landing_page_electrolyte_title": "Hydration Electrolytes (12 pack)",
+        "offer_landing_page_electrolyte_sub_desc": "6 Immunity\/Orange + 6 Recover\/Berry",
+        "offer_landing_page_electrolyte_compare_price": "$23.90",
+        "popup_title": "Level Up With VitaHustle",
+        "popup_subtitle": "Choose Your Flavor",
+        "save_mark": "SAVE 10%",
+        "single_subscription_title": "Kevin Hart's Starter Kit",
+        "single_subscription_subdesc": "30 Servings Shipped Monthly, Save 25%",
+        "try_once_title": "Try Once",
+        "try_once_subdesc": "30 Servings Shipped once + $7.95 shipping"
       }
     },
     "5096cd4d-03ff-4554-87ca-b668ea4df472": {
       "type": "product-review-block",
       "settings": {
         "title": "VITAHUSTLE REVIEWS",
-        "rating_text": "200+ 5 STAR REVIEWS",
+        "rating_text": "750+ 5 STAR REVIEWS",
         "review_text_tagline": "We're Constantly Inspired By VitaHustle Users Sharing Their Success Stories, Embracing Healthier, More Energized Lives Every Single Day!",
         "rating": 4.5
       }
@@ -280,9 +264,10 @@
             "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/de358ce7905c40ee8e112c6240c815b2.mp4"
           }
         },
-        "4d0555c6-5a62-4d2e-b344-14be49ac2fbc": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "judge_me_reviews_review_widget_homepage_XCA6Ky": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
+            "product": "vitahustle-one-superfood"
           }
         }
       },
@@ -302,7 +287,7 @@
         "c7acc696-ad84-42f2-b72d-cf4ab9c929d7",
         "f2ab0b7e-48b9-4f75-9702-a18960a72b11",
         "5d3a73d3-e168-4189-bc0e-e95287473236",
-        "4d0555c6-5a62-4d2e-b344-14be49ac2fbc"
+        "judge_me_reviews_review_widget_homepage_XCA6Ky"
       ],
       "settings": {
       }
@@ -670,7 +655,8 @@
     }
   },
   "order": [
-    "main",
+    "page",
+    "offer_landing_page_pBQV3x",
     "5096cd4d-03ff-4554-87ca-b668ea4df472",
     "a64e57db-eb92-4095-8e12-fd59d76e9a3c",
     "2fcd5b9f-ab41-41d4-a671-3ec3e5aaead6",

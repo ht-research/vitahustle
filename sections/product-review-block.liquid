@@ -18,9 +18,11 @@
             </svg>
           {% endfor %}
         </div>
-        <p>
-          {{ section.settings.rating_text }}
-        </p>
+        {% if product.metafields.reviews.rating_count >200 %}
+          <p>
+            {{ section.settings.rating_text }}
+          </p>
+        {% endif %}
       </div>
 
     </div>

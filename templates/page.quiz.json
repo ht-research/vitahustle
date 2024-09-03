@@ -2,6 +2,7 @@
   "sections": {
     "page": {
       "type": "page",
+      "disabled": true,
       "custom_css": [
         "h5 {font-family: \"Druk Web\"; font-size: 6rem; line-height: 1;}"
       ],
@@ -12,9 +13,22 @@
         "section_spacing_bottom": 50,
         "show_heading": true
       }
+    },
+    "main_quiz_cXRV8d": {
+      "type": "main-quiz",
+      "settings": {
+        "desktop_img": "shopify:\/\/shop_images\/banner_image_1.png",
+        "mobile_img": "shopify:\/\/shop_images\/banner-image241.png",
+        "tablet_img": "shopify:\/\/shop_images\/tablet_Image.png",
+        "caption": "86 Superfoods, Greens and Vitamins & Minerals",
+        "title": "Unlock <br> Exclusive Offer",
+        "text": "",
+        "note": ""
+      }
     }
   },
   "order": [
-    "page"
+    "page",
+    "main_quiz_cXRV8d"
   ]
 }

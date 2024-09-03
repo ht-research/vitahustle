@@ -1,7 +1,12 @@
 {% liquid
   assign color_scheme = section.settings.color_scheme
-%}
+  assign new_instagram_link = settings.social_instagram_link
+  assign new_tiktok_link = settings.social_tiktok_link
 
+  assign instagram_icon = settings.instagram_icon
+  assign tiktok_icon = settings.tiktok_icon
+  assign vitahusle_logo = settings.vitahusle_logo
+%}
 
 <drawer-menu
   data-section-id="{{ section.id }}"
@@ -106,23 +111,33 @@
           class="header-custom-section"
         >
           <div class="header-custom__column header-custom__column1">
-            <img
+            {% comment %} <img
               src="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/vitahustle_footer_logo.svg?v=1687200392"
               alt="Logo"
-            >
+            > {% endcomment %}
+              <img src="{{ vitahusle_logo | img_url: 'master' }}" alt="Logo" height="44" width="55">
+
           </div>
           <div class="header-custom__column header-custom__column2">
-            <a target="blank_" href="https://www.instagram.com/getvitahustle/"
-              ><img
-                src="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/ig_icon_22e68090-7b99-4432-bee1-1f6c094865fd.svg?v=1689273323"
+            <a target="blank_" href="{{ new_instagram_link }}"
+              >
+                {% comment %} <img
+                src="{{ instagram_icon }}"
                 alt="Instagram"
                 style="margin-right: 10px;"
-            ></a>
-            <a target="blank_" href="https://www.tiktok.com/@vitahustle"
-              ><img
+                > {% endcomment %}
+                 <img src="{{ instagram_icon | img_url: 'master' }}" alt="Instagram" style="margin-right: 10px;">
+
+            </a>
+            <a target="blank_" href="{{ new_tiktok_link }}"
+              >
+                {% comment %} <img
                 src="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/tiktok_icon_643930f0-bfcc-4077-95f0-6813e9bf57fc.svg?v=1689273323"
                 alt="TikTok"
-            ></a>
+                > {% endcomment %}
+                <img src="{{ tiktok_icon | img_url: 'master' }}" alt="TikTok" style="margin-right: 10px;">
+
+            </a>
           </div>
         </div>
         <div style="padding: 1.2rem .8rem 1.2rem 1.6rem" class="footer-custom-section">

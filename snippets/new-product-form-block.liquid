@@ -72,6 +72,9 @@
                     {% if available == false %}
                       disabled
                     {% endif %}
+                     data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                     aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
                   >
                     <span data-button-text>
@@ -99,6 +102,9 @@
                       disabled
                     {% endif %}
                     data-product-form-button
+                     data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                     aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
                   >
                     <span data-button-text>
@@ -118,17 +124,25 @@
                 name="add"
                 id="product-buy-btn-{{ product.id }}-{{ sectionId }}-{{selected_variant.id}}"
                 class="product-form__btn btn btn--lg {% if show_dynamic_checkout == true %}btn--outline{% else %}btn--solid{% endif %}"
-                {% if available == false %}
+                {% if available == false or product.variants[index].title == 'Strawberry' %}
                   disabled
                 {% endif %}
+                 data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                 aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
               >
                 <span data-button-text>
-                  {%- if available -%}
+                  {% if product.variants[index].title == 'Strawberry' %}
+                     {{ sold_out_label }}
+                  {% else %}
+                    {%- if available -%}
                     {{ add_to_cart_label }}
                   {%- else -%}
                     {{ sold_out_label }}
                   {%- endif -%}
+                  {% endif %}
+                  
                 </span>
                 {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
               </button>

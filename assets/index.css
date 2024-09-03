@@ -20,7 +20,14 @@
   font-style: normal;
   font-stretch: normal;
 }
-
+@font-face {
+  font-family: "TestSohneBreit";
+  src: url("https://cdn.shopify.com/s/files/1/0133/3562/5792/files/TestSohneBreit-Kraftig.woff?v=1713276596")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
 @font-face {
   font-family: "FK Grotesk Bold";
   src: url("https://cdn.shopify.com/s/files/1/0133/3562/5792/files/FKGrotesk-Bold.woff2?v=1687553861")

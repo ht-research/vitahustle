@@ -12,10 +12,20 @@
   endif
 -%}
 
+<style>
+  @media only screen and (max-width:820px) {
+    .product-mobile-media--with-half-next-slide{
+      overflow-x: hidden;
+      max-width: 100%;
+      margin: 0px;
+    }
+  }
+</style>
+
 <div class='product-desktop-media'>
   {%- liquid
     if block_layout contains 'thumbnails' and product_media.size > 1
-      if template contains 'new-superfood-strawberry'
+      if template contains 'new-superfood-strawberry'or template contains 'new-greens-strawberry'
         render 'product-new-media-carousel', product: product, block: block, block_layout: block_layout, section: section, sectionId: sectionId
       else
         render 'product-media-carousel', product: product, block: block, block_layout: block_layout, section: section, sectionId: sectionId
@@ -26,7 +36,7 @@
   -%}
 </div>
 
-{% if template contains 'new-superfood-strawberry' %}
+{% if template contains 'new-superfood-strawberry' or template contains 'new-greens-strawberry' %}
   {% assign product_temp_media = product.metafields.custom.custom_product_images.value %}
   <div class='product-mobile-media {% if show_part_of_next_slide %} product-mobile-media--with-half-next-slide{% endif %}'>
     <product-media-carousel data-section='{{ sectionId }}' id='product-media-{{ product.id }}-{{ sectionId }}'>
@@ -134,7 +144,7 @@
 
       thumbnail_images.map((item,i)=>{
 
-        let temp_gallery_elem = all_gallery_images[i+1].querySelector('.product-media__image-wrapper ');
+        let temp_gallery_elem = all_gallery_images[i].querySelector('.product-media__image-wrapper ');
         temp_gallery_elem.innerHTML = gallery_images[i];
 
       })

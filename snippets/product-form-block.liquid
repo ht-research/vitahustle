@@ -122,6 +122,9 @@
                   {% if available == false %}
                     disabled
                   {% endif %}
+                   data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                   aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
                 >
                   <span data-button-text>
@@ -149,6 +152,9 @@
                     disabled
                   {% endif %}
                   data-product-form-button
+                   data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                   aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
                 >
                   <span data-button-text>
@@ -171,6 +177,9 @@
               {% if available == false %}
                 disabled
               {% endif %}
+               data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
               aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
             >
               <span data-button-text>
