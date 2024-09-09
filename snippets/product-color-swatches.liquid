@@ -292,7 +292,9 @@
             assign variant = product.variants | where: option_label, value | first
           %}
 
-          <div>
+          <div  {% if variant.title == "Strawberry" %}
+                style="display:none!important"
+              {% endif %}>
             <label
               for='{{ sectionId }}-{{ product.id }}-{{ option.position }}-{{ forloop.index0 }}'
               class='image-swatches__item {% if is_primary_swatch %} image-swatches__item--{{ settings.primary_shape_for_product_pages }}{% else %} image-swatches__item--{{ settings.secondary_shape_for_product_pages }}{% endif %}  {% if enable_darken_mode %} multiply-mode{% endif %} {% if option.selected_value == value %} selected {% endif %}'

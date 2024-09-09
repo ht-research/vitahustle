@@ -10,6 +10,15 @@
     assign text = product.description
   endif
 %}
+
+{% if template contains '3-pack-superfood' %}
+  <style>
+    .product-content-tab{
+      margin-top: 14px;
+    }
+  </style>
+{% endif %}
+
 {%- if product != blank and text != blank -%}
   {%- if block_style contains 'collapsible' -%}
     <accordeon-component
@@ -60,7 +69,7 @@
           </div>
         </div>
       {% endif %}
-      {% if product.metafields.custom.product_description_features != blank and template contains 'new-superfood-greens' %}
+      {% if product.metafields.custom.product_description_features != blank and template contains 'new-superfood-greens' or template contains 'new-greens-strawberry' %}
         {% assign features = product.metafields.custom.product_description_features.value %}
         <div class="product-features">
           {% for feat in features %}

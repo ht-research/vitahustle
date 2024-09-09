@@ -1,0 +1,455 @@
+{%- assign selling_plans = product.selling_plan_groups[0].selling_plans -%}
+{%- assign sellingPlan = product.selling_plan_groups[0].selling_plans[0] -%}
+
+<style>
+  .product_price_box input:checked+.purchase_type_box{
+  
+  }
+  .purchase_type_box .purchase_type_info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 8px 0;
+    margin: 0 0px;
+  }
+  .purchase_type_box .purchase_type_info .radio_box{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #212121;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 1px;
+  }
+  .purchase_type_box .purchase_type_info .radio_box span{
+    width: 11px;
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border-radius: 50%;
+  }
+  .purchase_type_block input:checked+.purchase_type_box label span.custom_radio{
+    background-color: #212121;
+  }
+  .purchase_type_box .purchase_type_info .snippet_info_box{
+    width: calc(100% - 28px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .type_price_block h2{
+    font-family: 'Lato Regular', sans-serif;
+    color: #212121;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+  }
+  .purchase_type_info .snippet_info_box .per_bag_cost{
+    align-self: flex-end;
+    color: #5e5f5e;
+    text-align: right;
+    font-family: 'Lato Regular', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-transform: uppercase;
+  }
+  .product_price_box .purchase_type_box{
+    padding-bottom: 0px;
+    {% comment %} margin-bottom: 12px; {% endcomment %}
+  }
+  .product_price_box .purchase_type_box{
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all .3s;
+  }
+  .product_price_box .purchase_type_box label{
+    cursor: pointer;
+  }
+  .purchase_type_box.subscription_box .purchase_type_info{
+    padding-bottom: 15px;
+    {% comment %} border-bottom: 1px solid #E4E4E4; {% endcomment %}
+  }
+  .purchase_type_box .purchase_type_info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 18px 0px 5px 0px;
+    margin: 0 24px;
+    width: 350px;
+  }
+  .purchase_type_box.subscription_box .delivery_frequency_box{
+    margin-top: 15px;
+    position: relative;
+    padding: 0 24px;
+  }
+  .purchase_type_box.subscription_box .delivery_frequency_box .selected_frequency{
+    padding: 11px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 30px;
+    border: solid 1px #212121;
+    cursor: pointer;
+  }
+  .purchase_type_box.subscription_box .delivery_frequency_box .selected_frequency.disable{
+    pointer-events: none;
+    border: 1px solid rgba(33,33,33,.5);
+  }
+  {% comment %} .purchase_type_box.subscription_box .delivery_frequency_box .selected_frequency.disable .chevron_icon.disable{
+    visibility: hidden;
+    opacity: 0;
+  } {% endcomment %}
+  .delivery_frequency_box .selected_frequency .selected{
+    color: #212121;
+    font-family: Lato Bold,sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+  .delivery_frequency_box .selected_frequency .selected span:last-child{
+    text-transform: uppercase;
+    font-family: Lato Bold,sans-serif;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown{
+    position: absolute;
+    top: 60px;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #0000000f, 0 0 4px #0000000a;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: all .3s;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul{
+    list-style: none;
+    margin: 0;
+    padding: 20px 30px;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label{
+    font-family: Lato Regular,sans-serif;
+    font-size: 13px;
+    line-height: normal;
+    padding: 5px 0;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label span{
+    color: #21212180;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label input:checked~span {
+    color: #212121;
+    font-weight: 700;
+    font-family: Lato Bold,sans-serif;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown ul li label.active span:last-child, .delivery_frequency_box .delivery_frequency_dropdown ul li label input:checked~span:last-child{
+    font-family: Lato heavy,sans-serif;
+  }
+  .delivery_frequency_box .delivery_frequency_dropdown.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .type_price_block h2{
+    margin-bottom: 0px;
+  }
+  .delivery_frequency_box .selected_frequency.disable .selected{
+    color: rgba(33,33,33,.5);
+  }
+  .purchase_type_box.subscription_box .delivery_frequency_box .selected_frequency.disable .chevron_icon svg path{
+    stroke: rgba(33,33,33,.5);
+  }
+  .purchase_type_info .snippet_info_box .per_bag_cost span.discounted_price{
+    color: #212121;
+  }
+  @media screen and (max-width: 768px) {
+    .purchase_type_box.subscription_box .delivery_frequency_box{
+      margin: 15px 0px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .type_price_block h2,.purchase_type_info .snippet_info_box .per_bag_cost{
+      font-family: 'Lato Regular', sans-serif;
+      color: #212121;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16.8px;
+      text-transform: capitalize;
+      margin-bottom: 6px;
+    }
+    .purchase_type_info .snippet_info_box .per_bag_cost s{
+      color: #5e5f5e;
+    }
+    .purchase_type_box.subscription_box .delivery_frequency_box{
+      margin-bottom: 10px;
+      padding: 0 20px;
+    }
+    .product-quantity__wrap{
+      width: calc(100% - 40px) !important;
+      margin: 0px auto 10px auto !important;
+    }
+    .purchase_type_box .purchase_type_info{
+      margin: 0 0px;
+      width: unset;
+    }
+    .onetime_box.purchase_type_box,.purchase_type_box.subscription_box .purchase_type_info{
+      padding: 0px 20px;
+    }
+  }
+</style>
+<div class="product_price_box">
+    <div class="content_box purchase_type_block">
+       {% comment %} onetime box {% endcomment %}
+       <input
+       hidden
+       type="radio"
+       id="onetime_item_{{ product.variants[index].id }}{% if isMobile %}_mobile{% endif %}"
+       name="subscribe_{{ product.variants[index].id }}{% if isMobile %}_mobile{% endif %}"
+       data-subscribe-product
+       {% unless isMobile %}
+         checked
+       {% endunless %}
+       value="onetime_plan" />
+       
+       <div class="onetime_box purchase_type_box">
+        <label for="onetime_item_{{ product.variants[index].id }}{% if isMobile %}_mobile{% endif %}">
+
+          <div class="purchase_type_info">
+            <div class="radio_box">
+
+              <span class="custom_radio"></span>
+            </div>
+            <div class="snippet_info_box">
+              <div class="type_price_block">
+                <h2>One-time
+                </h2>
+              </div>
+              <div class="per_bag_cost">
+               
+                  <div class="price_box">
+                      <div class="price_calc_box">
+                          <span class="discounted_price_box onetime_original_price">
+                              <span class="discounted_price">{{product.price | money_with_currency | split: 'USD' | first}}</span>
+                          </span>
+                      </div>
+                  </div>
+                  {% if product.metafields.custom.product_servings != blank %}
+                    {% assign servings = product.metafields.custom.product_servings %}
+                  {% else %}
+                    {% assign servings = 15  %}
+                  {% endif %}
+                  {% comment %} <div class="discountBox">(
+                    <span class="discounted_price_per_bag">{{ product.price | divided_by: servings | money_with_currency | split: 'USD' | first }}</span>
+                    <span>/serving</span>
+                    )
+                  </div> {% endcomment %}
+
+                  
+              </div>
+            </div>
+          </div>
+
+
+        </label>
+
+      </div>
+      {% comment %} subscription box {% endcomment %}
+      <input
+      hidden
+      type="radio"
+      id="subscription_item_{{ product.variants[index].id }}{% if isMobile %}_mobile{% endif %}"
+      value="selling_plan"
+      name="subscribe_{{ product.variants[index].id }}{% if isMobile %}_mobile{% endif %}"
+      data-subscribe-product
+      {% if isMobile %}
+        checked
+      {% endif %}
+       />
+      <div class="subscription_box purchase_type_box">
+      
+        <label for="subscription_item_{{ product.variants[index].id }}{% if isMobile %}_mobile{% endif %}">
+
+          <div class="purchase_type_info">
+            <div class="radio_box">
+
+              <span class="custom_radio"></span>
+            </div>
+            <div class="snippet_info_box">
+              <div class="type_price_block">
+                {%- assign subscriptionDiscount = sellingPlan.price_adjustments[0].value | round  -%}
+                <h2>Subscribe & <span>Save {{ subscriptionDiscount }}%</span></h2>
+                {% comment %} <p>Modify, Skip Or Cancel Anytime!</p> {% endcomment %}
+              </div>
+              <div class="per_bag_cost">
+
+                      <div class="price_box">
+                          <span class="discounted_price_box">
+                            <s class="discounted_price">{{product.price | money_with_currency | split: 'USD' | first}}</s>
+                          <span class="discounted_price">{{product.selected_or_first_available_variant.selling_plan_allocations[0].price | money_with_currency | split: 'USD' | first }}</span></span>
+                      </div>
+                      {% if product.metafields.custom.product_servings != blank %}
+                        {% assign servings = product.metafields.custom.product_servings %}
+                    {% else %}
+                        {% assign servings = 15 %}
+                    {% endif %}
+                      {% comment %} <div class="discountBox">(
+                        <span class="discounted_price_per_bag">{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | divided_by: servings | money_with_currency | split: 'USD' | first }}</span>
+                        <span>/serving</span>
+                        )
+                      </div> {% endcomment %}
+              </div>
+            </div>
+          </div>
+
+        </label>
+        <div class="delivery_frequency_box">
+          <div class="selected_frequency {% unless isMobile %}disable{% endunless %}">
+            <div class="selected">
+              Deliver every <span> {{ selling_plans[0].name | replace: 'Deliver every', ''  }}</span>
+            </div>
+            <span class="chevron_icon disable">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none">
+                <path
+                  d="M6 9L12 15L18 9"
+                  stroke="#212121"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="delivery_frequency_dropdown">
+            <ul class="available_frequency">
+            {% for plan in selling_plans %}
+                <li>
+                  <label for="{{product.variants[index].id}}-{{plan.id}}" class="{% if forloop.index == 1%}active{% endif %}">
+                    <input
+                      type="radio"
+                      id="{{product.variants[index].id}}-{{plan.id}}"
+                      data-selling-plans
+                      value="{{ plan.id }}"
+                      name="selling_plan"
+                      form="product-form-{{ product.id }}-{{ sectionId }}-{{product.variants[index].id}}"
+                      hidden 
+                      {% if forloop.index == 1%}
+                      checked
+                      {% endif %}
+                      />
+                    <span>Deliver every</span>
+                    <span> {{ plan.name | replace: 'Deliver every', ''  }}</span>
+                  </label>
+              </li>
+            {% endfor %}
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+  </div>
+
+
+  <script>
+    $('.selected_frequency').unbind().on('click', function(e) {
+      e.stopPropagation();
+      {% comment %} console.log("$(this).siblings('.delivery_frequency_dropdown').",$(this).siblings('.delivery_frequency_dropdown')); {% endcomment %}
+      $(this).siblings('.delivery_frequency_dropdown').toggleClass('active');
+    });
+
+    if($(window).width()>=821){
+        $('.delivery_frequency_dropdown ul li label').on('click', function(e){
+          e.stopPropagation();
+          let text  = $(this).find('span').clone()
+          // let text  = $(this).html();
+          {% comment %} $(this).closest('.delivery_frequency_box').find('.selected_frequency .selected').html(text); {% endcomment %}
+          {% comment %} $(this).parent('.delivery_frequency_dropdown').removeClass('active');
+          $('.delivery_frequency_dropdown ul li label').removeClass('active');
+          $(this).addClass('active'); {% endcomment %}
+    
+          $(this).closest('.delivery_frequency_box').find('.selected_frequency .selected').html(text);
+          $('.delivery_frequency_dropdown').removeClass('active'); 
+          $('.delivery_frequency_dropdown ul li label').removeClass('active');
+          $(this).addClass('active');
+        });
+        
+    }
+    else{
+        $('.delivery_frequency_dropdown ul li label').on('click', function(e){
+            e.stopPropagation();
+            let text  = $(this).find('span').clone();
+            $(this).closest('.delivery_frequency_box').find('.selected_frequency .selected').html(text);
+            $(this).closest('.delivery_frequency_dropdown').removeClass('active');
+            $(this).addClass('active');
+        })
+    
+    }
+
+
+    // outside click
+    $('.delivery_frequency_dropdown, .selected_frequency').on('click', function(e){
+      e.stopPropagation();
+    });
+
+    $(document).on('click', function(){
+      const el = $('.delivery_frequency_dropdown');
+      let isTrueVisible =  $(el).is(':visible') &&
+          $(el).css('opacity') !== '0' &&
+          $(el).css('visibility') !== 'hidden';
+      if(isTrueVisible){$('.delivery_frequency_dropdown').removeClass('active');}
+    })
+
+    // disable selling plan on onetime click
+    $('input[data-subscribe-product]').unbind().on('change',function(){
+
+    let fre = $(this).parent().find('input[name="selling_plan"]:checked').val();
+    console.log("fre",fre);
+    if(!fre){
+        $(this).parent().find('.available_frequency li:first-child input[name="selling_plan"]').prop('checked',true);
+    }
+      if($(this).attr('id').includes('onetime_item')){
+        $('input[name="selling_plan"]').attr('disabled','disabled');
+
+      } else{
+        $('input[name="selling_plan"]').attr('disabled',false);
+        console.log("...")
+
+      }
+      console.log("$(this).attr(value)",$(this).attr("value"));
+      if($(this).attr("value")=="onetime_plan"){
+        console.log("$(this).siblings('.purchase_type_box').find('.selected_frequency')",$(this).siblings('.purchase_type_box').find('.selected_frequency'));
+        $(this).siblings('.purchase_type_box').find('.selected_frequency').addClass("disable");
+        $(this).siblings('.purchase_type_box').find('.selected_frequency .chevron_icon').addClass("disable")
+      }
+      else{
+        $(this).siblings('.purchase_type_box').find('.selected_frequency').removeClass("disable")
+        $(this).siblings('.purchase_type_box').find('.selected_frequency .chevron_icon').removeClass("disable")
+      }
+    })
+
+  </script>

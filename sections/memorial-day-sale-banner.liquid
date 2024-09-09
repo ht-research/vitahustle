@@ -1,0 +1,664 @@
+
+{%- liquid
+    assign options = section.settings
+    assign memorial_day_sale_title = options.memorial_day_sale_title
+    assign memorial_day_sale_subtitle = options.memorial_day_sale_subtitle
+    assign memorial_day_sale_subtext = options.memorial_day_sale_subtext
+    assign memorial_day_sale_offerText = options.memorial_day_sale_offerText
+    assign background_larger_screen_image = options.background_larger_screen_image
+    assign background_desktop_image = options.background_desktop_image
+    assign background_mobile_image = options.background_mobile_image
+    assign background_ipad_image = options.background_ipad_image
+    assign desktop_banner_max_height = options.desktop_banner_max_height
+    assign mobile_banner_min_height = options.mobile_banner_min_height
+    assign mobile_banner_max_height = options.mobile_banner_max_height
+    assign Tablet_banner_max_height = options.Tablet_banner_max_height
+    assign larger_screen_banner_max_height = options.larger_screen_banner_max_height
+    assign btn_text = options.btn_text
+    assign btn_url = options.btn_url
+    assign blocks = section.blocks
+
+  -%}
+
+<style>
+    .memorial_day_sale_banner{
+        width: 100%;
+        height: 41.181vw;
+        {% comment %}
+        {% if desktop_banner_max_height !=blank %}
+            max-height: {{ desktop_banner_max_height }}px;
+        {% endif %}
+        {% endcomment %}
+        display: block;
+        background-image: url("{{ background_desktop_image | img_url: 'master' }}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner{
+        padding: 40px 40px 20px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        {% comment %} max-width: 44.644vw; {% endcomment %}
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 48px;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p{
+        color: #FFF;
+        text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.20);
+        font-family: "Druk Web";
+        font-size: 8.889vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        margin: 0px 0px 30px 0px;
+
+    }
+    {% comment %} .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p span{
+        color: #C8E812;
+        font-size: 8.8832vw;
+        line-height: 9.659vw;
+    } {% endcomment %}
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content .subtitle{
+        color: #000;
+        text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.14);
+        font-family: "Sohne_Breit_regular";
+        font-size: 3.333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        {% comment %} margin: 10px 0px 20px 0px; {% endcomment %}
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content .subtitle span{
+         font-family: "Noto Sans", sans-serif;
+         font-weight: 400;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content h4{
+        font-family: "Lato Regular", sans-serif;
+        color: #212121;
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+        font-size: 1.667vw;
+        font-style: normal;
+        {% comment %} font-weight: 600; {% endcomment %}
+        line-height: normal;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content a{
+        background: #017CC1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 259px;
+        height: 55px;
+        font-family: 'Lato Bold', sans-serif;
+        font-size: 1.389vw;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 74px;
+        color: #FFF;
+        margin-bottom: 22px;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_subtext{
+        color: #000;
+        font-family: "Lato Regular", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .feature_icon_wrapper{
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .feature_icon_wrapper .feature_icon{
+        width: 76px;
+        height: 76px;
+        display: block;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .feature_icon_wrapper .feature_icon img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .shop_btn{
+        display: none;
+    }
+    .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .shop_btn a{
+        background-color: #C8E812;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 261px;
+        height: 55px;
+        font-family: 'Lato Bold', sans-serif;
+        font-size: 1.388vw;
+        font-weight: 900;
+        line-height: 1.665vw;
+        text-decoration: none;
+        border-radius: 30px;
+    }
+    .bottom_arrow_icon{
+        position: absolute;
+        bottom: 1.73vw;
+        width: 2.42vw;
+        min-width: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        z-index: 3;
+        cursor: pointer;
+        transform: translateX(-50%);
+    }
+    {% comment %} .bottom_arrow_icon svg{
+        -webkit-filter: drop-shadow( 0px 10px 4px rgba(0, 0, 0, .3));
+        filter: drop-shadow( 0px 10px 4px rgba(0, 0, 0, .3));
+    } {% endcomment %}
+    @media screen and (min-width: 3000px) {
+        .memorial_day_sale_banner {
+            max-height: 800px !important;
+        }
+    }
+    @media screen and (min-width: 2200px){
+        .memorial_day_sale_banner{
+            {% if larger_screen_banner_max_height !=blank %}
+                max-height: {{ larger_screen_banner_max_height }}px;
+            {% endif %}
+            {% if background_larger_screen_image !=blank %}
+                background-image: url("{{ background_larger_screen_image | img_url: 'master' }}");
+            {% endif %}
+            
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content a{
+            background: #017CC1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16.1134vw;
+            height: 2.817vw;
+            font-family: 'Lato Bold', sans-serif;
+            font-size: 1.388vw;
+            font-weight: 900;
+            line-height: 1.665vw;
+            text-decoration: none;
+            border-radius: 5.13vw;
+        
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content .subtitle{
+            font-size: 2.217vw;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p{
+            font-size: 5.889vw;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content{
+            position: absolute;
+            left: 17%;
+        }
+    }
+    @media screen and (max-width: 820px){
+        .memorial_day_sale_banner{
+            height: 130.41vw;
+            {% comment %} max-height: 800px; {% endcomment %}
+            {% if Tablet_banner_max_height !=blank %}
+                max-height: {{ Tablet_banner_max_height }}px;
+            {% endif %}
+            display: block;
+            background-image: url("{{ background_ipad_image | img_url: 'master' }}");
+            background-position: bottom;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner{
+            padding: 36px 42px 36px 42px;
+        }
+        .bottom_arrow_icon{
+            display: none;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content{
+            width: unset;
+            position: unset;
+            max-width: unset;
+            transform: unset;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content a{
+            font-size: 20px;
+            line-height: 20px;
+            width: 259px;
+
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .feature_icon_wrapper .feature_icon{
+            width: 46px;
+            height: 46px;
+            display: block;
+        }
+        {% comment %} .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content .subtitle{
+            margin: 10px 0px 15px 0px;
+        } {% endcomment %}
+        {% comment %} .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content a{
+            display: none;
+        } {% endcomment %}
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .shop_btn{
+            margin-top: 20px;
+            display: block;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content{
+            align-items: center;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p{
+            color: #FFF;
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.20);
+            font-size: 120px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p span{
+            color: #C8E812;
+            font-size: 128px;
+            line-height: 120px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content .subtitle{
+            {% comment %} font-family: 'Lato Bold', sans-serif; {% endcomment %}
+            color: #000;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content h4{
+            color: #212121;
+            text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+            font-size: 24px;
+            font-style: normal;
+            {% comment %} font-weight: 600; {% endcomment %}
+            line-height: normal;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .memorial_day_sale_banner{
+            height: 130.41vw;
+            {% comment %} max-height: 800px; {% endcomment %}
+            {% if Tablet_banner_max_height !=blank %}
+                max-height: {{ Tablet_banner_max_height }}px;
+            {% endif %}
+            display: block;
+            background-image: url("{{ background_ipad_image | img_url: 'master' }}");
+            background-position: bottom;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner{
+            padding: 25px 42px 36px 42px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content{
+            width: unset;
+            position: unset;
+            max-width: unset;
+            transform: unset;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p{
+            color: #FFF;
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.20);
+            font-size: 120px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+        }
+        
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p span{
+            color: #C8E812;
+            font-size: 128px;
+            line-height: 120px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content h4{
+            color: #212121;
+            text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+            font-size: 24px;
+            font-style: normal;
+            {% comment %} font-weight: 600; {% endcomment %}
+            line-height: normal;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content .subtitle{
+            {% comment %} font-family: 'Lato Bold', sans-serif; {% endcomment %}
+            color: #000;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        {% comment %} .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content a{
+            display: none;
+        } {% endcomment %}
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .feature_icon_wrapper .feature_icon{
+            width: 69px;
+            height: 73px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content{
+            align-items: center;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .shop_btn{
+            margin-top: 20px;
+            display: block;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_content .shop_btn a{
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 21px;
+        }
+    }
+    @media screen and (max-width: 540px) {
+        .memorial_day_sale_banner{
+            height: 129.41vw;
+            {% comment %} min-height: 712px; {% endcomment %}
+            {% if mobile_banner_min_height !=blank %}
+                min-height: {{ mobile_banner_min_height }}px;
+            {% endif %}
+            {% if mobile_banner_max_height !=blank %}
+                max-height: {{ mobile_banner_max_height }}px;
+            {% endif %}
+            display: block;
+            background-image: url("{{ background_mobile_image | img_url: 'master' }}");
+            background-position: bottom;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner{
+            padding: 25px 12px 12px 20px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p{
+            color: #FFF;
+            text-align: center;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 93.5%;
+            letter-spacing: 0.64px;
+            text-transform: uppercase;
+            margin: 12px 0px 24px 0px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p span{
+            font-size: 87px;
+            line-height: 76px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content .subtitle{
+            color: #000;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 93.5%;
+            text-transform: uppercase;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content a{
+            {% comment %} display: none; {% endcomment %}
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content h4{
+            color: #000;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.19);
+            font-size: 18px;
+            font-style: normal;
+            {% comment %} font-weight: 700; {% endcomment %}
+            line-height: normal;
+            margin: 0px 0px 20px 0px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content a{
+            width: 188px;
+            height: 48px;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_subtext{
+            color: #000;
+            font-family: "Lato Regular", sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 100%;
+            position: absolute;
+            bottom: 22px;
+            left: 45px;
+            max-width: 84px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .memorial_day_sale_banner{
+            min-height: 610px;  
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner{
+            padding: 25px 12px 33px 12px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_subtext {
+            color: #000;
+            font-family: "Lato Regular", sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 100%;
+            position: absolute;
+            bottom: 22px;
+            left: 35px;
+            max-width: 76px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p{
+            font-size: 63px;
+        }
+
+    }
+    @media screen and (max-width: 320px) {
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content .subtitle{
+            font-size: 25px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .top_content p{
+            font-size: 52px;
+        }
+        .memorial_day_sale_banner .inner_memorial_day_sale_banner .bottom_subtext{
+            font-size: 9px;
+            max-width: 68px;
+        }
+    }
+</style>
+
+<div class="memorial_day_sale_banner">
+    <div class="inner_memorial_day_sale_banner">
+        <div class="bottom_arrow_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="24"
+              viewBox="0 0 35 24"
+              fill="none">
+              <path
+                d="M3.5 5L17 18.5L31.5 4"
+                stroke="white"
+                stroke-width="7"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+        <div class="top_content">
+            {% if memorial_day_sale_title != blank %}
+                <span class="subtitle">{{ memorial_day_sale_title }}</span>
+            {% endif %}
+            {% if memorial_day_sale_subtitle != blank %}
+                <p>{{ memorial_day_sale_subtitle }}</p>
+            {% endif %}
+
+            {% if btn_text != blank %}
+                <a href="{{ btn_url }}">{{ btn_text }}</a>
+            {% endif %}
+
+            {% if memorial_day_sale_subtext != blank %}
+                <h4>{{ memorial_day_sale_subtext }}</h4>
+            {% endif %}
+            
+        </div>
+        <div class="bottom_subtext">
+            {% if memorial_day_sale_offerText !=blank %}
+                {{ memorial_day_sale_offerText }}
+            {% endif %}
+            
+        </div>
+        {% comment %} <div class="bottom_content">
+            {% comment %} <div class="feature_icon_wrapper">
+                {% for block in blocks %}
+                    <div class="feature_icon">
+                        <img src="{{ block.settings.icon_image | img_url: 'master' }}">
+                    </div>
+
+                {% endfor %}
+            </div> {% endcomment %}
+            <div class="shop_btn">
+                {% if btn_text != blank %}
+                    <a href="{{ btn_url }}">{{ btn_text }}</a>
+                {% endif %}
+            </div>
+        </div> {% endcomment %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      $('.bottom_arrow_icon').on('click', function() {
+        let offset = $('.new_all_in_one').offset().top;
+        $('body,html').animate({
+          scrollTop: offset - 40
+        }, 400);
+      })
+    })
+  </script>
+
+{% schema %}
+  {
+    "name": "Memorial Day Sale banner",
+    "tag": "section",
+    "settings": [
+
+        {
+            "type": "text",
+            "id": "memorial_day_sale_title",
+            "label": "t:sections.memorial_day_sale.memorial_day_sale_title"
+        },
+        {
+            "type": "text",
+            "id": "memorial_day_sale_subtitle",
+            "label": "t:sections.memorial_day_sale.memorial_day_sale_subtitle"
+        },
+        {
+            "type": "text",
+            "id": "memorial_day_sale_subtext",
+            "label": "t:sections.memorial_day_sale.memorial_day_sale_subtext"
+        },
+        {
+            "type": "text",
+            "id": "memorial_day_sale_offerText",
+            "label": "t:sections.memorial_day_sale.memorial_day_sale_offerText"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_larger_screen_image",
+            "label": "t:sections.memorial_day_sale.background_larger_screen_image"
+          },
+        {
+            "type":"range",
+            "id":"larger_screen_banner_max_height",
+            "label":"t:sections.memorial_day_sale.larger_screen_banner_max_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":700
+        },
+        {
+          "type": "image_picker",
+          "id": "background_desktop_image",
+          "label": "t:sections.memorial_day_sale.background_desktop_image"
+        },
+        {
+            "type":"range",
+            "id":"desktop_banner_max_height",
+            "label":"t:sections.memorial_day_sale.desktop_banner_max_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":600
+        },
+        {
+            "type": "image_picker",
+            "id": "background_mobile_image",
+            "label": "t:sections.memorial_day_sale.background_mobile_image"
+        },
+        {
+            "type":"range",
+            "id":"mobile_banner_min_height",
+            "label":"t:sections.memorial_day_sale.mobile_banner_min_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":660
+        },
+        {
+            "type":"range",
+            "id":"mobile_banner_max_height",
+            "label":"t:sections.memorial_day_sale.mobile_banner_max_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":800
+        },
+        {
+            "type": "image_picker",
+            "id": "background_ipad_image",
+            "label": "t:sections.memorial_day_sale.background_ipad_image"
+        },
+        {
+            "type":"range",
+            "id":"Tablet_banner_max_height",
+            "label":"t:sections.memorial_day_sale.Tablet_banner_max_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":800
+        },
+        {
+            "type": "text",
+            "id":"btn_text",
+            "label": "t:sections.memorial_day_sale.btn_text"
+        },
+        {
+            "type": "url",
+            "id": "btn_url",
+            "label": "t:sections.memorial_day_sale.btn_url"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Memorial Day Sale banner"
+        }
+    ]
+}
+{% endschema %}

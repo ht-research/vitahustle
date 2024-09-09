@@ -5,6 +5,21 @@
   assign first_3d_model = product.media | where: 'media_type', 'model' | first
 -%}
 
+{% if template contains '3-pack-superfood' %}
+  <style>
+    .product__info .product-general-info-block .h1{
+      text-transform: none;
+    }
+    @media only screen and (max-width:1015px) {
+      .product__info .product-general-info-block .h1{
+        max-width: unset;
+        font-size: 4.7rem;
+
+      }
+    }
+  </style>
+{% endif %}
+
 <div class="product__content">
   {%- liquid
     render 'product-media-list', section: section, product: product, sectionId: sectionId

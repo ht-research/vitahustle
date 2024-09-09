@@ -1,0 +1,18 @@
+{% case template.name %}
+    {% when 'product' %}
+      {% assign noCrawl =  product.metafields.custom.no_crawl_logic.value %}
+    {% when 'collection' %}
+      {% assign noCrawl =  collection.metafields.custom.no_crawl_logic.value %}
+    {% else %}
+      {% assign noCrawl =  page.metafields.custom.no_crawl_logic.value %}
+  {% endcase %}
+  
+  {% if noCrawl.add_no_index %}
+  <meta name="robots" content="noindex, nofollow" />
+  {% endif %}
+  {% if noCrawl.redirect_url != blank %}
+    <script>
+      window.location.href= '{{ noCrawl.redirect_url }}'
+    </script>
+  {% endif %}
+  

@@ -183,6 +183,7 @@
   }
   .upper_ingredient_row {
     /* display: flex; */
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 31.3688vw;
@@ -208,7 +209,7 @@
   }
   .lower_ingredient_row {
     margin-top: 0.9vw;
-    display: block;
+    display: flex;
     overflow: hidden;
     position: relative;
   }
@@ -330,6 +331,14 @@
 <script>
 
     document.addEventListener('DOMContentLoaded', () => {
+
+      $('.upper_ingredient_row').on('init', function(event, slick, direction){
+         document.querySelector('.upper_ingredient_row').style.display = "block";
+      });
+
+      $('.lower_ingredient_row').on('init', function(event, slick, direction){
+         document.querySelector('.lower_ingredient_row').style.display = "block";
+      });
 
         $('.upper_ingredient_row').slick({
           dots: false,

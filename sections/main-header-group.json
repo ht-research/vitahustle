@@ -114,10 +114,50 @@
             "item_9_btn_text": "Link label",
             "item_9_link": ""
           }
+        },
+        "new_button_menu_8BjFw6": {
+          "type": "new_button_menu",
+          "settings": {
+            "new_button_menu_text": "SHOP PROTEIN",
+            "new_button_menu_url": "https:\/\/vitahustle.com\/products\/one-superfood-protein-shake-strawberry",
+            "button_style": "Solid",
+            "button_background_color": "#afc42f",
+            "button_outline_color": "#afc42f",
+            "button_text_color": "#000000"
+          }
+        },
+        "new_button_menu_FiNwdF": {
+          "type": "new_button_menu",
+          "settings": {
+            "new_button_menu_text": "TAKE QUIZ",
+            "new_button_menu_url": "shopify:\/\/pages\/quiz",
+            "button_style": "Outline",
+            "button_background_color": "#ffffff",
+            "button_outline_color": "#000000",
+            "button_text_color": "#000000"
+          }
+        },
+        "new_menu_pQrB6i": {
+          "type": "new_menu",
+          "settings": {
+            "new_menu_text": "Account",
+            "new_menu_url": "https:\/\/vitahustle.com\/account\/login?return_url=%2Faccount"
+          }
+        },
+        "new_menu_QDQQTY": {
+          "type": "new_menu",
+          "settings": {
+            "new_menu_text": "Contact Us",
+            "new_menu_url": "https:\/\/vitahustle.zendesk.com\/hc\/en-us\/requests\/new"
+          }
         }
       },
       "block_order": [
-        "7ca1f1c5-b6ac-4202-b351-41dcf32a36c2"
+        "7ca1f1c5-b6ac-4202-b351-41dcf32a36c2",
+        "new_button_menu_8BjFw6",
+        "new_button_menu_FiNwdF",
+        "new_menu_pQrB6i",
+        "new_menu_QDQQTY"
       ],
       "custom_css": [
         ".image-block {border-radius: 15px; border: solid 1px white;}",
@@ -138,7 +178,8 @@
         "enable_sticky": false,
         "enable_upcart": false,
         "menu_trigger": "hover",
-        "menu": "header-new-website",
+        "menu": "desktop-header-live-8-2024",
+        "mobile_menu": "mobile-header-nav-menu-2024",
         "desktop_logo_img": "shopify:\/\/shop_images\/Vita_Hustle_Desktop_Logo.svg",
         "desktop_logo_width": 280,
         "mobile_logo_img": "shopify:\/\/shop_images\/Vita_Hustle_Desktop_Logo.svg",

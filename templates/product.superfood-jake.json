@@ -1,7 +1,7 @@
 {
   "sections": {
     "b50b4a7d-7333-44ee-89b6-d888375536cf": {
-      "type": "main-product-superfood-custom",
+      "type": "main-product-superfood-custom-v3",
       "blocks": {
         "35347329-5db9-47a6-bc93-42c0a23c5211": {
           "type": "subscription_benefits",
@@ -55,7 +55,7 @@
         "benefit_popup_tagline": "It's Your Plan. You're In Full Control",
         "step1_title": "Choose your flavors",
         "step2_title": "Choose your price",
-        "offer_free_shipping_text": "ADD ANOTHER BAG FOR FREE SHIPPING",
+        "offer_free_shipping_text": "",
         "free_shipping_text": "YOU GET FREE SHIPPING",
         "bags_to_choose_text": "CHOOSE A FLAVOR TO BEGIN WITH",
         "subscribe_cta_text": "Subscribe",
@@ -429,7 +429,9 @@
         "d_c_suplement": "shopify:\/\/shop_images\/Label1.5x.png",
         "m_c_suplement": "shopify:\/\/shop_images\/1.5.png",
         "d_v_suplement": "shopify:\/\/shop_images\/1.5x.png",
-        "m_v_suplement": "shopify:\/\/shop_images\/1.5x_f72e7481-b759-4987-94e3-65ca804dbe5f.png"
+        "m_v_suplement": "shopify:\/\/shop_images\/1.5x_f72e7481-b759-4987-94e3-65ca804dbe5f.png",
+        "d_s_suplement": "shopify:\/\/shop_images\/Group_48095946_1.png",
+        "m_s_suplement": "shopify:\/\/shop_images\/Frame_48096294.png"
       }
     },
     "a48cfe76-2d86-4d84-971b-46a3da69c5d3": {

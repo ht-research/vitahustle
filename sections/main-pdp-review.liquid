@@ -1,5 +1,19 @@
+{% assign hide_testimonials_section = product.metafields.custom.hide_testimonials_section %}
+
+{% if hide_testimonials_section == true %}
+  <style>
+    .review_switch{
+      max-width: 250px !important;
+    }
+    .review_switch .switch-item{
+      width: 100% !important;
+    }
+  </style>
+{% endif %}
+
 <div class="main_review_wrapper">
   <div class="main_review_inner_box">
+    {% unless hide_testimonials_section == true %}
     <div class="review_switch">
       <div class="written_review switch-item active" data-tab="reviews">
         Written Reviews
@@ -8,6 +22,7 @@
         Testimonials
       </div>
     </div>
+    {% endunless %}
 
     <div class="main_container">
       <div class="all_reviews active" data-container="reviews">
@@ -264,6 +279,15 @@
     }
     .testimonial_wrapper .testimonial_box:nth-child(3n) {
       margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 345px) {
+    .review_switch{
+      width: calc(100% - 20px);
+    }
+    .review_switch .switch-item{
+      padding: 16px 20px;
     }
   }
   .jdgm-paginate__load-more,.jdgm-rev__buyer-badge:before,

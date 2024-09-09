@@ -1,0 +1,1240 @@
+
+{%- liquid
+    assign options = section.settings
+    assign testimonial_title = options.testimonial_title
+    assign testimonial_subtitle = options.testimonial_subtitle
+    assign testimonial_review_title = options.testimonial_review_title
+    assign testimonial_review_subtitle = options.testimonial_review_subtitle
+    assign testimonial_review_count = options.testimonial_review_count
+    assign btn_text = options.btn_text
+    assign btn_url = options.btn_url
+    assign blocks = section.blocks
+
+  -%}
+
+<style>
+.testimonial_wrapper{
+    width: 100%;
+    max-width: 1440px;
+    display: inline-block;
+}
+.testimonial_wrapper .inner_testimonial_wrapper{
+    padding: 40px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_title_subtitle{
+    display: flex;
+    flex-direction: column;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_title_subtitle h3{
+    font-family: "Druk Web";
+    font-size: 4.514vw;
+    font-weight: 700;
+    line-height: 60.78px;
+    letter-spacing: 1px;
+    max-width: 445px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_title_subtitle p{
+    font-family: 'Lato Regular', sans-serif;
+    font-size: 1.389vw;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 20px 0px 40px 0px;
+    max-width: 606px;
+    text-align: left;
+    color: #4D201A;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details .review_count_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details h4{
+    font-family: "Druk Web";
+    font-size: 3.472vw;
+    font-weight: 700;
+    line-height: 60px;
+    color: #AFC42F;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details .review_count_details p{
+    font-family: "Druk Web";
+    font-size: 4.931vw;
+    font-weight: 700;
+    line-height: 71px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details .review_count_details .review_star_text{
+    display: flex;
+    flex-direction: column;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details .review_count_details .review_star_text .review_star{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details .review_count_details .review_star_text p{
+    font-family: 'Lato Regular', sans-serif;
+    font-size: 1.111vw;
+    font-weight: 700;
+    line-height: 19.2px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details .review_count_details .review_star_text .review_star svg{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content{
+    width: calc((100% - 120px)/4);
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content:nth-child(2n+1){
+    {% comment %} margin-top: 40px; {% endcomment %}
+
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .video_section{
+    width: 21.181vw;
+    max-width: 305px;
+    height: 35.208vw;
+    max-height: 507px;
+    position: relative;
+    cursor: pointer;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .video_section svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .video_section svg.hide{
+    display: none;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .video_section video,.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .video_section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content{
+    width: 21.181vw;
+    max-width: 305px;
+    /* height: 32.778vw; */
+    /* max-height: 472px; */
+    padding: 20px;
+    background-color: rgba(175,196,47,.7);
+    border-radius: 12px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .review_image_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .review_image_text .user_image{
+    width: 9.306vw;
+    max-width: 134px;
+    height: 9.306vw;
+    max-height: 134px;
+    margin-bottom: 20px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .review_image_text .user_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .review_image_text .review_text{
+    display: block;
+
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .review_image_text .review_text p{
+    font-family: 'Lato Regular', sans-serif;
+    font-style: italic;
+    font-size: 1.328vw;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    color: #4D201A;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .reviewer_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .reviewer_details p{
+    font-family: 'Lato Regular', sans-serif;
+    /* font-style: italic; */
+    font-size: 1.111vw;
+    font-weight: 600;
+    line-height: 25.2px;
+    text-align: center;
+    color: #212121; 
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .reviewer_details .icon svg{
+    width: 36px;
+    height: 36px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .reviewer_details span{
+    font-family: 'Lato Regular', sans-serif;
+    font-style: italic;
+    font-size: 0.833vw;
+    font-weight: 600;
+    line-height: 15px !important;
+    text-align: left;
+    color: #212121;
+    max-width: 66px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .all_reviews{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 40px;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .all_reviews a{
+    background-color: #C8E812;
+    font-family: 'Lato Regular', sans-serif;
+    /* font-style: italic; */
+    font-size: 1.389vw;
+    font-weight: 600;
+    line-height: 24px;
+    /* padding: 10px 40px; */
+    border-radius: 74px;
+    text-decoration: none;
+    width: 18.125vw;
+    height: 3.472vw;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.mobile_only{
+    display: none;
+}
+@media screen and (min-width: 1441px){
+    .testimonial_wrapper{
+        display: block;
+        {% comment %} margin: 0 auto; {% endcomment %}
+        max-width: unset;        
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_title_subtitle h3{
+        font-size: 70px;
+        max-width: unset;        
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_title_subtitle p{
+        line-height: 100%;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .video_section{
+        width: 21.181vw;
+        max-width: unset;
+        height: 35.208vw;
+        max-height: unset;
+        position: relative;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content{
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        justify-content: space-between;
+        max-width: unset;
+        max-height: unset;
+        height: 32.778vw;
+
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .reviewer_details span{
+        max-width: 180px;
+        line-height: 100% !important;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details h4{
+        line-height: 4.164vw;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .review_image_text .review_text p{
+        line-height: 2.082vw;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .all_reviews a{
+        height: 4.2vw !important;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details{
+        row-gap: 0.7vw;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .video_section svg{
+        height: 4vw;
+        width: 4vw;
+    }
+}
+@media screen and (max-width: 820px) {
+    .testimonial_wrapper .inner_testimonial_wrapper{
+        padding: 20px 0px 0px 0px;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.mobile_only .slick-track{
+        display: flex;
+
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details{
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_title_subtitle h3{
+        font-family: "Druk Web";
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 46.75px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin: 0 auto;
+        max-width: unset; 
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_title_subtitle p{
+        font-family: 'Lato Regular', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21.6px;
+        margin: 20px 0px 20px 0px;
+        max-width: 606px;
+        text-align: center;
+        color: #4D201A;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details h4{
+        font-family: "Druk Web";
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 54px;
+        color: #AFC42F;
+        margin-bottom: 20px;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details .review_count_details{
+        margin: 0 auto;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details .review_count_details p{
+        font-family: "Druk Web";
+        font-size: 71px;
+        font-weight: 700;
+        line-height: 71px;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details .review_count_details .review_star_text p{
+        font-family: 'Lato Regular', sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 19.2px;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.desktop_only{
+        display: none;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.mobile_only{
+        {% comment %} display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden; {% endcomment %}
+        display: block;
+        overflow: hidden;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content{
+        width: calc(100% - 40px);
+        {% comment %} column-gap: 20px;
+        row-gap: 0px; {% endcomment %}
+        display: inline-block;
+        margin: 0px 10px;
+        max-height: 553px;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.mobile_only .slick-arrow{
+        display: none !important;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.mobile_only .slick-dots{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0px;
+        column-gap: 5px;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.mobile_only .slick-dots li{
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0,0,0,.1);
+        border: 0.25px solid #5E5F5E;
+        border-radius: 50%;
+        list-style: none;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.mobile_only .slick-dots li.slick-active{
+        background-color: #ffffff;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.mobile_only .slick-dots li button{
+        display: none;
+
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .video_section,.testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content{
+        {% comment %} min-width: 100%;
+        max-width: 100%;
+       height: auto;
+       max-height: unset; {% endcomment %}
+        min-width: unset;
+        max-width: unset;
+        height: 100%;
+        width: 100%;
+        max-height: unset;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .review_image_text .user_image{
+        width: 134px;
+        max-width: 134px;
+        height: 134px;
+        max-height: 134px;
+        margin-bottom: 20px;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .review_image_text .review_text p{
+        font-family: 'Lato Regular', sans-serif;
+        font-style: italic;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: center;
+        color: #4D201A;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content:nth-child(2n+1){
+        margin-top: 0px;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .reviewer_details p{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 25.2px;
+        text-align: center;
+        color: #212121;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .reviewer_details span{
+        font-family: 'Lato Regular', sans-serif;
+        font-style: italic;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: left;
+        color: #212121;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .all_reviews{
+        display: none !important;        
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content .review_image_text .review_text p{
+        -webkit-line-clamp: 11;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper .video_review_content .review_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_videos_review_wrapper.mobile_only .slick-list{
+        padding: 0px 40px;
+
+    }
+}
+@media screen and (max-width: 360px) {
+    .testimonial_wrapper .inner_testimonial_wrapper .testimonial_title_review_details .testimonial_review_details h4{
+        font-size: 36px;
+    }
+}
+</style>
+
+<div class="testimonial_wrapper">
+    <div class="inner_testimonial_wrapper">
+        <div class="testimonial_title_review_details">
+            <div class="testimonial_title_subtitle">
+                {% if testimonial_title != blank %}
+                    <h3>{{ testimonial_title }}</h3>
+                {% endif %}
+                {% if testimonial_subtitle != blank %}
+                    <p>{{ testimonial_subtitle }}</p>
+                {% endif %}
+            </div>
+            <div class="testimonial_review_details">
+                <div class="review_count_details">
+                    {% if testimonial_review_count != blank %}
+                        <p>{{ testimonial_review_count }}</p>
+                    {% endif %}
+                    <div class="review_star_text">
+                        <div class="review_star">
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3398_16935)">
+                                <path d="M23.9691 9.17251C23.8866 8.91714 23.6506 8.74187 23.382 8.73632L15.2621 8.57121L12.5957 0.923244C12.5076 0.669729 12.2686 0.5 12 0.5C11.7314 0.5 11.4924 0.669729 11.4043 0.923244L8.73788 8.57121L0.617992 8.73632C0.349383 8.74187 0.113425 8.91714 0.0308713 9.17251C-0.052299 9.42818 0.0364159 9.70849 0.25081 9.87052L6.72146 14.7615L4.3699 22.5102C4.29227 22.7672 4.3853 23.0453 4.60216 23.2036C4.82025 23.3617 5.11288 23.3651 5.33344 23.212L12 18.5861L18.6666 23.212C18.775 23.2868 18.9007 23.3244 19.0264 23.3244C19.157 23.3244 19.2869 23.284 19.3978 23.2036C19.6147 23.0453 19.7077 22.7672 19.6301 22.5102L17.2785 14.7615L23.7492 9.87052C23.9636 9.70849 24.0523 9.42818 23.9691 9.17251Z" fill="#AFC42F"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3398_16935">
+                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                </clipPath>
+                                </defs>
+                            </svg> 
+
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3398_16935)">
+                                <path d="M23.9691 9.17251C23.8866 8.91714 23.6506 8.74187 23.382 8.73632L15.2621 8.57121L12.5957 0.923244C12.5076 0.669729 12.2686 0.5 12 0.5C11.7314 0.5 11.4924 0.669729 11.4043 0.923244L8.73788 8.57121L0.617992 8.73632C0.349383 8.74187 0.113425 8.91714 0.0308713 9.17251C-0.052299 9.42818 0.0364159 9.70849 0.25081 9.87052L6.72146 14.7615L4.3699 22.5102C4.29227 22.7672 4.3853 23.0453 4.60216 23.2036C4.82025 23.3617 5.11288 23.3651 5.33344 23.212L12 18.5861L18.6666 23.212C18.775 23.2868 18.9007 23.3244 19.0264 23.3244C19.157 23.3244 19.2869 23.284 19.3978 23.2036C19.6147 23.0453 19.7077 22.7672 19.6301 22.5102L17.2785 14.7615L23.7492 9.87052C23.9636 9.70849 24.0523 9.42818 23.9691 9.17251Z" fill="#AFC42F"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3398_16935">
+                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                </clipPath>
+                                </defs>
+                            </svg> 
+
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3398_16935)">
+                                <path d="M23.9691 9.17251C23.8866 8.91714 23.6506 8.74187 23.382 8.73632L15.2621 8.57121L12.5957 0.923244C12.5076 0.669729 12.2686 0.5 12 0.5C11.7314 0.5 11.4924 0.669729 11.4043 0.923244L8.73788 8.57121L0.617992 8.73632C0.349383 8.74187 0.113425 8.91714 0.0308713 9.17251C-0.052299 9.42818 0.0364159 9.70849 0.25081 9.87052L6.72146 14.7615L4.3699 22.5102C4.29227 22.7672 4.3853 23.0453 4.60216 23.2036C4.82025 23.3617 5.11288 23.3651 5.33344 23.212L12 18.5861L18.6666 23.212C18.775 23.2868 18.9007 23.3244 19.0264 23.3244C19.157 23.3244 19.2869 23.284 19.3978 23.2036C19.6147 23.0453 19.7077 22.7672 19.6301 22.5102L17.2785 14.7615L23.7492 9.87052C23.9636 9.70849 24.0523 9.42818 23.9691 9.17251Z" fill="#AFC42F"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3398_16935">
+                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                </clipPath>
+                                </defs>
+                            </svg> 
+
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3398_16935)">
+                                <path d="M23.9691 9.17251C23.8866 8.91714 23.6506 8.74187 23.382 8.73632L15.2621 8.57121L12.5957 0.923244C12.5076 0.669729 12.2686 0.5 12 0.5C11.7314 0.5 11.4924 0.669729 11.4043 0.923244L8.73788 8.57121L0.617992 8.73632C0.349383 8.74187 0.113425 8.91714 0.0308713 9.17251C-0.052299 9.42818 0.0364159 9.70849 0.25081 9.87052L6.72146 14.7615L4.3699 22.5102C4.29227 22.7672 4.3853 23.0453 4.60216 23.2036C4.82025 23.3617 5.11288 23.3651 5.33344 23.212L12 18.5861L18.6666 23.212C18.775 23.2868 18.9007 23.3244 19.0264 23.3244C19.157 23.3244 19.2869 23.284 19.3978 23.2036C19.6147 23.0453 19.7077 22.7672 19.6301 22.5102L17.2785 14.7615L23.7492 9.87052C23.9636 9.70849 24.0523 9.42818 23.9691 9.17251Z" fill="#AFC42F"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3398_16935">
+                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                </clipPath>
+                                </defs>
+                            </svg> 
+
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3398_16935)">
+                                <path d="M23.9691 9.17251C23.8866 8.91714 23.6506 8.74187 23.382 8.73632L15.2621 8.57121L12.5957 0.923244C12.5076 0.669729 12.2686 0.5 12 0.5C11.7314 0.5 11.4924 0.669729 11.4043 0.923244L8.73788 8.57121L0.617992 8.73632C0.349383 8.74187 0.113425 8.91714 0.0308713 9.17251C-0.052299 9.42818 0.0364159 9.70849 0.25081 9.87052L6.72146 14.7615L4.3699 22.5102C4.29227 22.7672 4.3853 23.0453 4.60216 23.2036C4.82025 23.3617 5.11288 23.3651 5.33344 23.212L12 18.5861L18.6666 23.212C18.775 23.2868 18.9007 23.3244 19.0264 23.3244C19.157 23.3244 19.2869 23.284 19.3978 23.2036C19.6147 23.0453 19.7077 22.7672 19.6301 22.5102L17.2785 14.7615L23.7492 9.87052C23.9636 9.70849 24.0523 9.42818 23.9691 9.17251Z" fill="#AFC42F"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3398_16935">
+                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                </clipPath>
+                                </defs>
+                            </svg> 
+                        
+                        </div>
+
+                        {% if testimonial_review_subtitle != blank %}
+                            <p>{{ testimonial_review_subtitle }}</p>
+                        {% endif %}
+                        {% comment %} <p>200+ 5 Star Reviews</p> {% endcomment %}
+                    </div>
+                </div>
+                {% if testimonial_review_title != blank %}
+                    <h4>{{ testimonial_review_title }}</h4>
+                {% endif %}
+            </div>
+        </div>
+    
+        <div class="testimonial_videos_review_wrapper desktop_only">
+            {% comment %} ==>{{ forloop.index }} {% endcomment %}
+            <div class="video_review_content">
+                {% for block in blocks %}
+                    {% if forloop.index<=2 %}
+                        {% if forloop.index==1 %}
+                            <div class="video_section">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 13H35V34H15V13Z" fill="black"/>
+                                    <path d="M23 3.83301C12.42 3.83301 3.83337 12.4197 3.83337 22.9997C3.83337 33.5797 12.42 42.1663 23 42.1663C33.58 42.1663 42.1667 33.5797 42.1667 22.9997C42.1667 12.4197 33.58 3.83301 23 3.83301ZM19.1667 31.6247V14.3747L30.6667 22.9997L19.1667 31.6247Z" fill="#C8E812"/>
+                                 </svg>
+                                    
+                                <video src="{{ block.settings.video_url }}" data-url="{{ block.settings.video_url }}" poster="{{ block.settings.testimonial_thumbnail_image | img_url: 'master' }}" />
+                                {% comment %} <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png"> {% endcomment %}
+                            </div>
+                        {% endif %}
+                        {% if forloop.index==2 %}
+                            <div class="review_content">
+                                <div class="review_image_text">
+                                    <div class="user_image">
+                                        <img src="{{  block.settings.image_content | img_url: '200x' }}">
+                                    </div>
+                                    <div class="review_text">
+                                        <p>{{ block.settings.review_text }}</p>
+                                    </div>
+                                </div>
+                                <div class="reviewer_details">
+                                    <p>{{ block.settings.customer_name }}</p>
+                                    <div class="icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                            <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                                        </svg>
+                                            
+                                    </div>
+                                    <span>{{ block.settings.customer_designation }}</span>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+
+                {% endfor %}
+            </div>
+
+            <div class="video_review_content">
+                {% for block in blocks %}
+                    {% if forloop.index>=3 or forloop.index<=4 %}
+                        {% if forloop.index==3 %}
+                            <div class="review_content">
+                                <div class="review_image_text">
+                                    <div class="user_image">
+                                        <img src="{{  block.settings.image_content | img_url: '200x' }}">
+                                    </div>
+                                    <div class="review_text">
+                                        <p>{{ block.settings.review_text }}</p>
+                                    </div>
+                                </div>
+                                <div class="reviewer_details">
+                                    <p>{{ block.settings.customer_name }}</p>
+                                    <div class="icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                            <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                                        </svg>
+                                            
+                                    </div>
+                                    <span>{{ block.settings.customer_designation }}</span>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if forloop.index==4 %}
+                            <div class="video_section">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 13H35V34H15V13Z" fill="black"/>
+                                    <path d="M23 3.83301C12.42 3.83301 3.83337 12.4197 3.83337 22.9997C3.83337 33.5797 12.42 42.1663 23 42.1663C33.58 42.1663 42.1667 33.5797 42.1667 22.9997C42.1667 12.4197 33.58 3.83301 23 3.83301ZM19.1667 31.6247V14.3747L30.6667 22.9997L19.1667 31.6247Z" fill="#C8E812"/>
+                                 </svg>
+                                <video src="{{ block.settings.video_url }}" data-url="{{ block.settings.video_url }}" poster="{{ block.settings.testimonial_thumbnail_image | img_url: 'master' }}" />
+                             </div>
+                        {% endif %}
+                    {% endif %}
+
+                {% endfor %}
+            </div>
+
+            <div class="video_review_content">
+                {% for block in blocks %}
+                    {% if forloop.index>=5 or forloop.index<=6  %}
+                        {% if forloop.index==5 %}
+                            <div class="video_section">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 13H35V34H15V13Z" fill="black"/>
+                                    <path d="M23 3.83301C12.42 3.83301 3.83337 12.4197 3.83337 22.9997C3.83337 33.5797 12.42 42.1663 23 42.1663C33.58 42.1663 42.1667 33.5797 42.1667 22.9997C42.1667 12.4197 33.58 3.83301 23 3.83301ZM19.1667 31.6247V14.3747L30.6667 22.9997L19.1667 31.6247Z" fill="#C8E812"/>
+                                 </svg>
+                                <video src="{{ block.settings.video_url }}" data-url="{{ block.settings.video_url }}" poster="{{ block.settings.testimonial_thumbnail_image | img_url: 'master' }}" />
+                            </div>
+                        {% endif %}
+                        {% if forloop.index==6 %}
+                            <div class="review_content">
+                                <div class="review_image_text">
+                                    <div class="user_image">
+                                        <img src="{{  block.settings.image_content | img_url: '200x' }}">
+                                    </div>
+                                    <div class="review_text">
+                                        <p>{{ block.settings.review_text }}</p>
+                                    </div>
+                                </div>
+                                <div class="reviewer_details">
+                                    <p>{{ block.settings.customer_name }}</p>
+                                    <div class="icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                            <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                                        </svg>
+                                            
+                                    </div>
+                                    <span>{{ block.settings.customer_designation }}</span>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+
+                {% endfor %}
+            </div>
+
+            <div class="video_review_content">
+                {% for block in blocks %}
+                    {% if forloop.index>=7 or forloop.index<=8 %}
+                        {% if forloop.index==7 %}
+                            <div class="review_content">
+                                <div class="review_image_text">
+                                    <div class="user_image">
+                                        <img src="{{  block.settings.image_content | img_url: '200x' }}">
+                                    </div>
+                                    <div class="review_text">
+                                        <p>{{ block.settings.review_text }}</p>
+                                    </div>
+                                </div>
+                                <div class="reviewer_details">
+                                    <p>{{ block.settings.customer_name }}</p>
+                                    <div class="icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                            <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                                        </svg>
+                                            
+                                    </div>
+                                    <span>{{ block.settings.customer_designation }}</span>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if forloop.index==8 %}
+                            <div class="video_section">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 13H35V34H15V13Z" fill="black"/>
+                                    <path d="M23 3.83301C12.42 3.83301 3.83337 12.4197 3.83337 22.9997C3.83337 33.5797 12.42 42.1663 23 42.1663C33.58 42.1663 42.1667 33.5797 42.1667 22.9997C42.1667 12.4197 33.58 3.83301 23 3.83301ZM19.1667 31.6247V14.3747L30.6667 22.9997L19.1667 31.6247Z" fill="#C8E812"/>
+                                 </svg>
+                                <video src="{{ block.settings.video_url }}" data-url="{{ block.settings.video_url }}" poster="{{ block.settings.testimonial_thumbnail_image | img_url: 'master' }}" />
+                            </div>
+                        {% endif %}
+                    {% endif %}
+
+                {% endfor %}
+            </div>
+
+            {% comment %} <div class="video_review_content">
+                <div class="video_section">
+                    <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png">
+                </div>
+                <div class="review_content">
+                    <div class="review_image_text">
+                        <div class="user_image">
+                            <img src="https://i.postimg.cc/66SZDgph/Ellipse-89.png">
+                        </div>
+                        <div class="review_text">
+                            <p>"I've been looking for a quick and easy way to fit all my daily vitamins and nutrients into my busy schedule. I found VitaHustle and it has allowed me to feel my best while juggling my kids and my busy schedule... and it tastes amazing!"</p>
+                        </div>
+                    </div>
+                    <div class="reviewer_details">
+                        <p>Kristin</p>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                            </svg>
+                                
+                        </div>
+                        <span>Teacher</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video_review_content">
+                <div class="review_content">
+                    <div class="review_image_text">
+                        <div class="user_image">
+                            <img src="https://i.postimg.cc/66SZDgph/Ellipse-89.png">
+                        </div>
+                        <div class="review_text">
+                            <p>"I've been looking for a quick and easy way to fit all my daily vitamins and nutrients into my busy schedule. I found VitaHustle and it has allowed me to feel my best while juggling my kids and my busy schedule... and it tastes amazing!"</p>
+                        </div>
+                    </div>
+                    <div class="reviewer_details">
+                        <p>Kristin</p>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                            </svg>
+                                
+                        </div>
+                        <span>Teacher</span>
+                    </div>
+                </div>
+                <div class="video_section">
+                    <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png">
+                </div>
+            </div>
+            <div class="video_review_content">
+                <div class="video_section">
+                    <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png">
+                </div>
+                <div class="review_content">
+                    <div class="review_image_text">
+                        <div class="user_image">
+                            <img src="https://i.postimg.cc/66SZDgph/Ellipse-89.png">
+                        </div>
+                        <div class="review_text">
+                            <p>"I've been looking for a quick and easy way to fit all my daily vitamins and nutrients into my busy schedule. I found VitaHustle and it has allowed me to feel my best while juggling my kids and my busy schedule... and it tastes amazing!"</p>
+                        </div>
+                    </div>
+                    <div class="reviewer_details">
+                        <p>Kristin</p>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                            </svg>
+                                
+                        </div>
+                        <span>Teacher</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video_review_content">
+                <div class="review_content">
+                    <div class="review_image_text">
+                        <div class="user_image">
+                            <img src="https://i.postimg.cc/66SZDgph/Ellipse-89.png">
+                        </div>
+                        <div class="review_text">
+                            <p>"I've been looking for a quick and easy way to fit all my daily vitamins and nutrients into my busy schedule. I found VitaHustle and it has allowed me to feel my best while juggling my kids and my busy schedule... and it tastes amazing!"</p>
+                        </div>
+                    </div>
+                    <div class="reviewer_details">
+                        <p>Kristin</p>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                            </svg>
+                                
+                        </div>
+                        <span>Teacher</span>
+                    </div>
+                </div>
+                <div class="video_section">
+                    <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png">
+                </div>
+            </div> {% endcomment %}
+            
+        </div>
+
+        <div class="testimonial_videos_review_wrapper mobile_only">
+
+            {% for block in blocks %}
+                {% if forloop.index==1 or forloop.index==2 %}
+                    <div class="video_review_content {{ forloop.index }}">
+                        {% if forloop.index==1 %}
+                            <div class="video_section">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 13H35V34H15V13Z" fill="black"/>
+                                    <path d="M23 3.83301C12.42 3.83301 3.83337 12.4197 3.83337 22.9997C3.83337 33.5797 12.42 42.1663 23 42.1663C33.58 42.1663 42.1667 33.5797 42.1667 22.9997C42.1667 12.4197 33.58 3.83301 23 3.83301ZM19.1667 31.6247V14.3747L30.6667 22.9997L19.1667 31.6247Z" fill="#C8E812"/>
+                                 </svg>
+                                <video src="{{ block.settings.video_url }}" data-url="{{ block.settings.video_url }}" poster="{{ block.settings.testimonial_thumbnail_image | img_url: 'master' }}" />
+                                {% comment %} <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png"> {% endcomment %}
+                            </div>
+                        {% endif %}
+                        {% if forloop.index==2 %}
+                            <div class="review_content">
+                                <div class="review_image_text">
+                                    <div class="user_image">
+                                        <img src="{{  block.settings.image_content | img_url: '200x' }}">
+                                    </div>
+                                    <div class="review_text">
+                                        <p>{{ block.settings.review_text }}</p>
+                                    </div>
+                                </div>
+                                <div class="reviewer_details">
+                                    <p>{{ block.settings.customer_name }}</p>
+                                    <div class="icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                            <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                                        </svg>
+                                            
+                                    </div>
+                                    <span>{{ block.settings.customer_designation }}</span>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+            {% comment %} {% endfor %} {% endcomment %}
+
+            {% comment %} {% for block in blocks %} {% endcomment %}
+                {% if forloop.index==3 or forloop.index==4 %}
+                    <div class="video_review_content {{ forloop.index }}">
+                        {% if forloop.index==3 %}
+                            <div class="review_content">
+                                <div class="review_image_text">
+                                    <div class="user_image">
+                                        <img src="{{  block.settings.image_content | img_url: '200x' }}">
+                                    </div>
+                                    <div class="review_text">
+                                        <p>{{ block.settings.review_text }}</p>
+                                    </div>
+                                </div>
+                                <div class="reviewer_details">
+                                    <p>{{ block.settings.customer_name }}</p>
+                                    <div class="icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                            <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                                        </svg>
+                                            
+                                    </div>
+                                    <span>{{ block.settings.customer_designation }}</span>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if forloop.index==4 %}
+                            <div class="video_section">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 13H35V34H15V13Z" fill="black"/>
+                                    <path d="M23 3.83301C12.42 3.83301 3.83337 12.4197 3.83337 22.9997C3.83337 33.5797 12.42 42.1663 23 42.1663C33.58 42.1663 42.1667 33.5797 42.1667 22.9997C42.1667 12.4197 33.58 3.83301 23 3.83301ZM19.1667 31.6247V14.3747L30.6667 22.9997L19.1667 31.6247Z" fill="#C8E812"/>
+                                 </svg>
+                                <video src="{{ block.settings.video_url }}" data-url="{{ block.settings.video_url }}" poster="{{ block.settings.testimonial_thumbnail_image | img_url: 'master' }}" />
+                             </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+            {% comment %} {% endfor %} {% endcomment %}
+
+            {% comment %} {% for block in blocks %} {% endcomment %}
+                {% if forloop.index==5 or forloop.index==6  %}
+                    <div class="video_review_content {{ forloop.index }}">
+                        {% if forloop.index==5 %}
+                            <div class="video_section">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 13H35V34H15V13Z" fill="black"/>
+                                    <path d="M23 3.83301C12.42 3.83301 3.83337 12.4197 3.83337 22.9997C3.83337 33.5797 12.42 42.1663 23 42.1663C33.58 42.1663 42.1667 33.5797 42.1667 22.9997C42.1667 12.4197 33.58 3.83301 23 3.83301ZM19.1667 31.6247V14.3747L30.6667 22.9997L19.1667 31.6247Z" fill="#C8E812"/>
+                                 </svg>
+                                <video src="{{ block.settings.video_url }}" data-url="{{ block.settings.video_url }}" poster="{{ block.settings.testimonial_thumbnail_image | img_url: 'master' }}" />
+                            </div>
+                        {% endif %}
+                        {% if forloop.index==6 %}
+                            <div class="review_content">
+                                <div class="review_image_text">
+                                    <div class="user_image">
+                                        <img src="{{  block.settings.image_content | img_url: '200x' }}">
+                                    </div>
+                                    <div class="review_text">
+                                        <p>{{ block.settings.review_text }}</p>
+                                    </div>
+                                </div>
+                                <div class="reviewer_details">
+                                    <p>{{ block.settings.customer_name }}</p>
+                                    <div class="icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                            <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                                        </svg>
+                                            
+                                    </div>
+                                    <span>{{ block.settings.customer_designation }}</span>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+            {% comment %} {% endfor %} {% endcomment %}
+
+            {% comment %} {% for block in blocks %} {% endcomment %}
+                {% if forloop.index==7 or forloop.index==8 %}
+                    <div class="video_review_content {{ forloop.index }}">
+                        {% if forloop.index==7 %}
+                            <div class="review_content">
+                                <div class="review_image_text">
+                                    <div class="user_image">
+                                        <img src="{{  block.settings.image_content | img_url: '200x' }}">
+                                    </div>
+                                    <div class="review_text">
+                                        <p>{{ block.settings.review_text }}</p>
+                                    </div>
+                                </div>
+                                <div class="reviewer_details">
+                                    <p>{{ block.settings.customer_name }}</p>
+                                    <div class="icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                            <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                                        </svg>
+                                            
+                                    </div>
+                                    <span>{{ block.settings.customer_designation }}</span>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if forloop.index==8 %}
+                            <div class="video_section">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 13H35V34H15V13Z" fill="black"/>
+                                    <path d="M23 3.83301C12.42 3.83301 3.83337 12.4197 3.83337 22.9997C3.83337 33.5797 12.42 42.1663 23 42.1663C33.58 42.1663 42.1667 33.5797 42.1667 22.9997C42.1667 12.4197 33.58 3.83301 23 3.83301ZM19.1667 31.6247V14.3747L30.6667 22.9997L19.1667 31.6247Z" fill="#C8E812"/>
+                                 </svg>
+                                <video src="{{ block.settings.video_url }}" data-url="{{ block.settings.video_url }}" poster="{{ block.settings.testimonial_thumbnail_image | img_url: 'master' }}" />
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+            {% endfor %}
+
+            {% comment %} <div class="video_review_content">
+                <div class="video_section">
+                    <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png">
+                </div>
+            </div>
+
+            <div class="video_review_content">
+                <div class="review_content">
+                    <div class="review_image_text">
+                        <div class="user_image">
+                            <img src="https://i.postimg.cc/66SZDgph/Ellipse-89.png">
+                        </div>
+                        <div class="review_text">
+                            <p>"I've been looking for a quick and easy way to fit all my daily vitamins and nutrients into my busy schedule. I found VitaHustle and it has allowed me to feel my best while juggling my kids and my busy schedule... and it tastes amazing!"</p>
+                        </div>
+                    </div>
+                    <div class="reviewer_details">
+                        <p>Kristin</p>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                            </svg>
+                                
+                        </div>
+                        <span>Teacher</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video_review_content">
+                <div class="review_content">
+                    <div class="review_image_text">
+                        <div class="user_image">
+                            <img src="https://i.postimg.cc/66SZDgph/Ellipse-89.png">
+                        </div>
+                        <div class="review_text">
+                            <p>"I've been looking for a quick and easy way to fit all my daily vitamins and nutrients into my busy schedule. I found VitaHustle and it has allowed me to feel my best while juggling my kids and my busy schedule... and it tastes amazing!"</p>
+                        </div>
+                    </div>
+                    <div class="reviewer_details">
+                        <p>Kristin</p>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                            </svg>
+                                
+                        </div>
+                        <span>Teacher</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video_review_content">
+                <div class="video_section">
+                    <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png">
+                </div>
+            </div>
+
+            <div class="video_review_content">
+                <div class="video_section">
+                    <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png">
+                </div>
+            </div>
+            
+            <div class="video_review_content">
+                <div class="review_content">
+                    <div class="review_image_text">
+                        <div class="user_image">
+                            <img src="https://i.postimg.cc/66SZDgph/Ellipse-89.png">
+                        </div>
+                        <div class="review_text">
+                            <p>"I've been looking for a quick and easy way to fit all my daily vitamins and nutrients into my busy schedule. I found VitaHustle and it has allowed me to feel my best while juggling my kids and my busy schedule... and it tastes amazing!"</p>
+                        </div>
+                    </div>
+                    <div class="reviewer_details">
+                        <p>Kristin</p>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                            </svg>
+                                
+                        </div>
+                        <span>Teacher</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video_review_content">
+                <div class="review_content">
+                    <div class="review_image_text">
+                        <div class="user_image">
+                            <img src="https://i.postimg.cc/66SZDgph/Ellipse-89.png">
+                        </div>
+                        <div class="review_text">
+                            <p>"I've been looking for a quick and easy way to fit all my daily vitamins and nutrients into my busy schedule. I found VitaHustle and it has allowed me to feel my best while juggling my kids and my busy schedule... and it tastes amazing!"</p>
+                        </div>
+                    </div>
+                    <div class="reviewer_details">
+                        <p>Kristin</p>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="18" fill="#C8E812"/>
+                                <path d="M18 27L16.695 25.849C12.06 21.7771 9 19.0916 9 15.7956C9 13.1101 11.178 11 13.95 11C15.516 11 17.019 11.7063 18 12.8223C18.981 11.7063 20.484 11 22.05 11C24.822 11 27 13.1101 27 15.7956C27 19.0916 23.94 21.7771 19.305 25.8578L18 27Z" fill="#212121"/>
+                            </svg>
+                                
+                        </div>
+                        <span>Teacher</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video_review_content">
+                <div class="video_section">
+                    <img src="https://i.postimg.cc/NGnpfJdd/Frame-48096320.png">
+                </div>
+            </div>             {% endcomment %}
+            
+        </div>
+        <div class="all_reviews">
+            {%  if btn_text != blank %}
+                <a href="{{ btn_url }}">{{ btn_text }}</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        $('.testimonial_videos_review_wrapper.mobile_only').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centermode: true,
+            centerPadding: "40px"
+        });
+
+        $(".video_section").on('click',function(){
+            {% comment %} var dataURL = $(this).attr('data-url');
+            console.log('dataURL',dataURL,$(this),$(this)[0].paused,$(this).attr('src'));
+            if(!$(this).attr('src')){
+                $(this).attr('src',dataURL);
+            } {% endcomment %}
+            if($(this).find('video')[0].paused){
+                $(this).find('svg').addClass('hide');
+            }
+            else{
+                $(this).find('svg').removeClass('hide');
+            }
+            $(this).find('video')[0].paused ? $(this).find('video').trigger('play') : $(this).find('video').trigger('pause');
+        })
+          
+    });
+</script>
+
+{% schema %}
+  
+{
+  "name": "Testimonial",
+  "settings": [
+    {
+        "type": "text",
+        "id": "testimonial_title",
+        "label": "t:sections.testimonial.testimonial_title"
+    },
+    {
+        "type": "text",
+        "id": "testimonial_subtitle",
+        "label": "t:sections.testimonial.testimonial_subtitle"
+    },
+    {
+        "type": "text",
+        "id": "testimonial_review_title",
+        "label": "t:sections.testimonial.testimonial_review_title"
+    },
+    {
+        "type": "text",
+        "id": "testimonial_review_subtitle",
+        "label": "t:sections.testimonial.testimonial_review_subtitle"
+    },
+    {
+        "type": "text",
+        "id": "testimonial_review_count",
+        "label": "t:sections.testimonial.testimonial_review_count"
+    },
+    {
+        "type": "text",
+        "id":"btn_text",
+        "label": "t:sections.testimonial.btn_text"
+    },
+    {
+        "type": "url",
+        "id": "btn_url",
+        "label": "t:sections.testimonial.btn_url"
+    }
+
+  ],
+  "blocks":[
+    {
+        "type": "rich_text",
+        "name": "t:sections.testimonial.blocks.image_and_text.name",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image_content",
+                "label":"t:sections.testimonial.blocks.image_and_text.image_content.label"
+            },
+            {
+                "type": "text",
+                "id": "review_text",
+                "label":"t:sections.testimonial.blocks.image_and_text.review_text.label"
+            },
+            {
+                "type": "text",
+                "id": "customer_name",
+                "label":"t:sections.testimonial.blocks.image_and_text.customer_name.label"
+            },
+            {
+                "type": "text",
+                "id": "customer_designation",
+                "label":"t:sections.testimonial.blocks.image_and_text.customer_designation.label"
+            }
+
+        ]
+    },
+    {
+        "type": "video_text",
+        "name": "t:sections.testimonial.blocks.video_text.name",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "testimonial_thumbnail_image",
+                "label":"t:sections.testimonial.blocks.video_text.testimonial_thumbnail_image.label"
+            },
+            {
+                "type": "url",
+                "id": "video_url",
+                "label":"t:sections.testimonial.blocks.video_text.video_url.label"
+            }
+
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial"
+    }
+  ]
+}
+
+{% endschema %}

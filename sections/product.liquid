@@ -4,10 +4,15 @@
   assign color_scheme = section.settings.color_scheme
   assign container_size = section.settings.container_size
   assign block_layout = section.settings.layout
-
   assign sectionIdWithQuickViewPrefix = section.id | append: '---QuickView'
   assign sectionIdWithMainSectionPrefix = section.id | append: '---MainSection'
 -%}
+{%- liquid 
+  if template contains '3-pack-superfood'
+    assign single_serve_product = section.settings.single_serve_product
+  endif
+-%}
+
 
 {{ 'product-description.css' | asset_url | stylesheet_tag: preload: true }}
  
@@ -20,23 +25,43 @@
   {% endstyle %}
 {% endcapture %}
 
+{% if product.handle=="one-superfood-protein-shake-strawberry" or product.handle=="vitahustle-one-superfood-protein-single-serve-packs-10" or product.handle=="vitahustle-one-superfood-protein-single-serve-sampler" or single_serve_product.handle == "vitahustle-one-superfood-protein-single-serve-sampler" or single_serve_product.handle contains 'shaker-bottle-stainless-20oz' or single_serve_product.handle contains 'vitahustle-chill-gummies' or single_serve_product.handle contains 'electrolyte-hydration-drink-immunity-orange' %}
+<style>
+  
+  @media screen and (max-width: 768px) {
+    .section-spacing.product--page .product__container{
+         padding: 0px;
+        }
+    }
+    .subscription_box .delivery_frequency_dropdown ul.available_frequency li{
+      
+      padding-inline-start: 30px !important;
+    }
+    </style>
+  {% endif %}
+
 {% render 'inline-css-minifier', css: css %}
+{% if single_serve_product.handle == "vitahustle-one-superfood-protein-single-serve-sampler" or single_serve_product.handle == "shaker-bottle-stainless-20oz" or single_serve_product.handle contains 'vitahustle-chill-gummies' or single_serve_product.handle contains 'electrolyte-hydration-drink-immunity-orange' %}
+  {% assign newproduct = single_serve_product %}
+{% else %}
+  {% assign newproduct = product %}
+{% endif %}
 
 <div class="product section section-{{ section.id }} color-{{ color_scheme }} section-spacing product--page {% if block_layout == 'two-column' or block_layout == 'one-column' %} product--with-desktop-media-grid {% endif %} {% if block_layout == 'thumbnails-left' or block_layout == 'thumbnails-right' or block_layout == 'thumbnails-bottom' %}  {% if container_size == 'page-width' %} product--with-page-width-container-and-desktop-media-carousel {% else %} product--with-desktop-media-carousel {% endif %}  {% endif %}">
   <div class="container container--{{ container_size }} product__container">
-    {%- render 'product', product: product, section: section, sectionId: sectionIdWithMainSectionPrefix -%}
+    {%- render 'product', product: newproduct, section: section, sectionId: sectionIdWithMainSectionPrefix -%}
   </div>
 </div>
 
 <div style="display: none;" data-quick-view-product-id="{{ product.id }}">
-  {%- render 'quick-view', product: product, section: section, sectionId: sectionIdWithQuickViewPrefix -%}
+  {%- render 'quick-view', product: newproduct, section: section, sectionId: sectionIdWithQuickViewPrefix -%}
 </div>
 
 {% schema %}
 {
   "name": "t:sections.product.name",
   "tag": "section",
-  "class": "section--with-sticky-elements",
+  "class": "section--with-sticky-elements default-product-section",
   "settings": [
     {
       "type": "select",
@@ -205,12 +230,21 @@
       "id": "show_part_of_next_slide",
       "default": false,
       "label": "t:sections.product.label_show_part_of_next_slide_setting"
+    },
+    {
+      "type": "product",
+      "id": "single_serve_product",
+      "label": "Choose Single serving product"
     }
   ],
   "blocks": [
     {
       "type": "@app"
     },
+    {
+        "type": "subscription_widget",
+        "name": "Subscription Widget"
+      },
     {
       "type": "title",
       "name": "t:sections.product.name_for_title_block",
@@ -594,6 +628,19 @@
           "default": false,
           "label": "t:sections.product.buy_buttons.enable_gift_card.label",
           "info": "t:sections.product.buy_buttons.enable_gift_card.info"
+        }
+      ]
+    },
+    {
+      "type": "subscribtion_manage",
+      "name": "subscribtion manage",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Remember, you can edit or cancel your subscription at anytime.",
+          "label": "subscribtion manage"
         }
       ]
     },

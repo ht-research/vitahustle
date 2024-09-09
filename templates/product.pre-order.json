@@ -46,6 +46,9 @@
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
           "type": "variant_picker",
           "settings": {
+            "option_type": "button-solid",
+            "primary_swatch_option_type": "swatches",
+            "secondary_swatch_option_type": "swatches",
             "option_name": "",
             "information_drawer_button_label": "",
             "text": "",
@@ -62,7 +65,8 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "enable_pickup_availability": false
+            "enable_pickup_availability": false,
+            "enable_gift_card": false
           }
         },
         "c9188b10-e29c-4c63-b385-a3faa860d64a": {
@@ -274,6 +278,11 @@
         "template--16729789563121__35a80c75-d4b0-4340-9552-75a9f11586de-1681824353e40c4786-3"
       ],
       "settings": {
+        "display_custom_text_items": true,
+        "custom_text_1": "",
+        "custom_text_2": "",
+        "custom_text_3": "",
+        "custom_text_4": "",
         "color_scheme": "default",
         "container_size": "large",
         "section_spacing_top": 48,

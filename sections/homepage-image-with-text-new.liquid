@@ -1,0 +1,281 @@
+{%  liquid 
+    assign title = section.settings.title
+    assign cta_text = section.settings.cta_text
+    assign cta_url = section.settings.cta_url
+    assign alignment = section.settings.alignment
+    assign top_spacing = section.settings.top_spacing
+    assign bottom_spacing = section.settings.bottom_spacing
+    %}
+    <div class="container_wrapper wrapper-{{ section.id }}">
+      <div class="image_text_block-{{ section.id }}">
+        <div class="text_block">
+          {% if title != blank %}
+            <h3>
+              {{ section.settings.title }}
+            </h3>
+          {% endif %}
+          {% if section.settings.subtext != blank %}
+            <p>{{ section.settings.subtext }}</p>
+          {% endif %}
+          {% if cta_text %}
+            <a href="{{ cta_url }}" class="btn btn--solid">{{ cta_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+      {% comment %} <img
+        src="{{ section.settings.background_image | img_url: '1440x' }}"
+        loading="lazy"
+        srcset="{{ section.settings.background_image | img_url: '600x' }} 600w, {{ section.settings.background_image | img_url: '1400x' }} 1400w" /> {% endcomment %}
+    </div>
+    
+    
+    
+    <style>
+      section.image_text_section .wrapper-{{ section.id }}{
+        position: relative;
+        background-image: url("{{ section.settings.background_image | img_url: '1440x' }}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .image_text_section .image_text_block-{{ section.id }}{
+        width: 100%;
+        max-width: 65.8732vw;
+        margin: 0 auto;
+        padding-top: calc(0.0694*{{ top_spacing }}vw);
+        padding-bottom: calc(0.0694*{{ bottom_spacing }}vw);
+        position: relative;
+        z-index: 2;
+      }
+      .image_text_section .image_text_block-{{ section.id }} .text_block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        {% if alignment == 'center' %}
+          align-items: center;
+        {% elsif alignment == 'right' %}
+          align-items: flex-end;
+        {% endif %}
+        justify-content: flex-start;
+      }
+      .image_text_section .image_text_block-{{ section.id }} .text_block h3 {
+        color: #FFF;
+        text-shadow: 0 0.277vw 0.277vw rgba(0, 0, 0, 0.25);
+        font-size: calc(0.0694* {{ section.settings.title_font_size }}vw);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%; /* 0px */
+        text-transform: uppercase;
+        letter-spacing: calc({{ section.settings.title_font_size }}*0.01*0.0694vw);
+        max-width: calc(0.0694*{{ section.settings.title_box_width }}vw);
+      }
+      .image_text_section .image_text_block-{{ section.id }} .text_block h3 span {
+        color: #C8E812;
+      }
+      .image_text_section .image_text_block-{{ section.id }} .text_block p {
+        color: #FFF;
+        text-shadow: 0 0.277vw 0.277vw rgba(0, 0, 0, 0.25);
+        font-family: 'Lato Bold', sans-serif;
+        font-size: 1.288vw;
+        font-weight: 700;
+        line-height: normal;
+        max-width: 27.8294vw;
+        margin: 10px 0px;
+      }
+      .image_text_section .image_text_block-{{ section.id }} .text_block a {
+        color: #121212;
+        text-align: center;
+        font-family: 'Lato Heavy', sans-serif;
+        font-size: 1.3186vw;
+        font-style: normal;
+        padding: 0.8328vw 4.164vw 1.014vw;
+        /* background-color: #C9E14B; */
+        border-radius: 5.13vw;
+        margin-top: 1.3186vw;
+        display: inline-block;
+        min-height: unset;
+        height: 60px !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+      }
+      .image_text_section .container_wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      @media screen and (max-width: 768px) {
+        section.image_text_section .container_wrapper.wrapper-{{ section.id }}{
+            height: {{ section.settings.mobile_height }}px;
+            background-image: url("{{ section.settings.background_image_mobile | img_url: '600x'}}");
+    
+        }
+        .image_text_section .image_text_block-{{ section.id }} .text_block a{
+            font-size: 19px;
+            padding:12px 60px;
+            border-radius: 74px;
+            {% if alignment == 'center' %}
+                margin-top:20px;
+            {% endif %}
+        }
+        .image_text_section .image_text_block-{{ section.id }} .text_block{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .image_text_section .image_text_block-{{ section.id }}{
+            width:100%;
+            max-width: 375px;
+            padding-top: 20px;
+            {% if alignment == 'center' %}
+                padding: 0;
+                position:relative;
+                top: 50%;
+                transform: translateY(-25%);
+            {% endif %}
+        }
+        .image_text_section .image_text_block-{{ section.id }} .text_block h3{
+            font-size: 50px;
+            width: 100%;
+            max-width: 260px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        .image_text_section .image_text_block-{{ section.id }} .text_block p{
+            font-size: 16px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            margin-bottom: 170px;
+
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .image_text_section .image_text_block-{{ section.id }} .text_block p{
+            font-size: 14px;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            margin-bottom: 170px;
+            margin: 10px 20px 170px 20px;
+        }
+      }
+    </style>
+    
+    {% schema %}
+      {
+        "name": "Image with text new",
+        "class": "image_text_section",
+        "tag": "section",
+        "settings": [
+          {
+            "type": "html",
+            "id": "title",
+            "label": "Section Title",
+            "info": "text in span tag will be in secondary color"
+          },
+    
+          {
+            "type": "text",
+            "id": "subtext",
+            "label": "Section subtext",
+            "default": "section subtext"
+          },
+          {
+            "type": "range",
+            "id": "title_font_size",
+            "label": "Title Font Size",
+            "default": 65,
+            "min": 10,
+            "max": 150,
+            "step": 5
+          },
+          {
+            "type": "range",
+            "id": "title_box_width",
+            "label": "Title Box Width",
+            "min": 100,
+            "max": 600,
+            "step": 5,
+            "default": 350
+          }, {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA text",
+            "default": "CTA Text"
+          }, {
+            "type": "url",
+            "id": "cta_url",
+            "label": "CTA Url"
+          }, {
+            "type": "range",
+            "id": "top_spacing",
+            "default": 245,
+            "min": 0,
+            "max": 500,
+            "step": 5,
+            "label": "Text Block top spacing",
+            "info": "unit is in pixel"
+    
+          }, {
+            "type": "range",
+            "id": "bottom_spacing",
+            "default": 275,
+            "min": 0,
+            "max": 500,
+            "step": 5,
+            "label": "Text Block bottom spacing",
+            "info": "unit is in pixel"
+    
+          }, {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image Desktop"
+          },
+          {
+            "type": "image_picker",
+            "id": "background_image_mobile",
+            "label": "Background Image Mobile"
+          }, 
+          {
+            "type": "select",
+            "id": "alignment",
+            "label": "Text block alignment",
+            "options": [
+              {
+                "value": "left",
+                "label": "t:sections.general_section_settings.alignment_option_left_label"
+              }, {
+                "value": "center",
+                "label": "t:sections.general_section_settings.alignment_option_center_label"
+              }, {
+                "value": "right",
+                "label": "t:sections.general_section_settings.alignment_option_right_label"
+              }
+            ],
+            "default": "left"
+          }, {
+            "type": "number",
+            "id": "mobile_height",
+            "label": "Section Mobile Height",
+            "info": "It is for mobile only",
+            "default": 450
+          }
+        ],
+        "presets": [
+          {
+            "name": "Image With Text New"
+          }
+        ]
+      }
+    {% endschema %}

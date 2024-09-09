@@ -8,6 +8,11 @@
                 <div class="vanilla switch_item" data-tab="vanilla">
                     Vanilla Bean
                 </div>
+                {% unless template contains 'offer-landing-page' %}
+                    <div class="strawberry switch_item" data-tab="strawberry">
+                        Strawberry
+                    </div>
+                {% endunless %}
             </div>
         </div>
 
@@ -18,9 +23,15 @@
             </div>
 
             <div class="vanilla_main supplement_box" data-container="vanilla">
-            <img class="desktop_only" src="{{ section.settings.d_v_suplement | img_url: '1440x' }}" loading="lazy" />
-            <img class="mobile_only" src="{{ section.settings.m_v_suplement | img_url: '800x' }}" loading="lazy" />
+                <img class="desktop_only" src="{{ section.settings.d_v_suplement | img_url: '1440x' }}" loading="lazy" />
+                <img class="mobile_only" src="{{ section.settings.m_v_suplement | img_url: '800x' }}" loading="lazy" />
             </div>
+            {% unless template contains 'offer-landing-page' %}
+                <div class="strawberry_main supplement_box" data-container="strawberry">
+                    <img class="desktop_only" src="{{ section.settings.d_s_suplement | img_url: '1440x' }}" loading="lazy" />
+                    <img class="mobile_only" src="{{ section.settings.m_s_suplement | img_url: '800x' }}" loading="lazy" />
+                </div>
+            {% endunless %}
         </div>
 
     </div>
@@ -53,14 +64,7 @@
     .supplement_facts_main img.mobile_only{
         display: none;
     } 
-    @media screen and (max-width: 768px){
-        .supplement_facts_main img.desktop_only{
-            display: none;
-        } 
-        .supplement_facts_main img.mobile_only{
-            display: block;
-        } 
-    }
+
     .inner_supplement_wrap .supplement_switch{
         margin-bottom: 46px;
     }
@@ -93,6 +97,32 @@
         background-color: #DFD0A5;
         color: #212121;
       }
+      .inner_supplement_wrap .supplement_switch .switch_item.active.strawberry{
+        background-color: #F5D1D5;
+        color: #212121;
+      }
+      @media screen and (max-width: 768px){
+        .supplement_facts_main img.desktop_only{
+            display: none;
+        } 
+        .supplement_facts_main img.mobile_only{
+            display: block;
+        } 
+        .inner_supplement_wrap .supplement_switch .switch_item{
+            padding: 16px 20px;
+        }
+    }
+    @media screen and (max-width: 380px){
+        .inner_supplement_wrap .supplement_switch .switch_item{
+            padding: 16px 15px;
+            font-size: 14px;
+        }    
+    }
+    @media screen and (max-width: 320px){
+        .inner_supplement_wrap .supplement_switch .switch_item{
+            font-size: 12px;
+        }  
+    }
 </style>
 
 <script>
@@ -140,6 +170,20 @@
                 "type": "image_picker",
                 "id": "m_v_suplement",
                 "label": "Vanilla Bean Supplement Mobile"
+            }
+            , {
+                "type": "header",
+                "content": "Strawberry"
+            },
+            {
+                "type": "image_picker",
+                "id": "d_s_suplement",
+                "label": "Strawberry Supplement Desktop"
+            },
+            {
+                "type": "image_picker",
+                "id": "m_s_suplement",
+                "label": "Strawberry Supplement Mobile"
             }
         ],
         "presets": [

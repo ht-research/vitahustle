@@ -1,0 +1,94 @@
+{% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', '5859381' %}
+{%- assign selling_plans = sellingPlanGroup[0].selling_plans -%}
+{%- assign sellingPlan = sellingPlanGroup[0].selling_plans[0] -%}
+{%- assign no_of_serving = product.metafields.custom.no_of_serving -%}
+{% if template contains 'new-greens-strawberry' or template contains 'new-superfood-greens' or template contains 'new-superfood-strawberry' or template contains '3-pack-superfood' %}
+  <style>
+    .content_box.purchase_type_block{
+      display: flex;
+      flex-direction: column-reverse;  
+    }
+    .discountBox{
+        visibility: hidden;
+        opacity: 0;
+    }
+    .product_price_box{
+      margin-top: 14px;
+    }
+    .product_price_box .purchase_type_box{
+      margin-bottom: -12px;
+    }
+    .header,.footer{
+        display: none; 
+    }
+    @media screen and (max-width: 1015px) {
+        .product_price_box .purchase_type_box{
+          margin-bottom: 0px;
+        }
+      }
+  </style>
+{% endif %}
+
+{% if true %}
+  <div class="product_price_box" {% if template contains 'new-greens-strawberry' or template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %} handle='{{ product.handle }}' {% endif %}>
+    <div class="content_box purchase_type_block">
+    
+      {% comment %} free 0$ buy box {% endcomment %}
+      <input
+        hidden
+        type="radio"
+        id="free_item"
+        name="subscribe"
+        value="onetime_plan"
+        checked
+        />
+
+      <div class="onetime_box purchase_type_box">
+        <label for="free_item">
+
+          <div class="purchase_type_info">
+            <div class="radio_box">
+
+              <span class="custom_radio"></span>
+            </div>
+            <div class="snippet_info_box">
+              <div class="type_price_block">
+                <h2>Try for FREE</h2>
+                <p>Modify, Skip Or Cancel Anytime!</p>
+              </div>
+              <div class="per_bag_cost">
+                
+                  <div class="price_box">
+                      <div class="price_calc_box">
+                          <span class="discounted_price_box onetime_original_price">
+                              <span class="discounted_price">{{product.price | money_with_currency | split: 'USD' | first}}</span>
+                          </span>
+                      </div>
+                  </div>
+                  {% if product.metafields.custom.product_servings != blank %}
+                    {% assign servings = product.metafields.custom.product_servings %}
+                  {% else %}
+                    {% assign servings = 15  %}
+                  {% endif %}
+                  <div class="discountBox">
+                    {% if no_of_serving !=blank %}
+                      <span class="discounted_price_per_bag">{{ product.price | divided_by: no_of_serving | money_with_currency | split: 'USD' | first }}</span>
+                    {% else %}
+                    <span class="discounted_price_per_bag">{{ product.price | divided_by: servings | money_with_currency | split: 'USD' | first }}</span>
+                    {% endif %}
+                    /serving
+                  </div>
+
+                  
+              </div>
+            </div>
+          </div>
+
+
+        </label>
+
+      </div>
+    </div>
+
+  </div>
+{% endif %}

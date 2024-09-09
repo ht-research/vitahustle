@@ -12,106 +12,286 @@
   endif
 -%}
 
+<style>
+  @media only screen and (max-width:820px) {
+    .product-mobile-media--with-half-next-slide{
+      overflow-x: hidden;
+      max-width: 100%;
+      margin: 0px;
+    }
+    {% if product.handle == "vitahustle-one-superfood-protein-single-serve-packs-10" or product.handle == "vitahustle-one-superfood-protein-single-serve-sampler" %}
+      .image-swatches.product-variant-picker__image-swatches
+      {
+        margin-bottom: 20px;
+      }
+    {% endif %}
+  }
+</style>
+
 <div class='product-desktop-media'>
   {%- liquid
     if block_layout contains 'thumbnails' and product_media.size > 1
-      render 'product-media-carousel', product: product, block: block, block_layout: block_layout, section: section, sectionId: sectionId
+      if template contains 'new-superfood-strawberry' or template contains 'new-greens-strawberry' or template contains '3-pack-superfood'
+        if product.url contains '/products/one-superfood-protein-shake-strawberry' or product.url contains '/products/vitahustle-one-superfood-protein-single-serve-packs-10' or product.url contains '/products/vitahustle-one-superfood-protein-single-serve-sampler' or template contains '3-pack-superfood'
+          render 'product-new-media-carousel', product: product, block: block, block_layout: block_layout, section: section, sectionId: sectionId
+        else
+          render 'product-media-carousel', product: product, block: block, block_layout: block_layout, section: section, sectionId: sectionId
+        endif
+      else
+        render 'product-media-carousel', product: product, block: block, block_layout: block_layout, section: section, sectionId: sectionId
+      endif
     else
       render 'product-media-grid', product: product, block: block, block_layout: block_layout, img_ratio: img_ratio, enable_image_zoom: enable_image_zoom, enable_video_autoplay: enable_video_autoplay, enable_video_looping: enable_video_looping, sectionId: sectionId
     endif
   -%}
 </div>
 
-<div class='product-mobile-media {% if show_part_of_next_slide %} product-mobile-media--with-half-next-slide{% endif %}'>
-  <product-media-carousel data-section='{{ sectionId }}' id='product-media-{{ product.id }}-{{ sectionId }}'>
-    <carousel-component
-      class='carousel product-mobile-media__carousel '
-      data-section-id='{{ sectionId }}'
-      data-product-media-carousel-component
-      tabindex='-1'
-      with-stop-on-hover
-    >
-      <div class='carousel__viewport embla product-mobile-media__carousel-viewport' data-carousel-viewport>
-        <div class='carousel__container' data-carousel-container>
-          {%- if product.media != blank -%}
-            {%- for media in product_media -%}
-              {%- if forloop.index0 == 0 -%}
-                {% assign is_first_media = true %}
-              {%- else -%}
-                {%- assign is_first_media = false -%}
-              {%- endif -%}
-
-              <div class='carousel__slide product-mobile-media__carousel-slide' data-media-id='{{ media.id }}'>
-                <div class='shape shape--{{ img_ratio }}'>
-                  {%- render 'product-media',
-                    product: product,
-                    is_first_media: is_first_media,
-                    enable_image_zoom: enable_image_zoom,
-                    enable_video_autoplay: enable_video_autoplay,
-                    media: media,
-                    modal_media_id: media.id,
-                    enable_video_looping: enable_video_looping,
-                    sectionId: sectionId
-                  -%}
-                </div>
-              </div>
-            {%- endfor -%}
-          {%- else -%}
-            {%- for media in product_media -%}
-              <div class='carousel__slide product-mobile-media__carousel-slide' data-media-id='{{ forloop.index }}'>
-                <div class='shape shape--{{ img_ratio }}'>
-                  {%- render 'product-media',
-                    product: product,
-                    enable_image_zoom: enable_image_zoom,
-                    enable_video_autoplay: enable_video_autoplay,
-                    media: media,
-                    modal_media_id: forloop.index,
-                    enable_video_looping: enable_video_looping,
-                    sectionId: sectionId
-                  -%}
-                </div>
-              </div>
-            {%- endfor -%}
-          {%- endif -%}
-        </div>
-      </div>
-      {% if show_part_of_next_slide != true and product_media.size > 1 %}
-        <carousel-dots
-          class='dots-carousel product-mobile-media__dots-carousel'
-          data-contain-scroll='keepSnaps'
-          data-align='center'
-        >
-          <div class='dots-carousel__viewport embla' data-carousel-viewport>
-            <div class='dots-carousel__container' data-carousel-container>
-              {%- for media in product_media -%}
-                <carousel-dot
-                  class='dots-carousel__slide {% if forloop.index == 1 %}is-primary{% endif %}'
-                  tabindex='0'
-                  data-dot-index='{{ forloop.index0 }}'
-                >
-                  <div class='dots-carousel__slide-body'>
-                    <div class='dots-carousel__slide-inner-circle'></div>
-                    <div
-                      class='dots-carousel__loader'
-                      size='medium'
-                      variant='dark'
-                      data-autoplay-indicator
-                      style='--gsc-autoplay-interval: {{ autoplay_interval }}s;'
-                    >
-                      {% render 'icon',
-                        icon_name: 'circle',
-                        background_class: 'dots-carousel__loader-background',
-                        border_class: 'dots-carousel__loader-border',
-                        circle_class: 'dots-carousel__loader-circle'
-                      %}
-                    </div>
+{% if product.url contains '/products/one-superfood-protein-shake-strawberry' or product.url contains '/products/vitahustle-one-superfood-protein-single-serve-packs-10' or product.url contains '/products/vitahustle-one-superfood-protein-single-serve-sampler' and template contains 'new-superfood-strawberry' or template contains 'new-greens-strawberry' or template contains '3-pack-superfood' %}
+  {% assign product_temp_media = product.metafields.custom.custom_product_images.value %}
+  <div class='product-mobile-media {% if show_part_of_next_slide %} product-mobile-media--with-half-next-slide{% endif %}'>
+    <product-media-carousel data-section='{{ sectionId }}' id='product-media-{{ product.id }}-{{ sectionId }}'>
+      <carousel-component
+        class='carousel product-mobile-media__carousel '
+        data-section-id='{{ sectionId }}'
+        data-product-media-carousel-component
+        tabindex='-1'
+        with-stop-on-hover
+      >
+        <div class='carousel__viewport embla product-mobile-media__carousel-viewport' data-carousel-viewport>
+          <div class='carousel__container' data-carousel-container>
+            {%- if product.media != blank -%}
+              {%- for media in product_temp_media -%}
+                {%- if forloop.index0 == 0 -%}
+                  {% assign is_first_media = true %}
+                {%- else -%}
+                  {%- assign is_first_media = false -%}
+                {%- endif -%}
+  
+                <div class='carousel__slide product-mobile-media__carousel-slide' data-media-id='{{ media.id }}'>
+                  <div class='shape shape--{{ img_ratio }}'>
+                    {%- render 'product-new-media',
+                      product: product,
+                      is_first_media: is_first_media,
+                      enable_image_zoom: enable_image_zoom,
+                      enable_video_autoplay: enable_video_autoplay,
+                      media: media,
+                      modal_media_id: media.id,
+                      enable_video_looping: enable_video_looping,
+                      sectionId: sectionId
+                    -%}
                   </div>
-                </carousel-dot>
+                </div>
               {%- endfor -%}
-            </div>
+            {%- else -%}
+              {%- for media in product_temp_media -%}
+                <div class='carousel__slide product-mobile-media__carousel-slide' data-media-id='{{ forloop.index }}'>
+                  <div class='shape shape--{{ img_ratio }}'>
+                    {%- render 'product-media',
+                      product: product,
+                      enable_image_zoom: enable_image_zoom,
+                      enable_video_autoplay: enable_video_autoplay,
+                      media: media,
+                      modal_media_id: forloop.index,
+                      enable_video_looping: enable_video_looping,
+                      sectionId: sectionId
+                    -%}
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
           </div>
-        </carousel-dots>
-      {% endif %}
-    </carousel-component>
-  </product-media-carousel>
-</div>
+        </div>
+        {% if show_part_of_next_slide != true and product_media.size > 1 %}
+          <carousel-dots
+            class='dots-carousel product-mobile-media__dots-carousel'
+            data-contain-scroll='keepSnaps'
+            data-align='center'
+          >
+            <div class='dots-carousel__viewport embla' data-carousel-viewport>
+              <div class='dots-carousel__container' data-carousel-container>
+                {%- for media in product_media -%}
+                  <carousel-dot
+                    class='dots-carousel__slide {% if forloop.index == 1 %}is-primary{% endif %}'
+                    tabindex='0'
+                    data-dot-index='{{ forloop.index0 }}'
+                  >
+                    <div class='dots-carousel__slide-body'>
+                      <div class='dots-carousel__slide-inner-circle'></div>
+                      <div
+                        class='dots-carousel__loader'
+                        size='medium'
+                        variant='dark'
+                        data-autoplay-indicator
+                        style='--gsc-autoplay-interval: {{ autoplay_interval }}s;'
+                      >
+                        {% render 'icon',
+                          icon_name: 'circle',
+                          background_class: 'dots-carousel__loader-background',
+                          border_class: 'dots-carousel__loader-border',
+                          circle_class: 'dots-carousel__loader-circle'
+                        %}
+                      </div>
+                    </div>
+                  </carousel-dot>
+                {%- endfor -%}
+              </div>
+            </div>
+          </carousel-dots>
+        {% endif %}
+      </carousel-component>
+    </product-media-carousel>
+  </div>
+
+  <script>
+    var gallery_images = [
+      '<img class="product-media__image lazyautosizes ls-is-cached lazyloaded" src="//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=960 960w," data-aspectratio="0.9008771929824562" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="387px" srcset="//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=960 960w,">',
+      '<img class="product-media__image lazyautosizes ls-is-cached lazyloaded" src="//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=960 960w," data-aspectratio="0.9008771929824562" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="387px" srcset="//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=960 960w,">'
+    ];
+
+    document.addEventListener("DOMContentLoaded", (event) => {
+
+      var all_gallery_images = $('.carousel__slide.product-mobile-media__carousel-slide');
+
+      thumbnail_images.map((item,i)=>{
+
+        let temp_gallery_elem = all_gallery_images[i].querySelector('.product-media__image-wrapper ');
+        temp_gallery_elem.innerHTML = gallery_images[i];
+
+      })
+
+      let product_url = "{{product.url}}";
+      let minindex,maxindex;
+      if(product_url=="/products/one-superfood-protein-shake-strawberry"){
+        gallery_images = [
+          '<img class="product-media__image lazyautosizes ls-is-cached lazyloaded" src="//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=960 960w," data-aspectratio="0.9008771929824562" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="607px" srcset="//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Group_48095952.jpg?v=1695197884&amp;width=960 960w,">',
+          '<img class="product-media__image lazyautosizes ls-is-cached lazyloaded" src="//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=960 960w," data-aspectratio="0.9008771929824562" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="607px" srcset="//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Group_48095953_5888fa40-1752-43b0-b00d-9fe37fea145e.jpg?v=1695282994&amp;width=960 960w,">'
+        ];
+        image_update();
+      }
+      else if(product_url=="/products/vitahustle-one-superfood-protein-single-serve-packs-10"){
+        gallery_images = [
+          '<img class="product-media__image lazyautosizes ls-is-cached lazyloaded" src="//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=200 200w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=400 400w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=580 580w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=760 760w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=960 960w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=2000 2000w," data-aspectratio="1.0" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="568px" srcset="//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=200 200w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=400 400w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=580 580w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=760 760w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=960 960w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/5_3217c48a-787f-492d-ae20-2e2f952be7db.jpg?v=1722627406&amp;width=2000 2000w,">',
+          '<img class="product-media__image lazyautosizes ls-is-cached lazyloaded" src="//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=200 200w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=400 400w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=580 580w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=760 760w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=960 960w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=2000 2000w," data-aspectratio="1.0" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="568px" srcset="//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=200 200w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=400 400w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=580 580w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=760 760w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=960 960w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/6_d9e22605-399d-4e0a-b719-9e85d9b8ea10.jpg?v=1722627405&amp;width=2000 2000w,">'
+        ];
+
+        image_update();
+      }
+      else if(product_url=="/products/vitahustle-one-superfood-protein-single-serve-sampler"){
+
+        {% comment %} gallery_images = [
+          '<img class="product-media__image lazyautosizes lazyloaded" src="//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=200 200w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=400 400w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=580 580w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=760 760w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=960 960w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=2000 2000w," data-aspectratio="1.0" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="482px" srcset="//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=200 200w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=400 400w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=580 580w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=760 760w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=960 960w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=2000 2000w,">',
+          '<img class="product-media__image lazyautosizes lazyloaded" src="//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=200 200w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=400 400w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=580 580w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=760 760w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=960 960w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=2000 2000w," data-aspectratio="1.0" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="482px" srcset="//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=200 200w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=400 400w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=580 580w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=760 760w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=960 960w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/vanilla_1.png?v=1724088546&amp;width=2000 2000w,">'
+        ]; {% endcomment %}
+
+        gallery_images = [
+          '<img class="product-media__image lazyautosizes lazyloaded" src="//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=200 200w,//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=400 400w,//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=580 580w,//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=760 760w,//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=960 960w," data-aspectratio="1.0" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="568px" srcset="//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=200 200w,//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=400 400w,//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=580 580w,//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=760 760w,//vitahustle.com/cdn/shop/files/TRY_VITAHUSTLE_FOR_FREE_50.jpg?v=1725539349&amp;width=960 960w,">',
+          '<img class="product-media__image lazyautosizes lazyloaded" src="//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=200 200w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=400 400w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=580 580w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=760 760w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=960 960w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=2000 2000w," data-aspectratio="1.0" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="482px" srcset="//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=200 200w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=400 400w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=580 580w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=760 760w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=960 960w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/chocolate_1.png?v=1724088545&amp;width=2000 2000w,">',
+          '<img class="product-media__image lazyautosizes lazyloaded" src="//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=320" data-srcset="//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=960 960w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=2000 2000w," data-aspectratio="1.0" data-sizes="auto" alt="" loading="lazy" width="1" height="1" style="object-position:50.0% 50.0%;" sizes="482px" srcset="//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=200 200w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=400 400w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=580 580w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=760 760w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=960 960w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=1200 1200w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=1600 1600w,//vitahustle.com/cdn/shop/files/Slide_1_Vanilla_1.jpg?v=1724088546&amp;width=2000 2000w,">'
+        ];
+        image_update();
+      }
+      function image_update(){
+        thumbnail_images.map((item,i)=>{
+          let temp_gallery_elem = all_gallery_images[i].querySelector('.product-media__image-wrapper');
+          temp_gallery_elem.innerHTML = gallery_images[i];
+
+        })
+
+      }
+    });
+  </script>
+{% else %}
+  <div class='product-mobile-media  {% if show_part_of_next_slide %} product-mobile-media--with-half-next-slide{% endif %}'>
+    <product-media-carousel data-section='{{ sectionId }}' id='product-media-{{ product.id }}-{{ sectionId }}'>
+      <carousel-component
+        class='carousel product-mobile-media__carousel '
+        data-section-id='{{ sectionId }}'
+        data-product-media-carousel-component
+        tabindex='-1'
+        with-stop-on-hover
+      >
+        <div class='carousel__viewport embla product-mobile-media__carousel-viewport' data-carousel-viewport>
+          <div class='carousel__container' data-carousel-container>
+            {%- if product.media != blank -%}
+              {%- for media in product_media -%}
+                {%- if forloop.index0 == 0 -%}
+                  {% assign is_first_media = true %}
+                {%- else -%}
+                  {%- assign is_first_media = false -%}
+                {%- endif -%}
+
+                <div class='carousel__slide product-mobile-media__carousel-slide' data-media-id='{{ media.id }}'>
+                  <div class='shape shape--{{ img_ratio }}'>
+                    {%- render 'product-media',
+                      product: product,
+                      is_first_media: is_first_media,
+                      enable_image_zoom: enable_image_zoom,
+                      enable_video_autoplay: enable_video_autoplay,
+                      media: media,
+                      modal_media_id: media.id,
+                      enable_video_looping: enable_video_looping,
+                      sectionId: sectionId
+                    -%}
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- else -%}
+              {%- for media in product_media -%}
+                <div class='carousel__slide product-mobile-media__carousel-slide' data-media-id='{{ forloop.index }}'>
+                  <div class='shape shape--{{ img_ratio }}'>
+                    {%- render 'product-media',
+                      product: product,
+                      enable_image_zoom: enable_image_zoom,
+                      enable_video_autoplay: enable_video_autoplay,
+                      media: media,
+                      modal_media_id: forloop.index,
+                      enable_video_looping: enable_video_looping,
+                      sectionId: sectionId
+                    -%}
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
+          </div>
+        </div>
+        {% if show_part_of_next_slide != true and product_media.size > 1 %}
+          <carousel-dots
+            class='dots-carousel product-mobile-media__dots-carousel'
+            data-contain-scroll='keepSnaps'
+            data-align='center'
+          >
+            <div class='dots-carousel__viewport embla' data-carousel-viewport>
+              <div class='dots-carousel__container' data-carousel-container>
+                {%- for media in product_media -%}
+                  <carousel-dot
+                    class='dots-carousel__slide {% if forloop.index == 1 %}is-primary{% endif %}'
+                    tabindex='0'
+                    data-dot-index='{{ forloop.index0 }}'
+                  >
+                    <div class='dots-carousel__slide-body'>
+                      <div class='dots-carousel__slide-inner-circle'></div>
+                      <div
+                        class='dots-carousel__loader'
+                        size='medium'
+                        variant='dark'
+                        data-autoplay-indicator
+                        style='--gsc-autoplay-interval: {{ autoplay_interval }}s;'
+                      >
+                        {% render 'icon',
+                          icon_name: 'circle',
+                          background_class: 'dots-carousel__loader-background',
+                          border_class: 'dots-carousel__loader-border',
+                          circle_class: 'dots-carousel__loader-circle'
+                        %}
+                      </div>
+                    </div>
+                  </carousel-dot>
+                {%- endfor -%}
+              </div>
+            </div>
+          </carousel-dots>
+        {% endif %}
+      </carousel-component>
+    </product-media-carousel>
+  </div>
+{% endif %}

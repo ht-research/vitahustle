@@ -16,15 +16,23 @@
           when 'inventory_status'
             render 'product-stock-block', product: product, section: section, block: block, sectionId: sectionId
           when 'price'
-            render 'product-price-block', product: product, section: section, block: block, sectionId: sectionId
+            unless template contains 'new-greens-strawberry' or template contains '3-pack-superfood'
+              render 'product-price-block', product: product, section: section, block: block, sectionId: sectionId
+            endunless
           when 'description'
             render 'product-description-block', product: product, section: section, block: block, sectionId: sectionId
           when 'subscription_widget'
-            render 'custom-subcription-widget', product: product, section: section, block: block, sectionId: sectionId
+            unless product.handle contains "vitahustle-one-superfood-protein-single-serve-sampler" or product.handle contains 'shaker-bottle-stainless-20oz' or product.handle contains 'vitahustle-chill-gummies' or product.handle contains 'electrolyte-hydration-drink-immunity-orange' and template contains '3-pack-superfood'
+              render 'custom-subcription-widget', product: product, section: section, block: block, sectionId: sectionId
+            endunless
           when 'custom_liquid'
             render 'product-liquid-block', product: product, section: section, block: block, sectionId: sectionId
           when 'collapsible_row'
-            render 'product-content-tab-block', product: product, section: section, block: block, sectionId: sectionId
+            if block.settings.title contains "Supplement Facts" or block.settings.title contains "SUPPLEMENT FACTS"
+              render 'product-content-tab-block-new', product: product, section: section, block: block, sectionId: sectionId
+            else
+              render 'product-content-tab-block', product: product, section: section, block: block, sectionId: sectionId
+            endif
           when 'quantity_selector'
             render 'product-quantity-block', product: product, section: section, block: block, sectionId: sectionId
           when 'information_tag'
@@ -36,7 +44,18 @@
           when 'variant_picker'
             render 'product-variant-picker-block', product: product, section: section, block: block, sectionId: sectionId
           when 'buy_buttons'
-            render 'product-form-block', product: product, section: section, block: block, sectionId: sectionId
+            if template contains 'new-greens-strawberry' and product.handle=="one-superfood-protein-shake-strawberry"
+              render 'product-new-form-block', product: product, section: section, block: block, sectionId: sectionId
+            elsif product.handle contains "vitahustle-one-superfood-protein-single-serve-sampler" or product.handle contains 'shaker-bottle-stainless-20oz' or product.handle contains 'vitahustle-chill-gummies' or product.handle contains 'electrolyte-hydration-drink-immunity-orange' and template contains '3-pack-superfood'
+              render 'single-serving-subscription', product: product, section: section, block: block, sectionId: sectionId
+              render 'product-form-block', product: product, section: section, block: block, sectionId: sectionId
+            else 
+              render 'product-form-block', product: product, section: section, block: block, sectionId: sectionId
+            endif
+          when 'subscribtion_manage'
+            if product.handle contains "vitahustle-one-superfood-protein-single-serve-sampler" or product.handle contains 'shaker-bottle-stainless-20oz' or product.handle contains 'vitahustle-chill-gummies' or product.handle contains 'electrolyte-hydration-drink-immunity-orange' and template contains '3-pack-superfood'
+              render 'subscription_manage', product: product, section: section, block: block, sectionId: sectionId
+            endif
           when 'button'
             render 'product-button-block', product: product, section: section, block: block, sectionId: sectionId
           when 'complementary_products'

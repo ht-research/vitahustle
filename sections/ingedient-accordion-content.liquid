@@ -1,5 +1,9 @@
-
-{% assign data = product.metafields.custom.product_feature_content.value %}
+{% assign ingredient_accordion_serving_product = section.settings.ingredient_accordion_serving_product %}
+{% if ingredient_accordion_serving_product %}
+    {% assign data = ingredient_accordion_serving_product.metafields.custom.product_feature_content.value %}
+{% else %}
+    {% assign data = product.metafields.custom.product_feature_content.value %}
+{% endif %}
 
 <style>
 .product_feature_accordion_content_wrapper{
@@ -483,7 +487,13 @@
 {
     "name": "Product feature content",
     "tag": "section",
-    "settings": [],
+    "settings": [
+        {
+            "type": "product",
+            "id": "ingredient_accordion_serving_product",
+            "label": "Choose Single serving product"
+        }
+    ],
     "presets": [
         {
           "name": "Product feature content"

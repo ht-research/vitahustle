@@ -44,10 +44,9 @@
             "image_width": 60
           }
         },
-        "a5695ed4-524b-45b1-a57e-48bebecb84a9": {
-          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+        "subscription_widget_xJhk8P": {
+          "type": "subscription_widget",
           "settings": {
-            "product": "{{product}}"
           }
         },
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
@@ -81,28 +80,6 @@
             "drawer_media_size": 60
           }
         },
-        "06c05680-9cfd-4c28-8b40-a64f24723e70": {
-          "type": "collapsible_row",
-          "settings": {
-            "style": "collapsible_row_closed",
-            "title": "HOW TO USE",
-            "icon": "none",
-            "text": "<p>Add 2 scoops of powder, blend with 8-12 oz of ice cold water or milk, blend ior shake vigorously. Serve cold or over ice.<\/p>",
-            "page": "",
-            "image_width": 60
-          }
-        },
-        "418118f7-e71b-4ce3-bee0-cde3239694f7": {
-          "type": "collapsible_row",
-          "settings": {
-            "style": "collapsible_row_closed",
-            "title": "INGREDIENTS",
-            "icon": "none",
-            "text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
-            "page": "",
-            "image_width": 60
-          }
-        },
         "c5924e9f-2227-4047-ac6f-bfad6b346aa4": {
           "type": "collapsible_row",
           "settings": {
@@ -116,12 +93,34 @@
         },
         "cbfcea53-e238-4c35-a5c9-da334abf0c2d": {
           "type": "collapsible_row",
-          "disabled": true,
           "settings": {
             "style": "collapsible_row_closed",
             "title": "BENEFITS",
             "icon": "none",
             "text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
+            "page": "",
+            "image_width": 60
+          }
+        },
+        "418118f7-e71b-4ce3-bee0-cde3239694f7": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "style": "collapsible_row_closed",
+            "title": "INGREDIENTS",
+            "icon": "none",
+            "text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
+            "page": "",
+            "image_width": 60
+          }
+        },
+        "06c05680-9cfd-4c28-8b40-a64f24723e70": {
+          "type": "collapsible_row",
+          "settings": {
+            "style": "collapsible_row_closed",
+            "title": "HOW TO USE",
+            "icon": "none",
+            "text": "<p>Add 2 scoops of powder, blend with 8-12 oz of ice cold water or milk, blend ior shake vigorously. Serve cold or over ice.<\/p>",
             "page": "",
             "image_width": 60
           }
@@ -133,18 +132,17 @@
         "price",
         "28586830-d855-4547-8946-94914bac9e85",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
-        "a5695ed4-524b-45b1-a57e-48bebecb84a9",
+        "subscription_widget_xJhk8P",
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
         "buy_buttons",
         "b7435ba2-8e00-4538-be27-63a92d60e195",
-        "06c05680-9cfd-4c28-8b40-a64f24723e70",
-        "418118f7-e71b-4ce3-bee0-cde3239694f7",
         "c5924e9f-2227-4047-ac6f-bfad6b346aa4",
-        "cbfcea53-e238-4c35-a5c9-da334abf0c2d"
+        "cbfcea53-e238-4c35-a5c9-da334abf0c2d",
+        "418118f7-e71b-4ce3-bee0-cde3239694f7",
+        "06c05680-9cfd-4c28-8b40-a64f24723e70"
       ],
       "custom_css": [
         "ul {padding-inline-start: 0px !important;}",
-        ".product-quantity__wrap {margin-top: 0px !important;}",
         ".superfood-only {display: none;}",
         "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
         ".product-desktop-media {position: sticky !important; top: 120px !important;}",
@@ -155,7 +153,7 @@
         "color_scheme": "default",
         "container_size": "page-width",
         "section_spacing_top": 32,
-        "section_spacing_bottom": 48,
+        "section_spacing_bottom": 10,
         "layout": "thumbnails-left",
         "img_ratio": "square",
         "enable_image_zoom": false,
@@ -217,7 +215,7 @@
         "template--16944483926265__0a917585-e6ae-4198-87c0-fec620632352-1688060215978781a1-2": {
           "type": "heading",
           "settings": {
-            "title": "VitaHustle Reviews",
+            "title": "Reviews",
             "heading_size": "h1"
           }
         }
@@ -265,8 +263,8 @@
       "settings": {
         "color_scheme": "default",
         "container_size": "small",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 11,
         "custom_liquid": ""
       }
     },
@@ -364,8 +362,8 @@
         "container_size": "large",
         "section_spacing_top": 60,
         "section_spacing_bottom": 60,
-        "title": "All GOOD NO B.S. (BAD STUFF)",
-        "text": "Clean & green ingredients with no artificial sweetners or scary sounding ingredients.",
+        "title": "all good, no b.s. (bad stuff)",
+        "text": "Clean nutrition with no added sugars or artificial ingredients.",
         "heading_size": "h1",
         "body_size": "body3",
         "content_alignment": "center",
@@ -381,81 +379,6 @@
         "btn_text": "",
         "btn_url": "",
         "btn_style": "outline"
-      }
-    },
-    "9ddba0be-f879-4e43-9a11-aea6ba37821b": {
-      "type": "images-with-text",
-      "blocks": {
-        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png"
-          }
-        }
-      },
-      "block_order": [
-        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0"
-      ],
-      "custom_css": [
-        ".images-with-text__image-list-item-media {border-radius: 20px;}"
-      ],
-      "settings": {
-        "display_custom_text_items": false,
-        "custom_text_1": "",
-        "custom_text_2": "",
-        "custom_text_3": "",
-        "custom_text_4": "",
-        "color_scheme": "default",
-        "container_size": "page-width",
-        "section_spacing_top": 60,
-        "section_spacing_bottom": 60,
-        "content_layout": "left",
-        "image_layout": "collage",
-        "img_ratio": 0.8,
-        "rotate_images": false,
-        "icon": "none",
-        "subheading": "",
-        "heading": "ZERO ADDED SUGAR. 100% DELICIOUS.",
-        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
-        "heading_size": "h1",
-        "body_size": "body3",
-        "content_alignment": "left",
-        "desktop_content_width": 480,
-        "first_button_text": "LEARN MORE",
-        "first_button_link": "shopify:\/\/pages\/about",
-        "first_button_style": "solid",
-        "second_button_text": "",
-        "second_button_link": "",
-        "second_button_style": "solid"
-      }
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "disabled": true,
-      "settings": {
-        "color_scheme": "default",
-        "container_size": "full-screen",
-        "section_spacing_top": 80,
-        "section_spacing_bottom": 80,
-        "section_layout": "carousel",
-        "title": "You may also like",
-        "heading_size": "h5",
-        "alignment": "center",
-        "product_recommendations_type": "auto",
-        "featured_collection": "",
-        "featured_products": [
-
-        ],
-        "img_ratio": "portrait",
-        "product_card_align": "center",
-        "cards_to_show": 18,
-        "desktop_columns": 4,
-        "desktop_space_between_cards": 12,
-        "mobile_space_between_cards": 16,
-        "enable_carousel_on_mobile": false,
-        "enable_autoplay": false,
-        "autoplay_interval": 3,
-        "show_navigation_on_hover": true
       }
     },
     "d7e5ae43-0bda-4830-acab-d2202fbad902": {
@@ -562,6 +485,82 @@
         "enable_carousel_on_mobile": false
       }
     },
+    "9ddba0be-f879-4e43-9a11-aea6ba37821b": {
+      "type": "images-with-text",
+      "blocks": {
+        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".images-with-text__image-list-item-media {border-radius: 20px;}"
+      ],
+      "settings": {
+        "display_custom_text_items": false,
+        "custom_text_1": "",
+        "custom_text_2": "",
+        "custom_text_3": "",
+        "custom_text_4": "",
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 60,
+        "section_spacing_bottom": 60,
+        "content_layout": "left",
+        "image_layout": "collage",
+        "img_ratio": 0.8,
+        "rotate_images": false,
+        "icon": "none",
+        "subheading": "",
+        "heading": "ZERO ADDED SUGAR. 100% DELICIOUS.",
+        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "content_alignment": "left",
+        "desktop_content_width": 480,
+        "first_button_text": "LEARN MORE",
+        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_style": "solid",
+        "second_button_text": "",
+        "second_button_link": "",
+        "second_button_style": "solid"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 80,
+        "section_spacing_bottom": 80,
+        "section_layout": "carousel",
+        "title": "You may also like",
+        "heading_size": "h5",
+        "alignment": "center",
+        "product_recommendations_type": "auto",
+        "featured_collection": "",
+        "featured_products": [
+
+        ],
+        "img_ratio": "portrait",
+        "product_card_align": "center",
+        "cards_to_show": 18,
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 12,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_navigation_on_hover": true
+      }
+    },
     "3358a2f5-cc69-465d-9d0b-052f74fcdf6c": {
       "type": "image-banner",
       "settings": {
@@ -574,12 +573,12 @@
         "section_spacing_bottom": 0,
         "desktop_height": 480,
         "mobile_height": 600,
-        "desktop_img": "shopify:\/\/shop_images\/02-_Option2-GIF_-_R2_1a762390-6458-4c6c-9eed-d41d1df4279c.jpg",
-        "desktop_overlay_opacity": 20,
-        "mobile_overlay_opacity": 20,
-        "caption": "RISK FREE",
+        "desktop_img": "shopify:\/\/shop_images\/div.media.webp",
+        "desktop_overlay_opacity": 13,
+        "mobile_overlay_opacity": 14,
+        "caption": "DAMN DELICIOUS",
         "title": "60-DAY GUARANTEE",
-        "text": "<p>If for any reason VitaHustle ONE is not for you, simply return the bag for a full refund, less shipping & handling.<\/p>",
+        "text": "<p>If you don't find this product absolutely <strong>damn delicious<\/strong>, simply return it and get your money back (less s&h)<\/p>",
         "heading_size": "h1",
         "body_size": "body3",
         "desktop_content_position": "align-items:center;justify-content:center;",
@@ -662,9 +661,9 @@
     "product-details",
     "168805997811e9e2b2",
     "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0",
+    "d7e5ae43-0bda-4830-acab-d2202fbad902",
     "9ddba0be-f879-4e43-9a11-aea6ba37821b",
     "product-recommendations",
-    "d7e5ae43-0bda-4830-acab-d2202fbad902",
     "3358a2f5-cc69-465d-9d0b-052f74fcdf6c",
     "bed2a76f-a55e-4479-825c-3e608236563f"
   ]

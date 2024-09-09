@@ -38,6 +38,41 @@
   endif
 -%}
 
+{% if product.handle contains "vitahustle-one-superfood-protein-single-serve-sampler" and template contains '3-pack-superfood' %}
+  <style>
+    .product-quantity__wrap{
+       display: none;
+    }
+    .add_to_cart_serving_product{
+      width: 100%;
+      background-color: rgb(200, 232, 18);
+      padding: 2rem 6rem;
+      border-radius: 100px;
+      letter-spacing: -0.7px;
+      border: none;
+      font-family: "FK Grotesk Bold";
+      text-transform: uppercase;
+      font-size: 17px;
+      color: black;
+      text-align: center;
+      cursor: pointer;
+      min-height: 5.6rem;
+    }
+    .add_to_cart_serving_product.disabled{
+      cursor: not-allowed;
+      opacity: .5;
+    }
+    .add_to_cart_serving_product.sticky{
+      display: none;
+    }
+    @media screen and (max-width: 820px) {
+      .add_to_cart_serving_product.sticky{
+        display: block;
+      }
+    }
+  </style>
+{% endif %}
+
 {%- if product != blank -%}
    {% if template contains 'new-superfood-greens' %} 
 <div class=""style="display: flex;" >
@@ -122,6 +157,9 @@
                   {% if available == false %}
                     disabled
                   {% endif %}
+                   data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                   aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
                 >
                   <span data-button-text>
@@ -149,6 +187,9 @@
                     disabled
                   {% endif %}
                   data-product-form-button
+                   data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
                   aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
                 >
                   <span data-button-text>
@@ -162,6 +203,43 @@
                 </button>
               </div>
             </product-form-button>
+          {% elsif template contains '3-pack-superfood' %}
+             <button class="add_to_cart_serving_product" id="add_to_cart_serving_product_desktop"
+              data-value = '{{ product.variants | json }}'
+              {% if available == false %}
+                  disabled
+              {% endif %}
+              >
+                <span>
+                  {%- if available -%}
+                    {{ add_to_cart_label }}
+                  {%- else -%}
+                    {{ sold_out_label }}
+                  {%- endif -%}
+                </span>
+              </button>
+
+              <product-form-button class="product-form__mobile-sticky-button">
+                <div
+                  class="product-form__btn-wrapper product-form__btn-wrapper--sticky-mobile-button"
+                >
+                  <button class="add_to_cart_serving_product sticky"
+                    {% if available == false %}
+                        disabled
+                    {% endif %}
+                    id="add_to_cart_serving_product_mobile"
+                    data-value = "{{ product.variants | json }}"
+                    >
+                      <span>
+                        {%- if available -%}
+                          {{ add_to_cart_label }}
+                        {%- else -%}
+                          {{ sold_out_label }}
+                        {%- endif -%}
+                      </span>
+                    </button>
+                </div>
+              </product-form-button>
           {%- else -%}
             <button
               type="submit"
@@ -171,6 +249,9 @@
               {% if available == false %}
                 disabled
               {% endif %}
+               data-product-id="{{ product.id }}"
+                    data-product-title="{{ product.title }}"
+                    data-product-price="{{ product.price | money_with_currency }}"
               aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
             >
               <span data-button-text>
@@ -210,3 +291,142 @@
       {%- endif -%}
 
 {%- endif -%}
+
+<script>
+  var selling_plaID = "{{product.selling_plan_groups[0].selling_plans[0].id}}"
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+      console.log("selling_plaID",selling_plaID);
+
+      function addTocart(id,qty,selling_planID){
+
+          if(!selling_planID){
+              items = [
+                  {
+                      id: id,
+                      quantity: qty
+                  }
+              ]
+          
+          }
+          else{
+              items = [
+                  {
+                      id: id,
+                      selling_plan: selling_planID,
+                      quantity: qty
+                  }
+              ]
+          }
+
+          console.log("items",items);
+          $.ajax({
+              type: 'POST',
+              url: '/cart/add.js',
+              data: {
+                  items: items
+              },
+              dataType: 'json',
+              success: function(data) {
+                  console.log('data=========>', data);
+                  $('.sidebar-cart__body').remove();
+                  fetch(window.Shopify.routes.root + "?sections=cart-drawer")
+                  .then(res => res.json()).then((res) => {
+                    const response = $.parseHTML(res['cart-drawer']);          
+                    
+                    
+                    $('.sidebar-cart').removeAttr('is-empty');     
+                    $('.sidebar-cart').append($(response).find('#CartInSidebar')[0].innerHTML);
+                    setTimeout(function() {
+                      $('.sidebar-cart__body').addClass('dataAddedonSideBar');
+                      $('.sidebar-cart').attr('data-aria-expanded', "true");  
+                      $('.sidebar-cart').addClass('cartAdded');     
+                    }); 
+                  });
+              }
+              
+          });
+      }
+
+      if($('.add_to_cart_serving_product')){
+        $('.add_to_cart_serving_product').on('click', function(event){
+          let selected_flavor = $('label.image-swatches__item--square.selected').attr('data-value');
+          let product_variant = $('#add_to_cart_serving_product_desktop').attr('data-value');
+          console.log("product_variant",product_variant);
+          let variant_array = JSON.parse(product_variant);
+          let selected_product =  variant_array.filter(variant=>variant.title==selected_flavor);
+  
+          event.preventDefault();
+          addTocart(selected_product[0].id,1,selling_plaID);
+       })
+        
+      }
+
+
+     function productAvailablity(flavor){
+      let selected_flavor = $('label.image-swatches__item--square.selected').attr('data-value');
+      let product_variant = $('#add_to_cart_serving_product_desktop').attr('data-value');
+        let variant_array =  product_variant ? JSON.parse(product_variant) : [];
+      let selected_product =  variant_array.filter(variant=>variant.title==selected_flavor);
+
+      if(!selected_product[0]?.available){
+        $('.add_to_cart_serving_product').addClass('disabled');
+        $('.add_to_cart_serving_product').text('Sold Out');
+      }
+      else{
+        $('.add_to_cart_serving_product').removeClass('disabled');
+        $('.add_to_cart_serving_product').text('Add To Cart');
+      }
+     }
+     if($('#add_to_cart_serving_product_desktop')){
+      productAvailablity();
+      $('label.image-swatches__item--square').on('click',function(){
+        let flavor = $(this).attr('data-value');
+        let product_variant = $('#add_to_cart_serving_product_desktop').attr('data-value');
+        let variant_array =  product_variant ? JSON.parse(product_variant) : [];
+        let selected_product =  variant_array.filter(variant=>variant.title==flavor);
+  
+        if(!selected_product[0]?.available){
+          $('.add_to_cart_serving_product').addClass('disabled');
+          $('.add_to_cart_serving_product').text('Sold Out');
+        }
+        else{
+          $('.add_to_cart_serving_product').removeClass('disabled');
+          $('.add_to_cart_serving_product').text('Add To Cart');
+        }
+      })
+     }
+
+
+     if($(window).width()<=1015){
+      var button = document.getElementById('add_to_cart_serving_product_desktop');
+      let topPosition = 0
+      if (button) {
+          var rect = button.getBoundingClientRect();
+          topPosition = rect.top + window.scrollY;
+          
+          console.log('The button is', topPosition, 'pixels from the top of the document.');
+      }
+      $(window).on('scroll',function(){
+       let y = $(window).scrollTop();
+       if($(this).scrollTop()>=topPosition+65){
+        $('.product-form__mobile-sticky-button').attr('visible','');
+      }
+      else{
+        $('.product-form__mobile-sticky-button').removeAttr('visible');
+      }
+       {% comment %} if(y>950){
+         $('.product-form__mobile-sticky-button').attr('visible','');
+       }
+       else{
+         $('.product-form__mobile-sticky-button').removeAttr('visible');
+ 
+       } {% endcomment %}
+      })
+     }
+     
+
+  });
+  
+</script>

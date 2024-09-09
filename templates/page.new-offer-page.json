@@ -1,0 +1,668 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "custom_css": [
+        "h5 {font-family: \"Druk Web\"; font-size: 6rem; line-height: 1;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "medium",
+        "section_spacing_top": 50,
+        "section_spacing_bottom": 50,
+        "show_heading": true
+      }
+    },
+    "offer_landing_page_pBQV3x": {
+      "type": "offer-landing-page",
+      "blocks": {
+        "image_text_XpKtjL": {
+          "type": "image_text",
+          "settings": {
+            "offer_landing_page_feature_text": "86 <br>Superfoods",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Orange_1.png"
+          }
+        },
+        "image_text_B4iART": {
+          "type": "image_text",
+          "settings": {
+            "offer_landing_page_feature_text": "Pre & <br>Probiotics",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Vector_7_1.png"
+          }
+        },
+        "image_text_KgiACU": {
+          "type": "image_text",
+          "settings": {
+            "offer_landing_page_feature_text": "20g <br>Plant Protein",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Frame_48096425.png"
+          }
+        },
+        "image_text_6jqy6C": {
+          "type": "image_text",
+          "settings": {
+            "offer_landing_page_feature_text": "Clinically Proven <br>Ashwagandha",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Frame_48096458.png"
+          }
+        },
+        "image_text_w9pg3i": {
+          "type": "image_text",
+          "settings": {
+            "offer_landing_page_feature_text": "$48.80 worth of gifts!",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Frame_48096072_1.png"
+          }
+        },
+        "image_text_PqJW3V": {
+          "type": "image_text",
+          "settings": {
+            "offer_landing_page_feature_text": "Free Shipping",
+            "offer_landing_page_feature_image": "shopify:\/\/shop_images\/Frame_48096073_1.png"
+          }
+        },
+        "feature_text_mdwimd": {
+          "type": "feature-text",
+          "settings": {
+            "offer_landing_page_feature_text": "60-Day Money-Back Guarantee"
+          }
+        },
+        "feature_text_NqDMeX": {
+          "type": "feature-text",
+          "settings": {
+            "offer_landing_page_feature_text": "30 Day Supply, Ships Every 30-Days"
+          }
+        },
+        "feature_text_ccExJK": {
+          "type": "feature-text",
+          "settings": {
+            "offer_landing_page_feature_text": "Pause, Cancel or Change Anytime"
+          }
+        },
+        "subscription_benefit_HTddwB": {
+          "type": "subscription-benefit",
+          "settings": {
+            "offer_landing_page_feature_text": "Free Shipping"
+          }
+        },
+        "subscription_benefit_AADXy7": {
+          "type": "subscription-benefit",
+          "settings": {
+            "offer_landing_page_feature_text": "Free Welcome Kit (Shaker Bottle + Recipe Book)"
+          }
+        },
+        "subscription_benefit_34jqra": {
+          "type": "subscription-benefit",
+          "settings": {
+            "offer_landing_page_feature_text": "Free Hydration Electrolytes"
+          }
+        },
+        "subscription_benefit_XAKgjc": {
+          "type": "subscription-benefit",
+          "settings": {
+            "offer_landing_page_feature_text": "60 Day Money Back Guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "image_text_XpKtjL",
+        "image_text_B4iART",
+        "image_text_KgiACU",
+        "image_text_6jqy6C",
+        "image_text_w9pg3i",
+        "image_text_PqJW3V",
+        "feature_text_mdwimd",
+        "feature_text_NqDMeX",
+        "feature_text_ccExJK",
+        "subscription_benefit_HTddwB",
+        "subscription_benefit_AADXy7",
+        "subscription_benefit_34jqra",
+        "subscription_benefit_XAKgjc"
+      ],
+      "settings": {
+        "serving_product": "vitahustle-one-superfood-protein-greens-30-servings",
+        "electrolytes_product": [
+          "electrolyte-hydration-12-pack",
+          "vitahustle-welcome-gift-set"
+        ],
+        "offer_landing_page_product_kit_image": "shopify:\/\/shop_images\/desktop-welcome-kit.png",
+        "offer_landing_page_product_kit_image_mobile": "shopify:\/\/shop_images\/mobile-welcome-kit.png",
+        "offer_landing_page_title": "You've Unlocked <span>40%<\/span> Off",
+        "offer_landing_page_subtitle": "Kevin Hart's Starter Kit",
+        "offer_landing_page_main_product_title": "VitaHustle ONE <br>Superfood Protein",
+        "offer_landing_page_main_product_sub_desc": "",
+        "offer_landing_page_main_product_compare_price": "$98.85",
+        "offer_landing_page_main_product_actual_price": "$74.95",
+        "offer_landing_page_first_order_text": "First Order Includes",
+        "offer_landing_page_welcome_kit_title": "Welcome Kit",
+        "offer_landing_page_welcome_kit_sub_desc": "Shaker Bottle, Recipe Book",
+        "offer_landing_page_welcome_kit_compare_price": "$24.95",
+        "offer_landing_page_electrolyte_title": "Hydration Electrolytes (12 pack)",
+        "offer_landing_page_electrolyte_sub_desc": "6 Immunity\/Orange + 6 Recover\/Berry",
+        "offer_landing_page_electrolyte_compare_price": "$23.90",
+        "popup_title": "Level Up With VitaHustle",
+        "popup_subtitle": "Choose Your Flavor",
+        "save_mark": "SAVE 10%",
+        "single_subscription_title": "Kevin Hart's Starter Kit",
+        "single_subscription_subdesc": "30 Servings Shipped Monthly, Save 25%",
+        "try_once_title": "Try Once",
+        "try_once_subdesc": "30 Servings Shipped once + $7.95 shipping"
+      }
+    },
+    "5096cd4d-03ff-4554-87ca-b668ea4df472": {
+      "type": "product-review-block",
+      "settings": {
+        "title": "VITAHUSTLE REVIEWS",
+        "rating_text": "750+ 5 STAR REVIEWS",
+        "review_text_tagline": "We're Constantly Inspired By VitaHustle Users Sharing Their Success Stories, Embracing Healthier, More Energized Lives Every Single Day!",
+        "rating": 4.5
+      }
+    },
+    "a64e57db-eb92-4095-8e12-fd59d76e9a3c": {
+      "type": "main-pdp-review",
+      "blocks": {
+        "176a989d-ffb8-4524-ae12-49b4d634c6a8": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/ANDREW_LISCIO.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
+          }
+        },
+        "29b22d82-c946-4966-af21-046a886c8ae6": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/BEN_HO.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cd0dba5beec04092ba712f45bba8aa1a.mp4"
+          }
+        },
+        "589a1982-73c9-4086-97c1-1120eb8069d4": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/BRITTANY_WOODCOX.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e301b71b26d74dea980f3457ce5e6db2.mp4"
+          }
+        },
+        "66c7ecd7-bb0b-40b1-8a59-4d30c0666728": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/GLORIA_GARAYUA_001.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f5cabf0584f94b51b61580789c4cff3f.mp4"
+          }
+        },
+        "c49ff97e-cd38-47f0-8dcc-810327899465": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/JESS_WEBER_002.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/59417e6e97e3421fb7d1b06564f241a1.mp4"
+          }
+        },
+        "cb2e5d5a-1cae-4240-b4c5-c53a187c9751": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/JONI_BOVILL_002.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8a428787c9f84392bee52882876364ff.mp4"
+          }
+        },
+        "4480c349-fb73-488e-bc6f-c236d2a85057": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/JUSTIN_SANDLER_001.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a6007d9e679c4e529b28cc46abd352d7.mp4"
+          }
+        },
+        "e73d9beb-4a4f-47c2-8c26-a575b2891100": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/KATIE_DUPIN-2.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/337ad2ea9fc047abb74ccb3eb668d484.mp4"
+          }
+        },
+        "744bed83-c84f-4350-ad33-397cdb62ad1e": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/KEESA_FORD_001.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0c7c8058fed746659aebbaf9199f30b2.mp4"
+          }
+        },
+        "a0f1ca5d-0f2e-433e-83d5-525e480346c5": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/KINYUMBA_MUTAKABIR_002.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af8a3916815947ef9f8d34f84671fda5.mp4"
+          }
+        },
+        "ce9a8ae7-22af-46f9-9d0c-57dd7184fa18": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/MELISSA_ARDON.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c87e435462724016a9acb2ebda611d7c.mp4"
+          }
+        },
+        "08df336b-1475-40f7-b374-8c909ffc03d3": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/OLIVIA_KAPLAN_004.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4a81af1a7d694f89ae9cce69a9775974.mp4"
+          }
+        },
+        "c7acc696-ad84-42f2-b72d-cf4ab9c929d7": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/PALM_SURICHANYA_001.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9cd77643acba49609fa6feb3798d562e.mp4"
+          }
+        },
+        "f2ab0b7e-48b9-4f75-9702-a18960a72b11": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/PAUL_DUFF_002.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/62de7359b4d04fa69e0754b4d0cb9326.mp4"
+          }
+        },
+        "5d3a73d3-e168-4189-bc0e-e95287473236": {
+          "type": "testimonial_box",
+          "settings": {
+            "thumbnail_image": "shopify:\/\/shop_images\/STEVE_DUPIN.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/de358ce7905c40ee8e112c6240c815b2.mp4"
+          }
+        },
+        "judge_me_reviews_review_widget_homepage_XCA6Ky": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "vitahustle-one-superfood"
+          }
+        }
+      },
+      "block_order": [
+        "176a989d-ffb8-4524-ae12-49b4d634c6a8",
+        "29b22d82-c946-4966-af21-046a886c8ae6",
+        "589a1982-73c9-4086-97c1-1120eb8069d4",
+        "66c7ecd7-bb0b-40b1-8a59-4d30c0666728",
+        "c49ff97e-cd38-47f0-8dcc-810327899465",
+        "cb2e5d5a-1cae-4240-b4c5-c53a187c9751",
+        "4480c349-fb73-488e-bc6f-c236d2a85057",
+        "e73d9beb-4a4f-47c2-8c26-a575b2891100",
+        "744bed83-c84f-4350-ad33-397cdb62ad1e",
+        "a0f1ca5d-0f2e-433e-83d5-525e480346c5",
+        "ce9a8ae7-22af-46f9-9d0c-57dd7184fa18",
+        "08df336b-1475-40f7-b374-8c909ffc03d3",
+        "c7acc696-ad84-42f2-b72d-cf4ab9c929d7",
+        "f2ab0b7e-48b9-4f75-9702-a18960a72b11",
+        "5d3a73d3-e168-4189-bc0e-e95287473236",
+        "judge_me_reviews_review_widget_homepage_XCA6Ky"
+      ],
+      "settings": {
+      }
+    },
+    "2fcd5b9f-ab41-41d4-a671-3ec3e5aaead6": {
+      "type": "all-ingredients",
+      "blocks": {
+        "5fb1b568-75de-4cb7-82b5-ea4204b1e306": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHE1C7_1.png",
+            "name1": "ORGANIC KALE"
+          }
+        },
+        "32752f03-a544-4878-a8ab-c468ed452b64": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHST_L_1_3.png",
+            "name1": "ORGANIC SPINACH"
+          }
+        },
+        "c19bd822-c9fc-45e3-b531-c99f453ebe49": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VH6529_1.png",
+            "name1": "ORGANIC BROCCOLI"
+          }
+        },
+        "02198a55-fd10-44ad-a2d0-79e3d73b837b": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHD2BE_1.png",
+            "name1": "ORGANIC BEET ROOT"
+          }
+        },
+        "e7ce461e-e564-47e8-be19-7435d47e1ca9": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHST_L_2_3.png",
+            "name1": "ORGANIC CAULIFLOWER"
+          }
+        },
+        "d2eb0d2b-0e22-4403-b5f8-03ac9ed44aff": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHCF75_1.png",
+            "name1": "ORGANIC BARLEY GRASS"
+          }
+        },
+        "87983cd7-00dd-42de-add0-2212c0e0b254": {
+          "type": "superfood_greens",
+          "settings": {
+            "ingredient_image1": "shopify:\/\/shop_images\/VHE2DB_1.png",
+            "name1": "ORGANIC TURMERIC ROOT"
+          }
+        },
+        "6282d446-68b4-4d27-ae07-93c300844392": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHA788_1.png",
+            "name2": "ORGANIC POMEGRANATE"
+          }
+        },
+        "5bba7bf6-95dd-4c13-a7ab-bf55832b55d8": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VH8837_1.png",
+            "name2": "ORGANIC ACAI"
+          }
+        },
+        "154002a2-01f9-4712-81f4-1a879516b8f1": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VH4679_1.png",
+            "name2": "TART CHERRY"
+          }
+        },
+        "57c62444-1816-49a6-9023-fdc226a3ffeb": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VH3075_1.png",
+            "name2": "ORGANIC STRAWBERRY"
+          }
+        },
+        "119e801c-5a69-4c91-afaa-53243537fa07": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHST_L_2_4.png",
+            "name2": "ORGANIC BLACKBERRY"
+          }
+        },
+        "a2672959-bfd4-4327-9d34-a2548eab15a1": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHST_L_4_4.png",
+            "name2": "ORGANIC CRANBERRY"
+          }
+        },
+        "b557220a-e297-4c66-a9e9-2630b6f78936": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VH6EB9_1.png",
+            "name2": "ORGANIC BANANA"
+          }
+        },
+        "8e8dee6b-2f7f-4bb6-a1a5-0a7d4b103648": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHC3F5_1.png",
+            "name2": "ORGANIC APPLE"
+          }
+        },
+        "a3b4d46c-0a9f-4661-8da9-7ec78c009325": {
+          "type": "Superfood_fruits",
+          "settings": {
+            "ingredient_image2": "shopify:\/\/shop_images\/VHST_L_3.png",
+            "name2": "ASHWAGANDHA"
+          }
+        },
+        "34d24afd-ed00-4a40-a9a0-501bc3da61c3": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_3_2.png",
+            "name3": "DIGESTIVE ENZYMES"
+          }
+        },
+        "36ec19d9-e41b-4000-95f4-1c97c0157726": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_2.png",
+            "name3": "ORGANIC CORDYCEPS"
+          }
+        },
+        "cf27b2a2-203f-4ff5-85a4-1fc90e7f3172": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_1_1.png",
+            "name3": "ORGANIC GINGER ROOT"
+          }
+        },
+        "d0004bd0-15e3-4bf3-87f3-429a9852084e": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_1_2.png",
+            "name3": "PREBIOTIC FIBER"
+          }
+        },
+        "d9f243ec-a246-452a-bdab-a4f683ba3184": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_4_2.png",
+            "name3": "PROBIOTIC BLEND"
+          }
+        },
+        "798cc835-20f3-4ca4-8de2-862e3a98f4c9": {
+          "type": "Superfood_energy",
+          "settings": {
+            "ingredient_image3": "shopify:\/\/shop_images\/VH2920_1.png",
+            "name3": "ORGANIC MACA ROOT"
+          }
+        }
+      },
+      "block_order": [
+        "5fb1b568-75de-4cb7-82b5-ea4204b1e306",
+        "32752f03-a544-4878-a8ab-c468ed452b64",
+        "c19bd822-c9fc-45e3-b531-c99f453ebe49",
+        "02198a55-fd10-44ad-a2d0-79e3d73b837b",
+        "e7ce461e-e564-47e8-be19-7435d47e1ca9",
+        "d2eb0d2b-0e22-4403-b5f8-03ac9ed44aff",
+        "87983cd7-00dd-42de-add0-2212c0e0b254",
+        "6282d446-68b4-4d27-ae07-93c300844392",
+        "5bba7bf6-95dd-4c13-a7ab-bf55832b55d8",
+        "154002a2-01f9-4712-81f4-1a879516b8f1",
+        "57c62444-1816-49a6-9023-fdc226a3ffeb",
+        "119e801c-5a69-4c91-afaa-53243537fa07",
+        "a2672959-bfd4-4327-9d34-a2548eab15a1",
+        "b557220a-e297-4c66-a9e9-2630b6f78936",
+        "8e8dee6b-2f7f-4bb6-a1a5-0a7d4b103648",
+        "a3b4d46c-0a9f-4661-8da9-7ec78c009325",
+        "34d24afd-ed00-4a40-a9a0-501bc3da61c3",
+        "36ec19d9-e41b-4000-95f4-1c97c0157726",
+        "cf27b2a2-203f-4ff5-85a4-1fc90e7f3172",
+        "d0004bd0-15e3-4bf3-87f3-429a9852084e",
+        "d9f243ec-a246-452a-bdab-a4f683ba3184",
+        "798cc835-20f3-4ca4-8de2-862e3a98f4c9"
+      ],
+      "settings": {
+        "title": "Powered by Nature’s <span>Healthiest Superfoods<\/span>",
+        "subtext": "Unlock Your Potential with <span>86 Superfoods<\/span>, Nutrients &amp; Plant-Based Goodness.",
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_navigation_on_hover": true,
+        "enable_carousel_on_mobile": false,
+        "img_ratio": "default",
+        "section_layout": "carousel",
+        "cards_to_show": 20,
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 18,
+        "mobile_space_between_cards": 18,
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48
+      }
+    },
+    "243e79b8-6de3-4ce6-961a-30121b85284e": {
+      "type": "supplement-facts",
+      "settings": {
+        "d_c_suplement": "shopify:\/\/shop_images\/Label1.5x.png",
+        "m_c_suplement": "shopify:\/\/shop_images\/1.5.png",
+        "d_v_suplement": "shopify:\/\/shop_images\/1.5x.png",
+        "m_v_suplement": "shopify:\/\/shop_images\/1.5x_f72e7481-b759-4987-94e3-65ca804dbe5f.png",
+        "d_s_suplement": "shopify:\/\/shop_images\/Group_48095946_1.png",
+        "m_s_suplement": "shopify:\/\/shop_images\/Frame_48096294.png"
+      }
+    },
+    "a48cfe76-2d86-4d84-971b-46a3da69c5d3": {
+      "type": "product-usb",
+      "blocks": {
+        "cbbdd019-f764-4eba-acf0-fb10d7867593": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_21_1ae1548a-e15b-40c1-bb3c-8635757577ed.png",
+            "icon_title": "SOY FREE"
+          }
+        },
+        "f23dead0-d3ca-49b5-999c-f1db4b25d4ea": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_22.png",
+            "icon_title": "Dairy Free"
+          }
+        },
+        "97c8b875-997c-4c3c-94cc-9a47d1cf6507": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_23.png",
+            "icon_title": "Gluten Free"
+          }
+        },
+        "d0f1dd9e-572e-43d8-97ba-1f10d26e7683": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_24.png",
+            "icon_title": "Non GMO"
+          }
+        },
+        "eccf0670-979e-459c-8122-b12e117f5cdb": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_25.png",
+            "icon_title": "No Artificial Ingredients"
+          }
+        },
+        "0cb0647e-99a8-4aab-8849-dd3f901bc1e4": {
+          "type": "product_usp",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Artboard_26.png",
+            "icon_title": "No Fillers"
+          }
+        }
+      },
+      "block_order": [
+        "cbbdd019-f764-4eba-acf0-fb10d7867593",
+        "f23dead0-d3ca-49b5-999c-f1db4b25d4ea",
+        "97c8b875-997c-4c3c-94cc-9a47d1cf6507",
+        "d0f1dd9e-572e-43d8-97ba-1f10d26e7683",
+        "eccf0670-979e-459c-8122-b12e117f5cdb",
+        "0cb0647e-99a8-4aab-8849-dd3f901bc1e4"
+      ],
+      "settings": {
+        "title": "<span>All Good<\/span> No B.S.(Bad Stuff)",
+        "subtext": "Clean and Green: No Fillers, No Artificial Ingredients, and No Added Sugar"
+      }
+    },
+    "c9b1908d-b463-4c61-b3a5-3edeef574d5c": {
+      "type": "Pdp-faq",
+      "blocks": {
+        "cb0524f6-907d-4c41-a008-5e88e87ce48c": {
+          "type": "pdp_faq",
+          "settings": {
+            "question": "What is VitaHustle ONE?",
+            "answer": "VitaHustle ONE is a healthy, all-in-one superdrink that contains 86 superfoods and essential nutrients, vegan protein, probiotics and adaptogens. It's called a superdrink because it's power packed blend of superfood fruits and veggies, protein, probiotics, herbs and adaptogens that provide daily nutrition in one simple drink."
+          }
+        },
+        "2982015c-3137-45c0-b028-8eb7f1577a40": {
+          "type": "pdp_faq",
+          "settings": {
+            "question": "Is there sugar in VitaHustle ONE?",
+            "answer": "VitaHustle ONE has no added sugar and zero sugar alcohols. While some superfood powders use organic coconut flower nectar in their fruit blend to hide added sugars, we have avoided that. We use a combination of natural flavors, stevia leaf extract and monk fruit so the ONE is pleasant tasting without being overly sweet."
+          }
+        },
+        "4d7eb0f1-e223-4951-85dc-b02b678e9e87": {
+          "type": "pdp_faq",
+          "settings": {
+            "question": "What vegan protein is used in VitaHustle ONE?",
+            "answer": "VitaHustle ONE uses an organic blend of the highest quality vegan proteins including pea, quinoa, and mung bean. This balanced blend of protein has an excellent amino acid profile and delivers 20 grams of protein for sustained energy."
+          }
+        },
+        "7ea84d0f-830d-4bf4-9f5a-c7b08e83af9b": {
+          "type": "pdp_faq",
+          "settings": {
+            "question": "How many servings are in each bag?",
+            "answer": "Each bag of VitaHustle ONE contains about 15 servings. Use it at least once a day to feel optimal health benefits. We recommend starting with 2 bags per person which is about a 30-day supply."
+          }
+        },
+        "2c0f90e9-1719-4f7f-be2f-bb5d8f4fed16": {
+          "type": "pdp_faq",
+          "settings": {
+            "question": "How do you use VitaHustle ONE?",
+            "answer": "Simply add the recommended scoops to 8-12 ounces of ice-cold water, or to a plant-based milk like soy, coconut, or oat. Shake, or mix in a blender for best results, and drink immediately. Add ice if desired. May be added into any smoothie recipe."
+          }
+        }
+      },
+      "block_order": [
+        "cb0524f6-907d-4c41-a008-5e88e87ce48c",
+        "2982015c-3137-45c0-b028-8eb7f1577a40",
+        "4d7eb0f1-e223-4951-85dc-b02b678e9e87",
+        "7ea84d0f-830d-4bf4-9f5a-c7b08e83af9b",
+        "2c0f90e9-1719-4f7f-be2f-bb5d8f4fed16"
+      ],
+      "settings": {
+        "section_title": "FREQUENTLY ASKED QUESTIONS",
+        "placeholder_image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png",
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": ""
+      }
+    },
+    "327a4f24-9bad-48e9-b9af-859a08ed5c39": {
+      "type": "image-banner",
+      "settings": {
+        "display_rating": false,
+        "number_of_reviews": 0,
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 480,
+        "mobile_height": 600,
+        "desktop_img": "shopify:\/\/shop_images\/div.media.png",
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "caption": "RISK FREE",
+        "title": "60-DAY GUARANTEE",
+        "text": "<p>If for any reason VitaHustle ONE is not for you, simply return the bag for a full refund less shipping & handling fees.<\/p>",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 528,
+        "content_spacing": 116,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "Get Started",
+        "btn_url": "",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
+      }
+    }
+  },
+  "order": [
+    "page",
+    "offer_landing_page_pBQV3x",
+    "5096cd4d-03ff-4554-87ca-b668ea4df472",
+    "a64e57db-eb92-4095-8e12-fd59d76e9a3c",
+    "2fcd5b9f-ab41-41d4-a671-3ec3e5aaead6",
+    "243e79b8-6de3-4ce6-961a-30121b85284e",
+    "a48cfe76-2d86-4d84-971b-46a3da69c5d3",
+    "c9b1908d-b463-4c61-b3a5-3edeef574d5c",
+    "327a4f24-9bad-48e9-b9af-859a08ed5c39"
+  ]
+}

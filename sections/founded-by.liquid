@@ -1,0 +1,336 @@
+
+{%- liquid
+    assign options = section.settings
+    assign founded_by_title = options.founded_by_title
+    assign founded_by_subtitle = options.founded_by_subtitle
+    assign founder_desktop_image = options.founder_desktop_image
+    assign founder_mobile_image = options.founder_mobile_image
+    
+  -%}
+  {% comment %} {{ founded_by_title }}
+  {{ founded_by_subtitle }}
+  {{ founder_desktop_image }}
+  {{ founder_mobile_image }} {% endcomment %}
+  
+  <style>
+    .founded_by{
+      width: 100%;
+      max-width: 1440px;
+      display: inline-block;
+    }
+    .founded_by .inner_founded_by{
+      padding: 80px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background: linear-gradient(to right, #7A4831 0%, #9C6D56 50%, #7A4831 100%);
+    }
+    .founded_by .inner_founded_by .title{
+      max-width: 325px;
+    }
+    .founded_by .inner_founded_by .title p{
+      font-family: "Druk Web";
+      font-size: 7.5vw;
+      font-weight: 700;
+      line-height: 100.98px;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+    }
+    .founded_by .inner_founded_by .title p span{
+      color: #AFC42F;
+    }
+  
+    .founded_by .inner_founded_by .kevin_image_desktop{
+      position: absolute;
+      width: 53.611vw;
+      max-width: 772px;
+      height: 38.403vw;
+      max-height: 695px;
+      bottom: 0px;
+      left: 250px;
+    }
+    .founded_by .inner_founded_by .kevin_image_desktop img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .founded_by .inner_founded_by .kevin_image_mobile{
+      display: none;
+    }
+    .founded_by .inner_founded_by .right_content{
+      max-width: 390px;
+      padding: 20px 20px 20px 30px;
+      border-left: 1px solid rgba(255,255,255,.3);
+    }
+    .founded_by .inner_founded_by .right_content .content_quote{
+      width: 49px;
+      height: 56px;
+    }
+    .founded_by .inner_founded_by .right_content p{
+      font-family: 'Lato Regular', sans-serif;
+      font-size: 1.528vw;
+      font-weight: 500;
+      line-height: 34px;
+      color: #FFFFFF;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1441px){
+      .founded_by{
+        display: block;
+        {% comment %} margin: 0 auto; {% endcomment %}
+        max-width: unset;
+        background: linear-gradient(to right, #7A4831 0%, #9C6D56 50%, #7A4831 100%);
+      }
+      .founded_by .inner_founded_by{
+        {% comment %} max-width: 1440px; {% endcomment %}
+        max-width: 1440px;
+        margin: 0 auto;
+        background: unset;
+      }
+      .founded_by .inner_founded_by .title p{
+        font-size: 127px;
+        font-weight: 700;
+        line-height: 120.98px;
+      }
+      .founded_by .inner_founded_by .right_content{
+        max-width: 450px;
+      }
+      .founded_by .inner_founded_by .kevin_image_desktop{
+        left: 280px;
+        height: 37.403vw;
+      }
+      .founded_by .inner_founded_by{
+        padding: 120px 80px;
+      }
+      .founded_by .inner_founded_by .kevin_image_desktop{
+        height: 531px !important;
+        width: 649px !important;
+        left: 310px !important;
+        bottom: -20px;
+
+      }
+      .founded_by .inner_founded_by .right_content p{
+        font-size: 23px;
+      }
+    }
+    @media screen and (max-width: 1270px) and (min-width: 821px){
+      .founded_by .inner_founded_by{
+        padding: 80px 60px;
+      }
+      .founded_by .inner_founded_by .title{
+        max-width: 265px;
+      }
+      .founded_by .inner_founded_by .title p{
+        line-height: 90.98px;
+      }
+      .founded_by .inner_founded_by .kevin_image_desktop{
+        width: 47.611vw;
+        left: 190px !important;
+      }
+      .founded_by .inner_founded_by .right_content{
+        max-width: 350px;
+      }
+    }
+    @media screen and (max-width: 820px) {
+      .founded_by .inner_founded_by .kevin_image_desktop{
+        display: none;
+      }
+      .founded_by .inner_founded_by{
+        flex-direction: column;
+        padding: 20px;
+        overflow: hidden;
+      }
+      .founded_by .inner_founded_by .right_content p{
+        margin-bottom: 20px;
+      }
+      .founded_by .inner_founded_by .right_content svg{
+        width: 25px;
+        height: 55px;
+      }
+      .founded_by .inner_founded_by .kevin_image_mobile{
+        display: flex;
+        justify-content: flex-end;
+      }
+      .founded_by .inner_founded_by .kevin_image_mobile{
+        width: 325px;
+        height: 303px;
+        position: absolute;
+        top: 14px;
+        right: -31px;
+        display: block;
+      }
+      .founded_by .inner_founded_by .kevin_image_mobile img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+      .founded_by .inner_founded_by .right_content {
+        margin-top: 82px;
+        border: 1px solid rgba(255, 255, 255, .3);
+        position: relative;
+        padding: 30px 20px 20px 20px;
+      }
+      .founded_by .inner_founded_by .title {
+        max-width: 200px;
+      }
+    }
+
+    @media screen and (min-width: 541px) and (max-width: 820px){
+      {% comment %} .founded_by .inner_founded_by .title{
+        max-width: unset;
+      } {% endcomment %}
+      .founded_by .inner_founded_by .right_content{
+        margin-top: -58px;
+        max-width: unset;
+        border: 1px solid rgba(255,255,255,.3);
+      }
+      .founded_by .inner_founded_by .right_content p{
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 34px;
+      }
+      .founded_by .inner_founded_by .kevin_image_mobile{
+        display: flex;
+        justify-content: flex-end;
+      }
+      .founded_by .inner_founded_by .kevin_image_mobile img{
+        display: block;
+        margin-right: -20px;
+      }
+      .founded_by .inner_founded_by .title p{
+        line-height: 73.98px;
+      }
+      .founded_by .inner_founded_by .right_content{
+        margin-top: 50px;
+      }
+    }
+  
+    @media screen and (max-width: 540px) {
+      .founded_by .inner_founded_by .title{
+        max-width: 200px;
+      }
+      .founded_by .inner_founded_by .title p{
+        font-size: 68px;
+        line-height: 63.58px;
+        letter-spacing: 1px;
+      }
+      .founded_by .inner_founded_by .right_content{
+        margin-top: 82px;
+        border: 1px solid rgba(255,255,255,.3);  
+        position: relative;
+        padding: 30px 20px 20px 20px;
+      }
+      .founded_by .inner_founded_by .right_content p{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+      }
+      .founded_by .inner_founded_by .right_content .content_quote{
+        position: absolute;
+        top: -25px;
+      }
+      .founded_by .inner_founded_by .kevin_image_mobile{
+        width: 325px;
+        height: 303px;
+        position: absolute;
+        top: 14px;
+        right: -31px;
+        display: block;
+      }
+      .founded_by .inner_founded_by .kevin_image_mobile img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+      .founded_by .inner_founded_by .right_content{
+        max-width: 100%;
+      }
+    }
+    @media screen and (max-width: 360px) {
+      .founded_by .inner_founded_by .kevin_image_mobile {
+        width: 275px;
+        height: 263px;
+        position: absolute;
+        top: 52px;
+        right: -31px;
+        display: block;
+      }
+    }
+  </style>
+  <div class="founded_by">
+    <div class="inner_founded_by">
+      {% if founded_by_title != blank %}
+        <div class="title">
+          <p>{{ founded_by_title }}</p>
+        </div>
+      {% endif %}
+      <div class="kevin_image_desktop">
+        <img src="{{ founder_desktop_image | img_url: '1440x' }}">
+      </div>
+      <div class="kevin_image_mobile">
+        <img src="{{ founder_mobile_image | img_url: '820x' }} ">
+      </div>
+      <div class="right_content">
+        <div class="content_quote">
+          <svg width="43" height="40" viewBox="0 0 43 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.408 0.567997H15.622C14.02 5.552 12.418 12.138 12.24 16.944H19.894V39.728H0.136V21.394C0.136 12.494 2.806 4.30599 4.408 0.567997ZM27.192 0.567997H38.406C36.804 5.552 35.202 12.138 35.024 16.944H42.678V39.728H22.92V21.394C22.92 12.494 25.59 4.30599 27.192 0.567997Z" fill="#AFC42F"/>
+          </svg>
+        </div>
+        {% if founded_by_subtitle != blank %}
+          <p>{{ founded_by_subtitle }}</p>
+        {% endif %}
+        {% comment %} <p>At VitaHustle, we're on a mission to disrupt the game and make premium nutrition accessible to all. 
+        Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products.</p> {% endcomment %}
+        
+        <svg width="37" height="79" viewBox="0 0 37 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 5.96142C36.9884 6.07909 37 6.20461 36.9612 6.31444C36.7439 6.98912 36.5498 7.67556 36.2782 8.33062C33.7286 14.4498 31.1673 20.5689 28.6022 26.6802C28.478 26.9783 28.4819 27.2215 28.6099 27.5196C30.6124 32.258 31.8464 37.2004 32.3626 42.3272C32.8399 47.1009 32.9136 51.8863 32.5411 56.6679C32.1918 61.1827 31.5825 65.6583 30.2903 70.0123C29.7664 71.7775 29.1105 73.4838 28.2024 75.0881C27.6087 76.1354 26.9179 77.1043 25.9866 77.877C25.1639 78.5634 24.2519 79.0263 23.1498 78.9988C22.23 78.9753 21.4694 78.5791 20.8019 77.9711C20.1539 77.3828 19.6688 76.6649 19.2535 75.9001C18.2795 74.0996 17.7478 72.1501 17.383 70.1496C16.766 66.7488 16.6962 63.3127 16.832 59.8687C17.1347 52.2982 18.9935 45.0886 21.8032 38.1104C23.1614 34.7292 24.5973 31.3794 26.006 28.0217C26.1107 27.7746 26.1185 27.5785 26.006 27.3313C25.0862 25.3897 24.019 23.5461 22.6724 21.8712C22.0554 21.1024 21.3763 20.3963 20.5652 19.8315C19.3273 18.9724 17.969 18.6076 16.475 18.8469C16.3391 18.8704 16.1645 18.992 16.1024 19.1136C15.4737 20.3532 14.88 21.6044 14.2513 22.84C13.9292 23.4755 13.9021 24.1698 13.8089 24.8484C13.0289 30.3634 12.245 35.8785 11.4844 41.3936C11.1778 43.6216 10.9372 45.8574 10.6345 48.0893C10.5491 48.7248 10.5414 49.3406 10.5957 49.9839C10.716 51.3215 10.1611 52.3727 9.07446 53.1337C8.85326 53.2906 8.63594 53.4632 8.39145 53.5809C8.08488 53.7299 7.91412 53.6201 7.85979 53.2828C7.72397 52.4551 7.7977 51.6314 7.9801 50.8233C8.58549 48.1443 8.70579 45.3985 9.1055 42.6959C9.66044 38.9616 10.2231 35.2274 10.782 31.4931C10.7975 31.3911 10.8091 31.2852 10.7626 31.1558C10.7121 31.2696 10.6617 31.3833 10.6112 31.4971C8.5816 36.11 6.57916 40.7385 4.51463 45.3357C3.917 46.6655 3.20683 47.9521 2.45397 49.1994C1.86411 50.184 1.13453 51.0822 0.451531 52.0119C0.377798 52.1139 0.218689 52.157 0.0983871 52.2276C0.0634607 52.1021 -0.0219147 51.9648 0.00525018 51.855C0.141075 51.3137 0.249734 50.7567 0.467054 50.2507C1.09961 48.7836 1.82142 47.3519 2.42681 45.8731C4.00626 42.033 5.54301 38.1771 7.09918 34.3252C8.52728 30.7871 10.0912 27.3078 11.756 23.8795C12.0277 23.3225 12.2333 22.7537 12.3032 22.134C12.3731 21.5142 12.4817 20.8984 12.5826 20.2041C12.4235 20.2865 12.3148 20.3336 12.2139 20.3924C10.5026 21.3613 8.95415 22.5576 7.51829 23.903C7.01768 24.3698 6.52483 24.8484 6.03974 25.3348C5.95437 25.4211 5.86123 25.574 5.87675 25.68C5.95049 26.1585 6.05139 26.6331 6.16781 27.1038C6.28423 27.5667 6.48603 28.0099 6.55976 28.4767C6.70723 29.426 6.31139 30.1712 5.5663 30.7361C5.10838 31.0813 4.44478 30.9989 4.27402 30.2458C3.99461 29.0102 3.92864 27.7667 3.96357 26.5154C4.07223 22.6675 4.44089 18.8469 5.20927 15.0774C5.93108 11.5471 6.95559 8.11881 8.67862 4.94941C9.29177 3.81972 10.0408 2.76064 10.7858 1.7094C11.0963 1.27008 11.5193 0.885669 11.9539 0.564022C12.2993 0.309058 12.7301 0.116854 13.1453 0.0384034C14.1543 -0.149878 14.9964 0.363973 15.2875 1.36422C15.4466 1.91337 15.5319 2.51352 15.5203 3.08621C15.4815 5.28282 15.4272 7.47943 15.3107 9.67213C15.1827 12.0649 14.977 14.4537 14.8063 16.8464C14.8063 16.8857 14.8063 16.9288 14.8683 16.9994C14.9304 16.8935 15.0003 16.7954 15.0546 16.6856C16.7505 13.1553 18.4114 9.60544 20.1539 6.09871C20.9727 4.45124 21.9429 2.88223 22.8548 1.28184C22.9519 1.11318 23.1032 0.968042 23.2545 0.846444C23.3477 0.771916 23.5534 0.689543 23.6038 0.73269C23.6931 0.815063 23.7513 0.987655 23.7396 1.1171C23.6931 1.56034 23.6775 2.01928 23.5378 2.43507C23.045 3.87856 22.5483 5.32205 21.97 6.73023C21.4384 8.02074 20.8097 9.27203 20.2121 10.5351C19.3001 12.4571 18.3804 14.3752 17.4645 16.2973C17.4257 16.3796 17.3947 16.4699 17.3481 16.5758C17.418 16.5915 17.4684 16.6111 17.515 16.6111C19.8162 16.6111 21.6906 17.6035 23.2934 19.1882C24.8844 20.7611 26.0952 22.6204 27.1779 24.5699C27.2323 24.6719 27.2866 24.7699 27.372 24.919C27.4457 24.7856 27.4962 24.6993 27.5388 24.6091C30.2359 19.0352 32.9291 13.4574 35.6379 7.88738C35.925 7.299 36.3015 6.75769 36.643 6.20069C36.7051 6.09871 36.8021 6.02026 36.8836 5.93004C36.9185 5.94573 36.9496 5.95749 36.9845 5.97319M27.1663 30.2458C27.1003 30.3791 27.0538 30.4576 27.0227 30.5439C25.7421 33.7957 24.4382 37.0435 23.1808 40.3031C20.7398 46.6341 19.1255 53.1572 18.718 59.9589C18.5162 63.348 18.5473 66.7292 19.1255 70.0829C19.4049 71.699 19.8085 73.2798 20.5536 74.7468C20.9145 75.4568 21.3375 76.1315 21.9584 76.6453C22.6336 77.2063 23.2778 77.2533 24.019 76.7865C24.2752 76.6257 24.5391 76.4453 24.7253 76.2099C25.1833 75.649 25.6489 75.0802 26.0254 74.4605C26.8403 73.1268 27.3953 71.6676 27.8648 70.1771C29.3472 65.4622 29.9759 60.5944 30.3019 55.6794C30.558 51.8393 30.4804 47.9991 30.1971 44.1629C29.8479 39.499 28.8971 34.9685 27.3021 30.5753C27.2672 30.4811 27.2245 30.387 27.1624 30.2418M5.97377 22.9969C6.01258 23.0166 6.05139 23.0401 6.09019 23.0597C6.12124 23.0048 6.14064 22.942 6.18333 22.895C7.9995 20.7572 10.1766 19.0901 12.6835 17.8624C12.8698 17.7721 12.9435 17.6505 12.9668 17.4505C13.0522 16.6699 13.1453 15.8893 13.2501 15.1127C13.7623 11.3823 13.8982 7.63241 13.8865 3.87071C13.8865 3.29018 13.8128 2.70572 13.7197 2.13303C13.6537 1.73293 13.3859 1.60741 13.0483 1.82708C12.6757 2.07419 12.2993 2.36054 12.0316 2.71357C11.4417 3.49807 10.8712 4.30219 10.39 5.1573C9.33834 7.01658 8.60101 9.01707 7.99562 11.0646C7.13798 13.9634 6.65678 16.9327 6.30363 19.9295C6.18333 20.9494 6.08631 21.9732 5.97765 22.9969" fill="white"/>
+        </svg>
+          
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  {% schema %}
+    
+  {
+    "name": "Founded by",
+    "settings": [
+      {
+        "type": "text",
+        "id": "founded_by_title",
+        "label": "t:sections.founded_by.founded_by_title"
+      },
+      {
+          "type": "text",
+          "id": "founded_by_subtitle",
+          "label": "t:sections.founded_by.founded_by_subtitle"
+      },
+      {
+        "type": "image_picker",
+        "id": "founder_desktop_image",
+        "label": "t:sections.founded_by.founder_desktop_image"
+    },
+    {
+        "type": "image_picker",
+        "id": "founder_mobile_image",
+        "label": "t:sections.founded_by.founder_mobile_image"
+    }
+  
+    ],
+    "presets": [
+      {
+        "name": "Founded by"
+      }
+    ]
+  }
+  
+  {% endschema %}

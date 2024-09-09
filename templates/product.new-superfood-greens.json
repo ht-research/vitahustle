@@ -83,7 +83,7 @@
             "style": "collapsible_row_closed",
             "title": "How To Use",
             "icon": "none",
-            "text": "<p>Add 1 scoop of powder to 8-12 oz of ice cold water, milk or add to a smoothie. Shake vigorously or stir until blended. Natural vitamin sediment is normal.<\/p>",
+            "text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
             "page": "",
             "image_width": 60
           }
@@ -139,7 +139,6 @@
         "cbfcea53-e238-4c35-a5c9-da334abf0c2d"
       ],
       "custom_css": [
-        ".product-quantity__wrap {margin-top: 0px !important;}",
         ".superfood-only {display: none;}",
         "@media (min-width: 1780px) {.product__info {width: 45rem; }}",
         ".product-desktop-media {position: sticky !important; top: 120px !important;}",

@@ -1,0 +1,61 @@
+{%- liquid
+    assign available = product.variants[index].available
+  -%}
+
+  <style>
+    .quantity__btn-icon{
+        background: white;
+
+    }
+    .product-quantity__wrap{
+        width: calc(100% - 48px);
+        margin: 10px auto 20px auto;
+    }
+  </style>
+  {%- if product != blank -%}
+    <div
+      class="product-quantity__wrap"
+      id="product-quantity-{{ product.id }}-{{ sectionId }}-{{ product.variants[index].id }}"
+      {{ block.shopify_attributes }}
+    >
+      <!--
+        <label class='product-quantity__label' for='Quantity-{{ product.id }}-{{ sectionId }}'>
+          {{ 'products.product.quantity.label' | t }}
+        </label>
+      -->
+      <quantity-component
+        class="quantity product-quantity__quantity"
+        data-stock="{% if product.selected_or_first_available_variant.inventory_policy == 'deny' %}{% if available == true %}{% if product.selected_or_first_available_variant.inventory_quantity > 0 %}{{ product.selected_or_first_available_variant.inventory_quantity }}{% else %}1{% endif %}{% else %}0{% endif %}{% else %}9999{% endif %}"
+      >
+        <quantity-btn class="quantity__btn" name="minus" data-action="minus" type="button" disabled tabindex="0">
+          {%- render 'icon', icon_name: 'minus', class: 'quantity__btn-icon' -%}
+        </quantity-btn>
+        <input
+          class="quantity__input"
+          form="product-form-{{ product.id }}-{{ sectionId }}-{{ product.variants[index].id }}"
+          id="Quantity-{{ product.id }}-{{ sectionId }}-{{ product.variants[index].id }}"
+          min="{% if available %}1{% else %}0{% endif %}"
+          name="quantity"
+          type="number"
+          value="{% if available %}1{% else %}0{% endif %}"
+          data-quantity-input
+          {% if available == false or product.variants[index].title == 'Strawberry' %}
+            disabled
+          {% endif %}
+        >
+        <quantity-btn
+          class="quantity__btn"
+          name="plus"
+          type="button"
+          data-action="plus"
+          {% if available == false or product.variants[index].title == 'Strawberry' %}
+            disabled
+          {% endif %}
+          tabindex="0"
+        >
+          {%- render 'icon', icon_name: 'plus', class: 'quantity__btn-icon' -%}
+        </quantity-btn>
+      </quantity-component>
+    </div>
+  {%- endif -%}
+  

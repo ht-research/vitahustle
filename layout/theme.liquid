@@ -1,279 +1,293 @@
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>
-<link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
-<link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
-<link rel='preconnect dns-prefetch' href='https://whale.camera/' crossorigin />
-<script>
-/* >> TriplePixel :: start*/
-window.TriplePixelData={TripleName:"vita-hustle.myshopify.com",ver:"2.12",plat:"SHOPIFY",isHeadless:false},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","text/plain")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1,P))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1,L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)};try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push({u:location.href,r:document.referrer,t:Date.now(),id:L()}),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(E=A[H]=function(t,e,a){return void 0===a&&(a=[]),"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e].concat(a)),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("https://conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,plat:A.TriplePixelData.plat,url:window.location.href,ref:document.referrer,ver:A.TriplePixelData.ver},O("https://api.config-security.com/event",5,p),O("https://whale.camera/live/dot.txt",5)))}}("","TriplePixel",localStorage);
-/* << TriplePixel :: end*/
-</script>
-
-
-
-{% render 'intelligems-tracking' %}
-    
-{% comment %}{% endcomment %}
-
-<link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
-    <script>
-  let path = window.location.pathname;
-  if(path.includes('copy-of-one-superfood-protein-greens') || path.includes('copy-of-one-superfood-protein-greens-1')){
-    window.location.href = '/products/vitahustle-one-superfood';
-  }
-    else if(path.includes('products/starter-kit-1') || path.includes('products/vitahustle-one-superfood-2')){
-         window.location.href = '/products/vitahustle-one-superfood';
-   }
-</script> 
-  {% render 'elevar-head-listener' %}
-  {% render 'elevar-head' %}
-{% include 'booster-seo' %}
-{% render 'replo-head' %}
-
-<script>
-!function(){var o=window.tdl=window.tdl||[];if(o.invoked)window.console&&console.error&&console.error("Tune snippet has been included more than once.");else{o.invoked=!0,o.methods=["init","identify","convert"],o.factory=function(n){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(n),o.push(e),o}};for(var e=0;e<o.methods.length;e++){var n=o.methods[e];o[n]=o.factory(n)}o.init=function(e){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://js.go2sdk.com/v2/tune.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t),o.domain=e}}}();
-
-tdl.init("https://f.appinfuse.com")
-tdl.identify()
-</script>
-    
- {% render 'pagefly-head' %}
- {% if page.template_suffix == 'homepage-v2' or template.name == 'product' or template.name == 'index' %}
-		<script  src="{{ 'jquery.min.js' | asset_url }}"></script>
-		<script  src="{{ 'slick.min.js' | asset_url }}"></script>
-{% endif %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     {% comment %}<meta name="viewport" content="width=device-width,initial-scale=1">{% endcomment %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
-    <meta name="theme-color" content="{{ settings.default_color_scheme }}">
-    {%- if page_description -%}
-      {% comment %}<meta name="description" content="{{ page_description | escape }}">{% endcomment %}
-    {%- endif -%}
-    {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
-    {%- endif -%}
-    {% render 'meta-tags' %}
-    <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-
-    {% comment %}<title>
-      {{ page_title }}
-      {%- if current_tags %}
-        &ndash; tagged "{{ current_tags | join: ', ' }}"
-      {%- endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %}
-        &ndash; {{ shop.name -}}
-      {%- endunless -%}
-    </title>{% endcomment %}
-
-    {% render 'css-variables' %}
- {{ 'index.js' | asset_url | preload_tag: as: 'script' }} 
-    {{ 'index.css' | asset_url | stylesheet_tag: preload: true }}
-    {% render 'fonts' %}
-    
-    
-        {% capture edited_content_for_header %}
-      {{ content_for_header }}
-      {% endcapture %}
-      {{ edited_content_for_header | 
-      replace: '12345', '' | 
-      remove: '"https:\/\/brad-horselman-smart-account.desisnack.com\/api\/testScriptTag?shop=vita-hustle.myshopify.com",' | 
-      remove: '"https:\/\/widget.gotolstoy.com\/widget\/widget.js?app-key=b8804c55-b6c5-4f9a-8d73-8d37e1797088\u0026shop=vita-hustle.myshopify.com",' }}
-
-
-
-
-
+  <html class="no-js" lang="{{ request.locale.iso_code }}">
+    <head>
+  <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
+  <link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
+  <link rel='preconnect dns-prefetch' href='https://whale.camera/' crossorigin />
+  <script>
+  /* >> TriplePixel :: start*/
+  window.TriplePixelData={TripleName:"vita-hustle.myshopify.com",ver:"2.12",plat:"SHOPIFY",isHeadless:false},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","text/plain")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1,P))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1,L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)};try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push({u:location.href,r:document.referrer,t:Date.now(),id:L()}),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(E=A[H]=function(t,e,a){return void 0===a&&(a=[]),"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e].concat(a)),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("https://conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,plat:A.TriplePixelData.plat,url:window.location.href,ref:document.referrer,ver:A.TriplePixelData.ver},O("https://api.config-security.com/event",5,p),O("https://whale.camera/live/dot.txt",5)))}}("","TriplePixel",localStorage);
+  /* << TriplePixel :: end*/
+  </script>
   
- <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Druk-Bold-Web.woff2?v=1687553050" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/soehne-breit-dreiviertelfett.woff2?v=1687553835" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/FKGrotesk-Bold.woff2?v=1687553861" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/FKGroteskNeue-Regular.woff2?v=1687809875" as="font" type="font/woff2" crossorigin="anonymous">
-  {% if template.name == 'product' or page.template_suffix == 'homepage-v2' %}
-<link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Regular.woff2?v=1693063109" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Bold.woff2?v=1693063109" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Heavy.woff2?v=1693063109" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Semibold.woff2?v=1693063108" as="font" type="font/woff2" crossorigin="anonymous">
-{{ 'fonts.css' | asset_url | stylesheet_tag: preload: true }}
-{% endif %}
-<style>
-  body[scroll-y-off] {
-    width: 100%;
-    position: relative!important;
-}
-</style>
-  <meta name="facebook-domain-verification" content="ogc4geohnqpb6l0r31u95tvwoxab7k" />
-
-</head>
-  <body class="color-{{ settings.default_color_scheme }} theme-with-{{ settings.edge_rounding_degree }}-rounded-style {% if settings.edge_rounding_degree != 'none' %} theme-with-rounded-style{% endif %}">
-  {% render 'elevar-body-end' %}
-    {% if template.name == 'password' %}
-      {% sections 'password-header-group' %}
-    {% else %}
-      {% sections 'main-header-group' %}
-      {% sections 'main-aside-group' %}
-    {% endif %}
-
-    {% if template contains 'product' %}
-
-    {% comment %}
-      <div class="black-friday-banner" data-black-friday-banner style="display:none">
-      <p>Black friday sale: <br> 25% off with code <span>BF25</span></p>
-      <style>
-        .black-friday-banner{
-          position: sticky;
-          top: 0;
-          background: #C8E812;
-          z-index: 5;
-          padding: 9px 0;
-        }
-        .black-friday-banner p{
-          text-align: center;
-          font-weight: 800;
-          font-family: 'Lato Heavy', sans-serif;
-          font-size: 18px;
-          line-height: 26px;
-          text-transform: uppercase;
-        }
-        .black-friday-banner p span{
-          border-bottom: 1px dashed;
-          /* padding-bottom: 3px; */
-        }
-        @media screen and (max-width: 767px){
-          .shopify-section-header[mobile-sticky][aria-hidden="false"] ~ .black-friday-banner{
-            top: 69px
-          }
-         .black-friday-banner p{
-            padding: 0 45px;
-          }
-        }
-      </style>
-    </div>
-      {% endcomment %}
-
-    {% endif %}
-
-    <main>
-      <!--LayoutHub-Workspace-Start-->{{ content_for_layout }}<!--LayoutHub-Workspace-End-->
-    </main>
-
-    {%- if template.name == 'password' -%}
-      {% sections 'password-footer-group' %}
-    {%- else -%}
-      {% sections 'main-footer-group' %}
-    {%- endif -%}
-
-    {%- if settings.show_back_to_top_button -%}
-      {% render 'back-to-top-button' %}
-    {%- endif -%}
-
-    <div class="body-overlay" id="BodyOverlay"></div>
-
-    {%- render 'dialog-components' -%}
-
-    {%- render 'inject-routes' -%}
-
-    <div id="Portal"></div>
-
-    <script>
+  
+  {% render 'intelligems-tracking' %}
+      {% render 'revenueRoll-GTM' %}
       
-      document.documentElement.className = document.documentElement.className.replace('no-js', 'js')
-      if (Shopify.designMode) {
-        document.documentElement.className = `${document.documentElement.className} is-editor-mode`
-      }
-      window.lazySizesConfig = {
-        loadMode: 1,
-      }
-      window.auroraTheme = {
-        version: '1.4.0',
-        id: window.Shopify.theme.id,
-        storeId: window.Shopify.theme.theme_store_id,
-        isLicenseTheme: !!window.Shopify.theme.theme_store_id,
-      }
-    </script>
-
-    <script src="{{ 'index.js' | asset_url }}" defer="defer"></script>
-   
-        
-{% comment %}
-{% render 'rebuy-smartcart-extensions' %}
-{% endcomment %}
-
-<style>
-  .octane-popup--center .octane-popup__close{
-    display: none;
-}
-</style>
-{% comment %}
-<script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
-    
-<div data-rebuy-id="90508"></div>
-{% endcomment %}
-<!-- black friday banner script -->
-    {% comment %}
-<script>
-   var a = "browse";
-    //var url = window.location.href;
-    var url = window.location.href;
+  {% comment %}{% endcomment %}
   
-    //if (url.match(/(?:utm_source|utm_campaign|pkwid|ep_mid|et_mid|ep_rid)/i)) {
-      if(url.match(/(?:\?|&)utm_source=facebook(?:&|$)/i)){
-      a = "external campaign";
-      if(document.querySelector('[data-black-friday-banner]') != null){
-        console.log('hellloo')
-        document.querySelector('[data-black-friday-banner]').style.display = 'block';
-      }
+  <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
+      <script>
+    let path = window.location.pathname;
+  
+    {% comment %} if(path.includes('/products/vitahustle-one-superfood') && !path.includes('/products/vitahustle-one-superfood-greens')){
+      window.location.href = "/products/one-superfood-protein-shake-strawberry?view=new-superfood-strawberry";
     }
-// console.log('aaaaaa',a)
-
-</script>
-{% endcomment %}
-{% comment %}
-  Start of vitahustle Zendesk Widget script
-{% endcomment %}
-{% liquid 
-  assign metaobj = shop.metaobjects['url_details']['url-details-fwrdeje7']['url_object'].value
-  assign isMatch = false
-
-%}
-{% for kk in metaobj %}
-  {% assign tempURL = kk.link | split : "vitahustle.com" | last %}
-  {% if isMatch == false and tempURL contains request.path %}
-    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=9920d750-340e-471e-846e-842f5b85f8d5" defer> </script>
-    {% assign isMatch = true %}
+  
+   else if(path.includes('copy-of-one-superfood-protein-greens') || path.includes('copy-of-one-superfood-protein-greens-1')){
+      window.location.href = '/products/vitahustle-one-superfood';
+    }
+      else if(path.includes('products/starter-kit-1') || path.includes('products/vitahustle-one-superfood-2')){
+           window.location.href = '/products/vitahustle-one-superfood';
+     } {% endcomment %}
+     if( path.includes('products/vitahustle-one-superfood-2')){
+        window.location.href = '/products/one-superfood-protein-shake-strawberry';
+     }
+  </script> 
+  
+  {% include 'booster-seo' %}
+  {% render 'replo-head' %}
+  
+  <script>
+  !function(){var o=window.tdl=window.tdl||[];if(o.invoked)window.console&&console.error&&console.error("Tune snippet has been included more than once.");else{o.invoked=!0,o.methods=["init","identify","convert"],o.factory=function(n){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(n),o.push(e),o}};for(var e=0;e<o.methods.length;e++){var n=o.methods[e];o[n]=o.factory(n)}o.init=function(e){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://js.go2sdk.com/v2/tune.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t),o.domain=e}}}();
+  
+  tdl.init("https://f.appinfuse.com")
+  tdl.identify()
+  </script>
+      
+   {% render 'pagefly-head' %}
+   {% if page.template_suffix == 'homepage-v2' or template.name == 'product' or template.name == 'index' or template contains 'offer-landing-page' or page.template_suffix == 'quiz-results' or template contains 'new-offer-page' or template contains '3-pack-superfood' %}
+    <script  src="{{ 'jquery.min.js' | asset_url }}"></script>
+      <script  src="{{ 'slick.min.js' | asset_url }}"></script>
   {% endif %}
-{% endfor %}
-{% comment %}
-  End of vitahustle Zendesk Widget script →
-{% endcomment %}
- {% include 'ins_opensend' %}
-
-{% comment %}
-  Getor tag
-{% endcomment %}
-<script src="https://www.chiefmedia.com/moment.js"></script>
-<script src="https://www.chiefmedia.com/moment-timezone-with-data-10-year-range.js"></script>
-<script src="https://www.chiefmedia.com/cookie_referrerv2.js"></script>
-<script type="text/javascript">
-if (!Aggregator){var Aggregator=function(o){
-    var d=document,p=Aggregator.prototype;this.options=o;this.q=[];d.cookie='__na_c=1';p.p=function(c){return function(){
-    this.q.push([c,arguments])}};p.setPerson=p.p(4,arguments);p.logEvent=p.p(0,arguments);p.logPageview=p.p(1,arguments);
-    p.ready=p.p(2,arguments);p.logOutbound=p.p(3,arguments);p.updatePerson=p.p(5,arguments);p.updateSession=p.p(6,arguments);
-    p.updateEvent=p.p(7,arguments);p.push=p.p(8,arguments);var s=d.createElement('script');s.type='text/javascript';
-    s.async=true;(function(i){s.onreadystatechange=function(){if(s.readyState=='loaded'||s.readyState=='complete'){i.run();}};
-    s.onload=function(){i.run();}})(this);e=location.protocol=='https:';s.src='http'+(e?'s://':'://')+
-    (e&&navigator.userAgent.indexOf('MSIE')>-1?'a-{0}.gatorapi.com':'a-{0}.scripts.gatorapi.com').replace('{0}',o.projectId)+
-    '/web?t='+Math.floor((new Date()*.00001)/36);var e=d.getElementsByTagName('script')[0];e.parentNode.insertBefore(s,e);
-}}
-
-var gator = new Aggregator({
-    "projectId": "131127304"
-});
-gator.logPageview();
-</script>
-</body>
-</html>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       {% comment %}<meta name="viewport" content="width=device-width,initial-scale=1">{% endcomment %}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+      <meta name="theme-color" content="{{ settings.default_color_scheme }}">
+      {% render 'no-crawl-redirect-script' %}
+      {%- if page_description -%}
+        {% comment %}<meta name="description" content="{{ page_description | escape }}">{% endcomment %}
+      {%- endif -%}
+      {%- if settings.favicon != blank -%}
+        <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      {%- endif -%}
+      {% render 'meta-tags' %}
+      <link rel="canonical" href="{{ canonical_url }}">
+      <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+  
+      {% comment %}<title>
+        {{ page_title }}
+        {%- if current_tags %}
+          &ndash; tagged "{{ current_tags | join: ', ' }}"
+        {%- endif -%}
+        {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+        {%- unless page_title contains shop.name %}
+          &ndash; {{ shop.name -}}
+        {%- endunless -%}
+      </title>{% endcomment %}
+  
+      {% render 'css-variables' %}
+   {{ 'index.js' | asset_url | preload_tag: as: 'script' }} 
+      {{ 'index.css' | asset_url | stylesheet_tag: preload: true }}
+      {% render 'fonts' %}
+      
+      
+          {% capture edited_content_for_header %}
+        {{ content_for_header }}
+        {% endcapture %}
+        {{ edited_content_for_header | 
+        replace: '12345', '' | 
+        remove: '"https:\/\/brad-horselman-smart-account.desisnack.com\/api\/testScriptTag?shop=vita-hustle.myshopify.com",' | 
+        remove: '"https:\/\/widget.gotolstoy.com\/widget\/widget.js?app-key=b8804c55-b6c5-4f9a-8d73-8d37e1797088\u0026shop=vita-hustle.myshopify.com",' }}
+  
+  
+  
+  
+  
+    
+   <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Druk-Bold-Web.woff2?v=1687553050" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/soehne-breit-dreiviertelfett.woff2?v=1687553835" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/FKGrotesk-Bold.woff2?v=1687553861" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/FKGroteskNeue-Regular.woff2?v=1687809875" as="font" type="font/woff2" crossorigin="anonymous">
+  {% if template.name == 'product' or page.template_suffix == 'homepage-v2' or page.template_suffix == 'quiz-results' %}
+    <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Regular.woff2?v=1693063109" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Bold.woff2?v=1693063109" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Heavy.woff2?v=1693063109" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.shopify.com/s/files/1/0133/3562/5792/files/Lato-Semibold.woff2?v=1693063108" as="font" type="font/woff2" crossorigin="anonymous">
+  {{ 'fonts.css' | asset_url | stylesheet_tag: preload: true }}
+  {% endif %}
+  <style>
+    body[scroll-y-off] {
+      width: 100%;
+      position: relative!important;
+  }
+  </style>
+    <meta name="facebook-domain-verification" content="ogc4geohnqpb6l0r31u95tvwoxab7k" />
+   {% if template.name == 'index' %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   {% endif %} 
+  </head>
+    <body class="color-{{ settings.default_color_scheme }} theme-with-{{ settings.edge_rounding_degree }}-rounded-style {% if settings.edge_rounding_degree != 'none' %} theme-with-rounded-style{% endif %}">
+  
+      {% if template.name == 'password' %}
+        {% sections 'password-header-group' %}
+      {% else %}
+        {% sections 'main-header-group' %}
+        {% sections 'main-aside-group' %}
+      {% endif %}
+  
+      {% if template contains 'product' %}
+  
+      {% comment %}
+        <div class="black-friday-banner" data-black-friday-banner style="display:none">
+        <p>Black friday sale: <br> 25% off with code <span>BF25</span></p>
+        <style>
+          .black-friday-banner{
+            position: sticky;
+            top: 0;
+            background: #C8E812;
+            z-index: 5;
+            padding: 9px 0;
+          }
+          .black-friday-banner p{
+            text-align: center;
+            font-weight: 800;
+            font-family: 'Lato Heavy', sans-serif;
+            font-size: 18px;
+            line-height: 26px;
+            text-transform: uppercase;
+          }
+          .black-friday-banner p span{
+            border-bottom: 1px dashed;
+            /* padding-bottom: 3px; */
+          }
+          @media screen and (max-width: 767px){
+            .shopify-section-header[mobile-sticky][aria-hidden="false"] ~ .black-friday-banner{
+              top: 69px
+            }
+           .black-friday-banner p{
+              padding: 0 45px;
+            }
+          }
+        </style>
+      </div>
+        {% endcomment %}
+  
+      {% endif %}
+  
+      <main>
+        <!--LayoutHub-Workspace-Start-->{{ content_for_layout }}<!--LayoutHub-Workspace-End-->
+      </main>
+  
+      {%- if template.name == 'password' -%}
+        {% sections 'password-footer-group' %}
+      {%- else -%}
+        {% sections 'main-footer-group' %}
+      {%- endif -%}
+  
+      {%- if settings.show_back_to_top_button -%}
+        {% render 'back-to-top-button' %}
+      {%- endif -%}
+  
+      <div class="body-overlay" id="BodyOverlay"></div>
+  
+      {%- render 'dialog-components' -%}
+  
+      {%- render 'inject-routes' -%}
+  
+      <div id="Portal"></div>
+  
+      <script>
+        
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js')
+        if (Shopify.designMode) {
+          document.documentElement.className = `${document.documentElement.className} is-editor-mode`
+        }
+        window.lazySizesConfig = {
+          loadMode: 1,
+        }
+        window.auroraTheme = {
+          version: '1.4.0',
+          id: window.Shopify.theme.id,
+          storeId: window.Shopify.theme.theme_store_id,
+          isLicenseTheme: !!window.Shopify.theme.theme_store_id,
+        }
+      </script>
+  
+      <script src="{{ 'index.js' | asset_url }}" defer="defer"></script>
+     
+          
+  {% comment %}
+  {% render 'rebuy-smartcart-extensions' %}
+  {% endcomment %}
+  
+  <style>
+    .octane-popup--center .octane-popup__close{
+      display: none;
+  }
+  </style>
+  {% comment %}
+  <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
+      
+  <div data-rebuy-id="90508"></div>
+  {% endcomment %}
+  <!-- black friday banner script -->
+      {% comment %}
+  <script>
+     var a = "browse";
+      //var url = window.location.href;
+      var url = window.location.href;
+    
+      //if (url.match(/(?:utm_source|utm_campaign|pkwid|ep_mid|et_mid|ep_rid)/i)) {
+        if(url.match(/(?:\?|&)utm_source=facebook(?:&|$)/i)){
+        a = "external campaign";
+        if(document.querySelector('[data-black-friday-banner]') != null){
+          console.log('hellloo')
+          document.querySelector('[data-black-friday-banner]').style.display = 'block';
+        }
+      }
+  // console.log('aaaaaa',a)
+  
+  </script>
+  {% endcomment %}
+  {% comment %}
+    Start of vitahustle Zendesk Widget script
+  {% endcomment %}
+  {% liquid 
+    assign metaobj = shop.metaobjects['url_details']['url-details-fwrdeje7']['url_object'].value
+    assign isMatch = false
+  
+  %}
+  {% for kk in metaobj %}
+    {% assign tempURL = kk.link | split : "vitahustle.com" | last %}
+    {% if isMatch == false and tempURL contains request.path %}
+      <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=9920d750-340e-471e-846e-842f5b85f8d5" defer> </script>
+      {% assign isMatch = true %}
+    {% endif %}
+  {% endfor %}
+  {% comment %}
+    End of vitahustle Zendesk Widget script →
+  {% endcomment %}
+   {% include 'ins_opensend' %}
+  
+  {% comment %}
+    Getor tag
+  {% endcomment %}
+  <script src="https://www.chiefmedia.com/moment.js"></script>
+  <script src="https://www.chiefmedia.com/moment-timezone-with-data-10-year-range.js"></script>
+  <script src="https://www.chiefmedia.com/cookie_referrerv2.js"></script>
+  <script type="text/javascript">
+  if (!Aggregator){var Aggregator=function(o){
+      var d=document,p=Aggregator.prototype;this.options=o;this.q=[];d.cookie='__na_c=1';p.p=function(c){return function(){
+      this.q.push([c,arguments])}};p.setPerson=p.p(4,arguments);p.logEvent=p.p(0,arguments);p.logPageview=p.p(1,arguments);
+      p.ready=p.p(2,arguments);p.logOutbound=p.p(3,arguments);p.updatePerson=p.p(5,arguments);p.updateSession=p.p(6,arguments);
+      p.updateEvent=p.p(7,arguments);p.push=p.p(8,arguments);var s=d.createElement('script');s.type='text/javascript';
+      s.async=true;(function(i){s.onreadystatechange=function(){if(s.readyState=='loaded'||s.readyState=='complete'){i.run();}};
+      s.onload=function(){i.run();}})(this);e=location.protocol=='https:';s.src='http'+(e?'s://':'://')+
+      (e&&navigator.userAgent.indexOf('MSIE')>-1?'a-{0}.gatorapi.com':'a-{0}.scripts.gatorapi.com').replace('{0}',o.projectId)+
+      '/web?t='+Math.floor((new Date()*.00001)/36);var e=d.getElementsByTagName('script')[0];e.parentNode.insertBefore(s,e);
+  }}
+  
+  var gator = new Aggregator({
+      "projectId": "131127304"
+  });
+  gator.logPageview();
+  </script>
+  {% render 'klaviyo-events' %}
+  </body>
+  </html>
+  

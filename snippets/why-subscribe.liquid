@@ -1,0 +1,210 @@
+<div class="modal_popup upgrade_cart">
+    <div class="inner_container_box">
+      <div class="close_box">
+        {% render 'close-icon' %}
+      </div>
+      <h3>Why <span>Subscribe?</span></h3>
+      <p>
+      Join Kevin Hart and thousands of happy customers saving $10 off each bag!
+      </p>
+      <ul>
+          <li>
+            {% render 'checkmark-dark' %}
+            <span>
+            Manage your shipment online
+            </span>
+          </li>
+          <li>
+            {% render 'checkmark-dark' %}
+            <span>
+            No Commitments, Change / Cancel Anytime
+            </span>
+          </li>
+          <li>
+            {% render 'checkmark-dark' %}
+            <span>
+            60-Day money-back guarantee
+            </span>
+          </li>
+          
+        </ul>
+      <div class="subscribe_option">
+        Yes, I want to save $<span id="overall_saving">10</span>
+      </div>
+      <div class="continue_onetime">
+      No, I'll Pay Full Price
+      </div>
+    </div>
+  </div>
+
+  <style>
+
+    .modal_popup{
+        position: fixed;
+        left:0;
+        top:0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(33,33,33,.7);
+        z-index:99;
+        display: none;
+      }
+      
+      .modal_popup .inner_container_box{
+        padding: 32px;
+        background-color: #fff;
+        border-radius: 10px;
+        max-width: 340px;
+        position: relative;
+        left:50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .modal_popup .inner_container_box .close_box{
+        width: 24px;
+        height: 24px; 
+        right: 18px;
+        top: 18px;
+        position: absolute;
+        cursor: pointer;
+      }
+      .modal_popup .inner_container_box h3{
+        color: #212121;
+        font-family: "FK Grotesk Bold", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-bottom: 6px;
+      }
+      .modal_popup.upgrade_cart .inner_container_box{
+        max-width: 624px;
+        background-color: #F8FAEF;
+      }
+      .modal_popup.upgrade_cart .inner_container_box h3{
+        color: #212121;
+        text-align: center;
+        font-size: 65px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal; /* 0px */
+        text-transform: uppercase;
+        font-family: 'Druk Web', sans-serif;
+        margin-bottom: 12px;
+      }
+      .modal_popup.upgrade_cart .inner_container_box h3 span{
+        color: #AEC22F;
+      }
+      
+      .modal_popup.upgrade_cart .inner_container_box p{
+        color: #4D201A;
+        text-align: center;
+        font-family: "Lato Bold", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; 
+        max-width: 90%;
+        margin: 0 auto;
+      }
+      .modal_popup .inner_container_box p.subtext{
+        color: #212121;
+        font-family: "FK Grotesk Bold", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+      .modal_popup .inner_container_box p.tagline{
+        color: #212121;
+        font-family: "FK Grotesk Bold", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+      .modal_popup .inner_container_box ul{
+        list-style: none;
+        padding:0;
+        margin:24px 0;
+      }
+      .modal_popup.upgrade_cart .inner_container_box ul{
+        margin:36px 0 43px 0;
+        padding: 0 85px;
+      }
+      .modal_popup.upgrade_cart .subscribe_option{
+        margin:0 36px;
+        text-align: center;
+        color: #121212;
+        text-align: center;
+        font-family: "Lato Bold", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        padding: 13px 0 15px 0;
+        border-radius: 74px;
+        background-color: #C9E14B;
+        transition: all 0.3s;
+        cursor:pointer;
+      }
+      .modal_popup.upgrade_cart .subscribe_option:hover{
+        background-color: #afc42f;
+      }
+      .modal_popup.upgrade_cart .continue_onetime{
+        margin-top: 16px;
+        color: #4D201A;
+        font-family: "Lato Regular", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 21px */
+        text-decoration-line: underline;
+        text-align: center;
+        cursor: pointer;
+      }
+      .modal_popup.upgrade_cart .inner_container_box ul li span{
+        font-size: 14px;
+      }
+      .modal_popup .inner_container_box ul li{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+      .modal_popup .inner_container_box ul li span{
+        margin-left: 12px;
+        color: #212121;
+        font-family: "Lato Bold", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 17px;
+      }
+      .modal_popup .inner_container_box ul li:last-child{
+        margin-bottom: 0;
+      }
+
+
+      @media screen and (max-width: 768px){
+        .modal_popup.upgrade_cart .subscribe_option{
+           width: 100%;
+           max-width: 320px;
+           margin:0 auto;
+        }
+        .modal_popup.upgrade_cart .inner_container_box ul{
+            padding: 0 25px;
+        }
+        .modal_popup.upgrade_cart .inner_container_box{
+            width: calc(100% - 40px);
+            padding: 32px 20px;
+        }
+        .modal_popup.upgrade_cart .inner_container_box p{
+            max-width: 100%;
+            font-size: 18px;
+        }
+      }
+  </style>

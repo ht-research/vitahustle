@@ -1,18 +1,33 @@
-{% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', '294517' %}
+{% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', '5859381' %}
 {%- assign selling_plans = sellingPlanGroup[0].selling_plans -%}
 {%- assign sellingPlan = sellingPlanGroup[0].selling_plans[0] -%}
-<div class="product_price_box">
-    <div class="content_box purchase_type_block">
-       {% comment %} onetime box {% endcomment %}
-       <input
-       hidden
-       type="radio"
-       id="onetime_item"
-       name="subscribe"
-       value="onetime_plan"
-       checked />
+{%- assign no_of_serving = product.metafields.custom.no_of_serving -%}
 
-       <div class="onetime_box purchase_type_box">
+{% if template contains 'new-greens-strawberry' or template contains 'new-superfood-greens' or template contains 'new-superfood-strawberry' %}
+  <style>
+    .content_box.purchase_type_block{
+      display: flex;
+      flex-direction: column-reverse;  
+    }
+  </style>
+{% endif %}
+
+{% if selling_plans %}
+  <div class="product_price_box" {% if template contains 'new-greens-strawberry' or template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %} handle='{{ product.handle }}' {% endif %}>
+    <div class="content_box purchase_type_block">
+        {% comment %} onetime box {% endcomment %}
+        <input
+        hidden
+        type="radio"
+        id="onetime_item"
+        name="subscribe"
+        value="onetime_plan"
+        {% unless template contains 'new-superfood-greens' or template contains 'new-greens-strawberry' %}
+           checked
+        {% endunless %}
+         />
+
+        <div class="onetime_box purchase_type_box">
         <label for="onetime_item">
 
           <div class="purchase_type_info">
@@ -26,7 +41,7 @@
                 </h2>
               </div>
               <div class="per_bag_cost">
-               
+                
                   <div class="price_box">
                       <div class="price_calc_box">
                           <span class="discounted_price_box onetime_original_price">
@@ -40,7 +55,11 @@
                     {% assign servings = 15  %}
                   {% endif %}
                   <div class="discountBox">
+                    {% if no_of_serving !=blank %}
+                      <span class="discounted_price_per_bag">{{ product.price | divided_by: no_of_serving | money_with_currency | split: 'USD' | first }}</span>
+                    {% else %}
                     <span class="discounted_price_per_bag">{{ product.price | divided_by: servings | money_with_currency | split: 'USD' | first }}</span>
+                    {% endif %}
                     /serving
                   </div>
 
@@ -60,7 +79,10 @@
       id="subscription_item"
       value="selling_plan"
       name="subscribe"
-       />
+      {% if template contains 'new-superfood-greens' %}
+        checked
+      {% endif %}
+        />
       <div class="subscription_box purchase_type_box">
       
         <label for="subscription_item">
@@ -89,7 +111,12 @@
                         {% assign servings = 15 %}
                     {% endif %}
                       <div class="discountBox">
-                        <span class="discounted_price_per_bag">{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | divided_by: servings | money_with_currency | split: 'USD' | first }}</span>/serving
+                        {% if no_of_serving !=blank %}
+                          <span class="discounted_price_per_bag">{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | divided_by: no_of_serving | money_with_currency | split: 'USD' | first }}</span>
+                        {% else %}
+                          <span class="discounted_price_per_bag">{{ product.selected_or_first_available_variant.selling_plan_allocations[0].price | divided_by: servings | money_with_currency | split: 'USD' | first }}</span>
+                        {% endif %}
+                        /serving
                       </div>
               </div>
             </div>
@@ -132,14 +159,16 @@
                         {% if forloop.index == 1%}
                         checked
                         {% endif %}
-                        disabled
+                        {% unless template contains 'new-superfood-greens' %}
+                          disabled
+                        {% endunless %}
                         />
                       <span>Deliver every</span>
                       <span> {{ plan.name | replace: 'Deliver every', ''  }}</span>
                     </label>
                 </li>
               {% endfor %}
-               
+          
               </ul>
             </div>
           </div>
@@ -149,9 +178,18 @@
     </div>
 
   </div>
+{% endif %}
 
 
   <script>
+
+    let handle = $('.product_price_box').attr('handle');
+    if(handle && handle=="one-superfood-protein-shake-strawberry"){
+      $('#subscription_item').attr('checked',true);
+      $('#onetime_item').attr('checked',false);
+      $('input[name="selling_plan"]').attr('disabled',false);
+    }
+    
     $('.selected_frequency').on('click', function(e) {
       e.stopPropagation();
       $(this).siblings('.delivery_frequency_dropdown').toggleClass('active');

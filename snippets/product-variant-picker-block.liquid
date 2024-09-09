@@ -8,6 +8,14 @@
   assign information_drawer_button_label = block.settings.information_drawer_button_label
 -%}
 
+{% if template contains '3-pack-superfood' %}
+  <style>
+    .product-variant-picker{
+      margin-top: 1.8rem;
+    }
+  </style>
+{% endif %}
+
 {%- if product != blank and product.has_only_default_variant == false -%}
   <variant-picker
     class='product-variant-picker block-{{ block.id }} {% if block.settings.option_type contains 'dropdown' %}product-variant-picker--with-dropdown-options{% endif %}'
