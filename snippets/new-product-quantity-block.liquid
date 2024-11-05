@@ -39,7 +39,7 @@
           type="number"
           value="{% if available %}1{% else %}0{% endif %}"
           data-quantity-input
-          {% if available == false or product.variants[index].title == 'Strawberry' %}
+          {% if available == false %}
             disabled
           {% endif %}
         >
@@ -48,7 +48,7 @@
           name="plus"
           type="button"
           data-action="plus"
-          {% if available == false or product.variants[index].title == 'Strawberry' %}
+          {% if available == false %}
             disabled
           {% endif %}
           tabindex="0"

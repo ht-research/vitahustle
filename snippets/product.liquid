@@ -5,6 +5,61 @@
   assign first_3d_model = product.media | where: 'media_type', 'model' | first
 -%}
 
+{% if template contains '3-pack-superfood' %}
+  <style>
+    .product__info .product-general-info-block .h1{
+      text-transform: none;
+      letter-spacing: -0.3px;
+      font-size: 6rem;
+    }
+    .product__content{
+      align-items: normal;
+    }
+    .product__info-wrapper{
+      padding-top: 0px;
+    }
+    @media only screen and (min-width:1015px) {
+      .product--page{
+        padding-top: 40px;
+      }
+
+    }
+    @media only screen and (max-width:1015px) {
+      .product__info .product-general-info-block .h1{
+        max-width: unset;
+        font-size: 4.4rem;
+        margin-top: 20px;
+      }
+      .image-swatches.product-variant-picker__image-swatches{
+        margin-bottom: 0px !important;
+      }
+    }
+  </style>
+{% endif %}
+
+{% if product.handle contains 'vitahustle-one-superfood-protein-single-serve-packs-10' %}
+  <style>
+    .product__info .product-general-info-block .h1{
+      font-size: 6rem;
+      letter-spacing: -0.3px;
+    }
+    .product_price_box .onetime_box.purchase_type_box{
+      margin-bottom: 0px;
+    }
+    @media only screen and (max-width:1015px) {
+      .product__info .product-general-info-block .h1{
+        font-size: 4.7rem;
+      }
+      .image-swatches.product-variant-picker__image-swatches{
+        margin-bottom: 0px !important;
+      }
+      .product_price_box .onetime_box.purchase_type_box{
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+{% endif %}
+
 <div class="product__content">
   {%- liquid
     render 'product-media-list', section: section, product: product, sectionId: sectionId

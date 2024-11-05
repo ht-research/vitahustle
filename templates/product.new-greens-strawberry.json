@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "quiz_offer_timer_XGTnbR": {
@@ -65,6 +56,12 @@
         "subscription_widget_xJhk8P": {
           "type": "subscription_widget",
           "settings": {
+          }
+        },
+        "subscription_highlight_BgpC8R": {
+          "type": "subscription_highlight",
+          "settings": {
+            "title": "Early Access VIP Offer!"
           }
         },
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
@@ -138,7 +135,7 @@
             "style": "collapsible_row_closed",
             "title": "HOW TO USE",
             "icon": "none",
-            "text": "<p>Add 2 scoops of powder, blend with 8-12 oz of ice cold water or milk, blend or shake vigorously. Serve cold or over ice.<\/p>",
+            "text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
             "page": "",
             "image_width": 60
           }
@@ -151,6 +148,7 @@
         "28586830-d855-4547-8946-94914bac9e85",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
         "subscription_widget_xJhk8P",
+        "subscription_highlight_BgpC8R",
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
         "buy_buttons",
         "b7435ba2-8e00-4538-be27-63a92d60e195",

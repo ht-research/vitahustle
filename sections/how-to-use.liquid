@@ -1,5 +1,9 @@
-
-{% assign data = product.metafields.custom.how_to_use_content.value %}
+{% assign how_to_use_single_serve_product = section.settings.how_to_use_single_serve_product %}
+{% if how_to_use_single_serve_product %}
+    {% assign data = how_to_use_single_serve_product.metafields.custom.how_to_use_content.value %}
+{% else %}
+    {% assign data = product.metafields.custom.how_to_use_content.value %}
+{% endif %}
 
 <style>
    .how_to_use_wrapper{
@@ -15,7 +19,7 @@
         align-items: flex-start;
         padding: 40px 58px;
     }
-    {% if template contains 'new-greens-strawberry' %}
+    {% if template contains 'new-greens-strawberry' or template contains 'PDP_image_AB_test' %}
         .how_to_use_wrapper .inner_how_to_use_wrapper{
             padding: 60px 58px;
         }
@@ -33,7 +37,7 @@
         flex-direction: row;
         text-transform: uppercase;
     }
-    {% if template contains 'new-greens-strawberry' %}
+    {% if template contains 'new-greens-strawberry' or template contains '3-pack-superfood' or template contains 'PDP_image_AB_test' %}
         .how_to_use_wrapper .inner_how_to_use_wrapper .title{
             max-width: 290px;
         }
@@ -57,7 +61,7 @@
         bottom: -10px;
         right: calc(-3* 2vw);
     }
-    {% if template contains 'new-greens-strawberry' %}
+    {% if template contains 'new-greens-strawberry' or template contains '3-pack-superfood' or template contains 'PDP_image_AB_test' %}
         .how_to_use_wrapper .inner_how_to_use_wrapper .title .htu_arrow{
             right: calc(-3* 0.6vw);
         }
@@ -78,7 +82,7 @@
         align-items: flex-start;
         column-gap: 40px;
     }
-    {% if template contains 'new-greens-strawberry' %}
+    {% if template contains 'new-greens-strawberry' or template contains '3-pack-superfood' or template contains 'PDP_image_AB_test' %}
         .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper{
             column-gap: 30px;
         }
@@ -143,7 +147,7 @@
         letter-spacing: 0.38px;
         {% comment %} line-height: 35.53px; {% endcomment %}
     }
-    {% if template contains 'new-greens-strawberry' %}
+    {% if template contains 'new-greens-strawberry' or template contains '3-pack-superfood' or template contains 'PDP_image_AB_test' %}
 
         .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper .image_text_section .how_to_use_image .steps p{
             color: #ffffff;
@@ -160,13 +164,13 @@
         .how_to_use_wrapper .inner_how_to_use_wrapper .title .htu_arrow{
           right: -100px;
         }
-        {% if template contains 'new-greens-strawberry' %}
+        {% if template contains 'new-greens-strawberry' or template contains '3-pack-superfood' or template contains 'PDP_image_AB_test' %}
           .how_to_use_wrapper .inner_how_to_use_wrapper{
             padding: 4vw 40px !important;
           }
         {% endif %}
     }
-    {% if template contains 'new-greens-strawberry' %}
+    {% if template contains 'new-greens-strawberry' or template contains '3-pack-superfood' or template contains 'PDP_image_AB_test' %}
         .how_to_use_wrapper .inner_how_to_use_wrapper .title{
             font-size: 60px;
         }
@@ -249,7 +253,7 @@
         }
 
     }
-    {% if template contains 'new-greens-strawberry' %}
+    {% if template contains 'new-greens-strawberry' or template contains '3-pack-superfood' or template contains 'PDP_image_AB_test' %}
         @media only screen and (max-width:820px) {
             .how_to_use_wrapper .inner_how_to_use_wrapper .title p{
                 max-width: 260px;
@@ -296,7 +300,7 @@
         }
     }
     @media only screen and (max-width:375px) {
-        {% if template contains 'new-greens-strawberry' %}
+        {% if template contains 'new-greens-strawberry' or template contains '3-pack-superfood' or template contains 'PDP_image_AB_test' %}
             .how_to_use_wrapper .inner_how_to_use_wrapper .image_text_section_wrapper .image_text_section .how_to_use_image .steps{
                 top: -40px;
                 left: 50%;
@@ -346,7 +350,13 @@
 {
     "name": "How to use",
     "tag": "section",
-    "settings": [],
+    "settings": [
+        {
+            "type": "product",
+            "id": "how_to_use_single_serve_product",
+            "label": "Choose Single serving product"
+        }
+    ],
     "presets": [
         {
           "name": "How to use"

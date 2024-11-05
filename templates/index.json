@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "9fd9498c-6efb-476e-8d6a-a7a853124857": {
@@ -49,8 +40,29 @@
         "extra_btn_style": "outline"
       }
     },
+    "new_strawberry_banner_GTRhVe": {
+      "type": "new-strawberry-banner",
+      "settings": {
+        "labor_day_banner_title": "",
+        "labor_day_banner_subtitle": "Strawberry",
+        "labor_day_banner_subtext": "is back in stock",
+        "labor_day_banner_offerText": "",
+        "background_larger_screen_image": "shopify:\/\/shop_images\/VH-Strawberry-BIS-Banner-2024-10-10_large-screen.jpg",
+        "larger_screen_banner_max_height": 700,
+        "background_desktop_image": "shopify:\/\/shop_images\/VH-Strawberry-BIS-Banner-2024-10-10_desktop-2x_1.jpg",
+        "desktop_banner_max_height": 700,
+        "background_mobile_image": "shopify:\/\/shop_images\/VH-Strawberry-BIS-Banner-2024-10-10_mobile-2x_1_1.jpg",
+        "mobile_banner_min_height": 660,
+        "mobile_banner_max_height": 800,
+        "background_ipad_image": "shopify:\/\/shop_images\/VH-Strawberry-BIS-Banner-2024-10-10_tablet-2x_2.jpg",
+        "Tablet_banner_max_height": 800,
+        "btn_text": "Shop Now",
+        "btn_url": "shopify:\/\/products\/one-superfood-protein-shake-strawberry"
+      }
+    },
     "labor_day_banner_dLjjkY": {
       "type": "labor-day-banner",
+      "disabled": true,
       "settings": {
         "labor_day_banner_title": "20% OFF",
         "labor_day_banner_subtitle": "LABOR DAY SALE",
@@ -421,8 +433,9 @@
         "rich_text_WYFL9g",
         "rich_text_eDcHVh"
       ],
+      "disabled": true,
       "settings": {
-        "custom_product_title": "VITAHUSTLE ONE.<br> <span>ACHIEVE YOUR MAXIMUM POTENTIAL<\/span>",
+        "custom_product_title": "VITAHUSTLE ONE. ACHIEVE YOUR MAXIMUM POTENTIAL",
         "custom_product_subtitle": "",
         "custom_single_product": "",
         "product_list": [
@@ -963,6 +976,7 @@
   },
   "order": [
     "9fd9498c-6efb-476e-8d6a-a7a853124857",
+    "new_strawberry_banner_GTRhVe",
     "labor_day_banner_dLjjkY",
     "new_prime_day_banner_Y6JjfG",
     "memorial_day_sale_banner_hjwiiD",

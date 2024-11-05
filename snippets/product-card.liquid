@@ -59,6 +59,17 @@
   .product-card__img{
     border:none;
   }
+  .image-swatches__item.unstyled-link.image-swatches__item--square.show{
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
+  }
+  .image-swatches__item.unstyled-link.image-swatches__item--square.show ~ .image-swatches__count{
+    display: none;
+  }
+  /* .image-swatches__item.unstyled-link.image-swatches__item--square:nth-child(n+4){
+    display: none !important;
+  } */
 {% endstyle %}
 
 {% if product.id != blank %}
@@ -131,20 +142,36 @@
             </carousel-component>
           {%- endif -%} {% endcomment %}
           <div class="product-card__images {% if settings.enable_product_darken_background %}multiply-mode{% endif %}">
-            <img
-              class="product-card__img product-card__img--visible lazyload {% if settings.enable_product_darken_background %}multiply-mode__target{% endif %}"
-              data-main-media
-              data-product-card-featured-image
-              src="{{ featured_media | image_url: width: 320 }}"
-              data-image-url="{{ featured_media | image_url: width: 1 }}"
-              data-aspectratio="{{ featured_media.aspect_ratio }}"
-              data-sizes="auto"
-              alt="{{ featured_media.alt }}"
-              loading="lazy"
-              width="1"
-              height="1"
-              style="object-position: {{ featured_media.presentation.focal_point }};"
-            >
+            {%- if product.metafields.custom.collection_grid_images -%}
+              <img
+                class="product-card__img product-card__img--visible lazyload {% if settings.enable_product_darken_background %}multiply-mode__target{% endif %}"
+                  data-main-media
+                  data-product-card-featured-image
+                  src="{{ product.metafields.custom.collection_grid_images.value | img_url: '320' }}"
+                  data-image-url="{{ product.metafields.custom.collection_grid_images.value | image_url: width: 1 }}"
+                  data-sizes="auto"
+                  alt="{{ product.handle }}"
+                  loading="lazy"
+                  width="1"
+                  height="1"
+                  style="object-position: {{ featured_media.presentation.focal_point }};"
+                data-image>
+            {%- else -%}
+                <img
+                  class="product-card__img product-card__img--visible lazyload {% if settings.enable_product_darken_background %}multiply-mode__target{% endif %}"
+                  data-main-media
+                  data-product-card-featured-image
+                  src="{{ featured_media | image_url: width: 320 }}"
+                  data-image-url="{{ featured_media | image_url: width: 1 }}"
+                  data-aspectratio="{{ featured_media.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ featured_media.alt }}"
+                  loading="lazy"
+                  width="1"
+                  height="1"
+                  style="object-position: {{ featured_media.presentation.focal_point }};"
+                >
+            {%- endif -%}
             {%- if settings.img_hover == 'show-secondary-media' and images.size > 1 -%}
               <img
                 class="product-card__img lazyload {% if settings.enable_product_darken_background %}multiply-mode__target{% endif %}"
@@ -348,10 +375,11 @@
                 <div class="image-swatches product-card__image-swatches">
                   {%- for color in colors limit: 6 -%}
                     {%- assign variant = product.variants | where: color_option_position, color | first -%}
-
+                    {% comment %} ===>{{ variant | json }} {% endcomment %}
                     {%- if variant.image.src != blank -%}
+                      {% comment %} ===>{{ variant.image.src }} {% endcomment %}
                       <a
-                        class="image-swatches__item unstyled-link image-swatches__item--{{ settings.primary_shape_for_product_cards }} {% if settings.enable_product_darken_background %}multiply-mode{% endif %}"
+                        class="image-swatches__item unstyled-link image-swatches__item--{{ settings.primary_shape_for_product_cards }} {% if settings.enable_product_darken_background %}multiply-mode{% endif %} {% if product.handle contains 'one-superfood-protein-shake-strawberry' %}show{% endif %}"
                         href="{{ variant.url }}"
                         aria-label="{{ variant.title }}"
                         data-color="{{ color }}"
@@ -509,7 +537,6 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-
         <div class="product-card__info">
           <a
             class="product-card__title unstyled-link"
@@ -520,11 +547,15 @@
                           {{product.title}} 
                         {% endif %}"
           >
-            {% if product.handle == 'vitahustle-one-superfood'  %}
-              ONE Superfood Protein + Greens 
-           {% else %} 
-             {{product.title}} 
-           {% endif %}
+            {% if product.metafields.custom.collection_grid_title != blank %}
+              {{  product.metafields.custom.collection_grid_title }}
+            {% else %}
+              {% if product.handle == 'vitahustle-one-superfood'  %}
+                ONE Superfood Protein + Greens 
+              {% else %} 
+                {{product.title}} 
+              {% endif %}
+            {% endif %}
           </a>
           {%- if show_vendor -%}
             <a class="product-card__vendor unstyled-link" href="/collections/all?filter.p.vendor={{ product.vendor }}">

@@ -1,0 +1,652 @@
+
+{%- liquid
+    assign options = section.settings
+    assign lnew_strawberry_banner_title = options.labor_day_banner_title
+    assign new_strawberry_banner_subtitle = options.labor_day_banner_subtitle
+    assign new_strawberry_banner_subtext = options.labor_day_banner_subtext
+    assign new_strawberry_banner_offerText = options.labor_day_banner_offerText
+    assign background_larger_screen_image = options.background_larger_screen_image
+    assign background_desktop_image = options.background_desktop_image
+    assign background_mobile_image = options.background_mobile_image
+    assign background_ipad_image = options.background_ipad_image
+    assign desktop_banner_max_height = options.desktop_banner_max_height
+    assign mobile_banner_min_height = options.mobile_banner_min_height
+    assign mobile_banner_max_height = options.mobile_banner_max_height
+    assign Tablet_banner_max_height = options.Tablet_banner_max_height
+    assign larger_screen_banner_max_height = options.larger_screen_banner_max_height
+    assign btn_text = options.btn_text
+    assign btn_url = options.btn_url
+    assign blocks = section.blocks
+
+  -%}
+
+<style>
+    .new_strawberry_banner{
+        width: 100%;
+        height: 50.181vw;
+        {% if desktop_banner_max_height !=blank %}
+            max-height: {{ desktop_banner_max_height }}px;
+        {% endif %}
+        display: block;
+        background-image: url("{{ background_desktop_image | img_url: 'master' }}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px -130px;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner{
+        padding: 40px 40px 20px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .top_content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 44.644vw;
+        position: absolute;
+        top: 26%;
+        left: 53px;
+        transform: translateY(1%);
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .top_content p{
+        font-family: "Druk Web";
+        color: #FFF;
+        text-shadow: 0px 8px 14px rgba(0, 0, 0, 0.20);
+        font-size: 15.582vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 70%;
+        margin: 9px 0px 22px 0px;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .top_content p span{
+        color: #C8E812;
+        font-size: 8.8832vw;
+        line-height: 9.659vw;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .top_content .subtitle{
+        font-family: "Druk Web";
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+        font-size: 8.4vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 95%;
+        letter-spacing: 5px;
+        color: #D04963;
+        text-transform: uppercase;
+        {% comment %} margin: 10px 0px 20px 0px; {% endcomment %}
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .top_content h4{
+        font-family: "Druk Web";
+        color: #FFF;
+        text-shadow: 0px 5.722px 17.166px rgba(0, 0, 0, 0.15);
+        font-size: 6.867vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 90%;
+        text-transform: uppercase;
+        margin: 6px 0px 0px 0px;
+        letter-spacing: 2px;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .top_content a{
+        background: #DFED5A;
+        border-radius: 74px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 233px;
+        height: 55px;
+        font-family: "FK Grotesk Bold", sans-serif;
+        color: #000000;
+        text-align: center;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: 50px;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .bottom_subtext{
+        color: #000;
+        font-family: "Lato Regular", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .bottom_content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .feature_icon_wrapper{
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .feature_icon_wrapper .feature_icon{
+        width: 76px;
+        height: 76px;
+        display: block;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .feature_icon_wrapper .feature_icon img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .shop_btn{
+        display: none;
+    }
+    .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .shop_btn a{
+        border-radius: 74px;
+        background-color: #C8E812;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 261px;
+        height: 55px;
+        font-family: 'Lato Bold', sans-serif;
+        font-size: 1.388vw;
+        font-weight: 900;
+        line-height: 1.665vw;
+        text-decoration: none;
+    }
+    .bottom_arrow_icon{
+        position: absolute;
+        bottom: 1.73vw;
+        width: 2.42vw;
+        min-width: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        z-index: 3;
+        cursor: pointer;
+        transform: translateX(-50%);
+    }
+    {% comment %} .bottom_arrow_icon svg{
+        -webkit-filter: drop-shadow( 0px 10px 4px rgba(0, 0, 0, .3));
+        filter: drop-shadow( 0px 10px 4px rgba(0, 0, 0, .3));
+    } {% endcomment %}
+    @media screen and (min-width: 2000px){
+        .new_strawberry_banner{
+            {% if larger_screen_banner_max_height !=blank %}
+                max-height: {{ larger_screen_banner_max_height }}px !important;
+            {% endif %}
+            {% if background_larger_screen_image !=blank %}
+                background-image: url("{{ background_larger_screen_image | img_url: 'master' }}");
+            {% endif %}
+            background-position: center;
+            
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content a{
+            background: #DFED5A;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16.1134vw;
+            height: 3.17vw;
+            font-family: 'Lato Bold', sans-serif;
+            font-size: 1.388vw;
+            font-weight: 900;
+            line-height: 1.665vw;
+            text-decoration: none;
+            border-radius: 5.13vw;
+        
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content .subtitle{
+            font-size: 7.417vw;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content p{
+            font-size: 9.889vw;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content{
+            position: absolute;
+            left: 18%;
+            top: 23%;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content h4{
+            font-size: 6.167vw;
+        }
+    }
+
+    @media screen and (min-width: 1600px){
+        .new_strawberry_banner{
+            max-height: 960px;
+        }
+    }
+    @media screen and (max-width: 1300px){
+        .new_strawberry_banner{
+            background-position: center;
+        
+        }
+    }
+    @media screen and (max-width: 820px){
+        .new_strawberry_banner{
+            height: 129.41vw;
+            {% comment %} max-height: 800px; {% endcomment %}
+            {% if Tablet_banner_max_height !=blank %}
+                max-height: {{ Tablet_banner_max_height }}px;
+            {% endif %}
+            display: block;
+            background-image: url("{{ background_ipad_image | img_url: 'master' }}");
+            background-position: bottom;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner{
+            padding: 20px 20px 40px 20px;
+        }
+        .bottom_arrow_icon{
+            display: none;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content{
+            width: unset;
+            position: unset;
+            max-width: unset;
+            transform: unset;
+            align-items: center;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content a{
+            font-size: 20px;
+            line-height: 20px;
+            width: 210px;
+
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .feature_icon_wrapper .feature_icon{
+            width: 46px;
+            height: 46px;
+            display: block;
+        }
+        {% comment %} .new_strawberry_banner .inner_new_strawberry_banner .top_content .subtitle{
+            margin: 10px 0px 15px 0px;
+        } {% endcomment %}
+        {% comment %} .new_strawberry_banner .inner_new_strawberry_banner .top_content a{
+            display: none;
+        } {% endcomment %}
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .shop_btn{
+            margin-top: 20px;
+            display: block;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_content{
+            align-items: center;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content p{
+            color: #FFF;
+            text-shadow: 0px 6.081px 10.642px rgba(0, 0, 0, 0.15);
+            font-size: 180px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 70%;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content p span{
+            color: #C8E812;
+            font-size: 128px;
+            line-height: 120px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content .subtitle{
+            color: #D04963;
+            font-size: 14vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 90%; /* 97px */
+            letter-spacing: 0.97px;
+            text-align: center;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content h4{
+            color: #FFF;
+            text-shadow: 0px 6.717px 20.152px rgba(0, 0, 0, 0.15);
+            font-size: 11vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 90%;
+            text-transform: uppercase;
+            margin: 20px 0px 0px 0px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .new_strawberry_banner{
+            height: 129.41vw;
+            {% comment %} max-height: 800px; {% endcomment %}
+            {% if Tablet_banner_max_height !=blank %}
+                max-height: {{ Tablet_banner_max_height }}px;
+            {% endif %}
+            display: block;
+            background-image: url("{{ background_ipad_image | img_url: 'master' }}");
+            background-position: bottom;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner{
+            padding: 20px 20px 40px 20px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content{
+            width: unset;
+            position: unset;
+            max-width: unset;
+            transform: unset;
+            align-items: center;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content p{
+            color: #FFF;
+            text-shadow: 0px 6.081px 10.642px rgba(0, 0, 0, 0.20);
+            font-size: 180px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 70%;
+        }
+        
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content p span{
+            color: #C8E812;
+            font-size: 128px;
+            line-height: 120px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content h4{
+            color: #FFF;
+            text-shadow: 0px 6.717px 20.152px rgba(0, 0, 0, 0.15);
+            font-size: 11vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 90%; /* 97px */
+            text-transform: uppercase;
+            margin: 20px 0px 0px 0px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content .subtitle{
+            color: #D04963;
+            font-size: 14vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 90%; /* 97px */
+            letter-spacing: 0.97px;
+            text-align: center;
+        }
+        {% comment %} .new_strawberry_banner .inner_new_strawberry_banner .top_content a{
+            display: none;
+        } {% endcomment %}
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .feature_icon_wrapper .feature_icon{
+            width: 69px;
+            height: 73px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_content{
+            align-items: center;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .shop_btn{
+            margin-top: 20px;
+            display: block;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_content .shop_btn a{
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 21px;
+        }
+    }
+    @media screen and (max-width: 540px) {
+        .new_strawberry_banner{
+            height: 129.41vw;
+            {% comment %} min-height: 712px; {% endcomment %}
+            {% if mobile_banner_min_height !=blank %}
+                min-height: {{ mobile_banner_min_height }}px;
+            {% endif %}
+            {% if mobile_banner_max_height !=blank %}
+                max-height: {{ mobile_banner_max_height }}px;
+            {% endif %}
+            display: block;
+            background-image: url("{{ background_mobile_image | img_url: 'master' }}");
+            background-position: bottom;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner{
+            padding: 20px 20px 40px 20px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content{
+            align-items: center;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content p{
+            color: #FFF;
+            text-shadow: 0px 5.18px 9.065px rgba(0, 0, 0, 0.20);
+            font-size: 35.148vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 60%;
+            margin: 9px 0px 12px 0px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content p span{
+            font-size: 87px;
+            line-height: 76px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content .subtitle{
+            color: #D04963;
+            font-size: 22.759vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 95%;
+            text-align: center;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content a{
+            {% comment %} display: none; {% endcomment %}
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content h4{
+            color: #FFF;
+            text-shadow: 0px 5.722px 17.166px rgba(0, 0, 0, 0.15);
+            font-size: 17vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 90%;
+            text-transform: uppercase;
+            margin: 10px 0px 0px 0px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content a{
+            width: 188px;
+            height: 48px;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-top: 50px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_subtext{
+            color: #000;
+            font-family: "Lato Regular", sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 100%;
+            position: absolute;
+            bottom: 22px;
+            left: 45px;
+            max-width: 84px;
+        }
+    }
+    @media screen and (max-width: 540px) and (min-width: 430px){
+        .new_strawberry_banner{
+            min-height: 700px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content h4{
+            margin: 10px 0px 0px 0px;
+        }
+    }
+    @media screen and (max-width: 430px) {
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content h4{
+            margin: 10px 0px 0px 0px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .new_strawberry_banner .inner_new_strawberry_banner{
+            padding: 20px 20px 40px 20px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_subtext {
+            color: #000;
+            font-family: "Lato Regular", sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 100%;
+            position: absolute;
+            bottom: 22px;
+            left: 35px;
+            max-width: 76px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content h4{
+            margin: 10px 0px 0px 0px;
+        }
+
+    }
+    @media screen and (max-width: 320px) {
+        .new_strawberry_banner{
+            min-height: 580px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content h4{
+            margin: 10px 0px 0px 0px;
+        }
+        {% comment %} .new_strawberry_banner .inner_new_strawberry_banner .top_content .subtitle{
+            font-size: 43px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .top_content p{
+            font-size: 55px;
+        }
+        .new_strawberry_banner .inner_new_strawberry_banner .bottom_subtext{
+            font-size: 9px;
+            max-width: 68px;
+        } {% endcomment %}
+    }
+</style>
+
+<div class="new_strawberry_banner">
+    <div class="inner_new_strawberry_banner">
+        <div class="top_content">
+            {% if new_strawberry_banner_subtitle != blank %}
+                <span class="subtitle">{{ new_strawberry_banner_subtitle }}</span>
+            {% endif %}
+            {% if new_strawberry_banner_title != blank %}
+                <p>{{ new_strawberry_banner_title }}</p>
+            {% endif %}
+            {% if new_strawberry_banner_subtext != blank %}
+                <h4>{{ new_strawberry_banner_subtext }}</h4>
+            {% endif %}
+            
+            {% if btn_text != blank %}
+                <a href="{{ btn_url }}">{{ btn_text }}</a>
+            {% endif %}
+        </div>
+        <div class="bottom_subtext">
+            {% if new_strawberry_banner_offerText !=blank %}
+                {{ new_strawberry_banner_offerText }}
+            {% endif %}
+            
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "New Strawberry Banner",
+    "tag": "section",
+    "settings": [
+
+        {
+            "type": "text",
+            "id": "labor_day_banner_title",
+            "label": "t:sections.labor_day_banner.labor_day_banner_title"
+        },
+        {
+            "type": "text",
+            "id": "labor_day_banner_subtitle",
+            "label": "t:sections.labor_day_banner.labor_day_banner_subtitle"
+        },
+        {
+            "type": "text",
+            "id": "labor_day_banner_subtext",
+            "label": "t:sections.labor_day_banner.labor_day_banner_subtext"
+        },
+        {
+            "type": "text",
+            "id": "labor_day_banner_offerText",
+            "label": "t:sections.labor_day_banner.labor_day_banner_offerText"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_larger_screen_image",
+            "label": "t:sections.labor_day_banner.background_larger_screen_image"
+          },
+        {
+            "type":"range",
+            "id":"larger_screen_banner_max_height",
+            "label":"t:sections.labor_day_banner.larger_screen_banner_max_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":700
+        },
+        {
+          "type": "image_picker",
+          "id": "background_desktop_image",
+          "label": "t:sections.labor_day_banner.background_desktop_image"
+        },
+        {
+            "type":"range",
+            "id":"desktop_banner_max_height",
+            "label":"t:sections.labor_day_banner.desktop_banner_max_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":600
+        },
+        {
+            "type": "image_picker",
+            "id": "background_mobile_image",
+            "label": "t:sections.labor_day_banner.background_mobile_image"
+        },
+        {
+            "type":"range",
+            "id":"mobile_banner_min_height",
+            "label":"t:sections.labor_day_banner.mobile_banner_min_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":660
+        },
+        {
+            "type":"range",
+            "id":"mobile_banner_max_height",
+            "label":"t:sections.labor_day_banner.mobile_banner_max_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":800
+        },
+        {
+            "type": "image_picker",
+            "id": "background_ipad_image",
+            "label": "t:sections.labor_day_banner.background_ipad_image"
+        },
+        {
+            "type":"range",
+            "id":"Tablet_banner_max_height",
+            "label":"t:sections.labor_day_banner.Tablet_banner_max_height",
+            "min": 0,
+            "max": 1240,
+            "step": 20,
+            "default":800
+        },
+        {
+            "type": "text",
+            "id":"btn_text",
+            "label": "t:sections.labor_day_banner.btn_text"
+        },
+        {
+            "type": "url",
+            "id": "btn_url",
+            "label": "t:sections.labor_day_banner.btn_url"
+        }
+    ],
+    "presets": [
+        {
+        "name": "New Strawberry Banner"
+        }
+    ]
+}
+{% endschema %}

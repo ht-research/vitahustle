@@ -1,6 +1,13 @@
+{% assign ingredient_serving_product = section.settings.ingredient_serving_product %}
 
-{% assign data = product.metafields.custom.ingredients_content.value %}
-{% assign ingredient_wrapper_background_colour = product.metafields.custom.ingredient_wrapper_background_colour %}
+{% if ingredient_serving_product  %}
+    {% assign data = ingredient_serving_product.metafields.custom.ingredients_content.value %}
+    {% assign ingredient_wrapper_background_colour = ingredient_serving_product.metafields.custom.ingredient_wrapper_background_colour %}
+{% else %}
+    {% assign data = product.metafields.custom.ingredients_content.value %}
+    {% assign ingredient_wrapper_background_colour = product.metafields.custom.ingredient_wrapper_background_colour %}
+{% endif %}
+
 
 <style>
     .ingredients_wrapper{
@@ -182,7 +189,7 @@
             margin: 0 -20px;
         }
     }
-    {% if template contains 'new-greens-strawberry' %}
+    {% if template contains 'new-greens-strawberry' or template contains 'PDP_image_AB_test' %}
         @media only screen and (max-width:820px) {
             .ingredients_wrapper {
                 background-size: cover;
@@ -289,7 +296,13 @@
 {
     "name": "Ingredients",
     "tag": "section",
-    "settings": [],
+    "settings": [
+        {
+            "type": "product",
+            "id": "ingredient_serving_product",
+            "label": "Choose Single serving product"
+        }
+    ],
     "presets": [
         {
           "name": "Ingredients"

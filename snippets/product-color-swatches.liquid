@@ -35,6 +35,38 @@
   assign section_background_color = settings[key] | downcase
 -%}
 
+{% if product.handle contains 'one-superfood-protein-shake-strawberry' %}
+  <style>
+    .product-variant-picker__list .image-swatches{
+      overflow: visible;
+    } 
+    .product-variant-picker__image-swatches .image-swatches__item{
+      overflow: visible;
+    }
+    .image-swatches__item:after{
+      z-index: 1;
+    }
+    .product-variant-picker__image-swatches .image-swatches__item .flavor_badge{
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 2px 9px;
+      border-radius: 6.727px;
+      background: #D5EE3C;
+      z-index: 2;
+      color: #212121;
+      font-family: "Lato Bold", sans-serif;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      letter-spacing: -0.4px;
+      text-transform: uppercase;
+    }
+  </style>
+{% endif %}
+
 {% if color_option_picker_type contains 'button' %}
   <div class='product-variant-picker__option-label'>
     {{ option.name }}
@@ -215,7 +247,7 @@
     <div class='product-variant-picker__option-label'>
       {{ option.name }}
 
-      <span class='truncate product-variant-picker__option-active-color' data-color-swatches-picker-active-value>
+      <span class='truncate product-variant-picker__option-active-color'>
         {{- option.selected_value -}}
       </span>
 
@@ -292,9 +324,7 @@
             assign variant = product.variants | where: option_label, value | first
           %}
 
-          <div  {% if variant.title == "Strawberry" %}
-                style="display:none!important"
-              {% endif %}>
+          <div class="">
             <label
               for='{{ sectionId }}-{{ product.id }}-{{ option.position }}-{{ forloop.index0 }}'
               class='image-swatches__item {% if is_primary_swatch %} image-swatches__item--{{ settings.primary_shape_for_product_pages }}{% else %} image-swatches__item--{{ settings.secondary_shape_for_product_pages }}{% endif %}  {% if enable_darken_mode %} multiply-mode{% endif %} {% if option.selected_value == value %} selected {% endif %}'
@@ -314,6 +344,11 @@
                 </div>
 
                 <div class='image-swatches__item-line'></div>
+                {% if variant.metafields.custom.show_badge %}
+                  <div class='flavor_badge'>
+                    New!
+                  </div>
+                {% endif %}
               {%- else -%}
                 <div class='image-swatches__item-body-wrapper {% if is_primary_swatch %} image-swatches__item-body-wrapper--{{ settings.primary_shape_for_product_pages }} {% else %} image-swatches__item-body-wrapper--{{ settings.secondary_shape_for_product_pages }} {% endif %}'>
                   {% render 'icon-color-image-placeholder', class: 'image-swatches__item-body' %}
@@ -326,3 +361,30 @@
     {% endif %}
   </color-swatches-picker>
 {% endif %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+
+    $('label.image-swatches__item--square').on('click',function(){
+      let selected_flavour = $(this).attr('data-value');
+      console.log('selected_flavour',selected_flavour);
+      $('.product-variant-picker__option-active-color').text(selected_flavour);
+      // if(selected_flavour.includes("Cream")){
+        
+      //   $('#subscription_item').prop('checked', true); // Use prop instead of attr for checked
+      //   $(".subscription_box.purchase_type_box").click();
+      //   $('input[name="selling_plan"]').attr('disabled',false);
+      //   $('.onetime_box.purchase_type_box').css('display','none');
+      //   $('.add_to_cart_strawberry').css('display', 'none');
+      //   $('.product-form__btn').css('display', 'block');
+      //   $('.subscription_highlight_wrapper').css('display','block');
+
+      // }
+      // else{
+      //   $('.onetime_box.purchase_type_box').css('display','block');
+      //   $('.subscription_highlight_wrapper').css('display','none');
+
+      // }
+    })
+  });
+</script>

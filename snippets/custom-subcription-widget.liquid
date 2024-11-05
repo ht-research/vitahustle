@@ -3,7 +3,7 @@
 {%- assign sellingPlan = sellingPlanGroup[0].selling_plans[0] -%}
 {%- assign no_of_serving = product.metafields.custom.no_of_serving -%}
 
-{% if template contains 'new-greens-strawberry' or template contains 'new-superfood-greens' or template contains 'new-superfood-strawberry' %}
+{% if template contains 'new-greens-strawberry' or template contains 'new-superfood-greens' or template contains 'new-superfood-strawberry' or template contains 'PDP_image_AB_test' %}
   <style>
     .content_box.purchase_type_block{
       display: flex;
@@ -13,7 +13,7 @@
 {% endif %}
 
 {% if selling_plans %}
-  <div class="product_price_box" {% if template contains 'new-greens-strawberry' or template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %} handle='{{ product.handle }}' {% endif %}>
+  <div class="product_price_box" {% if template contains 'new-greens-strawberry' or template contains 'PDP_image_AB_test' or template contains 'new-superfood-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %} handle='{{ product.handle }}' {% endif %}>
     <div class="content_box purchase_type_block">
         {% comment %} onetime box {% endcomment %}
         <input
@@ -22,9 +22,6 @@
         id="onetime_item"
         name="subscribe"
         value="onetime_plan"
-        {% unless template contains 'new-superfood-greens' or template contains 'new-greens-strawberry' %}
-           checked
-        {% endunless %}
          />
 
         <div class="onetime_box purchase_type_box">
@@ -79,9 +76,7 @@
       id="subscription_item"
       value="selling_plan"
       name="subscribe"
-      {% if template contains 'new-superfood-greens' %}
-        checked
-      {% endif %}
+      checked
         />
       <div class="subscription_box purchase_type_box">
       
@@ -159,9 +154,6 @@
                         {% if forloop.index == 1%}
                         checked
                         {% endif %}
-                        {% unless template contains 'new-superfood-greens' %}
-                          disabled
-                        {% endunless %}
                         />
                       <span>Deliver every</span>
                       <span> {{ plan.name | replace: 'Deliver every', ''  }}</span>
@@ -219,7 +211,7 @@
 
     // disable selling plan on onetime click
     $('input[name="subscribe"]').on('change',function(){
-      console.log("id",$(this).attr('id'))
+    //  console.log("id",$(this).attr('id'))
       if($(this).attr('id') == 'onetime_item'){
         $('input[name="selling_plan"]').attr('disabled','disabled');
       } else{

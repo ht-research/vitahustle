@@ -17,6 +17,12 @@
 
 -%}
 
+<style>
+  .footer__card-grid{
+    padding: 8rem 0 1.4rem;
+  }
+</style>
+
 {%- capture css -%}
   {% style %}
     .section-{{ section.id }} {
@@ -293,6 +299,7 @@
             ></a>
           </div>
         </div>
+      {% comment %}
       <div class="footer-custom-section">
         <div class="footer-custom__column footer-custom__column1">
           <div style="display:flex;align-items:center;">
@@ -311,6 +318,7 @@
           <h2 style="color:#AFC42F" class="h1">Your health is no joke.</h2>
         </div>
       </div>
+      {% endcomment %}
 
       <div class="footer__utils">
         {%- if show_currency_selector == true or show_language_selector == true -%}

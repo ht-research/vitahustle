@@ -124,7 +124,7 @@
                 name="add"
                 id="product-buy-btn-{{ product.id }}-{{ sectionId }}-{{selected_variant.id}}"
                 class="product-form__btn btn btn--lg {% if show_dynamic_checkout == true %}btn--outline{% else %}btn--solid{% endif %}"
-                {% if available == false or product.variants[index].title == 'Strawberry' %}
+                {% if available == false %}
                   disabled
                 {% endif %}
                  data-product-id="{{ product.id }}"
@@ -133,15 +133,12 @@
                 aria-label="{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}"
               >
                 <span data-button-text>
-                  {% if product.variants[index].title == 'Strawberry' %}
-                     {{ sold_out_label }}
-                  {% else %}
-                    {%- if available -%}
+
+                  {%- if available -%}
                     {{ add_to_cart_label }}
                   {%- else -%}
                     {{ sold_out_label }}
                   {%- endif -%}
-                  {% endif %}
                   
                 </span>
                 {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}

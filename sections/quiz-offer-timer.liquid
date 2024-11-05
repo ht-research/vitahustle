@@ -1,8 +1,10 @@
 {%- style -%}
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900 &display=swap');
     .quiz-banner-section{
       display:none;
+      opacity: 0;
+      visibility: hidden;
     }
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900 &display=swap');
     .quiz-banner-block {
       {% if section.settings.bg_image_mobile != blank %}
         background-image: url('{{ section.settings.bg_image_mobile | image_url: width: master }}');
@@ -288,8 +290,13 @@
   {% render 'quiz-results.js' %}
   if(!window.location.search.includes('quiz_results_redirect')){
     $('.quiz-banner-section').css('display','none');
+    $('.quiz-banner-section').css('opacity',0);
+    $('.quiz-banner-section').css('visibility','hidden');
+
   }else if(window.location.search.includes('quiz_results_redirect')){
     $('.quiz-banner-section').css('display','block');
+    $('.quiz-banner-section').css('opacity',1);
+    $('.quiz-banner-section').css('visibility','visible');
   }
 </script>
   

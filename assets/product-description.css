@@ -3,6 +3,9 @@
 .product-content-tab{
     margin-top: 14px;
 }
+.accordeon-plus__btn--small.product-content-tab{
+  margin-top: 3.2rem !important;
+}
 .product-features{
     display: flex;
     align-items: center;

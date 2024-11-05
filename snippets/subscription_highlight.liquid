@@ -1,0 +1,73 @@
+<style>
+    .subscription_highlight_wrapper{
+        display: none;
+        margin-top: -16px;
+        
+    }
+    .subscription_highlight{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+        padding: 6px 0px 3px 0px;;
+        margin-top: 0px;
+        background: rgb(200, 232, 18);
+        border-radius: 0px 0px 10px 10px;
+    }
+    .subscription_manage svg{
+        height: 20px !important;
+        width: 20px !important;
+    }
+    .subscription_highlight p{
+        font-size: 14px;
+        text-align: center;
+    }
+    .Estimated_shipping_date{
+        margin-top: 20px;
+        font-size: 16px;
+        font-style: normal;
+        color: #5e5f5e;
+        text-align: center;
+    }
+    @media screen and (max-width: 820px) {
+        .subscription_highlight{
+            align-items: baseline;
+            margin-bottom: 20px;
+        }
+        .subscription_highlight p{
+            font-size: 15px;
+            max-width: 242px;
+        }
+        .subscription_manage svg{
+            height: 15px !important;
+            width: 15px !important;
+            margin-top: 5px;
+        }
+        .Estimated_shipping_date{
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+<div class="subscription_highlight_wrapper">
+    <div class="subscription_highlight">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.982 5.05896C13.9338 4.91 13.7962 4.80776 13.6395 4.80452L8.9029 4.70821L7.34752 0.246893C7.29613 0.0990086 7.15669 0 7 0C6.84331 0 6.70387 0.0990086 6.65248 0.246893L5.09709 4.70821L0.360495 4.80452C0.203807 4.80776 0.0661649 4.91 0.0180082 5.05896C-0.0305078 5.2081 0.0212426 5.37162 0.146306 5.46614L3.92085 8.31924L2.54911 12.8393C2.50382 12.9892 2.55809 13.1514 2.68459 13.2438C2.81181 13.336 2.98252 13.3379 3.11117 13.2486L7 10.5503L10.8888 13.2486C10.9521 13.2923 11.0254 13.3142 11.0987 13.3142C11.1749 13.3142 11.2507 13.2907 11.3154 13.2438C11.4419 13.1514 11.4962 12.9892 11.4509 12.8393L10.0791 8.31924L13.8537 5.46614C13.9788 5.37162 14.0305 5.2081 13.982 5.05896V5.05896Z" fill="#212121"/>
+            </svg>
+            
+        <p>
+            {{ block.settings.title }}
+        </p>
+    </div>
+    
+    <div class="Estimated_shipping_date">
+        Estimated ship date: November 6th
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        $("[data-value='Strawberry']").click();
+    });
+</script>

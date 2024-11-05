@@ -46,7 +46,7 @@
   </script>
       
    {% render 'pagefly-head' %}
-   {% if page.template_suffix == 'homepage-v2' or template.name == 'product' or template.name == 'index' or template contains 'offer-landing-page' or page.template_suffix == 'quiz-results' or template contains 'new-offer-page' %}
+   {% if page.template_suffix == 'homepage-v2' or template.name == 'product' or template.name == 'index' or template contains 'offer-landing-page' or page.template_suffix == 'quiz-results' or template contains 'new-offer-page' or template contains '3-pack-superfood' %}
     <script  src="{{ 'jquery.min.js' | asset_url }}"></script>
       <script  src="{{ 'slick.min.js' | asset_url }}"></script>
   {% endif %}
@@ -113,6 +113,11 @@
       width: 100%;
       position: relative!important;
   }
+    .quiz-banner-section{
+      display:none;
+      opacity: 0;
+      visibility: hidden;
+    }
   </style>
     <meta name="facebook-domain-verification" content="ogc4geohnqpb6l0r31u95tvwoxab7k" />
    {% if template.name == 'index' %}

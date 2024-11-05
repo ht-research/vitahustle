@@ -38,7 +38,7 @@
     endif
   -%}
   
-  {% if template contains 'new-greens-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %}
+  {% if template contains 'new-greens-strawberry' or template contains 'PDP_image_AB_test' and product.handle=="one-superfood-protein-shake-strawberry" %}
     <style>
       .add_to_cart_strawberry{
         display: none;
@@ -46,7 +46,7 @@
         background-color: rgb(200, 232, 18);
         padding: 2rem 6rem;
         border-radius: 100px;
-        letter-spacing: -0.7px;
+        letter-spacing: 0px;
         border: none;
         font-family: "FK Grotesk Bold";
         text-transform: uppercase;
@@ -55,13 +55,39 @@
         text-align: center;
         cursor: pointer;
         min-height: 5.6rem;
+        border: 1px solid rgb(200, 232, 18);
+
       }
       .add_to_cart_strawberry span{
-      
+        font-family: "FK Grotesk Bold";
+        font-size: calc(1.4rem* 1.15);
+        line-height: calc(22 / 14);
       }
     </style>
   {% endif %}
-  
+  <style>
+    .sticky_mobile_button{
+      z-index: 10;
+      width: 100%;
+      background: rgb(255,255,255);
+      padding: 1.6rem 2.4rem;
+      transition: -webkit-transform .2s ease-in-out, -webkit-transform .2s ease-in-out, transform .2s ease-in-out;
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+    }
+    .sticky_mobile_button[visible]{
+      transform: translateY(0%);
+    }
+    @media screen and (max-width: 1015px) {
+      .sticky_mobile_button{;
+        display: block
+      }
+    }
+  </style> 
+
   {%- if product != blank -%}
      {% if template contains 'new-superfood-greens' %} 
   <div class=""style="display: flex;" >
@@ -113,7 +139,7 @@
   </div>
     {% endif %}
   
-    {% if template contains 'new-greens-strawberry' and product.handle=="one-superfood-protein-shake-strawberry" %}
+    {% if template contains 'new-greens-strawberry' or template contains 'PDP_image_AB_test' and product.handle=="one-superfood-protein-shake-strawberry" %}
       {%- render 'why-subscribe' -%}
     {% endif %}
     <div class="" {{ block.shopify_attributes }}>
@@ -144,6 +170,7 @@
             {% if template.name == 'product' and sectionId contains '---MainSection' %}
               <div>
                 <div class="product-form__btn-wrapper">
+                    {% unless product.handle contains 'vitahustle-one-superfood-protein-single-serve-packs-10' %}
                         <button class="add_to_cart_strawberry"
                             {% if available == false %}
                                 disabled
@@ -157,6 +184,7 @@
                             {%- endif -%}
                           </span>
                         </button>
+                    {% endunless %}
 
                         <button
                         type="submit"
@@ -184,23 +212,25 @@
                 </div>
               </div>
   
-              <product-form-button class="product-form__mobile-sticky-button">
+              <product-form-button class="sticky_mobile_button">
                 <div
                   class="product-form__btn-wrapper product-form__btn-wrapper--sticky-mobile-button"
                 >
-                    <button class="add_to_cart_strawberry sticky"
-                        {% if available == false %}
-                            disabled
-                        {% endif %}
-                    >
-                      <span>
-                        {%- if available -%}
-                          {{ add_to_cart_label }}
-                        {%- else -%}
-                          {{ sold_out_label }}
-                        {%- endif -%}
-                      </span>
-                    </button>
+                    {% unless product.handle contains 'vitahustle-one-superfood-protein-single-serve-packs-10' %}
+                      <button class="add_to_cart_strawberry sticky"
+                          {% if available == false %}
+                              disabled
+                          {% endif %}
+                      >
+                        <span>
+                          {%- if available -%}
+                            {{ add_to_cart_label }}
+                          {%- else -%}
+                            {{ sold_out_label }}
+                          {%- endif -%}
+                        </span>
+                      </button>
+                    {% endunless %}
                   <button
                     type="submit"
                     name="add"
@@ -284,7 +314,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", (event) => {
 
-        $('.modal_popup.upgrade_cart .continue_onetime').on('click', function(){
+        $('.modal_popup.upgrade_cart .continue_onetime,.modal_popup.upgrade_cart .close_box').on('click', function(){
            let variantId = $('.selectedvariant').val();
            let quantity__input = $('.quantity__input').val();
            addTocart(variantId,quantity__input,"onetime");
@@ -308,28 +338,57 @@
         })
         let items = [];
         let plan_type = $('input[name="subscribe"]:checked').val();
-        if(plan_type=="selling_plan"){
-            $('.add_to_cart_strawberry').css("display","none");
-            $('.product-form__btn').css("display", "inline-flex");
-        }
-        else{
-            $('.product-form__btn').css("display", "none");
-            $('.add_to_cart_strawberry').css("display","block");
-        }
+        {% unless product.handle contains 'vitahustle-one-superfood-protein-single-serve-packs-10' %}
+          if(plan_type=="selling_plan"){
+              $('.add_to_cart_strawberry').css("display","none");
+              $('.product-form__btn').css("display", "inline-flex");
+          }
+          else{
+              $('.product-form__btn').css("display", "none");
+              $('.add_to_cart_strawberry').css("display","block");
+          }
+          $('input[name="subscribe"]').on('change',function(){
+            //  console.log("id",$(this).attr('id'))
+              if($(this).attr('id') == 'onetime_item'){
+                  $('.product-form__btn').css("display", "none");
+                  $('.add_to_cart_strawberry').css("display","block");
+              }
+              else{
+                  $('.add_to_cart_strawberry').css("display","none");
+                  $('.product-form__btn').css("display", "inline-flex");
+              }
+          });
+        {% endunless %}
 
-        $('input[name="subscribe"]').on('change',function(){
-            console.log("id",$(this).attr('id'))
-            if($(this).attr('id') == 'onetime_item'){
-                $('.product-form__btn').css("display", "none");
-                $('.add_to_cart_strawberry').css("display","block");
-            }
-            else{
-                $('.add_to_cart_strawberry').css("display","none");
-                $('.product-form__btn').css("display", "inline-flex");
-            }
-        });
         console.log("plan_type",plan_type);
 
+        if($(window).width()<=1015){
+          var button = document.querySelector('.product-form__btn-wrapper');
+          let topPosition = 0
+          if (button) {
+              var rect = button.getBoundingClientRect();
+              topPosition = rect.top + window.scrollY;
+              
+              console.log('The button is', topPosition, 'pixels from the top of the document.');
+          }
+          $(window).on('scroll',function(){
+           let y = $(window).scrollTop();
+           if($(this).scrollTop()>=topPosition+65){
+            $('.sticky_mobile_button').attr('visible','');
+          }
+          else{
+            $('.sticky_mobile_button').removeAttr('visible');
+          }
+           {% comment %} if(y>950){
+             $('.product-form__mobile-sticky-button').attr('visible','');
+           }
+           else{
+             $('.product-form__mobile-sticky-button').removeAttr('visible');
+     
+           } {% endcomment %}
+          })
+        }
+        
         function addTocart(id,qty,purchase_type,selling_planID){
 
             if(purchase_type=="onetime"){
