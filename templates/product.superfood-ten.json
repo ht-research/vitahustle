@@ -1,53 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "4a805cf7-9717-4e0f-8529-4a9d674adfbe": {
       "type": "main-product-superfood-ten",
       "blocks": {
         "77d8802a-0529-462e-9620-5cc58249e9d0": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         },
         "aacec910-594c-4219-ade0-bd3356efadc6": {
           "type": "list-for-starter-kit",
           "settings": {
-            "title": "<p>Free shaker & recipes with first shipment<\/p>"
+            "title": "<p>Free shaker & recipes with first shipment</p>"
           }
         },
         "54439233-c140-41d5-8476-9cdefac1bef5": {
           "type": "list-for-starter-kit",
           "settings": {
-            "title": "<p>Includes 2 bags (30 total servings)<\/p>"
+            "title": "<p>Includes 2 bags (30 total servings)</p>"
           }
         },
         "8582d041-5f71-41fa-96e1-53a796ad21aa": {
           "type": "list-for-starter-kit",
           "settings": {
-            "title": "<p>Free shipping on all orders<\/p>"
+            "title": "<p>Free shipping on all orders</p>"
           }
         },
         "749806f0-a8f1-4073-aa64-98a31531ec34": {
           "type": "list-for-starter-kit",
           "settings": {
-            "title": "<p>No commitments: cancel anytime<\/p>"
+            "title": "<p>No commitments: cancel anytime</p>"
           }
         },
         "0d8889a6-87cb-4b9a-b06a-ee28c5d365f7": {
           "type": "list-for-one-time",
           "settings": {
-            "title": "<p>Each bag is a 15-day supply<\/p>"
+            "title": "<p>Each bag is a 15-day supply</p>"
           }
         },
         "668e6824-1469-4f5a-bcae-837fe61137c1": {
           "type": "list-for-one-time",
           "settings": {
-            "title": "<p>One-time shipment<\/p>"
+            "title": "<p>One-time shipment</p>"
           }
         },
         "71802339-b128-4de6-9ab7-a3b156b0426a": {
           "type": "list-for-one-time",
           "settings": {
-            "title": "<p>No commitment<\/p>"
+            "title": "<p>No commitment</p>"
           }
         },
         "36975efa-ee15-4cf1-a7b2-994dbcc2225a": {
@@ -58,7 +66,7 @@
             "body": "",
             "content_alignment": "center",
             "icon": "none",
-            "custom_icon_image": "shopify:\/\/shop_images\/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
+            "custom_icon_image": "shopify://shop_images/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
             "icon_position": "inline",
             "tag_background_color": "#e9ffcd",
             "tag_text_color": "#141416",
@@ -82,7 +90,7 @@
             "style": "collapsible_row_closed",
             "title": "HOW TO USE",
             "icon": "none",
-            "text": "<p>Add 2 scoops of powder, blend with 8-12 oz. of ice cold water or milk, pour over ice and drink immediately. Can be used as a breakfast shake, meal replacement, pre-or-post workout or snack. Check our our <a href=\"\/blogs\/the-hustle\" target=\"_blank\" title=\"The Hustle\">recipes here.<\/a><\/p>",
+            "text": "<p>Add 2 scoops of powder, blend with 8-12 oz. of ice cold water or milk, pour over ice and drink immediately. Can be used as a breakfast shake, meal replacement, pre-or-post workout or snack. Check our our <a href=\"/blogs/the-hustle\" target=\"_blank\" title=\"The Hustle\">recipes here.</a></p>",
             "page": "",
             "image_width": 60
           }
@@ -93,7 +101,7 @@
             "style": "collapsible_row_closed",
             "title": "SUPPLEMENT FACTS",
             "icon": "none",
-            "text": "<p>Supplement Facts Panel <\/p>",
+            "text": "<p>Supplement Facts Panel </p>",
             "page": "vitahustle-one-supplement-facts-panel",
             "image_width": 60
           }
@@ -104,7 +112,7 @@
             "style": "collapsible_row_closed",
             "title": "INGREDIENTS",
             "icon": "none",
-            "text": "<p>Pea Protein, Quinoa, Mung Bean Protein, Acacia Fiber, Chicory Root Fiber, Lactobacillus acidophilus, Lactobacillus casei, Lactobacillus salivarius, Lactobacillus plantarum, Lactobacillus rhamnosus, Lactobacillus brevis, Bifidobacterium bifidum, Streptococcus thermophilus, Bifidobacterium lactis\/longum, Medium Chain Triglyceride Oil, Organic Golden Flax Seed, Organic White Chia Seed, Organic Apple, Organic Banana, Organic Camu Camu, Organic Lemon, Papaya, Pineapple, Elderberry, Organic Maqui, Organic Acai, Organic Blueberry, Tart Cherry, Organic Pomegranate, Organic Strawberry, Organic Blackberry, Organic Raspberry, Organic Cranberry, Organic Carrot, Organic Cauliflower, Organic Celery Seed, Organic Barley Grass, Organic Wheat Grass, Organic Alfalfa Grass, Organic Kale, Organic Spinach, Organic Broccoli, Organic Beet Root, Organic Kelp, Organic Chlorella, Organic Radish Sprout, Organic Turmeric Root, Organic Spirulina, Organic Ashwagandha Extract (as KSM-66®),<br\/>Organic Cordyceps, Bacopa Monnieri Extract, Organic Rhodiola Rosea Root, Black Pepper (Piper nigrum) Fruit Extract (as Bioperine®), Organic Maca Root, Panax Ginseng Root Extract, Grape Seed Extract, Bamboo Leaf Extract, Organic Ginger Root, Gingko Biloba Leaf, Organic Matcha Green Tea, Organic Fenugreek Seed, Amylases, Protease (I,II,III), Lipase, Lactase, HemiSEB™ (Beta-Glucanase, Xylanase, Pectinase, Phytase), Cellulase, Diastase, Glucoamylase, Invertase, Bromelain, Papain, Peptizyme SP™ (Serrapeptase), Alpha Galactosidase<br\/><\/p>",
+            "text": "<p>Pea Protein, Quinoa, Mung Bean Protein, Acacia Fiber, Chicory Root Fiber, Lactobacillus acidophilus, Lactobacillus casei, Lactobacillus salivarius, Lactobacillus plantarum, Lactobacillus rhamnosus, Lactobacillus brevis, Bifidobacterium bifidum, Streptococcus thermophilus, Bifidobacterium lactis/longum, Medium Chain Triglyceride Oil, Organic Golden Flax Seed, Organic White Chia Seed, Organic Apple, Organic Banana, Organic Camu Camu, Organic Lemon, Papaya, Pineapple, Elderberry, Organic Maqui, Organic Acai, Organic Blueberry, Tart Cherry, Organic Pomegranate, Organic Strawberry, Organic Blackberry, Organic Raspberry, Organic Cranberry, Organic Carrot, Organic Cauliflower, Organic Celery Seed, Organic Barley Grass, Organic Wheat Grass, Organic Alfalfa Grass, Organic Kale, Organic Spinach, Organic Broccoli, Organic Beet Root, Organic Kelp, Organic Chlorella, Organic Radish Sprout, Organic Turmeric Root, Organic Spirulina, Organic Ashwagandha Extract (as KSM-66®),<br/>Organic Cordyceps, Bacopa Monnieri Extract, Organic Rhodiola Rosea Root, Black Pepper (Piper nigrum) Fruit Extract (as Bioperine®), Organic Maca Root, Panax Ginseng Root Extract, Grape Seed Extract, Bamboo Leaf Extract, Organic Ginger Root, Gingko Biloba Leaf, Organic Matcha Green Tea, Organic Fenugreek Seed, Amylases, Protease (I,II,III), Lipase, Lactase, HemiSEB™ (Beta-Glucanase, Xylanase, Pectinase, Phytase), Cellulase, Diastase, Glucoamylase, Invertase, Bromelain, Papain, Peptizyme SP™ (Serrapeptase), Alpha Galactosidase<br/></p>",
             "page": "",
             "image_width": 60
           }
@@ -158,9 +166,8 @@
           }
         },
         "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         },
         "price": {
           "type": "price",
@@ -194,8 +201,7 @@
         },
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -214,7 +220,7 @@
             "button_background_color": "#e9ffcd",
             "button_text_color": "#141416",
             "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
+            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}</p>",
             "tab_1_page": "",
             "tab_2_title": "",
             "tab_2_text": "",
@@ -233,7 +239,7 @@
             "button_background_color": "#e9ffcd",
             "button_text_color": "#141416",
             "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
             "tab_1_page": "",
             "tab_2_title": "",
             "tab_2_text": "",
@@ -252,7 +258,7 @@
             "button_background_color": "#e9ffcd",
             "button_text_color": "#141416",
             "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
+            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}</p>",
             "tab_1_page": "",
             "tab_2_title": "",
             "tab_2_text": "",
@@ -270,7 +276,7 @@
             "body": "",
             "content_alignment": "center",
             "icon": "none",
-            "custom_icon_image": "shopify:\/\/shop_images\/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
+            "custom_icon_image": "shopify://shop_images/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
             "icon_position": "inline",
             "tag_background_color": "#f7f7f7",
             "tag_text_color": "#141416",
@@ -399,9 +405,8 @@
       "type": "apps",
       "blocks": {
         "cb52da39-70ff-4f5c-a05e-cd12e031825b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -425,7 +430,7 @@
         "container_size": "large",
         "section_spacing_top": 48,
         "section_spacing_bottom": 48,
-        "custom_liquid": "<style>\n    \/* CSS for the two-column layout *\/\n\n .custom-accordion {\n     color:black!important;\n    }\n    .custom-container {\n      display: flex;\n      flex-wrap: wrap;\n    }\n\n    .custom-column {\n      flex: 1 0 50%;\n      padding: 20px;\n      box-sizing: border-box;\n\n    }\n\n    \/* CSS for the FAQ accordion *\/\n    .custom-accordion {\n      cursor: pointer;\n      border: none;\n      outline: none;\n      transition: 0.4s;\n      width:100%;\n      text-align: left;\n      padding:10px;\nbackground:white;\nfont-size:18px;\nfont-family:\"FK Grotesk Bold\";\npadding-left:0;\n    }\n\n    .custom-accordion:hover {\n      background-color: #fff;\n    }\n\n    .custom-accordion:after {\n      content: '\\002B';\n      color: #212121;\n      font-weight: bold;\n      float: right;\n      margin-left: 5px;\n      font-size:18px;\n    }\n\n    .custom-active:after {\n      content: \"\\2212\";\n    }\n\n    .custom-panel {\n      padding: 0 18px;\n      background-color: white;\n      display: none;\n      overflow: hidden;\nfont-size:14px;\npadding-left:0;\n    }\n\n    \/* CSS for the centered image *\/\n    .custom-image-container {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      height: 100%;\n    }\n\n    .custom-image-container img {\n      max-width: 100%;\n      max-height: 100%;\n    }\n  <\/style>\n\n<div class=\"custom-container\">\n    <div class=\"custom-column\">\n      <h2 class=\"h1\">ZERO ADDED SUGAR. 100% DELICIOUS<\/h2>\n<p>Reboot your health and wellness journey with just one serving a day of:<\/p>\n\n      <button class=\"custom-accordion\">Superfood Fruits & Veggies<\/button>\n      <div class=\"custom-panel\">\n        <p>15 alkalizing greens, including kale, wheat grass, and chlorella PLUS 16 antioxidant-rich super fruits, including maqui berry, tart cherry, pomegranate and camu camu.<\/p>\n      <\/div>\n\n      <button class=\"custom-accordion\">20g Vegan Protein<\/button>\n      <div class=\"custom-panel\">\n        <p>20g of hunger-satisfying protein to fuel your day, using a high-quality plant-based blend of pea protein, quinoa, and mung bean protein.<\/p>\n      <\/div>\n\n <button class=\"custom-accordion\">2B CFU Probiotic \/ Prebiotic<\/button>\n      <div class=\"custom-panel\">\n        <p>Support a healthy gut and digestive system with 2 billion CFU from 9 strains of Lactobacilli and Bifidobacteria probiotics, as well as prebiotic fiber.<\/p>\n      <\/div>\n\n<button class=\"custom-accordion\">Clinically Tested Adaptogens<\/button>\n      <div class=\"custom-panel\">\n        <p>\nSupport memory and cognition, sexual wellness, and a healthy response to stress with clinically studied adaptogens like ashwagandha extract, rhodiola and bacopa.<\/p>\n      <\/div>\n    <\/div>\n\n    <div class=\"custom-column\">\n      <div class=\"custom-image-container\">\n        <img style=\"border-radius:20px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0133\/3562\/5792\/files\/afd0d9b713f683c70153c59e6aaec0f7.png?v=1688060747&width=960\" alt=\"Image\">\n      <\/div>\n    <\/div>\n  <\/div>\n\n<script>\n    \/\/ JavaScript for the FAQ accordion\n    var accordions = document.getElementsByClassName(\"custom-accordion\");\n    for (var i = 0; i < accordions.length; i++) {\n      accordions[i].addEventListener(\"click\", function() {\n        this.classList.toggle(\"custom-active\");\n        var panel = this.nextElementSibling;\n        if (panel.style.display === \"block\") {\n          panel.style.display = \"none\";\n        } else {\n          panel.style.display = \"block\";\n        }\n      });\n    }\n  <\/script>"
+        "custom_liquid": "<style>\n    /* CSS for the two-column layout */\n\n .custom-accordion {\n     color:black!important;\n    }\n    .custom-container {\n      display: flex;\n      flex-wrap: wrap;\n    }\n\n    .custom-column {\n      flex: 1 0 50%;\n      padding: 20px;\n      box-sizing: border-box;\n\n    }\n\n    /* CSS for the FAQ accordion */\n    .custom-accordion {\n      cursor: pointer;\n      border: none;\n      outline: none;\n      transition: 0.4s;\n      width:100%;\n      text-align: left;\n      padding:10px;\nbackground:white;\nfont-size:18px;\nfont-family:\"FK Grotesk Bold\";\npadding-left:0;\n    }\n\n    .custom-accordion:hover {\n      background-color: #fff;\n    }\n\n    .custom-accordion:after {\n      content: '\\002B';\n      color: #212121;\n      font-weight: bold;\n      float: right;\n      margin-left: 5px;\n      font-size:18px;\n    }\n\n    .custom-active:after {\n      content: \"\\2212\";\n    }\n\n    .custom-panel {\n      padding: 0 18px;\n      background-color: white;\n      display: none;\n      overflow: hidden;\nfont-size:14px;\npadding-left:0;\n    }\n\n    /* CSS for the centered image */\n    .custom-image-container {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      height: 100%;\n    }\n\n    .custom-image-container img {\n      max-width: 100%;\n      max-height: 100%;\n    }\n  </style>\n\n<div class=\"custom-container\">\n    <div class=\"custom-column\">\n      <h2 class=\"h1\">ZERO ADDED SUGAR. 100% DELICIOUS</h2>\n<p>Reboot your health and wellness journey with just one serving a day of:</p>\n\n      <button class=\"custom-accordion\">Superfood Fruits & Veggies</button>\n      <div class=\"custom-panel\">\n        <p>15 alkalizing greens, including kale, wheat grass, and chlorella PLUS 16 antioxidant-rich super fruits, including maqui berry, tart cherry, pomegranate and camu camu.</p>\n      </div>\n\n      <button class=\"custom-accordion\">20g Vegan Protein</button>\n      <div class=\"custom-panel\">\n        <p>20g of hunger-satisfying protein to fuel your day, using a high-quality plant-based blend of pea protein, quinoa, and mung bean protein.</p>\n      </div>\n\n <button class=\"custom-accordion\">2B CFU Probiotic / Prebiotic</button>\n      <div class=\"custom-panel\">\n        <p>Support a healthy gut and digestive system with 2 billion CFU from 9 strains of Lactobacilli and Bifidobacteria probiotics, as well as prebiotic fiber.</p>\n      </div>\n\n<button class=\"custom-accordion\">Clinically Tested Adaptogens</button>\n      <div class=\"custom-panel\">\n        <p>\nSupport memory and cognition, sexual wellness, and a healthy response to stress with clinically studied adaptogens like ashwagandha extract, rhodiola and bacopa.</p>\n      </div>\n    </div>\n\n    <div class=\"custom-column\">\n      <div class=\"custom-image-container\">\n        <img style=\"border-radius:20px\" src=\"https://cdn.shopify.com/s/files/1/0133/3562/5792/files/afd0d9b713f683c70153c59e6aaec0f7.png?v=1688060747&width=960\" alt=\"Image\">\n      </div>\n    </div>\n  </div>\n\n<script>\n    // JavaScript for the FAQ accordion\n    var accordions = document.getElementsByClassName(\"custom-accordion\");\n    for (var i = 0; i < accordions.length; i++) {\n      accordions[i].addEventListener(\"click\", function() {\n        this.classList.toggle(\"custom-active\");\n        var panel = this.nextElementSibling;\n        if (panel.style.display === \"block\") {\n          panel.style.display = \"none\";\n        } else {\n          panel.style.display = \"block\";\n        }\n      });\n    }\n  </script>"
       }
     },
     "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0": {
@@ -435,7 +440,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/soy_free.svg",
+            "custom_icon_image": "shopify://shop_images/soy_free.svg",
             "icon_size": 64,
             "title": "Soy Free",
             "text": "",
@@ -447,7 +452,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/dairy_free.svg",
+            "custom_icon_image": "shopify://shop_images/dairy_free.svg",
             "icon_size": 64,
             "title": "Dairy Free",
             "text": "",
@@ -459,7 +464,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/gluten_free.svg",
+            "custom_icon_image": "shopify://shop_images/gluten_free.svg",
             "icon_size": 64,
             "title": "Gluten Free",
             "text": "",
@@ -471,7 +476,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/non_gmo.svg",
+            "custom_icon_image": "shopify://shop_images/non_gmo.svg",
             "icon_size": 64,
             "title": "Non GMO",
             "text": "",
@@ -483,7 +488,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/no_artificial_ingredients.svg",
+            "custom_icon_image": "shopify://shop_images/no_artificial_ingredients.svg",
             "icon_size": 64,
             "title": "No Artificial Ingredients",
             "text": "",
@@ -495,7 +500,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/no_fillers.svg",
+            "custom_icon_image": "shopify://shop_images/no_fillers.svg",
             "icon_size": 64,
             "title": "No Fillers",
             "text": "",
@@ -547,7 +552,7 @@
         "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png"
+            "image": "shopify://shop_images/afd0d9b713f683c70153c59e6aaec0f7.png"
           }
         }
       },
@@ -575,13 +580,13 @@
         "icon": "none",
         "subheading": "",
         "heading": "ZERO ADDED SUGAR. 100% DELICIOUS.",
-        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
+        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. </p>",
         "heading_size": "h1",
         "body_size": "body3",
         "content_alignment": "left",
         "desktop_content_width": 480,
         "first_button_text": "LEARN MORE",
-        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_link": "shopify://pages/about-old-2022-backup",
         "first_button_style": "solid",
         "second_button_text": "",
         "second_button_link": "",
@@ -602,9 +607,7 @@
         "alignment": "center",
         "product_recommendations_type": "auto",
         "featured_collection": "",
-        "featured_products": [
-
-        ],
+        "featured_products": [],
         "img_ratio": "portrait",
         "product_card_align": "center",
         "cards_to_show": 18,
@@ -626,7 +629,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/DSCF1772.png",
+            "image": "shopify://shop_images/DSCF1772.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Shop All",
@@ -634,7 +637,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "content_position": "bottom-left"
           }
         },
@@ -644,7 +647,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/recipes_2.png",
+            "image": "shopify://shop_images/recipes_2.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Recipes",
@@ -652,7 +655,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/blogs\/the-hustle",
+            "link": "shopify://blogs/the-hustle",
             "content_position": "bottom-left"
           }
         },
@@ -662,7 +665,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/clean_ingredients.png",
+            "image": "shopify://shop_images/clean_ingredients.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Clean Ingredients",
@@ -670,7 +673,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/superfood-ingredients",
+            "link": "shopify://pages/superfood-ingredients",
             "content_position": "bottom-left"
           }
         },
@@ -680,7 +683,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/reviews_2.png",
+            "image": "shopify://shop_images/reviews_2.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Reviews",
@@ -688,7 +691,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/vitahustle-reviews",
+            "link": "shopify://pages/vitahustle-reviews",
             "content_position": "bottom-left"
           }
         }
@@ -790,12 +793,12 @@
         "section_spacing_bottom": 0,
         "desktop_height": 480,
         "mobile_height": 600,
-        "desktop_img": "shopify:\/\/shop_images\/02-_Option2-GIF_-_R2_1a762390-6458-4c6c-9eed-d41d1df4279c.jpg",
+        "desktop_img": "shopify://shop_images/02-_Option2-GIF_-_R2_1a762390-6458-4c6c-9eed-d41d1df4279c.jpg",
         "desktop_overlay_opacity": 20,
         "mobile_overlay_opacity": 20,
         "caption": "RISK FREE",
         "title": "60-DAY GUARANTEE",
-        "text": "<p>If for any reason VitaHustle ONE is not for you, simply return the bag for a full refund less shipping & handling fees.<\/p>",
+        "text": "<p>If for any reason VitaHustle ONE is not for you, simply return the bag for a full refund less shipping & handling fees.</p>",
         "heading_size": "h1",
         "body_size": "body3",
         "desktop_content_position": "align-items:center;justify-content:center;",

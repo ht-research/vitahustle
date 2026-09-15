@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "page": {
@@ -55,13 +64,11 @@
         },
         "subscription_widget_xJhk8P": {
           "type": "subscription_widget",
-          "settings": {
-          }
+          "settings": {}
         },
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -85,7 +92,7 @@
             "body": "",
             "content_alignment": "center",
             "icon": "none",
-            "custom_icon_image": "shopify:\/\/shop_images\/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
+            "custom_icon_image": "shopify://shop_images/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
             "icon_position": "inline",
             "tag_background_color": "#f7f7f7",
             "tag_text_color": "#141416",
@@ -101,7 +108,7 @@
             "style": "collapsible_row_closed",
             "title": "HOW TO USE",
             "icon": "none",
-            "text": "<p>{{ section.settings.single_serve_product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "text": "<p>{{ section.settings.single_serve_product.metafields.custom.how_to_use | metafield_tag }}</p>",
             "page": "",
             "image_width": 60
           }
@@ -112,7 +119,7 @@
             "style": "collapsible_row_closed",
             "title": "INGREDIENTS",
             "icon": "none",
-            "text": "<p>{{ section.settings.single_serve_product.metafields.custom.ingredients | metafield_tag }}<\/p>",
+            "text": "<p>{{ section.settings.single_serve_product.metafields.custom.ingredients | metafield_tag }}</p>",
             "page": "",
             "image_width": 60
           }
@@ -135,7 +142,7 @@
             "style": "collapsible_row_closed",
             "title": "BENEFITS",
             "icon": "none",
-            "text": "<p>{{ section.settings.single_serve_product.metafields.custom.benefits | metafield_tag }}<\/p>",
+            "text": "<p>{{ section.settings.single_serve_product.metafields.custom.benefits | metafield_tag }}</p>",
             "page": "",
             "image_width": 60
           }
@@ -272,110 +279,110 @@
         "176a989d-ffb8-4524-ae12-49b4d634c6a8": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/ANDREW_LISCIO.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
+            "thumbnail_image": "shopify://shop_images/ANDREW_LISCIO.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
           }
         },
         "29b22d82-c946-4966-af21-046a886c8ae6": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/BEN_HO.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cd0dba5beec04092ba712f45bba8aa1a.mp4"
+            "thumbnail_image": "shopify://shop_images/BEN_HO.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/cd0dba5beec04092ba712f45bba8aa1a.mp4"
           }
         },
         "589a1982-73c9-4086-97c1-1120eb8069d4": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/BRITTANY_WOODCOX.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e301b71b26d74dea980f3457ce5e6db2.mp4"
+            "thumbnail_image": "shopify://shop_images/BRITTANY_WOODCOX.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/e301b71b26d74dea980f3457ce5e6db2.mp4"
           }
         },
         "66c7ecd7-bb0b-40b1-8a59-4d30c0666728": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/GLORIA_GARAYUA_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f5cabf0584f94b51b61580789c4cff3f.mp4"
+            "thumbnail_image": "shopify://shop_images/GLORIA_GARAYUA_001.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/f5cabf0584f94b51b61580789c4cff3f.mp4"
           }
         },
         "c49ff97e-cd38-47f0-8dcc-810327899465": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/JESS_WEBER_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/59417e6e97e3421fb7d1b06564f241a1.mp4"
+            "thumbnail_image": "shopify://shop_images/JESS_WEBER_002.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/59417e6e97e3421fb7d1b06564f241a1.mp4"
           }
         },
         "cb2e5d5a-1cae-4240-b4c5-c53a187c9751": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/JONI_BOVILL_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8a428787c9f84392bee52882876364ff.mp4"
+            "thumbnail_image": "shopify://shop_images/JONI_BOVILL_002.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/8a428787c9f84392bee52882876364ff.mp4"
           }
         },
         "4480c349-fb73-488e-bc6f-c236d2a85057": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/JUSTIN_SANDLER_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a6007d9e679c4e529b28cc46abd352d7.mp4"
+            "thumbnail_image": "shopify://shop_images/JUSTIN_SANDLER_001.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/a6007d9e679c4e529b28cc46abd352d7.mp4"
           }
         },
         "e73d9beb-4a4f-47c2-8c26-a575b2891100": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/KATIE_DUPIN-2.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/337ad2ea9fc047abb74ccb3eb668d484.mp4"
+            "thumbnail_image": "shopify://shop_images/KATIE_DUPIN-2.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/337ad2ea9fc047abb74ccb3eb668d484.mp4"
           }
         },
         "744bed83-c84f-4350-ad33-397cdb62ad1e": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/KEESA_FORD_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0c7c8058fed746659aebbaf9199f30b2.mp4"
+            "thumbnail_image": "shopify://shop_images/KEESA_FORD_001.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/0c7c8058fed746659aebbaf9199f30b2.mp4"
           }
         },
         "a0f1ca5d-0f2e-433e-83d5-525e480346c5": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/KINYUMBA_MUTAKABIR_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af8a3916815947ef9f8d34f84671fda5.mp4"
+            "thumbnail_image": "shopify://shop_images/KINYUMBA_MUTAKABIR_002.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/af8a3916815947ef9f8d34f84671fda5.mp4"
           }
         },
         "ce9a8ae7-22af-46f9-9d0c-57dd7184fa18": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/MELISSA_ARDON.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c87e435462724016a9acb2ebda611d7c.mp4"
+            "thumbnail_image": "shopify://shop_images/MELISSA_ARDON.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/c87e435462724016a9acb2ebda611d7c.mp4"
           }
         },
         "08df336b-1475-40f7-b374-8c909ffc03d3": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/OLIVIA_KAPLAN_004.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4a81af1a7d694f89ae9cce69a9775974.mp4"
+            "thumbnail_image": "shopify://shop_images/OLIVIA_KAPLAN_004.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/4a81af1a7d694f89ae9cce69a9775974.mp4"
           }
         },
         "c7acc696-ad84-42f2-b72d-cf4ab9c929d7": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/PALM_SURICHANYA_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9cd77643acba49609fa6feb3798d562e.mp4"
+            "thumbnail_image": "shopify://shop_images/PALM_SURICHANYA_001.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/9cd77643acba49609fa6feb3798d562e.mp4"
           }
         },
         "f2ab0b7e-48b9-4f75-9702-a18960a72b11": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/PAUL_DUFF_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/62de7359b4d04fa69e0754b4d0cb9326.mp4"
+            "thumbnail_image": "shopify://shop_images/PAUL_DUFF_002.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/62de7359b4d04fa69e0754b4d0cb9326.mp4"
           }
         },
         "5d3a73d3-e168-4189-bc0e-e95287473236": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/STEVE_DUPIN.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/de358ce7905c40ee8e112c6240c815b2.mp4"
+            "thumbnail_image": "shopify://shop_images/STEVE_DUPIN.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/de358ce7905c40ee8e112c6240c815b2.mp4"
           }
         },
         "judge_me_reviews_review_widget_homepage_a3yzDb": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "product": "one-superfood-protein-shake-strawberry"
           }
@@ -399,8 +406,7 @@
         "5d3a73d3-e168-4189-bc0e-e95287473236",
         "judge_me_reviews_review_widget_homepage_a3yzDb"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "c3c7b30f-5854-42d7-96d6-0f6fc96f0aa0": {
       "type": "multicolumn",
@@ -409,7 +415,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/soy_free.svg",
+            "custom_icon_image": "shopify://shop_images/soy_free.svg",
             "icon_size": 64,
             "title": "Soy Free",
             "text": "",
@@ -421,7 +427,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/dairy_free.svg",
+            "custom_icon_image": "shopify://shop_images/dairy_free.svg",
             "icon_size": 64,
             "title": "Dairy Free",
             "text": "",
@@ -433,7 +439,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/gluten_free.svg",
+            "custom_icon_image": "shopify://shop_images/gluten_free.svg",
             "icon_size": 64,
             "title": "Gluten Free",
             "text": "",
@@ -445,7 +451,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/non_gmo.svg",
+            "custom_icon_image": "shopify://shop_images/non_gmo.svg",
             "icon_size": 64,
             "title": "Non GMO",
             "text": "",
@@ -457,7 +463,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/no_artificial_ingredients.svg",
+            "custom_icon_image": "shopify://shop_images/no_artificial_ingredients.svg",
             "icon_size": 64,
             "title": "No Artificial Ingredients",
             "text": "",
@@ -469,7 +475,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/no_fillers.svg",
+            "custom_icon_image": "shopify://shop_images/no_fillers.svg",
             "icon_size": 64,
             "title": "No Fillers",
             "text": "",
@@ -522,7 +528,7 @@
         "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png"
+            "image": "shopify://shop_images/afd0d9b713f683c70153c59e6aaec0f7.png"
           }
         }
       },
@@ -550,13 +556,13 @@
         "icon": "none",
         "subheading": "",
         "heading": "ZERO ADDED SUGAR. 100% DELICIOUS.",
-        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
+        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. </p>",
         "heading_size": "h1",
         "body_size": "body3",
         "content_alignment": "left",
         "desktop_content_width": 480,
         "first_button_text": "LEARN MORE",
-        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_link": "shopify://pages/about-old-2022-backup",
         "first_button_style": "solid",
         "second_button_text": "",
         "second_button_link": "",
@@ -577,9 +583,7 @@
         "alignment": "center",
         "product_recommendations_type": "auto",
         "featured_collection": "",
-        "featured_products": [
-
-        ],
+        "featured_products": [],
         "img_ratio": "portrait",
         "product_card_align": "center",
         "cards_to_show": 18,
@@ -601,7 +605,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/DSCF1772.png",
+            "image": "shopify://shop_images/DSCF1772.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Shop All",
@@ -609,7 +613,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "content_position": "bottom-left"
           }
         },
@@ -619,7 +623,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/recipes_2.png",
+            "image": "shopify://shop_images/recipes_2.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Recipes",
@@ -627,7 +631,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/blogs\/the-hustle",
+            "link": "shopify://blogs/the-hustle",
             "content_position": "bottom-left"
           }
         },
@@ -637,7 +641,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/clean_ingredients.png",
+            "image": "shopify://shop_images/clean_ingredients.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Clean Ingredients",
@@ -645,7 +649,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/superfood-ingredients",
+            "link": "shopify://pages/superfood-ingredients",
             "content_position": "bottom-left"
           }
         },
@@ -655,7 +659,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/reviews_2.png",
+            "image": "shopify://shop_images/reviews_2.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Reviews",
@@ -663,7 +667,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/vitahustle-reviews",
+            "link": "shopify://pages/vitahustle-reviews",
             "content_position": "bottom-left"
           }
         }
@@ -708,13 +712,13 @@
         "section_spacing_bottom": 0,
         "desktop_height": 480,
         "mobile_height": 600,
-        "desktop_img": "shopify:\/\/shop_images\/riskfree-image-desktop.jpg",
-        "mobile_img": "shopify:\/\/shop_images\/risk-free-image-mobile.jpg",
+        "desktop_img": "shopify://shop_images/riskfree-image-desktop.jpg",
+        "mobile_img": "shopify://shop_images/risk-free-image-mobile.jpg",
         "desktop_overlay_opacity": 40,
         "mobile_overlay_opacity": 50,
         "caption": "RISK FREE",
         "title": "60-DAY GUARANTEE",
-        "text": "<p>If for any reason VitaHustle ONE is not for you,<br\/>simply return the bag for a full refund less shipping<br\/>& handling fees.<\/p>",
+        "text": "<p>If for any reason VitaHustle ONE is not for you,<br/>simply return the bag for a full refund less shipping<br/>& handling fees.</p>",
         "heading_size": "h1",
         "body_size": "body3",
         "desktop_content_position": "align-items:center;justify-content:center;",
@@ -726,7 +730,7 @@
         "desktop_content_background": "none",
         "mobile_content_background": "none",
         "btn_text": "Get Started",
-        "btn_url": "shopify:\/\/products\/starter-kit-1",
+        "btn_url": "shopify://products/starter-kit-1",
         "btn_style": "solid",
         "extra_btn_text": "",
         "extra_btn_url": "",

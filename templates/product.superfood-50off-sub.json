@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "b50b4a7d-7333-44ee-89b6-d888375536cf": {
@@ -12,7 +21,7 @@
         "8b35f34f-19da-4b33-b07d-d8b8c6098984": {
           "type": "subscription_benefits",
           "settings": {
-            "benefit": "20% OFF all future orders ($39.95\/bag)"
+            "benefit": "20% OFF all future orders ($39.95/bag)"
           }
         },
         "4278fc5f-4844-4255-81cc-542b5f081362": {
@@ -81,112 +90,111 @@
         "176a989d-ffb8-4524-ae12-49b4d634c6a8": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/ANDREW_LISCIO.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
+            "thumbnail_image": "shopify://shop_images/ANDREW_LISCIO.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/b18fd9e8df2e4dddb2fe9ac0fd113c86.mp4"
           }
         },
         "29b22d82-c946-4966-af21-046a886c8ae6": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/BEN_HO.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cd0dba5beec04092ba712f45bba8aa1a.mp4"
+            "thumbnail_image": "shopify://shop_images/BEN_HO.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/cd0dba5beec04092ba712f45bba8aa1a.mp4"
           }
         },
         "589a1982-73c9-4086-97c1-1120eb8069d4": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/BRITTANY_WOODCOX.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e301b71b26d74dea980f3457ce5e6db2.mp4"
+            "thumbnail_image": "shopify://shop_images/BRITTANY_WOODCOX.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/e301b71b26d74dea980f3457ce5e6db2.mp4"
           }
         },
         "66c7ecd7-bb0b-40b1-8a59-4d30c0666728": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/GLORIA_GARAYUA_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f5cabf0584f94b51b61580789c4cff3f.mp4"
+            "thumbnail_image": "shopify://shop_images/GLORIA_GARAYUA_001.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/f5cabf0584f94b51b61580789c4cff3f.mp4"
           }
         },
         "c49ff97e-cd38-47f0-8dcc-810327899465": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/JESS_WEBER_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/59417e6e97e3421fb7d1b06564f241a1.mp4"
+            "thumbnail_image": "shopify://shop_images/JESS_WEBER_002.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/59417e6e97e3421fb7d1b06564f241a1.mp4"
           }
         },
         "cb2e5d5a-1cae-4240-b4c5-c53a187c9751": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/JONI_BOVILL_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8a428787c9f84392bee52882876364ff.mp4"
+            "thumbnail_image": "shopify://shop_images/JONI_BOVILL_002.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/8a428787c9f84392bee52882876364ff.mp4"
           }
         },
         "4480c349-fb73-488e-bc6f-c236d2a85057": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/JUSTIN_SANDLER_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a6007d9e679c4e529b28cc46abd352d7.mp4"
+            "thumbnail_image": "shopify://shop_images/JUSTIN_SANDLER_001.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/a6007d9e679c4e529b28cc46abd352d7.mp4"
           }
         },
         "e73d9beb-4a4f-47c2-8c26-a575b2891100": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/KATIE_DUPIN-2.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/337ad2ea9fc047abb74ccb3eb668d484.mp4"
+            "thumbnail_image": "shopify://shop_images/KATIE_DUPIN-2.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/337ad2ea9fc047abb74ccb3eb668d484.mp4"
           }
         },
         "744bed83-c84f-4350-ad33-397cdb62ad1e": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/KEESA_FORD_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0c7c8058fed746659aebbaf9199f30b2.mp4"
+            "thumbnail_image": "shopify://shop_images/KEESA_FORD_001.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/0c7c8058fed746659aebbaf9199f30b2.mp4"
           }
         },
         "a0f1ca5d-0f2e-433e-83d5-525e480346c5": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/KINYUMBA_MUTAKABIR_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af8a3916815947ef9f8d34f84671fda5.mp4"
+            "thumbnail_image": "shopify://shop_images/KINYUMBA_MUTAKABIR_002.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/af8a3916815947ef9f8d34f84671fda5.mp4"
           }
         },
         "ce9a8ae7-22af-46f9-9d0c-57dd7184fa18": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/MELISSA_ARDON.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c87e435462724016a9acb2ebda611d7c.mp4"
+            "thumbnail_image": "shopify://shop_images/MELISSA_ARDON.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/c87e435462724016a9acb2ebda611d7c.mp4"
           }
         },
         "08df336b-1475-40f7-b374-8c909ffc03d3": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/OLIVIA_KAPLAN_004.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4a81af1a7d694f89ae9cce69a9775974.mp4"
+            "thumbnail_image": "shopify://shop_images/OLIVIA_KAPLAN_004.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/4a81af1a7d694f89ae9cce69a9775974.mp4"
           }
         },
         "c7acc696-ad84-42f2-b72d-cf4ab9c929d7": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/PALM_SURICHANYA_001.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9cd77643acba49609fa6feb3798d562e.mp4"
+            "thumbnail_image": "shopify://shop_images/PALM_SURICHANYA_001.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/9cd77643acba49609fa6feb3798d562e.mp4"
           }
         },
         "f2ab0b7e-48b9-4f75-9702-a18960a72b11": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/PAUL_DUFF_002.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/62de7359b4d04fa69e0754b4d0cb9326.mp4"
+            "thumbnail_image": "shopify://shop_images/PAUL_DUFF_002.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/62de7359b4d04fa69e0754b4d0cb9326.mp4"
           }
         },
         "5d3a73d3-e168-4189-bc0e-e95287473236": {
           "type": "testimonial_box",
           "settings": {
-            "thumbnail_image": "shopify:\/\/shop_images\/STEVE_DUPIN.jpg",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/de358ce7905c40ee8e112c6240c815b2.mp4"
+            "thumbnail_image": "shopify://shop_images/STEVE_DUPIN.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/de358ce7905c40ee8e112c6240c815b2.mp4"
           }
         },
         "4d0555c6-5a62-4d2e-b344-14be49ac2fbc": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -207,8 +215,7 @@
         "5d3a73d3-e168-4189-bc0e-e95287473236",
         "4d0555c6-5a62-4d2e-b344-14be49ac2fbc"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "2fcd5b9f-ab41-41d4-a671-3ec3e5aaead6": {
       "type": "all-ingredients",
@@ -216,154 +223,154 @@
         "5fb1b568-75de-4cb7-82b5-ea4204b1e306": {
           "type": "superfood_greens",
           "settings": {
-            "ingredient_image1": "shopify:\/\/shop_images\/VHE1C7_1.png",
+            "ingredient_image1": "shopify://shop_images/VHE1C7_1.png",
             "name1": "ORGANIC KALE"
           }
         },
         "32752f03-a544-4878-a8ab-c468ed452b64": {
           "type": "superfood_greens",
           "settings": {
-            "ingredient_image1": "shopify:\/\/shop_images\/VHST_L_1_3.png",
+            "ingredient_image1": "shopify://shop_images/VHST_L_1_3.png",
             "name1": "ORGANIC SPINACH"
           }
         },
         "c19bd822-c9fc-45e3-b531-c99f453ebe49": {
           "type": "superfood_greens",
           "settings": {
-            "ingredient_image1": "shopify:\/\/shop_images\/VH6529_1.png",
+            "ingredient_image1": "shopify://shop_images/VH6529_1.png",
             "name1": "ORGANIC BROCCOLI"
           }
         },
         "02198a55-fd10-44ad-a2d0-79e3d73b837b": {
           "type": "superfood_greens",
           "settings": {
-            "ingredient_image1": "shopify:\/\/shop_images\/VHD2BE_1.png",
+            "ingredient_image1": "shopify://shop_images/VHD2BE_1.png",
             "name1": "ORGANIC BEET ROOT"
           }
         },
         "e7ce461e-e564-47e8-be19-7435d47e1ca9": {
           "type": "superfood_greens",
           "settings": {
-            "ingredient_image1": "shopify:\/\/shop_images\/VHST_L_2_3.png",
+            "ingredient_image1": "shopify://shop_images/VHST_L_2_3.png",
             "name1": "ORGANIC CAULIFLOWER"
           }
         },
         "d2eb0d2b-0e22-4403-b5f8-03ac9ed44aff": {
           "type": "superfood_greens",
           "settings": {
-            "ingredient_image1": "shopify:\/\/shop_images\/VHCF75_1.png",
+            "ingredient_image1": "shopify://shop_images/VHCF75_1.png",
             "name1": "ORGANIC BARLEY GRASS"
           }
         },
         "87983cd7-00dd-42de-add0-2212c0e0b254": {
           "type": "superfood_greens",
           "settings": {
-            "ingredient_image1": "shopify:\/\/shop_images\/VHE2DB_1.png",
+            "ingredient_image1": "shopify://shop_images/VHE2DB_1.png",
             "name1": "ORGANIC TURMERIC ROOT"
           }
         },
         "6282d446-68b4-4d27-ae07-93c300844392": {
           "type": "Superfood_fruits",
           "settings": {
-            "ingredient_image2": "shopify:\/\/shop_images\/VHA788_1.png",
+            "ingredient_image2": "shopify://shop_images/VHA788_1.png",
             "name2": "ORGANIC POMEGRANATE"
           }
         },
         "5bba7bf6-95dd-4c13-a7ab-bf55832b55d8": {
           "type": "Superfood_fruits",
           "settings": {
-            "ingredient_image2": "shopify:\/\/shop_images\/VH8837_1.png",
+            "ingredient_image2": "shopify://shop_images/VH8837_1.png",
             "name2": "ORGANIC ACAI"
           }
         },
         "154002a2-01f9-4712-81f4-1a879516b8f1": {
           "type": "Superfood_fruits",
           "settings": {
-            "ingredient_image2": "shopify:\/\/shop_images\/VH4679_1.png",
+            "ingredient_image2": "shopify://shop_images/VH4679_1.png",
             "name2": "TART CHERRY"
           }
         },
         "57c62444-1816-49a6-9023-fdc226a3ffeb": {
           "type": "Superfood_fruits",
           "settings": {
-            "ingredient_image2": "shopify:\/\/shop_images\/VH3075_1.png",
+            "ingredient_image2": "shopify://shop_images/VH3075_1.png",
             "name2": "ORGANIC STRAWBERRY"
           }
         },
         "119e801c-5a69-4c91-afaa-53243537fa07": {
           "type": "Superfood_fruits",
           "settings": {
-            "ingredient_image2": "shopify:\/\/shop_images\/VHST_L_2_4.png",
+            "ingredient_image2": "shopify://shop_images/VHST_L_2_4.png",
             "name2": "ORGANIC BLACKBERRY"
           }
         },
         "a2672959-bfd4-4327-9d34-a2548eab15a1": {
           "type": "Superfood_fruits",
           "settings": {
-            "ingredient_image2": "shopify:\/\/shop_images\/VHST_L_4_4.png",
+            "ingredient_image2": "shopify://shop_images/VHST_L_4_4.png",
             "name2": "ORGANIC CRANBERRY"
           }
         },
         "b557220a-e297-4c66-a9e9-2630b6f78936": {
           "type": "Superfood_fruits",
           "settings": {
-            "ingredient_image2": "shopify:\/\/shop_images\/VH6EB9_1.png",
+            "ingredient_image2": "shopify://shop_images/VH6EB9_1.png",
             "name2": "ORGANIC BANANA"
           }
         },
         "8e8dee6b-2f7f-4bb6-a1a5-0a7d4b103648": {
           "type": "Superfood_fruits",
           "settings": {
-            "ingredient_image2": "shopify:\/\/shop_images\/VHC3F5_1.png",
+            "ingredient_image2": "shopify://shop_images/VHC3F5_1.png",
             "name2": "ORGANIC APPLE"
           }
         },
         "a3b4d46c-0a9f-4661-8da9-7ec78c009325": {
           "type": "Superfood_fruits",
           "settings": {
-            "ingredient_image2": "shopify:\/\/shop_images\/VHST_L_3.png",
+            "ingredient_image2": "shopify://shop_images/VHST_L_3.png",
             "name2": "ASHWAGANDHA"
           }
         },
         "34d24afd-ed00-4a40-a9a0-501bc3da61c3": {
           "type": "Superfood_energy",
           "settings": {
-            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_3_2.png",
+            "ingredient_image3": "shopify://shop_images/VHST_L_3_2.png",
             "name3": "DIGESTIVE ENZYMES"
           }
         },
         "36ec19d9-e41b-4000-95f4-1c97c0157726": {
           "type": "Superfood_energy",
           "settings": {
-            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_2.png",
+            "ingredient_image3": "shopify://shop_images/VHST_L_2.png",
             "name3": "ORGANIC CORDYCEPS"
           }
         },
         "cf27b2a2-203f-4ff5-85a4-1fc90e7f3172": {
           "type": "Superfood_energy",
           "settings": {
-            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_1_1.png",
+            "ingredient_image3": "shopify://shop_images/VHST_L_1_1.png",
             "name3": "ORGANIC GINGER ROOT"
           }
         },
         "d0004bd0-15e3-4bf3-87f3-429a9852084e": {
           "type": "Superfood_energy",
           "settings": {
-            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_1_2.png",
+            "ingredient_image3": "shopify://shop_images/VHST_L_1_2.png",
             "name3": "PREBIOTIC FIBER"
           }
         },
         "d9f243ec-a246-452a-bdab-a4f683ba3184": {
           "type": "Superfood_energy",
           "settings": {
-            "ingredient_image3": "shopify:\/\/shop_images\/VHST_L_4_2.png",
+            "ingredient_image3": "shopify://shop_images/VHST_L_4_2.png",
             "name3": "PROBIOTIC BLEND"
           }
         },
         "798cc835-20f3-4ca4-8de2-862e3a98f4c9": {
           "type": "Superfood_energy",
           "settings": {
-            "ingredient_image3": "shopify:\/\/shop_images\/VH2920_1.png",
+            "ingredient_image3": "shopify://shop_images/VH2920_1.png",
             "name3": "ORGANIC MACA ROOT"
           }
         }
@@ -393,8 +400,8 @@
         "798cc835-20f3-4ca4-8de2-862e3a98f4c9"
       ],
       "settings": {
-        "title": "Powered by Nature’s <span>Healthiest Superfoods<\/span>",
-        "subtext": "Unlock Your Potential with <span>86 Superfoods<\/span>, Nutrients &amp; Plant-Based Goodness.",
+        "title": "Powered by Nature’s <span>Healthiest Superfoods</span>",
+        "subtext": "Unlock Your Potential with <span>86 Superfoods</span>, Nutrients &amp; Plant-Based Goodness.",
         "enable_autoplay": false,
         "autoplay_interval": 3,
         "show_navigation_on_hover": true,
@@ -412,10 +419,10 @@
     "243e79b8-6de3-4ce6-961a-30121b85284e": {
       "type": "supplement-facts",
       "settings": {
-        "d_c_suplement": "shopify:\/\/shop_images\/Label1.5x.png",
-        "m_c_suplement": "shopify:\/\/shop_images\/1.5.png",
-        "d_v_suplement": "shopify:\/\/shop_images\/1.5x.png",
-        "m_v_suplement": "shopify:\/\/shop_images\/1.5x_f72e7481-b759-4987-94e3-65ca804dbe5f.png"
+        "d_c_suplement": "shopify://shop_images/Label1.5x.png",
+        "m_c_suplement": "shopify://shop_images/1.5.png",
+        "d_v_suplement": "shopify://shop_images/1.5x.png",
+        "m_v_suplement": "shopify://shop_images/1.5x_f72e7481-b759-4987-94e3-65ca804dbe5f.png"
       }
     },
     "a48cfe76-2d86-4d84-971b-46a3da69c5d3": {
@@ -424,42 +431,42 @@
         "cbbdd019-f764-4eba-acf0-fb10d7867593": {
           "type": "product_usp",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Artboard_21_1ae1548a-e15b-40c1-bb3c-8635757577ed.png",
+            "icon": "shopify://shop_images/Artboard_21_1ae1548a-e15b-40c1-bb3c-8635757577ed.png",
             "icon_title": "SOY FREE"
           }
         },
         "f23dead0-d3ca-49b5-999c-f1db4b25d4ea": {
           "type": "product_usp",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Artboard_22.png",
+            "icon": "shopify://shop_images/Artboard_22.png",
             "icon_title": "Dairy Free"
           }
         },
         "97c8b875-997c-4c3c-94cc-9a47d1cf6507": {
           "type": "product_usp",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Artboard_23.png",
+            "icon": "shopify://shop_images/Artboard_23.png",
             "icon_title": "Gluten Free"
           }
         },
         "d0f1dd9e-572e-43d8-97ba-1f10d26e7683": {
           "type": "product_usp",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Artboard_24.png",
+            "icon": "shopify://shop_images/Artboard_24.png",
             "icon_title": "Non GMO"
           }
         },
         "eccf0670-979e-459c-8122-b12e117f5cdb": {
           "type": "product_usp",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Artboard_25.png",
+            "icon": "shopify://shop_images/Artboard_25.png",
             "icon_title": "No Artificial Ingredients"
           }
         },
         "0cb0647e-99a8-4aab-8849-dd3f901bc1e4": {
           "type": "product_usp",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Artboard_26.png",
+            "icon": "shopify://shop_images/Artboard_26.png",
             "icon_title": "No Fillers"
           }
         }
@@ -473,7 +480,7 @@
         "0cb0647e-99a8-4aab-8849-dd3f901bc1e4"
       ],
       "settings": {
-        "title": "<span>All Good<\/span> No B.S.(Bad Stuff)",
+        "title": "<span>All Good</span> No B.S.(Bad Stuff)",
         "subtext": "Clean and Green: No Fillers, No Artificial Ingredients, and No Added Sugar"
       }
     },
@@ -525,7 +532,7 @@
       ],
       "settings": {
         "section_title": "FREQUENTLY ASKED QUESTIONS",
-        "placeholder_image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png",
+        "placeholder_image": "shopify://shop_images/afd0d9b713f683c70153c59e6aaec0f7.png",
         "color_scheme": "default",
         "container_size": "large",
         "section_spacing_top": 48,
@@ -543,9 +550,8 @@
           }
         },
         "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         },
         "price": {
           "type": "price",
@@ -579,8 +585,7 @@
         },
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -599,7 +604,7 @@
             "button_background_color": "#e9ffcd",
             "button_text_color": "#141416",
             "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
+            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}</p>",
             "tab_1_page": "",
             "tab_2_title": "",
             "tab_2_text": "",
@@ -618,7 +623,7 @@
             "button_background_color": "#e9ffcd",
             "button_text_color": "#141416",
             "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
             "tab_1_page": "",
             "tab_2_title": "",
             "tab_2_text": "",
@@ -637,7 +642,7 @@
             "button_background_color": "#e9ffcd",
             "button_text_color": "#141416",
             "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
+            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}</p>",
             "tab_1_page": "",
             "tab_2_title": "",
             "tab_2_text": "",
@@ -655,7 +660,7 @@
             "body": "",
             "content_alignment": "center",
             "icon": "none",
-            "custom_icon_image": "shopify:\/\/shop_images\/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
+            "custom_icon_image": "shopify://shop_images/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
             "icon_position": "inline",
             "tag_background_color": "#f7f7f7",
             "tag_text_color": "#141416",
@@ -717,7 +722,7 @@
         "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png"
+            "image": "shopify://shop_images/afd0d9b713f683c70153c59e6aaec0f7.png"
           }
         }
       },
@@ -745,13 +750,13 @@
         "icon": "none",
         "subheading": "",
         "heading": "ZERO ADDED SUGAR. 100% DELICIOUS.",
-        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
+        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. </p>",
         "heading_size": "h1",
         "body_size": "body3",
         "content_alignment": "left",
         "desktop_content_width": 480,
         "first_button_text": "LEARN MORE",
-        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_link": "shopify://pages/about-old-2022-backup",
         "first_button_style": "solid",
         "second_button_text": "",
         "second_button_link": "",
@@ -772,9 +777,7 @@
         "alignment": "center",
         "product_recommendations_type": "auto",
         "featured_collection": "",
-        "featured_products": [
-
-        ],
+        "featured_products": [],
         "img_ratio": "portrait",
         "product_card_align": "center",
         "cards_to_show": 18,
@@ -796,7 +799,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/DSCF1772.png",
+            "image": "shopify://shop_images/DSCF1772.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Shop All",
@@ -804,7 +807,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "content_position": "bottom-left"
           }
         },
@@ -814,7 +817,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/recipes_2.png",
+            "image": "shopify://shop_images/recipes_2.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Recipes",
@@ -822,7 +825,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/blogs\/the-hustle",
+            "link": "shopify://blogs/the-hustle",
             "content_position": "bottom-left"
           }
         },
@@ -832,7 +835,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/clean_ingredients.png",
+            "image": "shopify://shop_images/clean_ingredients.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Clean Ingredients",
@@ -840,7 +843,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/superfood-ingredients",
+            "link": "shopify://pages/superfood-ingredients",
             "content_position": "bottom-left"
           }
         },
@@ -850,7 +853,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/reviews_2.png",
+            "image": "shopify://shop_images/reviews_2.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Reviews",
@@ -858,7 +861,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/vitahustle-reviews",
+            "link": "shopify://pages/vitahustle-reviews",
             "content_position": "bottom-left"
           }
         }
@@ -903,12 +906,12 @@
         "section_spacing_bottom": 0,
         "desktop_height": 480,
         "mobile_height": 600,
-        "desktop_img": "shopify:\/\/shop_images\/02-_Option2-GIF_-_R2_1a762390-6458-4c6c-9eed-d41d1df4279c.jpg",
+        "desktop_img": "shopify://shop_images/02-_Option2-GIF_-_R2_1a762390-6458-4c6c-9eed-d41d1df4279c.jpg",
         "desktop_overlay_opacity": 20,
         "mobile_overlay_opacity": 20,
         "caption": "RISK FREE",
         "title": "60-DAY GUARANTEE",
-        "text": "<p>If for any reason VitaHustle ONE is not for you, simply return the bag for a full refund less shipping & handling fees.<\/p>",
+        "text": "<p>If for any reason VitaHustle ONE is not for you, simply return the bag for a full refund less shipping & handling fees.</p>",
         "heading_size": "h1",
         "body_size": "body3",
         "desktop_content_position": "align-items:center;justify-content:center;",

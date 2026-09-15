@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "742f54e3-44ed-4808-978b-f83400b0d688": {
@@ -19,13 +28,13 @@
         "section_spacing_bottom": 0,
         "desktop_height": 640,
         "mobile_height": 600,
-        "desktop_img": "shopify:\/\/shop_images\/Untitled-2_194035ec-db65-466f-b6ca-05803028eb74.jpg",
-        "mobile_img": "shopify:\/\/shop_images\/kkkk_bbf68ceb-5c49-4988-92cf-799860a8a239.jpg",
+        "desktop_img": "shopify://shop_images/Untitled-2_194035ec-db65-466f-b6ca-05803028eb74.jpg",
+        "mobile_img": "shopify://shop_images/kkkk_bbf68ceb-5c49-4988-92cf-799860a8a239.jpg",
         "desktop_overlay_opacity": 14,
         "mobile_overlay_opacity": 17,
         "caption": "KEVIN HART'S",
         "title": "SUPERFOOD NUTRITION",
-        "text": "<p>Fuels daily energy, mood, digestion & overall wellness<\/p>",
+        "text": "<p>Fuels daily energy, mood, digestion & overall wellness</p>",
         "heading_size": "h1",
         "body_size": "body1",
         "desktop_content_position": "align-items:center;justify-content:flex-start;",
@@ -37,7 +46,7 @@
         "desktop_content_background": "shadow",
         "mobile_content_background": "shadow",
         "btn_text": "Shop Now",
-        "btn_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "btn_url": "shopify://products/vitahustle-one-superfood",
         "btn_style": "solid",
         "extra_btn_text": "",
         "extra_btn_url": "",
@@ -64,13 +73,13 @@
         "section_spacing_bottom": 0,
         "desktop_height": 640,
         "mobile_height": 600,
-        "desktop_img": "shopify:\/\/shop_images\/Untitled-2_194035ec-db65-466f-b6ca-05803028eb74.jpg",
-        "mobile_img": "shopify:\/\/shop_images\/kkkk_bbf68ceb-5c49-4988-92cf-799860a8a239.jpg",
+        "desktop_img": "shopify://shop_images/Untitled-2_194035ec-db65-466f-b6ca-05803028eb74.jpg",
+        "mobile_img": "shopify://shop_images/kkkk_bbf68ceb-5c49-4988-92cf-799860a8a239.jpg",
         "desktop_overlay_opacity": 13,
         "mobile_overlay_opacity": 15,
         "caption": "LABOR DAY SALE",
         "title": "20% Off Sitewide!",
-        "text": "<p>Fuel daily energy, mood, digestion & overall wellness<\/p>",
+        "text": "<p>Fuel daily energy, mood, digestion & overall wellness</p>",
         "heading_size": "h1",
         "body_size": "body1",
         "desktop_content_position": "align-items:center;justify-content:flex-start;",
@@ -82,7 +91,7 @@
         "desktop_content_background": "shadow",
         "mobile_content_background": "shadow",
         "btn_text": "Shop Now",
-        "btn_url": "https:\/\/vitahustle.com\/discount\/ld20?redirect=%2Fproducts%2Fvitahustle-one-superfood",
+        "btn_url": "https://vitahustle.com/discount/ld20?redirect=%2Fproducts%2Fvitahustle-one-superfood",
         "btn_style": "solid",
         "extra_btn_text": "",
         "extra_btn_url": "",
@@ -121,7 +130,7 @@
         "template--16944483729657__1995127b-832a-4f8a-93c0-19f2657a09f8-16872064934d55a627-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/TDAVIS_Vitahustle_135_1_1.png"
+            "image": "shopify://shop_images/TDAVIS_Vitahustle_135_1_1.png"
           }
         }
       },
@@ -138,13 +147,13 @@
       "settings": {
         "display_custom_text_items": true,
         "custom_text_1": "Fuel everyday energy",
-        "custom_icon_1": "shopify:\/\/shop_images\/fuel_icon_f959af02-d045-4be0-b9d5-d32ec1780b65.svg",
+        "custom_icon_1": "shopify://shop_images/fuel_icon_f959af02-d045-4be0-b9d5-d32ec1780b65.svg",
         "custom_text_2": "Unleash mental performance",
-        "custom_icon_2": "shopify:\/\/shop_images\/mental_focus.svg",
+        "custom_icon_2": "shopify://shop_images/mental_focus.svg",
         "custom_text_3": "Support digestion & debloat",
-        "custom_icon_3": "shopify:\/\/shop_images\/belly_bloat.svg",
+        "custom_icon_3": "shopify://shop_images/belly_bloat.svg",
         "custom_text_4": "Boost overall wellness",
-        "custom_icon_4": "shopify:\/\/shop_images\/immune_system.svg",
+        "custom_icon_4": "shopify://shop_images/immune_system.svg",
         "color_scheme": "default",
         "container_size": "page-width",
         "section_spacing_top": 0,
@@ -156,16 +165,16 @@
         "icon": "none",
         "subheading": "",
         "heading": "Simple. Nutritious. Damn Delicious.",
-        "body": "<p>VitaHustle makes getting healthy easy with 86 superfoods, greens & vitamins that taste great.<\/p>",
+        "body": "<p>VitaHustle makes getting healthy easy with 86 superfoods, greens & vitamins that taste great.</p>",
         "heading_size": "h1",
         "body_size": "body3",
         "content_alignment": "left",
         "desktop_content_width": 560,
         "first_button_text": "",
-        "first_button_link": "shopify:\/\/products\/starter-kit-1",
+        "first_button_link": "shopify://products/starter-kit-1",
         "first_button_style": "link",
         "second_button_text": "shop the one superfood",
-        "second_button_link": "shopify:\/\/products\/starter-kit-1",
+        "second_button_link": "shopify://products/starter-kit-1",
         "second_button_style": "link"
       }
     },
@@ -201,13 +210,13 @@
         "section_spacing_bottom": 0,
         "desktop_height": 660,
         "mobile_height": 940,
-        "desktop_img": "shopify:\/\/shop_images\/one_starter_kit_b7da8b6b-be4e-48f0-92f7-8135a5de5f35.png",
-        "mobile_img": "shopify:\/\/shop_images\/one_starter_kit_mobile.png",
+        "desktop_img": "shopify://shop_images/one_starter_kit_b7da8b6b-be4e-48f0-92f7-8135a5de5f35.png",
+        "mobile_img": "shopify://shop_images/one_starter_kit_mobile.png",
         "desktop_overlay_opacity": 0,
         "mobile_overlay_opacity": 0,
         "caption": "",
         "title": "86 superfoods<br>& greens",
-        "text": "<p>The ultimate all-in-one shake with 86 superfoods & nutrients, probiotics, protein and adaptogens.  <strong>Free shaker bottle & recipe book <\/strong>when you subscribe.<br\/><\/p>",
+        "text": "<p>The ultimate all-in-one shake with 86 superfoods & nutrients, probiotics, protein and adaptogens.  <strong>Free shaker bottle & recipe book </strong>when you subscribe.<br/></p>",
         "heading_size": "h1",
         "body_size": "body3",
         "desktop_content_position": "align-items:center;justify-content:flex-start;",
@@ -219,10 +228,10 @@
         "desktop_content_background": "none",
         "mobile_content_background": "none",
         "btn_text": "shop the kit",
-        "btn_url": "shopify:\/\/products\/vitahustle-one-superfood",
+        "btn_url": "shopify://products/vitahustle-one-superfood",
         "btn_style": "solid",
         "extra_btn_text": "SHOP ALL",
-        "extra_btn_url": "shopify:\/\/collections\/all",
+        "extra_btn_url": "shopify://collections/all",
         "extra_btn_style": "link"
       }
     },
@@ -319,7 +328,7 @@
             "collection": "vitahustle-one-superfoods",
             "heading_size": "h1",
             "show_product_count": false,
-            "image": "shopify:\/\/shop_images\/hi_res-36-Inov8_Brands_r1_9946.png",
+            "image": "shopify://shop_images/hi_res-36-Inov8_Brands_r1_9946.png",
             "overlay_opacity": 5,
             "link_text": "Shop Now",
             "content_position": "bottom-left"
@@ -334,7 +343,7 @@
             "collection": "electrolyte-hydration",
             "heading_size": "h1",
             "show_product_count": false,
-            "image": "shopify:\/\/shop_images\/hi_res-fc-Inov8_Brands_r1_095A0003.png",
+            "image": "shopify://shop_images/hi_res-fc-Inov8_Brands_r1_095A0003.png",
             "overlay_opacity": 0,
             "link_text": "Shop Now",
             "content_position": "bottom-left"
@@ -408,8 +417,8 @@
         "section_spacing_bottom": 0,
         "desktop_height": 560,
         "mobile_height": 480,
-        "desktop_img": "shopify:\/\/shop_images\/2_New-_hi_res-3b-Inov8_Brands_r1_9966_copy.jpg",
-        "mobile_img": "shopify:\/\/shop_images\/Monile_New-_hi_res-3b-Inov8_Brands_r1_9966_copy.png",
+        "desktop_img": "shopify://shop_images/2_New-_hi_res-3b-Inov8_Brands_r1_9966_copy.jpg",
+        "mobile_img": "shopify://shop_images/Monile_New-_hi_res-3b-Inov8_Brands_r1_9966_copy.png",
         "desktop_overlay_opacity": 10,
         "mobile_overlay_opacity": 10,
         "caption": "",
@@ -426,7 +435,7 @@
         "desktop_content_background": "none",
         "mobile_content_background": "none",
         "btn_text": "Shop Now",
-        "btn_url": "shopify:\/\/collections\/gummy-vitamins",
+        "btn_url": "shopify://collections/gummy-vitamins",
         "btn_style": "solid",
         "extra_btn_text": "",
         "extra_btn_url": "",
@@ -448,7 +457,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p>Low sugar vitamin gummies pack a punch with multiple benefits <br\/><\/p>",
+            "text": "<p>Low sugar vitamin gummies pack a punch with multiple benefits <br/></p>",
             "text_2": "",
             "text_3": "",
             "body_size": "body3"
@@ -459,10 +468,10 @@
           "disabled": true,
           "settings": {
             "btn_text": "SHOP  now",
-            "btn_url": "shopify:\/\/collections\/gummy-vitamins",
+            "btn_url": "shopify://collections/gummy-vitamins",
             "btn_style": "solid",
             "extra_btn_text": "",
-            "extra_btn_url": "shopify:\/\/collections\/gummy-vitamins",
+            "extra_btn_url": "shopify://collections/gummy-vitamins",
             "extra_btn_style": "solid"
           }
         }
@@ -503,9 +512,7 @@
         "heading_size": "h5",
         "alignment": "center",
         "collection": "gummy-vitamins",
-        "featured_products": [
-
-        ],
+        "featured_products": [],
         "img_ratio": "default",
         "product_card_align": "left",
         "cards_to_show": 16,
@@ -536,9 +543,7 @@
         "heading_size": "h5",
         "alignment": "center",
         "collection": "kevs-faves",
-        "featured_products": [
-
-        ],
+        "featured_products": [],
         "img_ratio": "square",
         "product_card_align": "center",
         "cards_to_show": 16,
@@ -559,7 +564,7 @@
           "settings": {
             "text": "Both flavors are delicious and have helped greatly with my gut health. I only need this as a supplement now versus multiple powders and pills. The price is good and my husband is even on board!",
             "author_name": "Danielle",
-            "author_image": "shopify:\/\/shop_images\/Screen_Shot_2023-05-02_at_11.27.53_AM.png",
+            "author_image": "shopify://shop_images/Screen_Shot_2023-05-02_at_11.27.53_AM.png",
             "rating": 5,
             "link": ""
           }
@@ -569,7 +574,7 @@
           "settings": {
             "text": "Awesome stuff! Definitely can feel a difference after just a couple days.   Thanks for putting in the work to get this out there.",
             "author_name": "Justin",
-            "author_image": "shopify:\/\/shop_images\/Group_628.png",
+            "author_image": "shopify://shop_images/Group_628.png",
             "rating": 4.5,
             "link": ""
           }
@@ -579,7 +584,7 @@
           "settings": {
             "text": "This is the “One” for me. 😃 The chocolate & vanilla taste really good . I take 2 as a meal replacement. I feel full. I’m energetic. My focus is so much better. I overall just feel great all day.",
             "author_name": "Cindy",
-            "author_image": "shopify:\/\/shop_images\/download_5_-min.jpg",
+            "author_image": "shopify://shop_images/download_5_-min.jpg",
             "rating": 4.5,
             "link": ""
           }
@@ -589,7 +594,7 @@
           "settings": {
             "text": "This is the best tasting and textured protein powder out of all I've ever tried! I love that it's not JUST protein powder, it has lots of other health benefits too! You can cut out a few other of your supplements when using this, which saves you money!",
             "author_name": "Jennifer",
-            "author_image": "shopify:\/\/shop_images\/ATX_2902-min.jpg",
+            "author_image": "shopify://shop_images/ATX_2902-min.jpg",
             "rating": 4.5,
             "link": ""
           }
@@ -599,7 +604,7 @@
           "settings": {
             "text": "I'm impressed! VitaHustle ONE tastes decent with just water, but I prefer to make a meal replacement out of it and smoothiefy it. My hunger is satiated for hours afterward, and my energy levels stay constant.",
             "author_name": "Kort",
-            "author_image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-08-07_at_1.43.27_PM.jpg",
+            "author_image": "shopify://shop_images/WhatsApp_Image_2023-08-07_at_1.43.27_PM.jpg",
             "rating": 4.5,
             "link": ""
           }
@@ -609,7 +614,7 @@
           "settings": {
             "text": "Really can't beat this...I've tried several and this is the best on the market. It tastes great, has solid ingredients, and the price for 30 day supply to me, is on Point!!",
             "author_name": "David",
-            "author_image": "shopify:\/\/shop_images\/download.jpg",
+            "author_image": "shopify://shop_images/download.jpg",
             "rating": 4.5,
             "link": ""
           }
@@ -619,7 +624,7 @@
           "settings": {
             "text": "I have just recently started counting macros and the vita hustle one super food drink fits into my plan very nice. It gives me a good amount of protein without a lot of the chemical junk but I don’t want or need.",
             "author_name": "Lee",
-            "author_image": "shopify:\/\/shop_images\/Lee-min.jpg",
+            "author_image": "shopify://shop_images/Lee-min.jpg",
             "rating": 4.5,
             "link": ""
           }
@@ -627,9 +632,9 @@
         "8a9c2342-7041-4f52-bfe4-9a75aa68d5c1": {
           "type": "quote",
           "settings": {
-            "text": "I’ve been drinking Vita-Hustle for almost 2 months & it’s the best decision I’ve made when it comes to health! It tastes delicious & i feel so energized & have even noticed a difference in my overall health.10\/10 🤟🏼",
+            "text": "I’ve been drinking Vita-Hustle for almost 2 months & it’s the best decision I’ve made when it comes to health! It tastes delicious & i feel so energized & have even noticed a difference in my overall health.10/10 🤟🏼",
             "author_name": "Eli",
-            "author_image": "shopify:\/\/shop_images\/download_7_-min.jpg",
+            "author_image": "shopify://shop_images/download_7_-min.jpg",
             "rating": 4.5,
             "link": ""
           }
@@ -639,7 +644,7 @@
           "settings": {
             "text": "This plant-based protein shake is a delicious! It helps digestion, while delivering a boost of energy when I’m active. It’s not only great as a meal replacement, but an awesome addition to my immunity!",
             "author_name": "M.",
-            "author_image": "shopify:\/\/shop_images\/download_a5447f69-c661-4a42-926e-f7cb9d6ad26c.jpg",
+            "author_image": "shopify://shop_images/download_a5447f69-c661-4a42-926e-f7cb9d6ad26c.jpg",
             "rating": 4.5,
             "link": ""
           }
@@ -656,9 +661,7 @@
         "8a9c2342-7041-4f52-bfe4-9a75aa68d5c1",
         "86a931f4-bb23-4031-889e-37a669ed9063"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "custom-2",
         "enable_background_around_container": false,
@@ -674,7 +677,7 @@
         "heading_size": "h1",
         "body_size": "body3",
         "btn_text": "Read More Reviews",
-        "btn_url": "shopify:\/\/pages\/vitahustle-reviews",
+        "btn_url": "shopify://pages/vitahustle-reviews",
         "enable_autoplay": false,
         "autoplay_interval": 3
       }
@@ -685,7 +688,7 @@
         "template--16944483729657__938f4472-bac4-4959-bcff-bb172425d6f4-1687535103d8a007bf-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2d562d0665298e309a6ce133c5d3dd9d.png"
+            "image": "shopify://shop_images/2d562d0665298e309a6ce133c5d3dd9d.png"
           }
         }
       },
@@ -714,13 +717,13 @@
         "icon": "none",
         "subheading": "",
         "heading": "powerhouse founders",
-        "body": "<h6>Kevin HART & RON EVERLINE<\/h6><p>Meet the powerhouse team behind it all: Kevin Hart and celebrity trainer & business partner Ron Everline (\"Boss\"). As founders and visionaries, they've harnessed their passion for greatness to create VitaHustle.<\/p>",
+        "body": "<h6>Kevin HART & RON EVERLINE</h6><p>Meet the powerhouse team behind it all: Kevin Hart and celebrity trainer & business partner Ron Everline (\"Boss\"). As founders and visionaries, they've harnessed their passion for greatness to create VitaHustle.</p>",
         "heading_size": "h1",
         "body_size": "body3",
         "content_alignment": "center",
         "desktop_content_width": 500,
         "first_button_text": "Learn More",
-        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_link": "shopify://pages/about-old-2022-backup",
         "first_button_style": "outline",
         "second_button_text": "",
         "second_button_link": "",
@@ -733,32 +736,32 @@
         "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-0": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vitahustle_instagram_1.png",
-            "link": "https:\/\/instagram.com\/getvitahustle",
+            "image": "shopify://shop_images/Vitahustle_instagram_1.png",
+            "link": "https://instagram.com/getvitahustle",
             "icon": "instagram"
           }
         },
         "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-1": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vitahustle_instagram_2.png",
-            "link": "https:\/\/instagram.com\/getvitahustle",
+            "image": "shopify://shop_images/vitahustle_instagram_2.png",
+            "link": "https://instagram.com/getvitahustle",
             "icon": "instagram"
           }
         },
         "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-2": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vitahustle_instagram_4.png",
-            "link": "https:\/\/instagram.com\/getvitahustle",
+            "image": "shopify://shop_images/vitahustle_instagram_4.png",
+            "link": "https://instagram.com/getvitahustle",
             "icon": "instagram"
           }
         },
         "template--16944483729657__7feb0a9d-bd49-46bd-b85b-d02e2880b0c5-1687203820a4c13fa6-3": {
           "type": "post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vitahustle_instagram_3.png",
-            "link": "https:\/\/instagram.com\/getvitahustle",
+            "image": "shopify://shop_images/vitahustle_instagram_3.png",
+            "link": "https://instagram.com/getvitahustle",
             "icon": "instagram"
           }
         }
@@ -856,7 +859,7 @@
       "type": "apps",
       "blocks": {
         "25abe666-30dc-4cb7-aa69-ff53259ff28a": {
-          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-ugc\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "9s4l44zl6d0z9"
           }

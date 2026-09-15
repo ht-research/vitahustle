@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -19,9 +19,8 @@
           }
         },
         "8a594cf6-45bd-4c34-ba41-054c7b7bb43b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         },
         "price": {
           "type": "price",
@@ -53,22 +52,13 @@
             "image_width": 60
           }
         },
-        "a5695ed4-524b-45b1-a57e-48bebecb84a9": {
-          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
-          "disabled": true,
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "subscription_widget_mG4pMY": {
           "type": "subscription_widget",
-          "settings": {
-          }
+          "settings": {}
         },
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -86,7 +76,7 @@
             "body": "",
             "content_alignment": "center",
             "icon": "none",
-            "custom_icon_image": "shopify:\/\/shop_images\/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
+            "custom_icon_image": "shopify://shop_images/money_back_icon_36cec7e2-315b-482d-97dd-07014526a2e9.svg",
             "icon_position": "inline",
             "tag_background_color": "#f7f7f7",
             "tag_text_color": "#141416",
@@ -105,7 +95,7 @@
             "button_background_color": "#e9ffcd",
             "button_text_color": "#141416",
             "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}<\/p>",
+            "tab_1_text": "<p>{{ product.metafields.custom.benefits | metafield_tag }}</p>",
             "tab_1_page": "",
             "tab_2_title": "",
             "tab_2_text": "",
@@ -124,7 +114,7 @@
             "button_background_color": "#e9ffcd",
             "button_text_color": "#141416",
             "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "tab_1_text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
             "tab_1_page": "",
             "tab_2_title": "",
             "tab_2_text": "",
@@ -143,7 +133,7 @@
             "button_background_color": "#e9ffcd",
             "button_text_color": "#141416",
             "tab_1_title": "Tab 1",
-            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p>",
+            "tab_1_text": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}</p>",
             "tab_1_page": "",
             "tab_2_title": "",
             "tab_2_text": "",
@@ -160,7 +150,6 @@
         "price",
         "28586830-d855-4547-8946-94914bac9e85",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
-        "a5695ed4-524b-45b1-a57e-48bebecb84a9",
         "subscription_widget_mG4pMY",
         "5fc2bfb5-9e5c-42bc-a2a8-123d13205d0c",
         "buy_buttons",
@@ -275,9 +264,8 @@
       "type": "apps",
       "blocks": {
         "cb52da39-70ff-4f5c-a05e-cd12e031825b": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -301,7 +289,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/soy_free.svg",
+            "custom_icon_image": "shopify://shop_images/soy_free.svg",
             "icon_size": 64,
             "title": "Soy Free",
             "text": "",
@@ -313,7 +301,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/dairy_free.svg",
+            "custom_icon_image": "shopify://shop_images/dairy_free.svg",
             "icon_size": 64,
             "title": "Dairy Free",
             "text": "",
@@ -325,7 +313,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/gluten_free.svg",
+            "custom_icon_image": "shopify://shop_images/gluten_free.svg",
             "icon_size": 64,
             "title": "Gluten Free",
             "text": "",
@@ -337,7 +325,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/non_gmo.svg",
+            "custom_icon_image": "shopify://shop_images/non_gmo.svg",
             "icon_size": 64,
             "title": "Non GMO",
             "text": "",
@@ -349,7 +337,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/no_artificial_ingredients.svg",
+            "custom_icon_image": "shopify://shop_images/no_artificial_ingredients.svg",
             "icon_size": 64,
             "title": "No Artificial Ingredients",
             "text": "",
@@ -361,7 +349,7 @@
           "type": "column_with_icon",
           "settings": {
             "icon": "discount-outline",
-            "custom_icon_image": "shopify:\/\/shop_images\/no_fillers.svg",
+            "custom_icon_image": "shopify://shop_images/no_fillers.svg",
             "icon_size": 64,
             "title": "No Fillers",
             "text": "",
@@ -413,7 +401,7 @@
         "template--16944483926265__9ddba0be-f879-4e43-9a11-aea6ba37821b-16880606586bc9cf1b-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/afd0d9b713f683c70153c59e6aaec0f7.png"
+            "image": "shopify://shop_images/afd0d9b713f683c70153c59e6aaec0f7.png"
           }
         }
       },
@@ -440,13 +428,13 @@
         "icon": "none",
         "subheading": "",
         "heading": "ZERO ADDED SUGAR. 100% DELICIOUS.",
-        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. <\/p>",
+        "body": "<p>At VitaHustle, we’re on a mission to disrupt the game and make premium nutrition accessible to all. Our commitment is simple: empower you to become the superhero version of yourself through simple, nutritious and damn delicious products. </p>",
         "heading_size": "h1",
         "body_size": "body3",
         "content_alignment": "left",
         "desktop_content_width": 480,
         "first_button_text": "LEARN MORE",
-        "first_button_link": "shopify:\/\/pages\/about",
+        "first_button_link": "shopify://pages/about-old-2022-backup",
         "first_button_style": "solid",
         "second_button_text": "",
         "second_button_link": "",
@@ -467,9 +455,7 @@
         "alignment": "center",
         "product_recommendations_type": "auto",
         "featured_collection": "",
-        "featured_products": [
-
-        ],
+        "featured_products": [],
         "img_ratio": "portrait",
         "product_card_align": "center",
         "cards_to_show": 18,
@@ -491,7 +477,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/DSCF1772.png",
+            "image": "shopify://shop_images/DSCF1772.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Shop All",
@@ -499,7 +485,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "content_position": "bottom-left"
           }
         },
@@ -509,7 +495,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/recipes_2.png",
+            "image": "shopify://shop_images/recipes_2.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Recipes",
@@ -517,7 +503,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/blogs\/the-hustle",
+            "link": "shopify://blogs/the-hustle",
             "content_position": "bottom-left"
           }
         },
@@ -527,7 +513,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/clean_ingredients.png",
+            "image": "shopify://shop_images/clean_ingredients.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Clean Ingredients",
@@ -535,7 +521,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/superfood-ingredients",
+            "link": "shopify://pages/superfood-ingredients",
             "content_position": "bottom-left"
           }
         },
@@ -545,7 +531,7 @@
             "color_scheme": "white",
             "desktop_columns": 1,
             "desktop_rows": 2,
-            "image": "shopify:\/\/shop_images\/reviews_2.png",
+            "image": "shopify://shop_images/reviews_2.png",
             "overlay_opacity": 20,
             "caption": "",
             "title": "Reviews",
@@ -553,7 +539,7 @@
             "heading_size": "h2",
             "body_size": "body3",
             "link_text": "",
-            "link": "shopify:\/\/pages\/vitahustle-reviews",
+            "link": "shopify://pages/vitahustle-reviews",
             "content_position": "bottom-left"
           }
         }
